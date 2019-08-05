@@ -1,7 +1,40 @@
-extends ../layouts/master.pug
+
 
 block title
   title My Page - Index
 
 block content
-    h1 Hello
+    .header-google
+      a.header-content(href="#" id="text-gmail") Gmail
+      a.header-content(href="#" id="text-hinh-anh") Hình ảnh
+      img.header-content(src="../../assets/images/icon-google.png")
+      img.header-content(src="../../assets/images/icon-gmail.PNG")
+    .content
+      img#img-logo-google(src="../../assets/images/google.jpg")
+      input#search-box(type="text" align="center")
+      br
+      input.btn-submit(type="submit" value="Tìm với Google" id="tim-voi-google")
+      input.btn-submit(type="submit" value="Xem trang đầu tiên tìm được")
+      br
+      br
+      span#font-span Google có các thứ tiếng:
+      a.lang(href="#") English
+      a.lang(href="#") Franci
+      a.lang(href="#") Vietnamese
+      br
+      br
+      br
+      br
+      br
+    div.VietNam-footer
+      span Việt Nam
+    .footer-last
+      a.ft-last(href="#") Quảng cáo
+      a.ft-last(href="#") Doanh nghiệp
+      a.ft-last(href="#") Giới thiệu
+      a.ft-last(href="#") Cách hoạt động của Tìm kiếm
+      a.ft-last(href="#" id="bao-mat") Bảo mật
+      a.ft-last(href="#" id="dieu-khoan") Điều khoản
+      a.ft-last(href="#" id="cai-dat") Cài đặt
+
+    

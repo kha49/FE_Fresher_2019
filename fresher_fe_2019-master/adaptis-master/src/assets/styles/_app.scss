@@ -13,3 +13,58 @@
 // Component
 @import '../../views/components/header/header';
 @import '../../views/components/footer/footer';
+
+#text-gmail{
+  margin-left: 1000px;
+  margin-top:0px;
+}
+.header-content{
+  margin-right:10px;
+}
+#img-logo-google{
+  width: 500px;
+  height:200px;
+  background-position: center;
+  margin-left:400px;
+}
+#search-box{
+  display: flex;
+  width: 600px;
+  height:30px;
+  position: center;
+  margin-left: 350px;
+  border-radius: 5px;
+}
+.btn-submit{
+  height: 40px;
+  margin-left: 10px;
+  border: none;
+}
+#tim-voi-google{
+  margin-left:470px;
+}
+#font-span{
+  font-family:Arial, Helvetica, sans-serif;
+  color:black;
+  margin-left: 470px;
+  font-size: 12px;
+}
+.lang{
+  margin-left:10px;
+}
+#vn{
+  margin-top:100px;
+}
+.VietNam-footer{
+  background-color: #F2F2F2;
+
+}
+.footer-last{
+  background-color:#F2F2F2;
+}
+.ft-last{
+  margin-left:10px;
+}
+#bao-mat{
+  margin-left:500px;
+}
