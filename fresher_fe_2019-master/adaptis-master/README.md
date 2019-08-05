@@ -20,3 +20,13 @@ The purpose if this webpack starter is to allow people to create websites withou
 - Yarn instead NPM
 - PostCSS
 
+## How to use
+- Clone project
+- Run command: 
+
++ npm install yarn -g
++ yarn install
++ yarn dev (to run local server)
++ yarn prod (to build distribution files)
+
+- Run: localhost:8080 on browser
