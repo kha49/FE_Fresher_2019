@@ -13,3 +13,147 @@
 // Component
 @import '../../views/components/header/header';
 @import '../../views/components/footer/footer';
+
+body{
+  padding: 0;
+  background-color: white;
+}
+
+.nav{
+  background-color: rgb(255, 255, 255);
+  color: black;
+  position: relative;
+  padding: 4rem 4rem;
+  margin-bottom: 6rem;
+
+  .nav__list{
+    display: flex;
+    position: absolute;
+    right: 2rem;
+    align-items: center;
+
+    .nav__item{
+      padding: 0rem 1rem;
+      cursor: pointer;
+      // width: 10%;
+    
+      .nav__link{
+
+        &:hover{
+          text-decoration: underline;
+        }
+
+        .nav__th-icon{
+          width: 3rem;
+        }
+    
+        .nav__ava{
+          width: 5rem;
+          overflow: hidden;
+          border-radius: 30px;
+        }
+      }
+    }
+  }
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .google__logo{
+    width: 20%;
+  }
+
+  .google__form{
+    margin: 3rem 0;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .google__inp{
+      width: 70%;
+      margin: 2rem 0;
+      padding: 1rem 8rem 1rem 2rem;
+      border: 1px solid rgb(207, 207, 207);
+      border-radius: 20px;
+      box-shadow: 2px 2px 1px 1px #b8b8b8;
+    }
+
+  
+    .keyboard-icon{
+      width: 2rem;
+      position: absolute;
+      right: 15rem;
+      top: 47%;
+      transform: translateY(-180%);
+      cursor: pointer;
+    }
+
+    .voice-icon{
+      width: 2rem;
+      position: absolute;
+      right: 12rem;
+      top: 47%;
+      transform: translateY(-180%);
+      cursor: pointer;
+    }
+  
+  }
+
+  .btn{
+    margin: 1rem;
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: rgb(235, 235, 235);
+    color: rgb(145, 145, 145);
+  
+    &:hover{
+      border: 1px solid rgb(170, 170, 170);
+    }
+  }
+
+  .language{
+    color: blue;
+  }
+
+}
+
+.footer{
+  margin-top: 6rem;
+
+  .footer__country{
+    padding: 1rem 0 1rem 4rem;
+    background-color: rgb(243, 243, 243);
+    border: 1px solid rgb(214, 214, 214);
+    color: rgb(112, 112, 112);
+  }
+
+  .footer__infor{
+    padding: 1rem 0 1rem 2rem;
+    background-color: rgb(243, 243, 243);
+    border: 1px solid rgb(214, 214, 214);
+    color: rgb(112, 112, 112);
+    display: flex;
+    justify-content: space-between;
+
+    .footer-nav__list{
+      display: flex;
+
+      .footer-nav__item{
+        padding: 0 2rem;
+
+        .footer-nav__link{
+          color: rgb(112, 112, 112);
+
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

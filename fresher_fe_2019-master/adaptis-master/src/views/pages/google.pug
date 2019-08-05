@@ -1,0 +1,62 @@
+//- extends ../layouts/master.pug
+
+block title
+  title My Page -  Google
+
+block content
+      nav.nav
+        ul.nav__list
+          li.nav__item 
+            a.nav__link(href="#") Gmail
+          li.nav__item 
+            a.nav__link(href="#") Hình ảnh
+          li.nav__item
+            .nav__link
+              img.nav__th-icon(src="../assets/images/th-icon.png", alt="")
+          li.nav__item
+            .nav__link
+              img.nav__ava(src="../assets/images/ava.jpg", alt="")
+
+      .content
+        img.google__logo(src="../assets/images/google.png", alt="")
+        form.google__form(action="#")
+          input.google__inp(type="text")
+          
+          div
+            span
+              img.keyboard-icon(src="../assets/images/keyboard-icon.png", alt="")
+            span
+              img.voice-icon(src="../assets/images/voice-icon.png", alt="")
+
+          div
+            button.btn(type="submit") Tìm với google
+            button.btn(type="submit") Xem trang đầu tiên tìm được
+        div 
+          | Google có các thứ tiếng: 
+          a.language(href="#") English France ...
+        
+      .footer
+        .footer__country Việt Nam
+        .footer__infor
+          ul.footer-nav__list
+            li.footer-nav__item
+              a.footer-nav__link(href="#") Quảng cáo
+            li.footer-nav__item
+              a.footer-nav__link(href="#") Doanh nghiệp
+            li.footer-nav__item
+              a.footer-nav__link(href="#") Giới thiệu
+            li.footer-nav__item
+              a.footer-nav__link(href="#") Cách hoạt động của Tìm kiếm
+          ul.footer-nav__list
+            li.footer-nav__item
+              a.footer-nav__link(href="#") Bảo mật
+            li.footer-nav__item
+              a.footer-nav__link(href="#") Điều khoản
+            li.footer-nav__item
+              a.footer-nav__link(href="#") Cài đặt
+
+
+
+
+
+
