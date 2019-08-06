@@ -36,7 +36,8 @@ html(lang='jp')
 
     //- Favicons
     link(rel='shortcut icon', href=require('images/favicons/favicon.ico'))
-
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css", rel="stylesheet")
+    
     //- Fonts
     //- link(href="https://fonts.googleapis.com/css?family=Quicksand", rel='stylesheet')
 
@@ -48,12 +49,12 @@ html(lang='jp')
 
   body
     //- header
-    include ../components/header/header.pug
+    //- include ../components/header/header.pug
 
     //- block content
     block content
 
-    include ../components/footer/footer.pug
+    //- include ../components/footer/footer.pug
 
     //- block scripts
     block scripts

@@ -1,0 +1,29 @@
+extends ../layouts/master.pug
+
+block title
+  title My Page - Index
+
+block content
+  div#google
+    div.head
+      div.content
+        p Gmail
+        p Hình ảnh
+        p
+          i.glyphicon.glyphicon-th
+        img(src="https://avatars2.githubusercontent.com/u/30647000?s=460&v=4", alt="alt")
+  div#main
+    img(src="https://www.google.com.vn/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png", alt="google")
+    div
+      i.glyphicon.glyphicon-search
+      input(type="text" placeholder="")
+    div
+      button(type='submit') Tìm với Google
+      button(type='submit') Xem trang đầu tiên tìm được
+    div
+      p Google có các thứ tiếng: 
+        a  English 
+        a Français 
+        a 中文（繁體）
+  div.footer
+
