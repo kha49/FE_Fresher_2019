@@ -13,3 +13,204 @@
 // Component
 @import '../../views/components/header/header';
 @import '../../views/components/footer/footer';
+
+@mixin properties {
+  cursor: pointer;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  color: rgba(0,0,0,0.87);
+}
+
+@mixin google-app($property, $color, $opacity) {
+  width: $property;
+  height: $property;
+  color: $color;
+  opacity: $opacity;
+}
+
+@mixin sign-in-button {
+  cursor: default;
+  text-decoration: none;
+  border: solid 1px #4285f4;
+  padding: 2px 10px 2px 10px;
+  background-color: #4387fd;
+  border-radius: 2px;
+  margin-top: 5.5px !important;
+  a {
+    font-weight: bold !important;
+    color: #fff !important;
+    &:hover {
+      text-decoration: none !important;
+      opacity: 1 !important;
+      cursor: inherit;
+    }
+  }
+}
+
+%shared {
+  display: flex;
+  justify-content: flex-end;
+}
+
+body {
+  box-sizing: border-box;
+  padding-top: 10px;
+}
+
+.google-header {
+  @extend %shared;
+  padding-right: 30px;
+  div {
+    margin: 7.5px;
+    a {
+      @include properties;
+      &:hover {
+        text-decoration: underline;
+        opacity: .85;
+      }
+    }
+  }
+}
+
+.google-app {
+  @include google-app(23px, #000, .55);
+  &:hover {
+    opacity: .85;
+  }
+}
+
+.sign-in-button {
+  @include sign-in-button;
+}
+
+.google-section {
+  .google-brand {
+    @extend %shared;
+    justify-content: center;
+    margin-top: 89px;
+    img {
+      padding-top: 89px;
+      width: 272px;
+    }
+  }
+  .input {
+    @extend %shared;
+    justify-content: center;
+    width: 582px;
+    height: 44px;
+    border: solid 1px #dfe1e5;
+    border-radius: 24px;
+    margin: auto;
+    &:hover {
+      box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+    }
+    div {
+      @extend %shared;
+      justify-content: center;
+      align-items: center;
+      input {
+        width: 514px;
+        border: solid 1px #fff;
+      }
+      .key-board {
+        @extend %shared;
+        justify-content: center;
+        @include google-app(24px, #000, .55)
+      }
+    }
+  }
+}
+
+.google-section-1 {
+  div {
+    @extend %shared;
+    justify-content: center;
+    padding-top: 18px;
+    center {
+      button {
+        height: 36px;
+        margin: 11px 4px;
+        border: 1px solid #f2f2f2;
+        border-radius: 4px;
+        color: #5F6368;
+        cursor: pointer;
+        &:hover {
+          border: 1px solid #c6c6c6;
+          box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+          color: #222;
+        }
+      }
+    }
+  }
+}
+
+.google-section-2 {
+  div {
+    @extend %shared;
+    justify-content: center;
+    p {
+      color: #000;
+      span {
+        a {
+          font-family: arial,sans-serif;
+          color:#1a0dab;
+          padding: 0 7px;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer-1 {
+  position: absolute;
+  width: 100%;
+  bottom: 40px;
+  background: #f2f2f2;
+  border: 1px solid #e4e4e4;
+  div {
+    @extend %shared;
+    justify-content: flex-start;
+    height: 40px;
+    align-items: center;
+    padding-left: 27px;
+    p {
+      color: rgba(0,0,0,.54);
+    }
+  }
+}
+
+.footer-2 {
+  position: absolute;
+  height: 40px;
+  width: 100%;
+  bottom: 1px;
+  background: #f2f2f2;
+  border: 1px solid #e4e4e4;
+  div {
+    @extend %shared;
+    justify-content: flex-start;
+    height: 40px;
+    align-items: center;
+    div {
+      padding-left: 27px;
+      a {
+        padding: 0 12px 0 0;
+        font-size: 14px;
+        color: rgba(0,0,0,.54);
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .left {
+      position: absolute;
+      right: 50px;
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
