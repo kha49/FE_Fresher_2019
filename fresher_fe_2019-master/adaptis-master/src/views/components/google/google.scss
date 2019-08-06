@@ -4,7 +4,7 @@
         position: relative;
         .gg-content {
             position: absolute;
-            right: 10px;
+            right: 25px;
             top: 20px;
             @include flexbox();
             .item {
@@ -26,17 +26,36 @@
         text-align: center;
         padding-top: 190px;
         .input-search {
+            position: relative;
+            .img-keyboard {
+                position: absolute;
+                width: 23px;
+                top: 41px;
+                right: 464px;
+            }
+            .img-voice {
+                position: absolute;
+                width: 15px;
+                top: 42px;
+                right: 431px;
+            }
             input[type='text'] {
                 border-radius: 30px;
-                padding: 13px 175px;
+                padding: 13px 180px;
                 border: 1px solid #ccc;
                 margin: 30px;
+                &:hover {
+                    border-color:#ccc;
+                    outline: 0;
+                    -webkit-box-shadow: inset 0 1px 1px rgba(163, 153, 153, 0.075),0 0 10px rgba(194, 200, 206, 0.6);
+                    box-shadow: inset 0 1px 1px rgba(163, 153, 153, 0.075),0 0 10px rgba(194, 200, 206, 0.6);
+                }
             }
         }
         .gg-button {
             button {
-                padding: 6px 12px;
-                border-radius: 5px;
+                padding: 8px 13px;
+                border-radius: 7px;
                 margin-left: 15px;
                 font-size: 14px;
                 background-image: -webkit-gradient(linear,left top,left bottom,from(#f5f5f5),to(#f1f1f1));
@@ -73,6 +92,9 @@
                         font-size: 14px;
                         color: #1a0dab;
                         text-decoration: none;
+                        &:hover {
+                            text-decoration: underline;
+                        }
                     }
                 }
             }
@@ -85,9 +107,11 @@
         .gg-footer-top {
             border-top: 1px solid #ccc;
             margin-left: 20px;
-            padding: 5px;
+            padding: 6px;
+            color: #5F6368;
         }
         .gg-footer-bot {
+            color: #5F6368;
             font-size: 14px;
             border-top: 1px solid #ccc;
             background-color: #f2f2f2;
