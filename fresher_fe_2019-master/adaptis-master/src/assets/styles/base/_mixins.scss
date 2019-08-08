@@ -207,3 +207,17 @@
         @content;
     }
 }
+
+@mixin display($flex, $justify-content) {
+    display: $flex;
+    justify-content: $justify-content;
+}
+
+@mixin paddings($top, $right, $bottom, $left) {
+    padding: $top $right $bottom $left;
+}
+
+@mixin scale($width, $height) {
+    width: $width;
+    height: $height;
+}

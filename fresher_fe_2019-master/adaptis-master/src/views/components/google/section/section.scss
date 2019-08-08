@@ -1,0 +1,79 @@
+@import '../../../../assets/styles/base/mixins';
+
+.google-brand {
+    @include display(flex, center);
+    @include paddings(59px, 0, 0, 0);
+    img {
+        width: 272px;
+        @include paddings(93px, 0, 0, 0);
+    }
+}
+
+.search-group {
+    @include display(flex, center);
+    @include paddings(25px, 0, 0, 0);
+    .search-input {
+        width: 584px;
+        @include display(flex, center);
+        height: 44px;
+        border: solid 1px #dfe1e5;
+        border-radius: 24px;
+        margin: auto;
+        &:hover {
+            box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+        }
+        input {
+            width: 514px;
+            border: solid 1px #fff;
+        }
+        .search-icon {
+            @include scale(20px, 20px);
+            @include paddings(11px, 0, 0, 0);
+            opacity: .55;
+        }
+        .keyboard-icon {
+            @include scale(20px, 20px);
+            @include paddings(11px, 0, 0, 0);
+            opacity: .55;
+        }
+    }
+}
+
+.google-search-buttons {
+    @include paddings(18px, 0, 0, 0);
+    center {
+        button {
+            height: 36px;
+            margin: 11px 4px;
+            border: 1px solid #f2f2f2;
+            border-radius: 4px;
+            color: #5F6368;
+            cursor: pointer;
+            &:hover {
+                border: 1px solid #c6c6c6;
+                box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+                color: #222;
+            }
+        }
+    }
+}
+
+.google-languages {
+    div {
+        @include display(flex, center);
+        p {
+            color: #000;
+            font-size: 13px;
+            span {
+                a {
+                    font-family: arial,sans-serif;
+                    color:#1a0dab;
+                    padding: 0 7px;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

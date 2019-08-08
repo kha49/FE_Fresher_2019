@@ -1,0 +1,83 @@
+@mixin google-header-buttons($color, $cursor) {
+    color: $color;
+    text-decoration: none;
+    font-size: 13px;
+    cursor: $cursor;
+}
+
+@mixin display($display, $justify-content) {
+    display: $display;
+    justify-content: $justify-content;
+}
+
+@mixin paddings($top, $right, $bottom, $left) {
+    padding: $top $right $bottom $left;
+}
+
+@mixin scale($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+body {
+    @include paddings(20px, 0, 0, 0);
+    margin-top: 20px;
+}
+
+.google-header {
+    @include paddings(0, 30px, 0, 30px);
+    @include display(flex, flex-end);
+    div {
+        @include display(flex, flex-end);
+    }
+    .google-header-origin__link {
+        div {
+            a {
+                @include google-header-buttons(rgba(0, 0, 0, .87), pointer);
+                &:hover {
+                    opacity: .85;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.google-header-images__link {
+    @include paddings(0, 0, 0, 15px);
+}
+
+.google-header-other-apps {
+    a {
+        @include paddings(2px, 0, 0, 0);
+        img {
+            @include scale(18px, 18px);
+            opacity: .55;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    
+}
+
+.google-header-origin__link {
+    @include paddings(0, 15px, 0, 0);
+}
+
+.google-header-login__link {
+    @include paddings(0, 0, 0, 15px);
+    div {
+        border: 1px solid #4285f4;
+        margin-top: -3px;
+        border-radius: 2px;
+        a {
+            @include google-header-buttons(#fff, default);
+            @include paddings(2px, 10px, 2px, 10px);
+            font-weight: bold;
+            background-color: #4387fd;
+            text-align: center;
+        }
+    }
+        
+}
