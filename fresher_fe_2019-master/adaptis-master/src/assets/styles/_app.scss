@@ -12,4 +12,12 @@
 
 // Component
 @import '../../views/components/header/header';
-@import '../../views/components/google/google';
+
+
+@import '../../views/components/result_search/header/result_header.scss';
+@import '../../views/components/result_search/main/result_main.scss';
+@import '../../views/components/result_search/footer/result_footer.scss';
+
+@import '../../views/components/google/header/google_header.scss';
+@import '../../views/components/google/main/google_main.scss';
+@import '../../views/components/google/footer/google_footer.scss';

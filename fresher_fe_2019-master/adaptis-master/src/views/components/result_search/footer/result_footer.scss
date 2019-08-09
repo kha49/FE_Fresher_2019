@@ -1,0 +1,43 @@
+.result-footer {
+    background-color: #f2f2f2;
+    width: 100%;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    &__top {
+        @include flexbox();
+        margin-left: 13%;
+        padding: 6px;
+        color: #5F6368;
+        span {
+            font-size: 15px;
+            color: #5F6368;
+            margin-right: 30px;
+        }
+        &__location {
+            font-size: 14px;
+            b{
+                color: #333;
+                margin-right: 8px;
+            }
+            span {
+                color: #5F6368;
+            }
+        }
+    }
+    &__bottom {
+        border-top: 1px solid #ccc;
+        background-color: #f2f2f2;
+        cursor: pointer;
+        padding: 6px 6px 6px 13%;
+        ul {
+            @include flexbox();
+            li {
+                margin-right: 20px;
+                a {
+                    font-size: 14px;
+                    color: #5F6368;
+                }
+            }
+        }
+    }
+}

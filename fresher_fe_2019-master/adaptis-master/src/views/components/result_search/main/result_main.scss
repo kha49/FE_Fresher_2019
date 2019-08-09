@@ -1,0 +1,148 @@
+.result-main {
+    width: 100%;
+    margin-top: 90px;
+    &__menu {
+        @include flexbox();
+        padding-left: 13%;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #ccc;
+        &__left {
+            ul {
+                @include flexbox();
+                li {
+                    margin-right: 25px;
+                    img {
+                        width: 15px;
+                        margin-right: 6px;
+                    }
+                    a {
+                        font-size: 13px;
+                        &:hover {
+                            color: #1A73E8;
+                        }
+                    }
+                }
+            } 
+        }
+        &__right {
+            margin-left: 70px;
+            a {
+                font-size: 13px;
+                margin-right: 22px;
+            }
+            button {
+                border: none;
+                font-size: 13px;
+                background: transparent;
+                cursor: pointer;
+                &:hover {
+                    color: #5f6368;
+                    outline-width: 0;
+                    outline: none;
+                    background-color: #f8f8f8;
+                    background-image: linear-gradient(top,#f8f8f8,#f1f1f1);
+                    border: 1px solid #c6c6c6;
+                    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+                    display: inline-block;
+                    text-align: center;
+                    border-radius: 2px;
+                    line-height: 19px;
+                    cursor: pointer;
+                    margin-left: -1px;
+                    padding: 4px 11px;
+                }
+            }
+        }
+    }
+    &__result-content {
+        padding-left: 13%;
+        &__result-number {
+            line-height: 43px;
+            color: #777;
+            font-family: arial,sans-serif;
+            font-size: small;
+        }
+        .result-main__result-content__search-result {
+            margin-bottom: 25px;
+            a.title {
+                display: block;
+                font-size: 18px;
+                color: #1a0dab;
+                &:hover {
+                    color: #609;
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
+            .link-translate {
+                @include flexbox();
+                a.link {
+                position: relative;
+                margin-right: 20px;
+                color: #006621;
+                font-size: 14px;
+                font-weight: normal;
+                &::after {
+                    position: absolute;
+                    right: -15px;
+                    top: -5px;
+                    font-family: $font-fontawesome;
+                    content: '\f0dd';
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+                }
+                a.translate {
+                    font-size: 14px;
+                    color: #1a0dab;
+                    &:hover {
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            span.short-content {
+                display: inline-block;
+                width:50%;
+                color: #545454;
+                font-size: small;
+            }
+        }
+        &__result-related {
+            p {
+                color: #222;
+                font-size: 18px;
+            }
+            .related-content {
+                margin-top: 20px;
+                @include flexbox();
+                &__left, &__right {
+                    ul {
+                        li {
+                            a {
+                                padding: 3px 32px 3px 0;
+                                color: #1a0dab;
+                                font-size: 14px;
+                                line-height: 20px;
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+                &__left {
+                    margin-right: 20px;
+                }                
+            }
+        }
+        &__pagination {
+            padding-left: 13%;
+            .img-pagination {
+                width: 303px;
+                padding-top: 10px;
+            }
+        }
+    }
+}

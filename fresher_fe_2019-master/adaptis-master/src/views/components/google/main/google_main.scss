@@ -1,0 +1,79 @@
+.google-main {
+    text-align: center;
+    padding-top: 190px;
+    &__input-search {
+        position: relative;
+        &__keyboard {
+            position: absolute;
+            width: 23px;
+            top: 41px;
+            right: 464px;
+        }
+        &__voice {
+            position: absolute;
+            width: 15px;
+            top: 42px;
+            right: 431px;
+        }
+        input[type='text'] {
+            border-radius: 30px;
+            padding: 13px 180px;
+            border: 1px solid #ccc;
+            margin: 30px;
+            &:hover {
+                border-color:#ccc;
+                outline: 0;
+                -webkit-box-shadow: inset 0 1px 1px rgba(163, 153, 153, 0.075),0 0 10px rgba(194, 200, 206, 0.6);
+                box-shadow: inset 0 1px 1px rgba(163, 153, 153, 0.075),0 0 10px rgba(194, 200, 206, 0.6);
+            }
+        }
+    }
+    &__button-search {
+        button {
+            padding: 8px 13px;
+            border-radius: 7px;
+            margin-left: 15px;
+            font-size: 14px;
+            background-image: -webkit-gradient(linear,left top,left bottom,from(#f5f5f5),to(#f1f1f1));
+            background-image: -webkit-linear-gradient(top,#f5f5f5,#f1f1f1);
+            -webkit-border-radius: 2px;
+            -webkit-user-select: none;
+            background-color: #f2f2f2;
+            border: 1px solid #f2f2f2;
+            color: #5F6368;
+            cursor: pointer;
+            font-family: arial,sans-serif;
+            min-width: 54px;
+            text-align: center;
+            &:hover {
+                background-image: -webkit-gradient(linear,left top,left bottom,from(#f8f8f8),to(#f1f1f1));
+                background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
+                -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+                background-color: #f8f8f8;
+                background-image: linear-gradient(top,#f8f8f8,#f1f1f1);
+                background-image: -o-linear-gradient(top,#f8f8f8,#f1f1f1);
+                border: 1px solid #c6c6c6;
+                box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+                color: #222;
+            }
+        }
+    }
+    &__language {
+        margin: 20px 0px;
+        p {
+            font-size: 14px;
+            span {
+                margin-left: 5px;
+                a {
+                    font-size: 14px;
+                    color: #1a0dab;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        
+    }
+}

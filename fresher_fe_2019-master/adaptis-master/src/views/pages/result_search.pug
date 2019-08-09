@@ -1,0 +1,14 @@
+extends ../layouts/master.pug
+
+block title
+  title test - Tìm với Google
+
+block basicSeo
+  meta(name='description' content='home page')
+  meta(name='keywords', content='home, page')
+  meta(name='author' content='')
+
+block content
+    include ../components/result_search/header/result_header.pug
+    include ../components/result_search/main/result_main.pug
+    include ../components/result_search/footer/result_footer.pug

@@ -1,0 +1,71 @@
+.result-main
+    .result-main__menu
+        .result-main__menu__left
+            ul
+                li
+                    img(src="https://image.flaticon.com/icons/png/512/55/55369.png", alt="All result")
+                    a(href="#") Tất cả
+                li
+                    img(src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuD1NyyxFxShefmfPQ2i9SKWC1hesWTqdIk2OnYfl17wzeNEQ9", alt="Image Result")
+                    a(href="#") Hình ảnh
+                li
+                    img(src="https://icon2.kisspng.com/20180417/kqe/kisspng-youtube-2018-itb-berlin-brian-a-thomasson-p-l-c-video-icon-5ad5b17696f7f3.2844973815239540386184.jpg", alt="Video Result")
+                    a(href="#") Video
+                li
+                    img(src="https://image.flaticon.com/icons/png/512/14/14711.png", alt="News")
+                    a(href="#") Tin tức 
+                li
+                    img(src="https://cdn2.iconfinder.com/data/icons/neutro-essential/32/more-vertical-512.png", alt="Option vertical")
+                    a(href="#") Thêm
+        .result-main__menu__right
+            a(href="#") Cài đặt
+            button(type="submit") Công cụ
+    .result-main__result-content
+        p.result-main__result-content__result-number Khoảng 10.700.000.000 kết quả (0,36 giây)
+        mixin result-content(content)
+            .result-main__result-content__search-result
+                a.title=content.title
+                .link-translate
+                    a.link=content.link
+                    a.translate Dịch trang này
+                span.short-content=content.description
+        - const value1 = { title: 'Speedtest by Ookla - The Global Broadband Speed Test' , link: 'https://www.speedtest.net/' , description: 'Test your Internet connection bandwidth to locations around the world with this interactive broadband speed test from Ookla.'}
+        - const value2 = { title: 'Fast.com: Internet Speed Test' , link: 'https://fast.com/' , description: 'How fast is your download speed? In seconds, FAST.coms simple Internet speed test will estimate your ISP speed.'}
+        - const value3 = { title: 'Speed Test - Telstra' , link: 'https://speedtest.telstra.com/' , description: 'Measure your connection speed for your Telstra nbn™, ADSL, Cable or mobile data service.'}
+        - const value4 = { title: 'Test Your Internet Speed - Spectrum' , link: 'https://www.speedtest.net/' , description: 'Test your Internet connection bandwidth to locations around the world with this interactive broadband speed test from Ookla.'}
+        - const value5 = { title: 'Speed Test - Most Accurate Online Broadband Speed Test' , link: 'https://openspeedtest.com/Get-widget.php' , description: 'The best HTML5 Internet Speed Test. No Flash or Java needed ✅The Most Accurate Online Broadband Speed Test. Work on Any Web Browser. No Plugins ...'}
+        - const value6 = { title: 'Internet speed test - www.meter.net' , link: 'https://www.meter.net/' , description: 'Check the speed of your internet with a trusted speed test Meter.net. Bandwidth capacity over 30Gbps.'}
+        - const value7 = { title: 'Xfinity Speed Test' , link: 'speedtest.xfinity.com/' , description: 'Xfinity Speed Test tests your Internet connection speed.'}
+        - const value8 = { title: 'Internet Speed Test | Check Your Internet Speed | CenturyLink' , link: 'https://www.centurylink.com/home/help/.../internet-speed-test.html' , description: 'We all know how frustrating a slow internet connection can be. With CenturyLinks free internet speed test, you can see how fast your upload and download ...'}
+        - const value9 = { title: 'Speed Test - HighSpeedInternet.com' , link: 'https://www.highspeedinternet.com/tools/speed-test' , description: 'Is your internet fast enough? Test internet connection speed at your location with a single click.'}
+        - const value10 = { title: 'MyBroadband Speed Test' , link: 'speedtest.mybroadband.co.za/' , description: 'Test your Internet connection bandwidth and latency to servers in Johannesburg and Cape Town on the MyBroadband Speed Test.'}
+
+        - var array = { value1,value2,value3,value4,value5,value6,value7,value8,value9,value10 }
+        each n,i in array
+            +result-content(n)
+
+        .result-main__result-content__result-related
+            p Các tìm kiếm liên quan đến test
+            .related-content
+                .related-content__left
+                    ul
+                        li
+                            a(href="#") test speed wifi
+                        li
+                            a(href="#") speed test online
+                        li
+                            a(href="#") test tốc độ mạng
+                        li
+                            a(href="#") speed test google
+                .related-content__right
+                    ul
+                        li
+                            a(href="#") speedtest online
+                        li
+                            a(href="#") test speed viettel
+                        li
+                            a(href="#") test wifi
+                        li
+                            a(href="#") download test
+        .result-main__result-content__pagination
+            img.img-pagination(src="https://cdn.shopify.com/s/files/1/0070/7032/files/googlepages.jpg?v=1503323070")

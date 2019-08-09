@@ -1,0 +1,22 @@
+.google-header{
+    width: 100%;
+    position: relative;
+    .google-header__item {
+        position: absolute;
+        right: 25px;
+        top: 20px;
+        @include flexbox();
+        .item {
+            margin-left: 15px;
+            span {
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+        .acc-avatar {
+            border-radius: 50%;
+            width:30px;
+        }
+    }
+}
