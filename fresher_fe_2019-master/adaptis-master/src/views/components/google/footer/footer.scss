@@ -1,0 +1,35 @@
+.footer{
+    margin-top: 6rem;
+  
+    .footer__country{
+      padding: 1rem 0 1rem 4rem;
+      background-color: rgb(243, 243, 243);
+      border: 1px solid rgb(214, 214, 214);
+      color: rgb(112, 112, 112);
+    }
+  
+    .footer__infor{
+      padding: 1rem 0 1rem 2rem;
+      background-color: rgb(243, 243, 243);
+      border: 1px solid rgb(214, 214, 214);
+      color: rgb(112, 112, 112);
+      display: flex;
+      justify-content: space-between;
+  
+      .footer-nav__list{
+        display: flex;
+  
+        .footer-nav__item{
+          padding: 0 2rem;
+  
+          .footer-nav__link{
+            color: rgb(112, 112, 112);
+  
+            &:hover{
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }

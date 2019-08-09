@@ -1,0 +1,17 @@
+extends ../layouts/master.pug
+
+block title
+    title google result
+
+block content
+    include ../mixins/list.pug
+    include ../components/googleResult/header/header.pug
+    include ../components/googleResult/content/content.pug
+    include ../components/googleResult/footer/footer.pug
+
+block scripts
+    script(src="https://kit.fontawesome.com/a076d05399.js")
+
+
+
+

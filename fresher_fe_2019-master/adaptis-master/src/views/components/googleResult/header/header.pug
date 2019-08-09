@@ -1,0 +1,21 @@
+.google-header
+    .google-header__function
+        div.search-brand
+            div.google-header__brand
+                img.google-header__logo(src="../../assets/images/google-result/google-result-logo.png", alt="logo")
+            form.google-header__form(action="#", method="get")
+                input.google-header__inp(type="text", name="", value="test")
+                .google-header__icon
+                    span.icon__keyboard(class="fas fa-keyboard")
+                    img.icon__voice(src="../../assets/images/voice-icon.png", alt="voice")
+                button.google-header__btn(type="submit") Tìm kiếm
+        div.menu-ava
+            div.google-header__th(class="fas fa-th")
+            img.google-header__ava(src="../../assets/images/google-result/ava.jpg", alt="ava")
+    .google-header__nav
+        - var nav_list_1 = ['Tất cả', 'Hình ảnh', 'Video', 'Tin tức', 'Thêm']
+        - var nav_list_2 = ['Cài đặt', 'Công cụ']
+        +google-header-nav('', 'header-nav__list', nav_list_1, 'fab fa-youtube')
+        +google-header-nav('', 'header-nav__list', nav_list_2)
+
+    .google-header__notice Khoảng 5.810.000.000 kết quả (0,36 giây)

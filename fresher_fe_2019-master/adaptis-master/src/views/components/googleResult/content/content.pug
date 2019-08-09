@@ -1,0 +1,26 @@
+.google-content
+    .google-content__block-result
+        - var i = 0
+        - var title = ['Speedtest by Ookla - The Global Broadband Speed Test', 'Fast.com: Internet Speed Test', 'Speed Test - Telstra', 'Test Your Internet Speed - Spectrum', 'Speed Test - Most Accurate Online Broadband Speed Test', 'Internet speed test - www.meter.net', 'Xfinity Speed Test', 'Speed Test - Broadband Internet Speedtest - speedtest.net.in', 'Internet Speed Test | Check Your Internet Speed | CenturyLink', 'Speed Test - HighSpeedInternet.com']
+        - var link = ['https://www.speedtest.net/', 'https://fast.com/', 'https://speedtest.telstra.com/', 'https://www.spectrum.com/internet/speed-test.html', 'https://openspeedtest.com/Get-widget.php', 'https://www.meter.net/', 'speedtest.xfinity.com/', 'speedtest.net.in/', 'https://www.centurylink.com/home/help/.../internet-speed-test.html', 'https://www.highspeedinternet.com/tools/speed-test']
+        - var content = ['Test your Internet connection bandwidth to locations around the world with this interactive broadband speed test from Ookla.', "How fast is your download speed? In seconds, FAST.com's simple Internet speed test will estimate your ISP speed.", 'Measure your connection speed for your Telstra nbn™, ADSL, Cable or mobile data service.', 'Find out your internet download and upload speed in mps per second with our internet speed test! Get lightning fast internet speeds starting at 100 mps with ...', 'The best HTML5 Internet Speed Test. No Flash or Java needed ✅The Most Accurate Online Broadband Speed Test. Work on Any Web Browser. No Plugins ...', 'Check the speed of your internet with a trusted speed test Meter.net. Bandwidth capacity over 30Gbps.', 'Xfinity Speed Test tests your Internet connection speed.', 'Speed Test - check your Internet connection speed using the most accurate and popular tool in India. Check which ISP provides the best mobile or desktop ...', "We all know how frustrating a slow internet connection can be. With CenturyLink's free internet speed test, you can see how fast your upload and download ...", 'Is your internet fast enough? Test internet connection speed at your location with a single click.']
+        while i < 10
+            +block-result(title, link, 'Dịch trang này', content)
+            - i++
+    .google-content__block-related-result
+        h2.related-result__title Các tìm kiếm liên quan đến test
+
+        .related-result__small-block
+            - var item1 = ['test speed wifi', 'test speed wifi', 'test speed wifi', 'test speed wifi']
+            - var item2 = ['speedfast online', 'speedfast online', 'speedfast online', 'speedfast online']
+            +block-related-result(item1)
+            +block-related-result(item2)
+
+
+    .google-content__block-pagination
+        table.google-content__table
+            - var tr1 = ['G', 'o', 'o', 'o', 'o', 'o', 'o', 'o', 'o', 'o', 'o', 'g', 'l', 'e',' ' ,'>']
+            - var tr2 = ['', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, '', '', '',' ' ,'Tiếp']
+
+            +table-tr(tr1)
+            +table-tr(tr2)

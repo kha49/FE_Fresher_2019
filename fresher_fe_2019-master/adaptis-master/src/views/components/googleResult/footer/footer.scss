@@ -1,0 +1,75 @@
+@import '../mixin.scss';
+
+.google-footer{
+
+    &__place{
+        color: $primary-color;
+        @include bgFooter();
+
+        
+        .fooer-nav__list{
+            @include nav-list();
+            padding: 12px 0;
+            align-items: center;
+        }
+    
+        .footer-nav__item{
+            font-size: 15px;
+
+            &:first-child{
+                padding-right: 12px;
+                padding-left: 11px;
+                border-right: 1px solid rgb(199, 199, 199);
+            }
+
+            &:nth-child(2){
+                padding-left: 12px;
+                padding-right: 1px;
+                font-size: 10px;
+                @include color(rgb(168, 168, 168));
+            }
+
+            &:nth-child(3){
+                font-weight: 900;
+                color: black;
+                padding: 0 2px;
+
+            }
+
+            &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(8), &:last-child(){
+                padding: 0 2px;
+
+                .footer-nav__link{
+                    &:hover{
+                        color: black;
+                    }
+                }
+            }
+        }
+    
+        .footer-nav__link{
+            @include nav-link();
+        }
+    }
+
+
+
+    &__nav{
+        @include bgFooter();
+
+
+        .footer-nav__list{
+            @include nav-list();
+        }
+
+        .footer-nav__item{
+            @include nav-item();
+            padding-top: 14px;
+            padding-bottom: 14px
+        }
+
+        .footer-nav__link{
+            @include nav-link();
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.google-footer
+    .google-footer__place
+        div.fooer-nav__list
+            span.footer-nav__item Việt Nam
+            span.footer-nav__item(class="fas fa-circle")
+            span.footer-nav__item Mỹ Đình, Hà Nội
+            span.footer-nav__item -
+            span.footer-nav__item Từ địa chỉ Internet của bạn
+            span.footer-nav__item -
+            span.footer-nav__item
+                a.footer-nav__link(href="#") Sử dụng vị trí chính xác
+            span.footer-nav__item -
+            span.footer-nav__item
+                a.footer-nav__link(href="#") Tìm hiểu thêm
+
+    .google-footer__nav
+        - var footer_nav_2 = ['Trợ giúp', 'Gửi phản hồi', 'Bảo mật', 'Điều khoản']
+        +google-footer-nav('', 'footer-nav__list', footer_nav_2)

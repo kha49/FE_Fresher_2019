@@ -1,0 +1,40 @@
+$primary-color: gray;
+$second-color: blue;
+$bg: white;
+
+@mixin border($size, $borderColor, $borderRadius) {
+    border: $size solid $borderColor;
+    border-radius: $borderRadius;
+}
+
+@mixin cursor($cursorType) {
+    cursor: $cursorType;
+}
+
+@mixin color($textColor) {
+    color: $textColor;
+}
+
+@mixin background ($backgroundColor) {
+    background-color: $backgroundColor;
+}
+
+@mixin nav-list() {
+    display: flex;
+    margin-left: 155px;
+}
+
+@mixin nav-item(){
+    padding: 16px 12px 12px;
+}
+
+@mixin nav-link() {
+    font-size: 15px;
+    @include color($primary-color);
+}
+
+@mixin bgFooter() {
+    background-color: rgb(241, 241, 241);
+    @include border(1px, rgb(230, 230, 230), 0);
+}
+

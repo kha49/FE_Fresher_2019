@@ -1,6 +1,41 @@
 //- src/views/mixins/list.pug
 
-mixin list(id, ...items)
-  ul(id=id)
+//- mixin của header nav
+mixin google-header-nav(id, className, items, classIcon)
+  ul(class= className id= id)
     each item in items
-      li= item
+      li.header-nav__item
+        span.header-nav__icon(class= classIcon)
+        a.header-nav__link(href="#")= item
+
+
+mixin google-footer-nav(id, className, items)
+  ul(class= className id= id)
+    each item in items
+      li.footer-nav__item
+        a.footer-nav__link(href="#")= item
+
+
+mixin block-result(title, link, translate, description)
+  .block-result-small
+    h3.google-content__result-title
+      a.title-link(href="#")= title[i]
+    div
+      span.google-content__result-link= link[i]
+      a.google-content__result-translate(href="#")= translate
+    p.google-content__result-description= description[i]
+
+
+mixin block-related-result(items)
+  ul.related-result__list
+    each item in items
+      li.related-result__item
+        a.related-result__link(href="#")= item
+
+mixin table-tr(items)
+  tr.google-content__row
+    each item in items
+      td.col
+        a.link(href="#")= item
+  
+  
