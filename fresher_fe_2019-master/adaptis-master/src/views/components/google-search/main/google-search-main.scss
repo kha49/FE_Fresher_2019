@@ -1,0 +1,73 @@
+.google-search-main{
+  width: 1200px;
+  margin: 0 auto;
+  &__index{
+    padding: 5px;
+  }
+  &__content{
+    width: 700px;
+    &--sub1{
+      display: block;
+      width: 100%;
+      font-size: 20px;
+      color: #640DAB;
+    }
+    p{
+      display: inline-block;
+      font-size: 15px;
+      color: green;
+    }
+  }
+  &__content-box{
+    p{
+      display: block;
+      width: 100%;
+      color: gray;
+    }
+    a{
+      font-size: 14px;
+      color: #640DAB;
+    }
+  }
+  &__block{
+    display: block;
+    margin: 20px 5px;
+  }
+  &__title{
+    width: 100%;
+    font-size: 25px;
+  }
+  &__lienquan{
+    display: block;
+    &--list{
+      display: flex;
+      ul{
+        padding: 5px 25px 25px 0;
+        li{
+          a{
+            color: blue;
+          }
+        }
+      }
+    }
+  }
+  &__pagination{
+    display: block;
+    width: 100%;
+    margin: 30px auto;
+    padding: 5px;
+    ul{
+      li{
+        padding: 3px;
+        float: left;
+      }
+    }
+  }
+}
+.title{
+  font-size: 30px;
+}
+.title-mini{
+  font-size: 13px;
+  color: gray;
+}

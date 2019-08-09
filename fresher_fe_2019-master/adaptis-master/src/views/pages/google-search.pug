@@ -1,0 +1,10 @@
+extends ../layouts/master.pug
+
+block title
+  title My Page - Index
+
+block content
+  include ../mixins/list.pug
+  include ../components/google-search/header/google-search-head.pug
+  include ../components/google-search/main/google-search-main.pug
+  include ../components/google-search/footer/google-search-footer.pug

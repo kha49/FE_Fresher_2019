@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.google-header {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: block;
+  &__content {
+    display: flex;
+    float: right;
+    padding: 15px;
+    img {
+      width: 50px;
+      border-radius: 999px;
+      margin-left: 20px;
+      margin-right: 35px;
+    }
+    p {
+      padding: 15px 10px 0 15px;
+    }
+    i {
+      font-size: 25px;
+    }
+  }
+}

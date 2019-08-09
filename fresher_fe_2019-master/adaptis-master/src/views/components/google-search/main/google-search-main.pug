@@ -1,0 +1,23 @@
+div.google-search-main
+	div.google-search-main__index
+		p.title.title-mini Khoảng 7.540.000.000 kết quả (0,50 giây)
+	div.google-search-main__content
+		- var title = ['Speedtest by Ookla - The Global Broadband Speed Test', 'Fast.com: Internet Speed Test', 'Speed Test - Telstra', 'Test Your Internet Speed - Spectrum', 'Internet speed test - www.meter.net', 'Speed Test - Most Accurate Online Broadband Speed Test', 'Xfinity Speed Test', 'Speed Test - Broadband Internet Speedtest - speedtest.net.in', 'Internet Speed Test | Check Your Internet Speed | CenturyLink']
+		- var link = ['https://www.speedtest.net/', 'https://fast.com/', 'https://speedtest.telstra.com/', 'https://www.spectrum.com/internet/speed-test.html', 'https://www.meter.net/', 'https://openspeedtest.com/Get-widget.php', 'speedtest.xfinity.com/', 'speedtest.net.in/', 'https://www.centurylink.com/home/help/.../internet-speed-test.html']
+		- var content = ['Test your Internet connection bandwidth to locations around the world with this interactive broadband speed test from Ookla.', "How fast is your download speed? In seconds, FAST.com's simple Internet speed test will estimate your ISP speed.", 'Measure your connection speed for your Telstra nbn™, ADSL, Cable or mobile data service.', "Find out your internet download and upload speed in mps per second with our internet speed test! Get lightning fast internet speeds starting at 100 mps with ...", 'Check the speed of your internet with a trusted speed test Meter.net. Bandwidth capacity over 30Gbps.', 'The best HTML5 Internet Speed Test. No Flash or Java needed ✅The Most Accurate Online Broadband Speed Test. Work on Any Web Browser. No Plugins ...', 'Xfinity Speed Test tests your Internet connection speed.', 'Speed Test - check your Internet connection speed using the most accurate and popular tool in India. Check which ISP provides the best mobile or desktop ...']
+		- var tag = ['‎Apps · ‎Settings · ‎Desktop apps · ‎Google Chrome']
+		- var classes = ['google-search-main__content--sub1']
+		
+		- var i = 0
+		while i < 9
+			+google_content(title, link, 'dịch trang này', content, tag, classes)
+			- ++i
+	div.google-search-main__lienquan
+		h4 Các tìm kiếm liên quan
+		div.google-search-main__lienquan--list
+			- var content1 = ['test speed wifi','download test', 'download test', 'download test']
+			- var content2 = ['test speed wifi', 'download test', 'download test', 'download test']
+				+list_link(content1)
+				+list_link(content2)
+	div.google-search-main__pagination
+		+pagination

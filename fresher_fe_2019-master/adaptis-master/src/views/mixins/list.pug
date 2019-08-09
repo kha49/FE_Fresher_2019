@@ -4,3 +4,41 @@ mixin list(id, ...items)
   ul(id=id)
     each item in items
       li= item
+
+
+mixin slidebar(id, classes, items, icons=0)
+  ul(id = id class=classes)
+    - var n = 0
+    each item in items
+      li
+        while n < icons.lenght
+        i(class= icons[n])
+        - ++n
+        a(href="#")=item
+          
+            
+    
+mixin google_content(title, link, describe, content, tag, classes)
+  div.google-search-main__block
+    div.google-search-main__title
+      a(href="#" class=classes[0])=title[i]
+      p=link[i]
+      a(href="#")=describe
+    div.google-search-main__content-box
+      p=content[i]
+      a(href="")=tag[i]
+      
+    
+mixin list_link(content)
+  ul
+    each val in content
+      li
+        a=val
+
+mixin pagination()
+  ul
+    each val in [1,2,3,4,5,6,7,8,9,10]
+      li
+        a(href="#", title="title")=val 
+      
+    

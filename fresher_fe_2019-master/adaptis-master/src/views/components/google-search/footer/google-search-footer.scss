@@ -1,0 +1,27 @@
+.google-search-footer {
+  width: 100%;
+  background: #F2F2F2;
+  &__location {
+    display: block;
+    width: 1200px;
+    margin: 0 auto;
+    &--contry{
+      width: 100%;
+      display: flex;
+      p{
+        padding: 10px 5px;
+        font-size: 15px;
+      }
+    }
+    &--rule{
+      width: 100%;
+      ul{
+        display: flex;
+        li{
+          padding: 5px 20px 5px 5px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
