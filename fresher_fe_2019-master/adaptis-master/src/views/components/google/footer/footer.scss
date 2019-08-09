@@ -1,0 +1,36 @@
+.footer{
+    .footer-line1{
+        background-color: #F2F2F2;
+        height:40px;
+        border: 1px solid #e4e4e4;
+        &__span-vn{
+            margin-left: 170px;
+            font-size: 16px;
+            color:#585858;
+            padding-top: 8px;
+        }
+        &__span-hn{
+            margin-left: 30px;
+            font-size: 15px;
+            color:#585858;
+        }
+    }
+    .footer-line2{        
+        background-color:#F2F2F2;
+        height:40px;
+        #a-help{
+            margin-left:170px;
+            
+        }
+        a{
+            
+            color:#585858;
+            margin-right:20px;
+            font-size: 15px;
+            text-align: justify;
+            top:3px;
+            padding-top: 5px;
+        }
+
+    }
+}

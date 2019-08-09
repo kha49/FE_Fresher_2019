@@ -1,0 +1,140 @@
+.container-content{
+    &__title{
+        font-size: 14px;
+        margin-left: 180px;
+        color:#848484;
+    }
+    &__results{
+        margin-left: 180px;
+        margin-top: 12px;
+        .a-first{
+            font-size: 19px;
+            color:#1a0dab;
+            display: inline-block;
+            &:hover{
+                text-decoration:underline
+            }
+        }
+        .a-second{
+            display: block;
+            font-size: 14px;
+            color:#006621;
+
+        }
+        .span-text{
+            display: inline-block;
+            font-size: 13px;
+            color:#6E6E6E;
+        }
+    }
+    &__dropdown{
+        border: 1px solid #ccc;
+        border-radius: 9px;
+        width: 750px;
+        height: 200px;
+        margin-left:160px;
+        margin-top: 20px;
+        .dropdown-wrapper
+            span{
+                font-size:22px;
+                color:#848484;
+                margin-left: 20px;
+            }
+            .dropdown-content{
+                width:100%;
+                button{
+                    position:relative;
+                    width: 100%;
+                    background: white;
+                    border-top:1px solid #ccc;
+                    text-align: left;
+                    font-size: 18px;
+                    color:#2E2E2E;
+                    span{
+                        position:absolute;
+                        right:13px;
+                        top:5px;
+                    }
+                }
+            }
+            .dropdown-content2{
+               @extend .dropdown-content
+            }
+            .dropdown-content3{
+                @extend .dropdown-content
+            }
+            .dropdown-content4{
+                @extend .dropdown-content
+            }
+           
+
+    }
+    .dropdown-footer{
+        span{
+            float:right;
+            font-size: 14px;
+            margin-top: 10px;
+            color:#6E6E6E;
+        }
+    }
+    .content-category{
+        margin-top:50px;
+        span{
+            font-size: 18px;
+            margin-left: 200px;
+            margin-top: 100px;
+            color:#151515;
+        }
+        .line1{
+            margin-left:200px;
+            margin-top:20px;
+            .a-1{
+                color:#1a0dab;
+            }
+            .a-2{
+                color:#1a0dab;
+                margin-left:22px;
+            }
+        }
+        .line2{
+            margin-left:200px;
+            .a-3{
+                color:#1a0dab;
+
+            }
+            .a-4{
+                color:#1a0dab;
+                margin-left:20px;
+            }
+        }
+        .line3{
+            margin-left:200px;
+            .a-5{
+                color:#1a0dab;
+
+            }
+            .a-6{
+                color:#1a0dab;
+                margin-left:20px;
+            }
+        }
+    }
+    .content-pages{
+        img{
+            margin-left:350px;
+        }
+        &__index{
+            margin-left: 400px;
+            a{
+                margin-right:8px;
+               color:#01A9DB;
+               #a-next{
+                   marin-left:30px;
+               }
+            }
+            
+        }
+    }
+
+
+}

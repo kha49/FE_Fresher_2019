@@ -1,0 +1,193 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.header-google {
+  position: relative;
+  width: 100%;
+  height: 135px;
+  .form-logo {
+    width: 92px;
+    height: 30px;
+    .img-logo-google {
+      width: 92px;
+      height: 30px;
+      alt: Google;
+      margin-left: 20px;
+      margin-top: 30px;
+    }
+  }
+  .form-search {
+    position: absolute;
+    width: 630px;
+    height: 45px;
+    margin-left: 150px;
+    top: 20px;
+
+    .img-voice {
+      position: absolute;
+      width: 15px;
+      height: 22px;
+      background-size: 15px;
+      top: 10px;
+      right: 100px;
+    }
+    .btn {
+      width: 100px;
+      height: 100%;
+      position: absolute;
+      color: #1a73e8;
+      top: 0.5px;
+      right: 0px;
+      border-radius: 20px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      display: inline-block;
+      &:hover {
+        background-color: #e8f0fe;
+      }
+    }
+    input[type="text"] {
+      border-radius: 30px;
+      outline: 0px;
+      width: 100%;
+      height: 100%;
+      border: 1px solid #ccc;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .form-gmail {
+    position: absolute;
+    float: right;
+    top: 20px;
+    right: 20px;
+  }
+  .header-content {
+    $margin-left-a: 20px;
+    position: absolute;
+    top: 125px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    &__div-all {
+      position: absolute;
+      bottom: 8px;
+      img {
+        width: 15px;
+        height: 15px;
+        margin-left: 170px;
+        margin-bottom: 3px;
+        color: #848484;
+      }
+      
+    }
+    .a-all {
+        margin-left: 5px;
+        font-size: 14px;
+        color: #848484;
+        &:hover {
+            color: blue;
+        }
+      }
+    &__div-images {
+      position: absolute;
+      bottom: 8px;
+      img {
+        width: 15px;
+        height: 15px;
+        margin-left: 232px;
+        margin-bottom: 0px;
+        margin-right: 3px;
+        margin-top: 0px;
+        color: #848484;
+      }
+      .a-images {
+        margin-left: 5px;
+        font-size: 13px;
+        color: #848484;
+        &:hover {
+          color: #1a73e8;
+        }
+      }
+    }
+    &__div-news {
+      position: absolute;
+      bottom: 8px;
+      img {
+        width: 15px;
+        height: 15px;
+        margin-left: 325px;
+        margin-top: 0px;
+        margin-right: 5px;
+        color: #848484;
+      }
+      .a-news {
+        font-size: 13px;
+        color: #848484;
+      }
+    }
+    &__div-videos {
+      position: absolute;
+      bottom: 8px;
+      img {
+        width: 13px;
+        height: 13px;
+        margin-left: 399px;
+        margin-top: 0px;
+        margin-right: 5px;
+        color: #848484;
+      }
+      .a-videos {
+        font-size: 13px;
+        color: #848484;
+      }
+    }
+    &__div-more {
+      position: absolute;
+      bottom: 8px;
+      img {
+        width: 12px;
+        height: 12px;
+        margin-left: 480px;
+        margin-top: 0px;
+        margin-right: 5px;
+        color: #848484;
+      }
+      .a-more {
+        font-size: 13px;
+        color: #848484;
+        &:hover {
+          color: #1a73e8;
+        }
+      }
+    }
+    &__div-settings {
+      position: absolute;
+      bottom: 8px;
+      .a-setting {
+        font-size: 14px;
+        margin-left: 658px;
+        color: #848484;
+      }
+    }
+    &__div-button {
+      position: absolute;
+      bottom: 8px;
+      button {
+        margin-left: 720px;
+        text-align: center;
+        font-size: 14px;
+        border: none;
+        background-color: white;
+        color: #848484;
+        :hover {
+          background-color: #1a73e8;
+        }
+      }
+    }
+  }
+}

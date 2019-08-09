@@ -40,25 +40,27 @@ html(lang='jp')
     //- Fonts
     //- link(href="https://fonts.googleapis.com/css?family=Quicksand", rel='stylesheet')
 
+  link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css")
+  
 
-
-    //- Title
-    block title
-      title Your project!
+  //- Title
+  block title
+    title Your project!
 
   body
     //- header
-    include ../components/header/header.pug
+    //- include ../components/header/header.pug
 
     //- block content
     block content
 
-    include ../components/footer/footer.pug
+    //- include ../components/footer/footer.pug
 
     //- block scripts
     block scripts
 
+    //- script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js")
     script(id="ze-snippet", src="https://static.zdassets.com/ekr/snippet.js?key=a0d065e1-295a-4de9-89f4-106bb253506a" defer)
     script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDo8ICXyf-BwI1tBv-PJxvHgm-0wUbTLAY&libraries=places" defer)
     script(src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js" defer)
-    
+
