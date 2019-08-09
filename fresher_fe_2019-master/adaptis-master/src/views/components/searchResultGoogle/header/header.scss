@@ -1,0 +1,161 @@
+@mixin scale($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin display($display, $justify-content) {
+    display: $display;
+    justify-content: $justify-content;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.search-result-google-header {
+    @include display(flex, space-between);
+    .search-result-google-header-brand-input {
+        @include display(flex, flex-start);
+        .search-result-google-brand {
+            top: 4px;
+            padding: 8px 28px 0 20px;
+            a {
+                img {
+                    @include scale(92px, auto);
+                }
+            }
+        }
+        .search-result-google-input {
+            @include display(flex, flex-start);
+            @include scale(638px, 44px);
+            height: 44px;
+            border: solid 1px #dfe1e5;
+            border-radius: 24px;
+            &:hover {
+                box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+            }
+            .search-result-google-input-type {
+                padding: 10px 0 0 20px;
+                input {
+                    width: 494px;
+                    border: solid 1px #fff;
+                }
+            }
+            .search-result-google-keyboard-icon {
+                padding: 9px 0px 0 0;
+                a {
+                    img {
+                        @include scale(24px, 24px);
+                        opacity: .55;
+                    }
+                }
+            }
+            .search-result-google-search {
+                margin: 5px 0px;
+                padding: 4px 13px 4px 13px;
+                border-radius: 24px;
+                @include scale(auto, 32px);
+                &:hover {
+                    background-color: #e8f0fe;
+                }
+                a {
+                    color: #1A73E8;             
+                }
+            }
+        }
+    }
+    .search-result-google-apps-login {
+        @include display(flex, flex-end);
+        padding: 10px 20px 0 0;
+        .search-result-google-apps {
+            margin: 0 20px 0 0;
+            a {
+                img {
+                    @include scale(24px, 24px);
+                    opacity: .55;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .search-result-google-login {
+            margin: 1px 0 0 0;
+            a {
+                background-color: #4387fd;
+                padding: 5px;
+                border-radius: 2px;
+                button {
+                    border: 0px;
+                    background-color: #4387fd;
+                    color: #fff;
+                    font-weight: bold;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+.google-navbar {
+    @include display(flex, flex-start);
+    border-bottom: solid 1px #efefef;
+    padding: 25px 0 0 157px;
+    div {
+        @include display(flex, flex-start);
+        padding: 0 5px 5px 5px;
+        div {
+            a {
+                color: #5f6368;
+            }
+        }
+        .google-icons {
+            padding: 3px 5px 0 0;
+            a {
+                img {
+                    @include scale(16px, auto);
+                    opacity: .55;
+                }
+                .search-result-google-images-icon {
+                    @include scale(14px, auto);
+                }
+                .search-result-google-more-icon {
+                    @include scale(6px, auto);
+                }
+            }   
+        }
+        &:hover {
+            div {
+                a {
+                    color: #1A73E8;
+                    img {
+                        color: #1A73E8;
+                    }
+                }
+            }
+            
+        }
+    }
+    .search-result-google-active {
+        // padding: 0 0 18px 0;
+        border-bottom: solid 3px #1A73E8;
+        div {
+            a {
+                img {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .search-result-google-tools {
+        &:hover {
+            div {
+                background-color: #f8f8f8;
+                border: 1px solid #c6c6c6;    
+                a {
+                    color: #5f6368;
+                }
+            }
+        }
+    }
+}
