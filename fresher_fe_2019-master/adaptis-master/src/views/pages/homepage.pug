@@ -9,39 +9,7 @@ block basicSeo
   meta(name='author' content='')
 
 block content
-    #google
-      .head
-        .content
-          p Gmail
-          p Hình ảnh
-          i.glyphicon.glyphicon-th
-          img(src="https://data.whicdn.com/images/121319747/original.jpg", alt="anh")
-      #main
-        img(src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png", alt="google")
-        div
-          i.glyphicon.glyphicon-search
-          input(type="text")
-        div
-          button(type="button") Tìm kiếm bằng google
-          button(type="button") xem trang đầu tiên tìm được
-        div
-          p Google có các thứ tiếng: English Français 中文（繁體）
-      #footer
-        div
-          p Việt Nam
-        div.left
-          a Doanh nghiệp
-          a Doanh nghiệp
-          a Doanh nghiệp
-          a Doanh nghiệp
-          a Doanh nghiệp
-        div.right
-          a Bảo mật
-          a Điều Khoản
-          a Cài đặt
-        
-    
-
-
-
-
+  include ../mixins/list.pug
+  include ../components/google/head/google__header.pug
+  include ../components/google/main/google__main.pug
+  include ../components/google/footer/google__footer.pug

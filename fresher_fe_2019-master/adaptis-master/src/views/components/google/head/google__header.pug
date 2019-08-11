@@ -1,0 +1,21 @@
+#google__head
+    .head-content-top
+        .head-content-top__img
+            img(src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png", alt="anh")
+        .head-content-top__left
+            input(type="text")
+            span Test
+            img.key(src="http://icons.iconarchive.com/icons/google/noto-emoji-objects/1024/62829-keyboard-icon.png")
+            img.voice(src="https://demotix.com/wp-content/uploads/2019/06/Google-Voice5.jpg", alt="ảnh")
+            button(type="submit" value="Tìm Kiếm") Tìm Kiếm
+        .head-content-top__right
+            i.glyphicon.glyphicon-th
+            img.mail(src="https://image.viettimes.vn/w800/Uploaded/2019/aohuooh/2019_03_16/chum_anh_chung_to_meo_bi_ngao_da_la_co_that_158278544_1632019.png", alt="")
+    .head-content-bottom
+        .head-content-bottom__menu
+            -var menus = ['Tìm kiếm', 'Hình ảnh', 'Video', 'Tin tức', 'Thêm'] 
+            -var icon = ['fas fa-search', 'far fa-image', 'fab fa-youtube', 'far fa-newspaper', 'fas fa-ellipsis-v'] 
+                +menu(menus, icon)
+            span
+                p Công cụ 
+                p Cài đặt

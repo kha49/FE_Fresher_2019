@@ -1,0 +1,35 @@
+mixin google-content
+    .google-content-left__content-search
+                h4 Speedtest by Ookla - The Global Broadband Speed Test
+                p https://www.speedtest.net
+                    i.fas.fa-caret-down
+                        a Dịch trang này
+                a Test your Internet connection bandwidth to locations around the world with this interactive broadband speed test from Ookla.
+                ul 
+                    li Apps
+                    li Settings
+                    li Destop
+                    li Google Chorme
+#google__main
+    .google-content
+        .google-content-left
+            .google-content-left__sub-search
+                p Khoảng 7.380.000.000 kết quả (0,35 giây) 
+            - var i = 0
+            while i < 5
+                +google-content
+                - ++i                
+            br
+            br
+            .google-content-left__bottom-search
+                p Các tìm kiếm liên quan đến test
+                br
+                a test speed wifi
+                a test speed wifi
+                a test speed wifi
+                a test speed wifi
+                br
+                img(src="https://cdn.shopify.com/s/files/1/0070/7032/files/googlepages.jpg?v=1503323070")
+        .google-content-right
+        
+        

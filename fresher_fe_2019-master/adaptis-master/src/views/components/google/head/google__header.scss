@@ -1,0 +1,130 @@
+#google__head{
+    height: 100px;
+    margin: 0;
+    width: 100%;
+    border-bottom: 1px solid #3333;
+    height: 140px; 
+    .head-content-top{
+      display: flex;  
+      &__img{
+        img{
+          width: 92px;  
+          height: 30px;  
+          margin: 30px; 
+          display: block;
+          overflow: hidden;
+          position: relative;
+        }
+    
+      }
+      &__left{
+        input{
+          margin: 0px;
+          position: absolute;
+          width: 565px;
+          height: 44px;
+          border-radius: 999px;
+          margin-top: 25px;
+          border: 1px solid rgba(51, 51, 51, .2);
+        }
+        span{
+          text-align: center;
+          left: 168px;
+          font-size: 16px;
+          position: absolute;
+          top: 36px;
+        }
+        img.key{
+          width: 38px;
+          height: 35px;
+          left: 532px;
+          top: 29px;
+          position: absolute;
+          padding: 5px 2px 2px 2px;
+        }
+        img.voice{
+          width: 39px;
+          height: 29px;
+          left: 580px;
+          top: 33px;
+          position: absolute;
+          padding: 5px 2px 2px 2px;
+        }
+        button{
+          color: #1A73E8;
+          background: transparent;
+          font-size: 10px;
+          text-align: center;
+          padding: 0 15px;
+          border-radius: 24px;
+          position: absolute;
+          left: 615px;
+          width: 97px;
+          height: 37px;
+          top: 29px;
+          font-style: arial;
+          font-size: 15px;
+          border: none;
+          line-height: 34px;
+          &:hover{
+            background: #d2f5f7; 
+          }
+        }
+      }
+      &__right{
+        display: block;
+        float: left;
+        i{
+          top: 17px;
+          padding: 20px;
+          width: 30px;
+          height: 32px;
+          right: 111px;
+          position: absolute;
+        }
+        img.mail{
+          border-radius: 1090px;
+          height: 32px;
+          top: 25px;
+          width: 34px;
+          position: absolute;
+          right: 52px;
+        }
+      }
+    }
+    .head-content-bottom{
+      &__menu{
+        width: 100%;
+        display: block;
+        margin-right: 50px;
+        ul{
+          margin-left: 150px; 
+          li{
+            float: left;
+            padding: 5px;
+            i{
+              margin-left: 5px; 
+              padding: 4px;
+            }
+            a{
+              font-family: "Roboto", sans-serif;
+              font-weight: 400;
+              font-size: 1.6rem;
+              line-height: inherit;
+              color: #003b59;
+              margin-right: 0px;
+            }
+          }
+        }
+        span{
+          position: absolute;
+          left:660px;
+          top: 85px;
+          p{
+            float: left;
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }

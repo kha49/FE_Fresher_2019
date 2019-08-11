@@ -4,3 +4,14 @@ mixin list(id, ...items)
   ul(id=id)
     each item in items
       li= item
+
+
+mixin menu(items, icon=0)
+  ul
+    - var n = 0
+    each item in items
+      li
+        while n < icon.lenght
+        i(class = icon[n])
+        - ++n
+        a(href="#", title="title")=item
