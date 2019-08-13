@@ -1,0 +1,63 @@
+.airbnb-content__booked-container
+    .airbnb-content__title
+        |Just booked in United States
+    .booked-container__booked-slider
+        - var bookedImg = [
+        - "../../../../../assets/images/airbnb/booked/booked-1.jpg",
+        - "../../../../../assets/images/airbnb/booked/booked-2.jpg",
+        - "../../../../../assets/images/airbnb/booked/booked-3.jpg",
+        - "../../../../../assets/images/airbnb/booked/booked-4.jpg"
+        - ]
+
+        - var bookedPlace = [
+        - "TREEHOUSE · ATLANTA",
+        - "TREEHOUSE · ATLANTA",
+        - "TREEHOUSE · ATLANTA",
+        - "TREEHOUSE · ATLANTA"
+        - ]
+
+        - var bookedName = [
+        - "Secluded Intown Treehouse",
+        - "Secluded Intown Treehouse",
+        - "Secluded Intown Treehouse",
+        - "Secluded Intown Treehouse"
+        - ]
+
+        - var bookedPrice = [
+        - "$375/night",
+        - "$375/night",
+        - "$375/night",
+        - "$375/night"
+        - ]
+
+        - var reviewStar= [
+        - 5,
+        - 5,
+        - 3,
+        - 3
+        - ]
+
+        - var reviewNumber = [
+        - 366,
+        - 355,
+        - 555,
+        - 999   
+        - ]
+
+        - var reviewStatus = [
+        - "Superhost",
+        - "Superhost",
+        - "Superhost",
+        - "Superhost"
+        - ]
+
+        - var bookedArray = [
+        - {img: bookedImg[0], place: bookedPlace[0], name: bookedName[0], price: bookedPrice[0], star: reviewStar[0], number: reviewNumber[0], status: reviewStatus[0]},
+        - {img: bookedImg[1], place: bookedPlace[1], name: bookedName[1], price: bookedPrice[1], star: reviewStar[1], number: reviewNumber[1], status: reviewStatus[1]},
+        - {img: bookedImg[2], place: bookedPlace[2], name: bookedName[2], price: bookedPrice[2], star: reviewStar[2], number: reviewNumber[2], status: reviewStatus[2]},
+        - {img: bookedImg[3], place: bookedPlace[3], name: bookedName[3], price: bookedPrice[3], star: reviewStar[3], number: reviewNumber[3], status: reviewStatus[3]}
+        - ]
+
+        each bookedObject in bookedArray
+            +bookedBlock(bookedObject.img, bookedObject.place, bookedObject.name, bookedObject.price, bookedObject.star, bookedObject.number, bookedObject.status)
+

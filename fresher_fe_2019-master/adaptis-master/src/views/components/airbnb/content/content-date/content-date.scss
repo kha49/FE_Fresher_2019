@@ -1,0 +1,35 @@
+.airbnb-content{
+
+    &__date-container{
+        padding: 3rem;
+
+        @include Responsive(LaptopDefault){
+            margin: 0 17.875rem;
+        }
+
+        @include Responsive(LaptopL){
+            margin: 0 22.5rem;
+        }
+
+        @include Responsive(LaptopXL){
+            margin: 0 92.5rem;
+        }
+    }
+
+    &__title{
+        padding: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    &__description{
+        @include SearchForm($fontFamily1, 16px, $colorSearch, 300);
+        margin-bottom: 1rem;
+    }
+}
+
+.btn-add{
+    @extend .btn-general;
+    background-color: #008489;
+    width: 15.83625rem;
+    margin: 0;
+}

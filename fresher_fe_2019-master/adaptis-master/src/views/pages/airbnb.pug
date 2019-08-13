@@ -1,0 +1,17 @@
+extends ../layouts/master.pug
+
+block favicon
+    link(rel='shortcut icon', href=require('../../assets/images/airbnb/favicon/airbnb-favicon.png'))
+
+block title
+    title Vacation Homes & Condo Rentals - Airbnb
+
+block content
+    include ../components/airbnb/mixins/mixin.pug
+    include ../components/airbnb/header/header.pug
+    include ../components/airbnb/content/content.pug
+    include ../components/airbnb/footer/footer.pug
+
+block scripts
+    script(src="https://kit.fontawesome.com/a076d05399.js")
+    

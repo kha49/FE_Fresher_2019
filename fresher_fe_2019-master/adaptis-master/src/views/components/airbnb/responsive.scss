@@ -1,0 +1,41 @@
+// Khai báo kích thước tương ứng với màn hình thiết bị
+   
+$MobileS: 320px;   
+$MobileM: 375px;  
+$MobileL: 425px;   
+$Tablet: 768px;
+$Laptop: 1024px;     
+$LaptopDefault: 1366px;     
+$LaptopL: 1440px;
+$LaptopXL: 2560px;     
+
+
+// media queries
+
+@mixin Responsive($screenType) {
+  @if $screenType == MobileS {
+   @media only screen and (min-width: $MobileS) { @content; } 
+  }
+  @else if $screenType == MobileM {
+   @media only screen and (min-width: $MobileM) { @content; } 
+  }
+  @else if $screenType == MobileL {
+   @media only screen and (min-width: $MobileL) { @content; } 
+  }
+  @else if $screenType == Tablet {
+   @media only screen and (min-width: $Tablet) { @content; } 
+  }
+  @else if $screenType == Laptop {
+    @media only screen and (min-width: $Laptop) { @content; } 
+  }
+  @else if $screenType == LaptopDefault {
+    @media only screen and (min-width: $LaptopDefault) { @content; } 
+  }
+  @else if $screenType == LaptopL {
+    @media only screen and (min-width: $LaptopL) { @content; } 
+  }
+  @else if $screenType == LaptopXL {
+    @media only screen and (min-width: $LaptopXL) { @content; } 
+  }
+   
+}

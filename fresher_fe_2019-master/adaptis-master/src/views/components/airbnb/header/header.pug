@@ -1,0 +1,38 @@
+header.airbnb-header
+    .airbnb-header__brand-block
+        .brand-block__logo-frame
+            img.brand-block__logo-img(src="../../assets/images/airbnb/brand/airbnb-logo.png", alt="logo")
+        h1.brand-block__title
+            |Find places to stay in United States on Airbnb
+    .airbnb-header__search-block
+        form.search-block__form(action="#", method="get")
+            h1.search-block__title
+                |Find places to stay in United States on Airbnb
+            p.search-block__desc
+                |Discover entire homes and private rooms perfect for any trip.
+            .seach-block__place
+                p.search-block__subtitle where
+                input.search-block__inp(type="text", name="", placeholder="Anywhere")
+            .search-block__date
+                - var checkArray = [
+                - {check: "check-in"},
+                - {check: "check-out"} 
+                - ]
+
+                each item in checkArray
+                    +dateCheck(item.check)
+                    
+            .search-block__people
+                - var number = ["jsjs", "mdkssd"]
+
+                - var peopleArray = [
+                - {age: "adult", numberPeople: ["1 adult", "2 adults", "3 adults", "4 adults", "5 adults", "6 adults", "7 adults",
+                - "8 adults", "9 adults", "10 adults", "11 adults", "12 adults", "13 adults", "14 adults",
+                - "15 adults", "16 adults"]},
+                - {age: "children", numberPeople: ["1 child", "2 children", "3 children", "4 children", "5 children"]}
+                - ]
+
+                each itemPeople in peopleArray 
+                    +selectNumber(itemPeople.age, itemPeople.numberPeople)
+               
+            button.btn-search(type="submit") Search

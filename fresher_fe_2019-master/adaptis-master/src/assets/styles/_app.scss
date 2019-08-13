@@ -13,3 +13,13 @@
 // Component
 @import '../../views/components/header/header';
 @import '../../views/components/footer/footer';
+
+// Airbnb
+@import '../../views/components/airbnb/mixins/mixin.scss';
+@import '../../views/components/airbnb/reset.scss';
+@import '../../views/components/airbnb/responsive.scss';
+@import '../../views/components/airbnb/header/header.scss';
+@import '../../views/components/airbnb/content/content.scss';
+@import '../../views/components/airbnb/footer/footer.scss';
+// @import '../../../node_modules/slick-carousel/slick/slick-theme.scss';
+@import '../../../node_modules/slick-carousel/slick/slick.scss';

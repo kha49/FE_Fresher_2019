@@ -1,0 +1,91 @@
+.airbnb-content{
+
+    &__booked-container{
+        padding: 3rem 2.5rem 0;
+
+        @include Responsive(LaptopDefault){
+            margin: 0 17.875rem;
+        }
+
+        @include Responsive(LaptopL){
+            margin: 0 22.5rem;
+        }
+
+        @include Responsive(LaptopXL){
+            margin: 0 92.5rem;
+        }
+    }
+}
+
+.booked-container{
+
+    &__booked-slider{
+        margin-top: 2rem;
+        display: flex;
+    }
+
+    &__booked-block{
+        width: 100%;
+        padding: 0 0.75rem;
+
+
+        @include Responsive(Tablet){
+            width: 50%;
+        }
+
+        @include Responsive(LaptopDefault){
+            width: 25%;
+        }
+    }
+}
+
+.booked-block{
+
+    &__info{
+        padding-top: 1.5rem;
+    }
+
+    &__frame{
+        overflow: hidden;
+        width: 100%;
+        height: 25rem;
+    }
+
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    &__place{
+        @include SearchForm($fontFamily1, 12px, $color-text-second, 700);
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+    }
+
+    &__name{
+        @include SearchForm($fontFamily1, 18px, $colorSearch, 500);
+        margin-bottom: 1rem;
+    }
+
+    &__price{
+        @include SearchForm($fontFamily1, 14px, $colorSearch, 4e00);
+        margin-bottom: 1rem;
+    }
+
+    &__review{
+        @include SearchForm($fontFamily1, 12px, $colorSearch, 4e00);
+        display: flex;
+    }
+}
+
+.review{
+
+    &__star{
+        color: $primary;
+        font-size: 10px;
+        margin-right: 0.25rem
+    }
+}
+

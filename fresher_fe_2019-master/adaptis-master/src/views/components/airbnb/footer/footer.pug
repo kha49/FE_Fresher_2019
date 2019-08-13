@@ -1,0 +1,33 @@
+footer.airbnb-footer
+    .airbnb-footer__category-container
+        - var categoryList1 =["Careers", "News", "Policies", "Help", "Diversity & belonging"]
+            +categoryList("Airbnb","",categoryList1,"")
+        
+        - var categoryList2 = ["Trust & Safety", "Crédit voyage",
+        - "Gift Cards", "Airbnb Citizen", "Business Travel",
+        - "Guidebooks", "Airbnbmag"]
+            +categoryList("Discover","",categoryList2,"")
+
+        - var categoryList3 = ["Why Host", "Hospitality",
+        - "Responsible Hosting", "Community Center", 
+        - "Host an Experience", "Open Homes"]
+            +categoryList("Hosting","",categoryList3,"New")
+
+        - var categoryList4 = ["Terms", "Privacy",
+        - "Site Map"]
+        - var classIcon = ["fab fa-facebook-f", "fab fa-twitter",
+        - "fab fa-instagram"]
+            +categoryList("", classIcon, categoryList4)
+
+    .airbnb-footer__license-block
+        .license-block__brand-footer
+            .brand-footer__frame
+                img.brand-footer__img(src="../../assets/images/airbnb/license/airbnb-logo-license.png", alt="logo-footer")
+            p.brand-footer__copyright
+                |© 2019 Airbnb, Inc. All rights reserved.
+        .license-block__money-footer
+            .money-footer__icon-down
+                i(class="fas fa-chevron-down")
+            .money-footer__money-type-frame
+                - var moneyType = ["USD"]
+                    +money(moneyType)

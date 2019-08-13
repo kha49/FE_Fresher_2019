@@ -1,0 +1,150 @@
+.airbnb-footer{
+    @include Responsive(Tablet){
+        padding: 6rem 3rem;
+    }
+
+    @include Responsive(LaptopDefault){
+        margin: 0 17.875rem;
+    }
+
+    @include Responsive(LaptopL){
+        margin: 0 22.5rem;
+    }
+
+    @include Responsive(LaptopXL){
+        margin: 0 92.5rem;
+    }
+
+    &__category-container{
+        display: none;
+
+        @include Responsive(Tablet){
+            display: flex;
+            margin-bottom: 4rem;
+            background-color: white;
+        }
+    }
+
+    @include Responsive(Tablet){
+        &__category-block{
+            padding: 0 1rem;
+            margin: 0 0 0 7.9rem;
+            width: 18.88888%;
+            
+            &:first-child{
+                margin: 0;
+            }
+        }
+    }
+
+    &__license-block{
+        display: flex;
+        padding: 3rem;
+
+        @include Responsive(Tablet){
+            padding: 0;
+        }
+    }
+}
+
+.category-block{
+    @include Responsive(Tablet){
+        &__title-link{
+            @include footer-text($fontFamily1, 14px, $colorSearch, 700);
+        }
+
+        &__icon-link{
+            @include footer-text($fontFamily1, 18px, $colorSearch, 700);
+            padding: 0 1rem;
+
+        }
+
+        &__list{
+            margin-top: 2rem;
+        }
+
+        &__item{
+            margin-bottom: 0.5rem;
+
+        }
+
+        &__link{
+            @include footer-text($fontFamily1, 14px, $color-text-second, 400);
+        }
+
+        &__status{
+            display: none;
+        }
+    }
+}
+
+.license-block{
+    &__brand-footer{
+        display: flex;
+        padding: 2.5rem 0;
+        align-items: center;
+
+        @include Responsive(MobileL){
+            padding: 1rem 0;
+        }
+    }
+
+    @include Responsive(MobileL){
+        &__money-footer{
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.brand-footer{
+
+    &__frame{
+        padding-right: 1rem;
+    }
+
+    &__img{
+        width: 2.625rem;
+    }
+
+    &__copyright{
+        @include footer-text($fontFamily1, 14px, $color-text-second, 400);
+        letter-spacing: normal;
+    }
+}
+
+.money-footer{
+
+    &__icon-down{
+        color: $color-text-second;
+        padding: 1rem;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    &__money-type-frame{
+        padding: 1rem;
+    }
+
+    &__money-type{
+        color: $colorSearch;
+        border: none;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+.airbnb-footer__category-block:nth-of-type(3){
+
+        .category-block__item:nth-child(5){
+
+            .category-block__status{            
+                display: inline;
+                padding: 0 0.5rem;
+                background-color: #006a70;
+                @include footer-text($fontFamily1, 12px, white, 700);
+            }
+        }     
+    }
+
+

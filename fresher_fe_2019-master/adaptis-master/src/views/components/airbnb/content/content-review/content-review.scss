@@ -1,0 +1,149 @@
+.airbnb-content{
+    &__review-container{
+        padding: 3rem 2.25rem 0;
+
+        @include Responsive(Tablet){
+            padding: 6rem 2rem 0;
+        }
+        @include Responsive(LaptopDefault){
+            margin: 0 17.875rem;
+        }
+        @include Responsive(LaptopL){
+            margin: 0 22.5rem;
+        }
+        @include Responsive(LaptopXL){
+            margin: 0 92.5rem;
+        }
+    }
+
+    &__title{
+        @include SearchForm($fontFamily1, 18px, $colorSearch, 700);
+        line-height: 3.25rem;
+        padding: 0 1rem;
+
+        @include Responsive(Tablet){
+            padding: 0 1.5rem;
+            font-size: 24px;
+        }
+    }
+}
+
+.review-container{
+    &__desc-block{
+        display: flex;
+        align-items: center;
+        padding: 2rem 1rem 3rem 1rem;
+    }
+
+    @include Responsive(Tablet){
+        padding: 2 1.5rem 3rem 1.5rem;
+    }
+
+    &__review-slider{
+        padding: 0 0.75rem;
+        display: flex;
+    }
+
+    &__review-block{
+        width: 100%;
+        padding: 0 1rem;
+        // height: 445px;
+        // padding-bottom: 3.75rem;
+
+    @include Responsive(Tablet){
+        width: 50%;
+    }
+    @include Responsive(LaptopDefault){
+        width: 33.33333%;
+    }
+    }
+}
+
+.desc-block{
+
+    &__icon-big-star{
+        margin-right: 1rem;
+    }
+
+    &__text-review{
+        @include SearchForm($fontFamily1, 16px, $colorSearch, 400);
+        line-height: 2.8rem;
+
+        &--bold{
+            font-weight: 700;
+        }
+    }
+}
+
+.review-block{
+
+    &__frame{
+        width: 100%;
+        // height: 22.66625rem;
+        height: 25rem;
+        overflow: hidden;
+
+        // @include Responsive(MobileM){
+        //     height: 
+        // }
+    }
+
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__icon-star{
+        color: $primary;
+        font-size: 15px;
+        margin: 2rem 0 0 0;
+    }
+
+    &__description{
+        margin: 1rem 4rem 2rem 0;
+        @include SearchForm($fontFamily1, 14px, $colorSearch, 400);
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        // white-space: nowrap; 
+    }
+
+    &__customer{
+        display: flex;
+        align-items: flex-start;
+    }
+}
+
+.icon-star{
+    padding: 0 0.5rem 0 0;
+}
+
+.customer{
+
+    &__frame{
+        width: 6rem;
+        height: 6rem;
+    }
+
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 10rem;
+    }
+
+    &__info{
+        margin-left: 2rem;
+    }
+
+    &__name{
+        @include SearchForm($fontFamily1, 16px, $colorSearch, 400);
+    }
+
+    &__country{
+        @include SearchForm($fontFamily1, 14px, $colorSearch, 400);
+
+    }
+}

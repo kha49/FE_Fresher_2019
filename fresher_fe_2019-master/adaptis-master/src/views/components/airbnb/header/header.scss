@@ -1,0 +1,219 @@
+body{
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.btn-general{
+    padding: 1.25rem 2.75rem;
+    background-color: gray;
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-top: 3rem;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 3px;
+    line-height: 3.5rem;
+    @include SearchForm($fontFamily1, 2rem, white, 800);
+}
+
+.btn-search{
+    @extend .btn-general;
+    background-color: #ff5a5f;
+}
+
+.airbnb-header{
+
+    @include Responsive(Tablet){
+        background-image: url(../images/airbnb/banner/banner.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        padding: 8rem 0 0 9.5rem;
+        position: relative;
+        min-height: 86.25rem;
+    }
+
+    @include Responsive(LaptopDefault){
+        padding: 8rem 0;
+    }
+
+    @include Responsive(LaptopL){
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &__brand-block{
+        background-image: linear-gradient(351.58deg, #00383E -0.02%, #17989A 50%, #1BABA8 80%),radial-gradient(228.77px at 31.86% 0%, #19A2A0 0%, rgba(0, 122, 135, 0.9) 100%);
+        padding: 2rem 3rem;
+
+        @include Responsive(Tablet){
+            background-image: none;
+            padding: 0;
+        }
+
+    }
+
+    &__search-block{
+        padding: 0 3rem;
+        background-color: $bg-white;
+
+        @include Responsive(Tablet){
+            padding: 0 3rem;
+            background: transparent;
+        }
+
+        @include Responsive(LaptopDefault){
+            margin-left: 17.875rem;
+            margin-right: 17.875rem;
+        }
+
+        @include Responsive(LaptopL){
+            margin-left: 22.5rem;
+            margin-right: 22.5rem;
+        }
+
+        @include Responsive(LaptopXL){
+            margin-left: 92.5rem;
+            margin-right: 92.5rem;
+        }
+    }
+}
+
+.brand-block{
+    &__logo-frame{
+        padding-bottom: 1.5rem;
+    }
+
+    &__logo-img{
+        width: 4rem;
+    }
+
+    &__title{
+        color: white;
+        margin: 0;
+        font-size: 26px;
+        font-family: $fontFamily1;
+        line-height: 3.75rem;
+        letter-spacing: normal;
+
+        @include Responsive(Tablet){
+            display: none;
+        }
+    }
+
+    @include Responsive(Tablet){
+
+        &__logo-frame{
+            padding: 0;
+            position: absolute;
+            left: 3rem;
+            top: 2rem;
+        }
+    }
+}
+
+.search-block{
+    &__title{
+        display: none;
+
+        @include Responsive(Tablet){
+            display: block;
+            color: $colorSearch;
+            font-size: 4rem;
+            font-family: $fontFamily1;
+            margin: 0;
+            line-height: 3.75rem;
+            letter-spacing: normal;
+        }
+    }
+
+    &__desc{
+        display: none;
+
+        @include Responsive(Tablet){
+            display: block;
+            color: $colorSearch;
+            font-family: $fontFamily1;
+            font-size: 2.25rem;
+            margin: 1rem 0;
+            font-weight: lighter;
+            letter-spacing: normal;
+            line-height: 3.75rem;
+        }
+    }
+
+    &__subtitle{
+        text-transform: uppercase;
+        margin: 3.5rem 0 1rem;
+        @include SearchForm($fontFamily1, 1.5rem, $colorSearch, 700);
+    
+    }
+
+    &__inp{
+        padding: 1.375rem;
+        width: 100%;
+        line-height: 3rem;
+        @include SearchForm($fontFamily1, 2rem, $colorSearch, 600);
+        @include borderInp(rgb(233, 233, 233), 3px, 3px, 3px, 3px);
+
+        &::placeholder{
+            @include SearchForm($fontFamily1, 2rem, $colorSearch, 600);
+        }
+    }
+
+    &__date, &__people{
+        display: flex;
+    }
+
+    @include Responsive(Tablet){
+        &__form{
+            padding: 4rem;
+            background-color: white;
+            width: 63.5rem;
+        }
+    }
+}
+
+.date-check{
+    width: 50%;
+
+    &:first-child{
+        .search-block__inp-date{
+            @extend .search-block__inp;
+            padding: 1.25rem;
+            font-size: 1.5rem;
+            border-radius: 3px 0 0 3px;
+        }
+    }
+
+    &:last-child{
+        .search-block__inp-date{
+            @extend .search-block__inp;
+            padding: 1.25rem;
+            font-size: 1.5rem;
+            border-radius: 0 3px 3px 0;
+        }
+    }
+}
+
+.people-number{
+    @extend .date-check;
+
+    &:first-child{
+        .search-block__inp-select{
+            @extend .search-block__inp-date;
+            font-weight: lighter;
+            font-size: 2.2rem;
+
+        }
+    }
+
+    &:last-child{
+        .search-block__inp-select{
+            @extend .search-block__inp-date;
+            font-weight: lighter;
+            font-size: 2.2rem;
+        }
+    }
+}
+

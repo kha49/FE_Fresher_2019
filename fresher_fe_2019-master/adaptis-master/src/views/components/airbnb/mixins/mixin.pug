@@ -1,0 +1,74 @@
+//- select number people form search header
+mixin dateCheck(check)
+    .date-check
+        p.search-block__subtitle= check
+        input.search-block__inp-date(type="date", name="")
+
+mixin selectNumber(age, numberPeople)
+    .people-number
+        p.search-block__subtitle= age
+        select.search-block__inp-select(name="select")
+            each people in numberPeople
+                option(value="")= people
+
+mixin money(moneyType)
+    select.money-footer__money-type
+        each money in moneyType
+            option= money
+
+mixin categoryList(categoryTitle, categoryTitleIcon, categoryList, categoryStatus)
+    .airbnb-footer__category-block
+        .category-block__title
+            a.category-block__title-link(href="#")= categoryTitle
+            each classIcon in categoryTitleIcon
+                a.category-block__icon-link(href="#")
+                    i(class= classIcon)
+        ul.category-block__list   
+            each categoryLink in categoryList
+                li.category-block__item
+                    a.category-block__link(href="#")= categoryLink
+                    span.category-block__status= categoryStatus
+
+mixin reviewBlock(reviewImg, iconStar, reviewDescription, customerImg, customerName, customerCountry)
+    .review-container__review-block
+        .review-block__frame
+            img.review-block__img(src= reviewImg, alt="")
+        .review-block__icon-star
+            each icon in iconStar
+                span.icon-star
+                    i(class= icon)
+        .review-block__description= reviewDescription
+        .review-block__customer
+            .customer__frame
+                img.customer__img(src= customerImg, alt="")
+            .customer__info
+                .customer__name= customerName
+                .customer__country= customerCountry
+
+mixin featureBlock(dPath, strokePath, featureName, featureDescription)
+    .feature-container__feature-block
+        .feature-block__icon-feature
+            svg(style="height:40px;width:40px;display:block;overflow:visible" viewBox="0 0 24 24" fill="#60B6B5" fill-opacity="0" stroke="#60B6B5" stroke-width="1" focusable="false" aria-hidden="true" role="presentation" stroke-linecap="round" stroke-linejoin="round")
+                path(d= dPath stroke-linejoin= strokePath fill-rule="evenodd")
+        .feature-block__info
+            .feature-block__name= featureName
+            .feature-block__description= featureDescription
+
+mixin bookedBlock(bookedImg, bookedPlace, bookedName, bookedPrice, reviewStar,reviewNumber, reviewStatus)
+    .booked-container__booked-block
+        .booked-block__frame
+            img.booked-block__img(src= bookedImg, alt="")
+        .booked-block__info
+            .booked-block__place= bookedPlace
+            .booked-block__name= bookedName
+            .booked-block__price= bookedPrice
+            .booked-block__review
+                .booked-block__star-container
+                    - for(i=0; i< reviewStar; ++i){
+                        span.review__star
+                            i(class="fas fa-star")
+                    - }
+                span.review__number= reviewNumber
+                |.
+                span.review__status= reviewStatus
+

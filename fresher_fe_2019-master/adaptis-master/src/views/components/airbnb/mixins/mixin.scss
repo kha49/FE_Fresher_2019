@@ -1,0 +1,24 @@
+$fontFamily1: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+$colorSearch: #484848;
+$bg-white: white;
+$color-text-second: #767676;
+$primary: #46a2a6;
+
+@mixin SearchForm($family, $size, $color, $bold) {
+        font-family: $family;
+        font-size: $size;
+        color: $color;
+        font-weight: $bold;
+}
+
+@mixin borderInp($borderColor, $top-left, $top-right, $bottom-right, $bottom-left) {
+    border: 1px solid $borderColor;
+    border-radius: $top-left $top-right $bottom-right $bottom-left;
+}
+
+@mixin footer-text($family-footer, $size-footer, $color-footer, $bold-footer) {
+    font-family: $family-footer;
+    font-size: $size-footer;
+    color: $color-footer;
+    font-weight: $bold-footer;
+}
