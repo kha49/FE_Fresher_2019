@@ -10,7 +10,14 @@
     padding: 48px 24px 0;
     margin: 0 auto;
   }
-
+  @include Responsive(SM) {
+    &__content {
+      display: block;
+      width: auto;
+      padding: 48px 24px 0;
+      margin: 0 auto;
+    }
+  }
   @import "main-view/slide/sllide";
   @import "main-view/utility/utility";
   @import "main-view/pro-detail/detail";

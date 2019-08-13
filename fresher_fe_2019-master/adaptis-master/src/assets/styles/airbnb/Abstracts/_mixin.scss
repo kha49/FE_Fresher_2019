@@ -8,7 +8,7 @@
 // Khai báo kích thước tương ứng với màn hình thiết bị
 
 $XS: 480px;
-$SM: 768px;
+$SM: 742px;
 $MD: 1024px;
 $XL: 1170px;
 
@@ -16,19 +16,19 @@ $XL: 1170px;
 
 @mixin Responsive($canvas) {
   @if $canvas == XS {
-    @media only screen and (min-width: $XS) {
+    @media (min-width: 0) and (max-width: $XS) {
       @content;
     }
   } @else if $canvas == SM {
-    @media only screen and (min-width: $SM) {
+    @media (min-width: $XS + 1px) and (max-width: $SM) {
       @content;
     }
   } @else if $canvas == MD {
-    @media only screen and (min-width: $MD) {
+    @media (min-width: $SM + 1px) and (max-width: $MD) {
       @content;
     }
   } @else if $canvas == XL {
-    @media only screen and (min-width: $XL) {
+    @media only screen and (min-width: $MD + 1pxx) {
       @content;
     }
   }
