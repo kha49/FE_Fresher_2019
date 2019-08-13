@@ -1,0 +1,13 @@
+.main__slider
+    .slider-title
+        h1.slider-title__main What guests are saying about homes in United States
+        p.slider-title__sub United States homes were rated 4.8 out of 5 stars with 31,500,000+ reviews
+    .multiple-items
+        - var slider = [
+        -    {img: 'https://a0.muscache.com/im/pictures/16086432/099f134b_original.jpg?aki_policy=large', star: 5, content: 'Very accurate description. This little space was set in a quiet neighborhood near wonderful places to visit while in Austin. The space was ', avt: 'https://a0.muscache.com/im/users/20614685/profile_pic/1409165030/original.jpg?aki_policy=large', name:'Erin', contry:'United States'},
+        -    {img: 'https://a0.muscache.com/im/pictures/16086432/099f134b_original.jpg?aki_policy=large', star: 3, content: 'Very accurate description. This little space was set in a quiet neighborhood near wonderful places to visit while in Austin. The space was ', avt: 'https://a0.muscache.com/im/users/20614685/profile_pic/1409165030/original.jpg?aki_policy=large', name:'Erin', contry:'United States'},
+        -    {img: 'https://a0.muscache.com/im/pictures/16086432/099f134b_original.jpg?aki_policy=large', star: 3, content: 'Very accurate description. This little space was set in a quiet neighborhood near wonderful places to visit while in Austin. The space was ', avt: 'https://a0.muscache.com/im/users/20614685/profile_pic/1409165030/original.jpg?aki_policy=large', name:'Erin', contry:'United States'},
+        -    {img: 'https://a0.muscache.com/im/pictures/16086432/099f134b_original.jpg?aki_policy=large', star: 3, content: 'Very accurate description. This little space was set in a quiet neighborhood near wonderful places to visit while in Austin. The space was ', avt: 'https://a0.muscache.com/im/users/20614685/profile_pic/1409165030/original.jpg?aki_policy=large', name:'Erin', contry:'United States'},
+        -]
+        each val in slider
+            +slider(val.img, val.star, val.content, val.avt, val.name, val.contry)

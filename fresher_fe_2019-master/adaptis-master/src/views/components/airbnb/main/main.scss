@@ -1,0 +1,18 @@
+.main {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  clear: both;
+  box-sizing: border-box;
+  &__content {
+    display: block;
+    width: 1080px;
+    padding: 48px 24px 0;
+    margin: 0 auto;
+  }
+
+  @import "main-view/slide/sllide";
+  @import "main-view/utility/utility";
+  @import "main-view/pro-detail/detail";
+  @import "main-view/add-date/add-date";
+}
