@@ -1,0 +1,51 @@
+.travel {
+    padding-bottom: 20px;
+    &__title {
+        padding: 40px 0px 20px 0px;
+        border-bottom: 1px solid #ccc;
+        p {
+        font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+        font-size: 18px;
+        font-weight: 800;
+        line-height: 1.4444444444444444em;
+        color: #484848;
+        @include min-sm {
+            font-size: 24px;
+            line-height: 1.25em;
+        }
+        }
+    }
+    &__list {
+        border-bottom: 1px solid #ccc;
+        padding-top: 25px;
+        padding-bottom: 30px;
+        @include flexbox();
+        &__item {
+            margin-right: 20px;
+            width: 85%;
+            .icon {
+                img {
+                    width: 80px;
+                }
+            }
+            .title {
+                margin-bottom: 8px;
+                p {
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 1.375em;
+                    color: #484848;
+                }
+            }
+            .description {
+                width: 85%;
+                p {
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 1.2857142857142858em;
+                    color: #484848;
+                }
+            }
+        }
+    }
+}

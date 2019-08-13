@@ -1,0 +1,19 @@
+section.travel
+    .container-fluid
+        .travel__title
+            p Travel with Airbnb
+        .travel__list.multiple-items
+            mixin travel-list(content)
+                .travel__list__item
+                    .icon
+                        img(src=content.icon, alt="")
+                    .title
+                        p=content.title
+                    .description
+                        p=content.description
+            - const value1 = { icon: '../../../../assets/images/airbnb/icon1.PNG', title: '24/7 user support', description: 'We are here for you day and night. Talk to our support team wherever you are and at any time.'}
+            - const value2 = { icon: '../../../../assets/images/airbnb/icon2.PNG', title: 'Global hospitality standards', description: 'Guests review their hosts after each stay. All hosts must maintain a minimum rating and our hospitality standards to be on Airbnb.'}
+            - const value3 = { icon: '../../../../assets/images/airbnb/icon3.PNG', title: '5-star hosts', description: 'From fresh-pressed sheets to tips on where to get the best brunch, our hosts are full of local hospitality.'}        
+                - var array = [ value1,value2,value3]
+            each n,i in array
+                +travel-list(n)

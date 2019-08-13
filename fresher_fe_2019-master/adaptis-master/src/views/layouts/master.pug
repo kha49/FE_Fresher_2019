@@ -37,6 +37,8 @@ html(lang='jp')
     //- Favicons
     link(rel='shortcut icon', href=require('images/favicons/favicon.ico'))
 
+    link(href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/fontawesome.min.css')
+
     //- Fonts
     //- link(href="https://fonts.googleapis.com/css?family=Quicksand", rel='stylesheet')
 
@@ -48,12 +50,12 @@ html(lang='jp')
 
   body
     //- header
-    include ../components/header/header.pug
+    //- include ../components/header/header.pug
 
     //- block content
     block content
 
-    include ../components/footer/footer.pug
+    //- include ../components/footer/footer.pug
 
     //- block scripts
     block scripts
@@ -61,4 +63,5 @@ html(lang='jp')
     script(id="ze-snippet", src="https://static.zdassets.com/ekr/snippet.js?key=a0d065e1-295a-4de9-89f4-106bb253506a" defer)
     script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDo8ICXyf-BwI1tBv-PJxvHgm-0wUbTLAY&libraries=places" defer)
     script(src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js" defer)
+    script(src="https://kit.fontawesome.com/a076d05399.js")
     

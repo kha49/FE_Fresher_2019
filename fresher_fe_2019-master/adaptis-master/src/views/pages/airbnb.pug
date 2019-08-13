@@ -1,0 +1,17 @@
+extends ../layouts/master.pug
+
+block title
+  title Holiday Rentals & Apartments - Airbnb
+
+block basicSeo
+  meta(name='description' content='home page')
+  meta(name='keywords', content='home, page')
+  meta(name='author' content='')
+
+block content
+  include ../components/airbnb/header/header.pug
+  include ../components/airbnb/united-states/united-states.pug
+  include ../components/airbnb/travel/travel.pug
+  include ../components/airbnb/booked/booked.pug
+  include ../components/airbnb/add-date/add-date.pug
+  include ../components/airbnb/footer/footer.pug

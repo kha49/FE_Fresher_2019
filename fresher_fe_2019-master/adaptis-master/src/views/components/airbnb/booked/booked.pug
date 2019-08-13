@@ -1,0 +1,34 @@
+section.booked
+    .container-fluid
+        .booked__title
+            p Just booked in United States
+        .booked__list.bookedSlider
+            mixin booked-list(content)
+                .booked__list__item
+                    .images
+                        img.img-responsive(src=content.link, alt="")
+                    .name
+                        p=content.name
+                    .title 
+                        p=content.title
+                    .price
+                        span=content.price
+                        span /night
+                    .rated
+                        .rated__star
+                            img(src="../../../../assets/images/airbnb/rated_star.PNG")
+                        .rated__number
+                            span=content.number
+                            span . Supperhost
+            - const booked1 = { link: '../../../../assets/images/airbnb/booked1.jpg', name: 'TREEHOUSE · ATLANTA', title: 'Secluded Intown Treehouse', price: '$375',number: '366'}
+            - const booked2 = { link: '../../../../assets/images/airbnb/booked2.jpg', name: 'ENTIRE HOUSE · JOSHUA TREE', title: 'The Joshua Tree House', price: '$185',number: '452'}
+            - const booked3 = { link: '../../../../assets/images/airbnb/booked3.jpg', name: 'DOME HOUSE · APTOS', title: 'Mushroom Dome Cabin: #1  on airbnb in the world', price: '$130',number: '1355'}
+            - const booked4 = { link: '../../../../assets/images/airbnb/booked4.jpg', name: 'EARTH HOUSE · ORONDO', title: 'Underground Hygge', price: '$400',number: '515'}
+                - var array = [ booked1, booked2, booked3, booked4 ]
+            each n,i in array
+                +booked-list(n)
+        .booked__show
+            a Show all (22,000+)
+            span(style="color:#008489")
+                svg(viewBox="0 0 18 18" role="presentation" aria-hidden="true" focusable="false" style="height:10px;width:10px;fill:currentColor")
+                    path(d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd")

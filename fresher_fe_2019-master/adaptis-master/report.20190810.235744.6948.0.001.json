@@ -1,0 +1,429 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20190810.235744.6948.0.001.json",
+    "dumpEventTime": "2019-08-10T23:57:44Z",
+    "dumpEventTimeStamp": "1565456264131",
+    "processId": 6948,
+    "cwd": "C:\\Users\\Admin\\Desktop\\project\\FE_Fresher_2019\\fresher_fe_2019-master\\adaptis-master",
+    "commandLine": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\Admin\\Desktop\\project\\FE_Fresher_2019\\fresher_fe_2019-master\\adaptis-master\\node_modules\\.bin\\\\..\\webpack-dev-server\\bin\\webpack-dev-server.js",
+      "--config",
+      "./build/webpack.config.js",
+      "--env.NODE_ENV=development",
+      "--progress",
+      "--open"
+    ],
+    "nodejsVersion": "v12.7.0",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.7.0",
+      "v8": "7.5.288.22-node.16",
+      "uv": "1.30.1",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.39.1",
+      "napi": "4",
+      "llhttp": "1.1.4",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1c",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019a",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v12.7.0/node-v12.7.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.7.0/node-v12.7.0.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.7.0/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.17763",
+    "osVersion": "Windows 10 Pro",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Pentium(R) CPU N4200 @ 1.10GHz",
+        "speed": 1094,
+        "user": 2942968,
+        "nice": 0,
+        "sys": 3037937,
+        "idle": 15650078,
+        "irq": 312828
+      },
+      {
+        "model": "Intel(R) Pentium(R) CPU N4200 @ 1.10GHz",
+        "speed": 1094,
+        "user": 2942968,
+        "nice": 0,
+        "sys": 3037937,
+        "idle": 15650078,
+        "irq": 312828
+      },
+      {
+        "model": "Intel(R) Pentium(R) CPU N4200 @ 1.10GHz",
+        "speed": 1094,
+        "user": 2942968,
+        "nice": 0,
+        "sys": 3037937,
+        "idle": 15650078,
+        "irq": 312828
+      },
+      {
+        "model": "Intel(R) Pentium(R) CPU N4200 @ 1.10GHz",
+        "speed": 1094,
+        "user": 2942968,
+        "nice": 0,
+        "sys": 3037937,
+        "idle": 15650078,
+        "irq": 312828
+      }
+    ],
+    "host": "Admin"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff62afa6b89",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+10841"
+    },
+    {
+      "pc": "0x00007ff62afaa4fc",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+25548"
+    },
+    {
+      "pc": "0x00007ff62afa94a8",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+21368"
+    },
+    {
+      "pc": "0x00007ff62b0933db",
+      "symbol": "v8::base::CPU::has_sse+37691"
+    },
+    {
+      "pc": "0x00007ff62b87a3de",
+      "symbol": "v8::Isolate::ReportExternalAllocationLimitReached+94"
+    },
+    {
+      "pc": "0x00007ff62b86272a",
+      "symbol": "v8::SharedArrayBuffer::Externalize+842"
+    },
+    {
+      "pc": "0x00007ff62b6f3e3c",
+      "symbol": "v8::internal::Heap::EphemeronKeyWriteBarrierFromCode+1436"
+    },
+    {
+      "pc": "0x00007ff62b6fbd5f",
+      "symbol": "v8::internal::Heap::OldGenerationSizeOfObjects+4879"
+    },
+    {
+      "pc": "0x00007ff62b6f2003",
+      "symbol": "v8::internal::Heap::CollectGarbage+1235"
+    },
+    {
+      "pc": "0x00007ff62b6f0894",
+      "symbol": "v8::internal::Heap::AddRetainedMap+2292"
+    },
+    {
+      "pc": "0x00007ff62b70f375",
+      "symbol": "v8::internal::Factory::NewFillerObject+53"
+    },
+    {
+      "pc": "0x00007ff62b4c56ed",
+      "symbol": "v8::internal::interpreter::JumpTableTargetOffsets::iterator::operator=+3757"
+    },
+    {
+      "pc": "0x00007ff62bc9982d",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+614605"
+    },
+    {
+      "pc": "0x00007ff62bc9a763",
+      "symbol": "v8::internal::SetupIsolateDelegate::SetupHeap+618499"
+    },
+    {
+      "pc": "0x00000349ee7c2512",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2092363776,
+    "totalCommittedMemory": 2092363776,
+    "usedMemory": 2073272800,
+    "availableMemory": 44631672,
+    "memoryLimit": 2124414976,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 262144,
+        "capacity": 261832,
+        "used": 31960,
+        "available": 229872
+      },
+      "new_space": {
+        "memorySize": 11534336,
+        "committedMemory": 11534336,
+        "capacity": 5760304,
+        "used": 1669096,
+        "available": 4091208
+      },
+      "old_space": {
+        "memorySize": 2057187328,
+        "committedMemory": 2057187328,
+        "capacity": 2054552744,
+        "used": 2052053656,
+        "available": 2499088
+      },
+      "code_space": {
+        "memorySize": 2260992,
+        "committedMemory": 2260992,
+        "capacity": 1966688,
+        "used": 1966688,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 5771264,
+        "committedMemory": 5771264,
+        "capacity": 2357520,
+        "used": 2357520,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 14725120,
+        "committedMemory": 14725120,
+        "capacity": 14643480,
+        "used": 14643480,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 622592,
+        "committedMemory": 622592,
+        "capacity": 550400,
+        "used": 550400,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 5760304,
+        "used": 0,
+        "available": 5760304
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 234.421,
+    "kernelCpuSeconds": 18.968,
+    "cpuConsumptionPercent": 7.49893,
+    "maxRss": 2135007232,
+    "pageFaults": {
+      "IORequired": 1187366,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 5767,
+      "writes": 6
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "=C:": "C:\\Users\\Admin\\Desktop\\project\\FE_Fresher_2019\\fresher_fe_2019-master\\adaptis-master",
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "APPDATA": "C:\\Users\\Admin\\AppData\\Roaming",
+    "COLORTERM": "truecolor",
+    "CommonProgramFiles": "C:\\Program Files\\Common Files",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "ADMIN",
+    "ComSpec": "C:\\Windows\\system32\\cmd.exe",
+    "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\Admin",
+    "INIT_CWD": "C:\\Users\\Admin\\Desktop\\project\\FE_Fresher_2019\\fresher_fe_2019-master\\adaptis-master",
+    "LANG": "en_US.UTF-8",
+    "LOCALAPPDATA": "C:\\Users\\Admin\\AppData\\Local",
+    "LOGONSERVER": "\\\\ADMIN",
+    "NODE": "C:\\Program Files\\nodejs\\node.exe",
+    "NODE_ENV": "development",
+    "npm_config_argv": "{\"remain\":[],\"cooked\":[\"run\",\"dev\"],\"original\":[\"dev\"]}",
+    "npm_config_bin_links": "true",
+    "npm_config_ignore_optional": "",
+    "npm_config_ignore_scripts": "",
+    "npm_config_init_license": "MIT",
+    "npm_config_init_version": "1.0.0",
+    "npm_config_registry": "https://registry.yarnpkg.com",
+    "npm_config_save_prefix": "^",
+    "npm_config_strict_ssl": "true",
+    "npm_config_user_agent": "yarn/1.17.3 npm/? node/v12.7.0 win32 x64",
+    "npm_config_version_commit_hooks": "true",
+    "npm_config_version_git_message": "v%s",
+    "npm_config_version_git_sign": "",
+    "npm_config_version_git_tag": "true",
+    "npm_config_version_tag_prefix": "v",
+    "npm_execpath": "C:\\Users\\Admin\\AppData\\Roaming\\npm\\node_modules\\yarn\\bin\\yarn.js",
+    "npm_lifecycle_event": "dev",
+    "npm_lifecycle_script=webpack-dev-server --config ./build/webpack.config.js --env.NODE_ENV": "development --progress --open",
+    "npm_node_execpath": "C:\\Program Files\\nodejs\\node.exe",
+    "npm_package_dependencies_bunnyjs": "^0.14.41",
+    "npm_package_dependencies_eve": "^0.5.4",
+    "npm_package_dependencies_fitvids": "^2.0.0",
+    "npm_package_dependencies_gsap": "^1.20.4",
+    "npm_package_dependencies_jquery": "^3.3.1",
+    "npm_package_dependencies_jquery_datetimepicker": "^2.5.21",
+    "npm_package_dependencies_jquery_touchswipe": "^1.6.19",
+    "npm_package_dependencies_magnific_popup": "^1.1.0",
+    "npm_package_dependencies_micromodal": "^0.3.2",
+    "npm_package_dependencies_normalize_css": "^8.0.0",
+    "npm_package_dependencies_overlayscrollbars": "^1.6.0",
+    "npm_package_dependencies_raphael": "^2.2.7",
+    "npm_package_dependencies_scrollmagic": "^2.0.5",
+    "npm_package_dependencies_slick_carousel": "^1.8.1",
+    "npm_package_dependencies_sticky_js": "^1.2.0",
+    "npm_package_dependencies_tippy_js": "^3.2.0",
+    "npm_package_dependencies_vanilla_lazyload": "^10.0.1",
+    "npm_package_dependencies_yarn": "^1.10.1",
+    "npm_package_description": "My project description",
+    "npm_package_devDependencies_autoprefixer": "^8.2.0",
+    "npm_package_devDependencies_babel_core": "^6.26.3",
+    "npm_package_devDependencies_babel_loader": "^7.1.4",
+    "npm_package_devDependencies_babel_minify_webpack_plugin": "^0.3.1",
+    "npm_package_devDependencies_babel_plugin_module_resolver": "^3.1.0",
+    "npm_package_devDependencies_babel_plugin_syntax_dynamic_import": "^6.18.0",
+    "npm_package_devDependencies_babel_polyfill": "^6.26.0",
+    "npm_package_devDependencies_babel_preset_env": "^1.6.1",
+    "npm_package_devDependencies_babel_preset_es2015": "^6.24.1",
+    "npm_package_devDependencies_clean_webpack_plugin": "^0.1.19",
+    "npm_package_devDependencies_copy_webpack_plugin": "^4.5.1",
+    "npm_package_devDependencies_css_loader": "^0.28.11",
+    "npm_package_devDependencies_eslint": "^5.7.0",
+    "npm_package_devDependencies_eslint_config_airbnb_base": "^13.1.0",
+    "npm_package_devDependencies_eslint_plugin_import": "^2.14.0",
+    "npm_package_devDependencies_extract_text_webpack_plugin": "^3.0.2",
+    "npm_package_devDependencies_file_loader": "^1.1.11",
+    "npm_package_devDependencies_html_webpack_plugin": "^3.1.0",
+    "npm_package_devDependencies_image_webpack_loader": "^4.3.1",
+    "npm_package_devDependencies_mini_css_extract_plugin": "^0.5.0",
+    "npm_package_devDependencies_multi_loader": "^0.1.0",
+    "npm_package_devDependencies_node_sass": "^4.7.2",
+    "npm_package_devDependencies_postcss": "^6.0.21",
+    "npm_package_devDependencies_postcss_cssnext": "^3.1.0",
+    "npm_package_devDependencies_postcss_import": "^11.1.0",
+    "npm_package_devDependencies_postcss_loader": "^2.1.3",
+    "npm_package_devDependencies_postcss_modules": "^1.1.0",
+    "npm_package_devDependencies_pug": "^2.0.3",
+    "npm_package_devDependencies_pug_loader": "^2.3.0",
+    "npm_package_devDependencies_sass_loader": "^6.0.7",
+    "npm_package_devDependencies_style_loader": "^0.20.3",
+    "npm_package_devDependencies_tslib": "^1.9.0",
+    "npm_package_devDependencies_url_loader": "^1.0.1",
+    "npm_package_devDependencies_webpack": "^4.29.0",
+    "npm_package_devDependencies_webpack_cli": "^3.2.1",
+    "npm_package_devDependencies_webpack_dev_server": "^3.1.4",
+    "npm_package_devDependencies_webpack_notifier": "^1.6.0",
+    "npm_package_devDependencies_webp_loader": "^0.4.0",
+    "npm_package_license": "MIT",
+    "npm_package_main": "app.js",
+    "npm_package_name": "villagehouse",
+    "npm_package_readmeFilename": "README.md",
+    "npm_package_repository_type": "git",
+    "npm_package_repository_url": "git@github.com:my-user/my-repo.git",
+    "npm_package_scripts_dev=webpack-dev-server --config ./build/webpack.config.js --env.NODE_ENV": "development --progress --open",
+    "npm_package_scripts_dev_network": "webpack-dev-server --config ./build/webpack.config.js --progress --open --host 0.0.0.0",
+    "npm_package_scripts_lint": "eslint",
+    "npm_package_scripts_prod=webpack --config ./build/webpack.config.js --env.NODE_ENV": "production --progress",
+    "npm_package_scripts_test": "echo \"Error: no test specified\" && exit 1",
+    "npm_package_version": "0.0.1",
+    "NUMBER_OF_PROCESSORS": "4",
+    "OneDrive": "C:\\Users\\Admin\\OneDrive",
+    "OS": "Windows_NT",
+    "Path": "C:\\Users\\Admin\\AppData\\Local\\Temp\\yarn--1565452885008-0.17858381288021707;C:\\Users\\Admin\\Desktop\\project\\FE_Fresher_2019\\fresher_fe_2019-master\\adaptis-master\\node_modules\\.bin;C:\\Users\\Admin\\AppData\\Local\\Yarn\\Data\\link\\node_modules\\.bin;C:\\Users\\Admin\\AppData\\Local\\Yarn\\bin;C:\\Program Files\\libexec\\lib\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Program Files\\lib\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Git\\cmd;C:\\Program Files\\nodejs\\;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Admin\\AppData\\Roaming\\npm",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JSE;.WSF;.WSH;.MSC;.CPL",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 92 Stepping 9, GenuineIntel",
+    "PROCESSOR_LEVEL": "6",
+    "PROCESSOR_REVISION": "5c09",
+    "ProgramData": "C:\\ProgramData",
+    "ProgramFiles": "C:\\Program Files",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "PROMPT": "$P$G",
+    "PSModulePath": "C:\\Users\\Admin\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules",
+    "PUBLIC": "C:\\Users\\Public",
+    "SESSIONNAME": "Console",
+    "SystemDrive": "C:",
+    "SystemRoot": "C:\\Windows",
+    "TEMP": "C:\\Users\\Admin\\AppData\\Local\\Temp",
+    "TERM_PROGRAM": "vscode",
+    "TERM_PROGRAM_VERSION": "1.37.0",
+    "TMP": "C:\\Users\\Admin\\AppData\\Local\\Temp",
+    "USERDOMAIN": "ADMIN",
+    "USERDOMAIN_ROAMINGPROFILE": "ADMIN",
+    "USERNAME": "Admin",
+    "USERPROFILE": "C:\\Users\\Admin",
+    "WEBPACK_DEV_SERVER": "true",
+    "windir": "C:\\Windows",
+    "YARN_WRAP_OUTPUT": "false"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\Windows\\SYSTEM32\\ntdll.dll",
+    "C:\\Windows\\System32\\KERNEL32.DLL",
+    "C:\\Windows\\System32\\KERNELBASE.dll",
+    "C:\\Windows\\System32\\WS2_32.dll",
+    "C:\\Windows\\System32\\RPCRT4.dll",
+    "C:\\Windows\\SYSTEM32\\dbghelp.dll",
+    "C:\\Windows\\System32\\ADVAPI32.dll",
+    "C:\\Windows\\System32\\msvcrt.dll",
+    "C:\\Windows\\System32\\ucrtbase.dll",
+    "C:\\Windows\\System32\\sechost.dll",
+    "C:\\Windows\\System32\\USER32.dll",
+    "C:\\Windows\\System32\\win32u.dll",
+    "C:\\Windows\\System32\\GDI32.dll",
+    "C:\\Windows\\System32\\gdi32full.dll",
+    "C:\\Windows\\System32\\msvcp_win.dll",
+    "C:\\Windows\\System32\\PSAPI.DLL",
+    "C:\\Windows\\System32\\CRYPT32.dll",
+    "C:\\Windows\\System32\\MSASN1.dll",
+    "C:\\Windows\\System32\\bcrypt.dll",
+    "C:\\Windows\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\Windows\\SYSTEM32\\USERENV.dll",
+    "C:\\Windows\\System32\\profapi.dll",
+    "C:\\Windows\\SYSTEM32\\WINMM.dll",
+    "C:\\Windows\\SYSTEM32\\winmmbase.dll",
+    "C:\\Windows\\System32\\cfgmgr32.dll",
+    "C:\\Windows\\System32\\IMM32.DLL",
+    "C:\\Windows\\System32\\powrprof.dll",
+    "C:\\Windows\\system32\\uxtheme.dll",
+    "C:\\Windows\\System32\\combase.dll",
+    "C:\\Windows\\System32\\bcryptPrimitives.dll",
+    "C:\\Windows\\system32\\mswsock.dll",
+    "C:\\Windows\\System32\\kernel.appcore.dll",
+    "C:\\Windows\\System32\\NSI.dll",
+    "C:\\Windows\\SYSTEM32\\dhcpcsvc6.DLL",
+    "C:\\Windows\\SYSTEM32\\dhcpcsvc.DLL",
+    "C:\\Windows\\SYSTEM32\\DNSAPI.dll",
+    "C:\\Windows\\SYSTEM32\\CRYPTBASE.DLL",
+    "C:\\Windows\\System32\\rasadhlp.dll",
+    "C:\\Windows\\System32\\fwpuclnt.dll",
+    "\\\\?\\C:\\Users\\Admin\\Desktop\\project\\FE_Fresher_2019\\fresher_fe_2019-master\\adaptis-master\\node_modules\\node-sass\\vendor\\win32-x64-",
+    "C:\\Windows\\system32\\apphelp.dll",
+    "C:\\Windows\\system32\\napinsp.dll",
+    "C:\\Windows\\system32\\pnrpnsp.dll",
+    "C:\\Windows\\System32\\winrnr.dll",
+    "C:\\Windows\\system32\\NLAapi.dll",
+    "C:\\Windows\\system32\\wshbth.dll"
+  ]
+}

@@ -1,0 +1,84 @@
+.booked {
+    &__title {
+        padding: 30px 0px 10px 0px;
+        p {
+        font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+        font-size: 18px;
+        font-weight: 800;
+        line-height: 1.4444444444444444em;
+        color: #484848;
+        @include min-sm {
+            font-size: 24px;
+            line-height: 1.25em;
+        }
+        }
+    }
+    &__list {
+        @include flexbox();
+        margin: 0 -8px;
+        &__item {
+            margin-top: 10px;
+            padding: 0 8px;
+            .name {
+                padding: 10px 0px;
+                p {
+                    color: #767676;
+                    font-size: 13px;
+                    font-weight: 800;
+                    line-height: 1.3333333333333333em;
+                }
+            }
+            .title {
+                p {
+                    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+                    font-size: 16px;
+                    font-weight: 800;
+                    line-height: 1.4444444444444444em;
+                    color: #484848;
+                }
+            }
+            .price {
+                word-wrap: break-word;
+                span {
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 1.2857142857142858em;
+                    color: #484848;
+                }
+            }
+            .rated {
+                @include flexbox();
+                &__star {
+                    margin-left: -5px;
+                    img {
+                        width: 100%;
+                    }
+                }
+                &__number {
+                    margin-top: -5px;
+                    span {
+                        font-size: 13px;
+                        font-weight: 400;
+                        line-height: 1.2857142857142858em;
+                        color: #484848;
+                    }
+                }
+            }
+        }
+    }
+    &__show {
+        padding: 15px 0px;
+        a {
+            text-decoration: none;
+            color: #008489;
+            line-height: 18px;
+            letter-spacing: normal;
+            font-weight: 800;
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+                text-decoration-color: #008489;
+            }
+        }
+    }
+}
