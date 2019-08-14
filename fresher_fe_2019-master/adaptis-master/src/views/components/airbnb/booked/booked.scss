@@ -67,13 +67,7 @@
         }
     }
     &__show {
-        text-align: center;
-        padding: 14px;
-        padding-top: 18px;
-        border: 1px solid #008489;
-        background: transparent;
-        border-radius: 4px;
-        cursor: pointer;
+        padding: 15px 0px;
         a {
             text-decoration: none;
             color: #008489;
@@ -82,17 +76,8 @@
             font-weight: 800;
             &:hover {
                 cursor: pointer;
+                text-decoration: underline;
                 text-decoration-color: #008489;
-            }
-        }
-        @include min-sm {
-            text-align: left;
-            padding: 15px 0px; 
-            border: none; 
-            a {
-                &:hover {
-                    text-decoration: underline;
-                }
             }
         }
     }

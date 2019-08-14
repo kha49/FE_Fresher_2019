@@ -10,15 +10,15 @@ section.united-states
         .united-states__list.multiple-items
             mixin united-states__list(content)
                 .united-states__list__item
-                    .images(style='background-image: url("' + content.link + '"')
-                        //- img.img-responsive(src=content.link, alt="")
+                    .images
+                        img.img-responsive(src=content.link, alt="")
                     - var n = 0;
                     .rated
                         while n < 5
                             img(src="../../../../assets/images/airbnb/star.png")
                             - n++
                     .comment
-                        span=content.comment
+                        p=content.comment
                     .customer 
                         .customer__avatar
                             img.img-responsive(src=content.link_avt, alt="")

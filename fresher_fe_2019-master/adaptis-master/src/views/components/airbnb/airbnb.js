@@ -41,7 +41,7 @@ const airbnbSlickSlider = {
                     settings: {
                         arrows: true,
                         dots: false,
-                        slidesToShow: 1,
+                        slidesToShow: 2,
                     },
                 },
                 {
