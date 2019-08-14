@@ -3,6 +3,7 @@ import Global from './views/components/global/global';
 import Header from './views/components/header/header';
 import airbnbHeader from './views/components/airbnb/header/header';
 import airbnbSlickSlider from './views/components/airbnb/airbnb';
+// import * as xyz from '..'
 // import slick from 'slick-carousel';
 import 'slick-carousel/slick/slick';
 
