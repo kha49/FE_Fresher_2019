@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var array = [5,7,8,2,11,16,77,88,66];
+
+// thêm số 99 vào mảng A
+array.push(99);
+console.log(' thêm số 99 vào mảng :'+array);
+
+// tìm vị trí của số 11 trong mảng A
+var str = ['11','2','11','23','11']
+for(var i=0; i<str.length; i++){
+    var n = str.indexOf('11');
+    str[n]= i;
+        console.log(n);
+}
+console.log(str);
+console.log(array.indexOf(11));
+// xóa số 77 trong mảng A
+var deleteElement = 77;
+var i = array.indexOf(deleteElement);
+if( i != -1){
+    array.splice(i,1);
+}
+console.log('xoa số 77 trong mang:' +array);
+console.log('xoa số 77 trong mang 2:' +array.splice(77) +array);
+
+// sắp xếp mảng theo thứ tự tăng dần
+array.sort(function(a, b){return a - b});
+console.log('sắp xếp mảng theo thứ tự tăng dần:'+array);
+
+//sắp xếp mảng theo thứ tự giảm dần
+array.sort(function(a, b){return b - a});
+console.log('sắp xếp mảng theo thứ tự giảm dần:' +array);
+
+
+//Sắp xếp mảng A theo thứ tự tất cả số chẵn trước rồi đến số lẻ.
+// Tách mảng A thành 2 mảng B và C. Trong đó mảng B chứa tất cả các số 
+//chẵn của mảng A và mảng C chứa tất cả các số lẻ của mảng A.
+B = [];
+C = [];
+array.forEach((value) => {
+    if(value%2 ==0){
+        B.push(value);
+    }else{
+        C.push(value);
+    }
+});
+console.log('mang chua so chan' + B);
+console.log('mang chua so le' + C);
+console.log('mang chua so chan roi den so le' + array);
+</script>  
+</body>
+</html>
