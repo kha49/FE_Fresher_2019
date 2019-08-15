@@ -39,7 +39,9 @@
         }
     }
     &__bottom {
-        padding: 30px 0px;
+        padding: 28px 0px 45px 0px;
+        @include flexbox();
+        justify-content: space-between;
         border-top: 1px solid #ccc;
         &__copyright {
             @include flexbox();
@@ -52,6 +54,12 @@
                     padding-left: 5px;
                     margin-top: -3px;
                 }
+            }
+        }
+        &__currency {
+            span {
+                padding-right: 8px;
+                color: #767676;
             }
         }
     }

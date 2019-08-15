@@ -1,17 +1,7 @@
 .add-date {
     padding: 35px 0px 30px 0px;
     &__title {
-        p {
-            font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
-            font-size: 18px;
-            font-weight: 800;
-            line-height: 1.4444444444444444em;
-            color: #484848;
-            @include min-sm {
-                font-size: 24px;
-                line-height: 1.25em;
-            }
-            }
+        @include title-page();
     }
     &__description {
         p {

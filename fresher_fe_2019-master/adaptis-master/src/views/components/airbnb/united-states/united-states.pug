@@ -10,15 +10,15 @@ section.united-states
         .united-states__list.multiple-items
             mixin united-states__list(content)
                 .united-states__list__item
-                    .images
-                        img.img-responsive(src=content.link, alt="")
+                    .images(style='background-image: url("' + content.link + '"')
+                        //- img.img-responsive(src=content.link, alt="")
                     - var n = 0;
                     .rated
                         while n < 5
                             img(src="../../../../assets/images/airbnb/star.png")
                             - n++
-                    .comment
-                        p=content.comment
+                    .comment    
+                        span=content.comment
                     .customer 
                         .customer__avatar
                             img.img-responsive(src=content.link_avt, alt="")
@@ -27,9 +27,9 @@ section.united-states
                                 span=content.name
                             .customer__info__countries
                                 span=content.countries
-            - const val1 = { link: '../../../../assets/images/airbnb/united-states1.jpg' , comment: 'The apartment is new and very clean. The home is perfect. The location is a bit far from the city center and it is not really ...',link_avt: '../../../../assets/images/airbnb/cus1.jpg', name: 'Hervé', countries: 'la France'}
-            - const val2 = { link: '../../../../assets/images/airbnb/united-states2.jpg' , comment: 'We had a nice stay at the Silver Cloud! A lot of charm, a lot of comfort, the breakfast is a plus which is very appreciated, the place is calm ...',link_avt: '../../../../assets/images/airbnb/cus2.jpg', name: 'Jerome', countries: 'Swiss'}
-            - const val3 = { link: '../../../../assets/images/airbnb/united-states3.jpg' , comment: 'very satisfying place, it is very pretty, well decorated, an experience to do! in addition to the air stream, the small garden gives the ...',link_avt: '../../../../assets/images/airbnb/cus3.jpg', name: 'Francois', countries: 'la France'}
+            - const val1 = { link: '../../../../assets/images/airbnb/united-states1.jpg' , comment: 'The apartment is new and very clean. The home is perfect. The location is a bit far from the city center and it is not really very appreciated well decorated, an experience to do!',link_avt: '../../../../assets/images/airbnb/cus1.jpg', name: 'Hervé', countries: 'la France'}
+            - const val2 = { link: '../../../../assets/images/airbnb/united-states2.jpg' , comment: 'We had a nice stay at the Silver Cloud! A lot of charm, a lot of comfort, the breakfast is a plus which is very appreciated, the place is calm is not really very appreciated',link_avt: '../../../../assets/images/airbnb/cus2.jpg', name: 'Jerome', countries: 'Swiss'}
+            - const val3 = { link: '../../../../assets/images/airbnb/united-states3.jpg' , comment: 'very satisfying place, it is very pretty, well decorated, an experience to do! in addition to the air stream, the small garden gives the location is a bit far from the city center',link_avt: '../../../../assets/images/airbnb/cus3.jpg', name: 'Francois', countries: 'la France'}
                 - var array = [ val1,val2,val3]
             each n,i in array
                 +united-states__list(n)
