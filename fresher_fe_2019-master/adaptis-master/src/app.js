@@ -3,6 +3,7 @@ import Global from './views/components/global/global';
 import Header from './views/components/header/header';
 
 import 'slick-carousel/slick/slick';
+import './views/components/airbnb/test';
 
 require('normalize.css');
 
