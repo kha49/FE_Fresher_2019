@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exam 01 Javascript: </title>
+</head>
+
+<body>
+    <script>
+        var A = [5, 7, 8, 2, 11, 16, 77, 88, 66];
+        console.log('Giá trị của mảng A:' + A);
+        //Thêm số 99 vào mảng A:
+        A.push(99);
+        console.log('Giá trị của mảng A sau khi thêm số 99:' + A);
+
+        //Tìm vị trí của số 11 trong mảng A
+        A.forEach((value, index) => {
+            if (value === 11) {
+                console.log('Vị trí của số 11 trong mảng A là:' + index);
+            }
+        });
+
+        //Xóa số 77 khỏi mảng A
+        A.forEach((value, index) => {
+            if (value === 77) {
+                A.splice(index, 1);
+            }
+        });
+        console.log('Giá trị của mảng A sau khi xóa số 77:' + A);
+        // Sắp xếp mảng A theo thứ tự tăng dần
+
+        A.sort((value, index) => {
+            return value - index;
+        });
+        console.log('Mảng A theo thứ tự sắp xếp tăng dần là:' + A);
+        // Sắp xếp mảng A theo thứ tự giảm dần
+
+        A.sort((value, index) => {
+            return index - value;
+        });
+        console.log('Mảng A theo thứ tự sắp xếp giảm dần là:' + A);
+        // Sắp xếp mảng A theo thứ tự tất cả số chẵn trước rồi đến số lẻ.
+        // Tách mảng A thành 2 mảng B và C. Trong đó mảng B chứa tất cả các số chẵn của mảng A và mảng C chứa tất cả các số lẻ của mảng A.
+        var B = [];
+        var C = [];
+        A.forEach((value) => {
+            if (value % 2 == 0) {
+                B.push(value);
+            } else {
+                C.push(value);
+            }
+        });
+        A = B.concat(C);
+        console.log('Mảng A được sắp xếp theo thứ tự số chắn trước rồi đến số lẻ: ' + A);
+        console.log('Mảng B chứa tất cả các số chắn : ' + B);
+        console.log('Mảng C chứa tất cả các số lẻ : ' + C);
+    </script>
+</body>
+
+</html>
