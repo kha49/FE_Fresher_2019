@@ -1,0 +1,25 @@
+.heading-primary
+    h1.heading-primary__main Find places to stay in United States on Airbnb
+    p.heading-primary__sub Discover entire homes and private rooms perfect for any trip.
+form(action="" method="method").form
+    .form__element
+        label(for="") Where
+        input(type="text", placeholder="Anywhere")
+    .form__element
+        .form__col-6
+            label(for="") CHECK-IN
+            input(type="date", placeholder="mm/dd/yyy")
+        .form__col-6
+            label(for="") CHECKOUT
+            input(type="date", placeholder="mm/dd/yyy")
+    .form__element
+        .form__col-6
+            label(for="") ADULTS
+            select(name="", type="text", placeholder="")
+                option(value="") 1 adult
+        .form__col-6
+            label(for="") CHILDREN
+            select(name="", type="text", placeholder="")
+                option(value="") 0 children
+    .form__element
+        button.btn(type='submit') Search

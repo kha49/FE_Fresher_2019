@@ -1,0 +1,138 @@
+.main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    clear: both;
+    box-sizing: border-box;
+    &__content {
+      display: block;
+      width: 1080px;
+      padding: 48px 24px 0;
+      margin: 0 auto;
+    }
+    @include Responsive(SM) {
+      &__content {
+        display: block;
+        width: auto;
+        padding: 48px 24px 0;
+        margin: 0 auto;
+      }
+    }
+
+    &__slider {
+        width: 100%;
+    }
+    .slider-title {
+        padding: 0;
+        width: 100%;
+        &__main {
+        margin: 0;
+        font-size: 24px;
+        padding: 2px 0;
+        font-weight: bold;
+        }
+        &__sub {
+        font-size: 18px;
+        padding: 15px 0 0;
+        }
+    }
+    
+    .slide {
+        width: 100%;
+        padding: 15px;
+        &__img {
+        width: 100%;
+        }
+        &__star {
+        font-size: 15px;
+        color: $color-blue;
+        margin: 15px 0;
+        }
+        &__content {
+        font-size: 15px;
+        text-overflow: ellipsis;
+        height: 55px;
+        width: 314px; 
+        &--main {
+            font-size: 12px;
+            padding: 5px 0 0;
+        }
+        &--sub {
+            font-size: 18px;
+            padding: 5px 0 0;
+        }
+        &--price {
+            font-size: 14px;
+            padding: 5px 0 0;
+        }
+        &--star {
+            padding: 10px 0 0;
+            i {
+            color: $color-blue;
+            font-size: 10px;
+            }
+        }
+        }
+        &__avt {
+        margin: 15px 0;
+        display: flex;
+        img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+        }
+        p {
+            padding: 0 15px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        }
+    }
+    @include Responsive(SM) {
+        .slider-title {
+        padding: 0;
+        width: 100%;
+        &__main {
+            margin: 0;
+            font-size: 24px;
+            padding: 2px 0;
+        }
+        &__sub {
+            font-size: 18px;
+            padding: 15px 0 0;
+        }
+        }
+    }
+    .utility {
+        width: 100%;
+        .multiple-items{
+            border-top: 1px solid rgb(208, 203, 203);
+            border-bottom: 1px solid rgb(208, 203, 203);
+            margin: 20px 0;
+            padding: 20px 0;
+        }
+        &__icon {
+          height: 40px;
+          width: 40px;
+          display: block;
+          overflow: visible;
+          fill:#60B6B5;
+          fill-opacity: 0;
+          stroke:#60B6B5;
+          stroke-width: 1;
+        }
+        &__content{
+          width: 100%;
+          padding-right: 35px;
+          &--title{
+              font-size: 24px;
+              font-weight: bold;
+              padding: 15px 0 5px 0;
+          }
+          &--main{
+              font-size: 14px;;
+          }
+        }
+      }
+      
+}
