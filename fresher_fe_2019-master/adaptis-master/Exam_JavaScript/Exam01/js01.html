@@ -9,6 +9,8 @@
 </head>
 
 <body>
+    <h2>Exam Javascript 01:</h2>
+    <hr>
     <script>
         var A = [5, 7, 8, 2, 11, 16, 77, 88, 66];
         console.log('Giá trị của mảng A:' + A);
@@ -17,11 +19,13 @@
         console.log('Giá trị của mảng A sau khi thêm số 99:' + A);
 
         //Tìm vị trí của số 11 trong mảng A
-        A.forEach((value, index) => {
-            if (value === 11) {
-                console.log('Vị trí của số 11 trong mảng A là:' + index);
-            }
-        });
+        A.indexOf(11);
+        console.log('Vị trí của số 11 trong mảng A là:' + A.indexOf(11));
+        // A.forEach((value, index) => {
+        //     if (value === 11) {
+        //         console.log('Vị trí của số 11 trong mảng A là:' + index);
+        //     }
+        // });
 
         //Xóa số 77 khỏi mảng A
         A.forEach((value, index) => {
