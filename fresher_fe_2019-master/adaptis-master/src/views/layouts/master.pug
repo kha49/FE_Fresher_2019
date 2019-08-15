@@ -39,7 +39,7 @@ html(lang='jp')
 
     //- Fonts
     //- link(href="https://fonts.googleapis.com/css?family=Quicksand", rel='stylesheet')
-
+    //- link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
 
 
     //- Title
@@ -48,17 +48,23 @@ html(lang='jp')
 
   body
     //- header
-    include ../components/header/header.pug
+    //- include ../components/header/header.pug
 
     //- block content
     block content
 
-    include ../components/footer/footer.pug
+    //- include ../components/footer/footer.pug
 
     //- block scripts
     block scripts
+      //- script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+      //- script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js")
+      //- script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js")
+        
 
-    script(id="ze-snippet", src="https://static.zdassets.com/ekr/snippet.js?key=a0d065e1-295a-4de9-89f4-106bb253506a" defer)
-    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDo8ICXyf-BwI1tBv-PJxvHgm-0wUbTLAY&libraries=places" defer)
-    script(src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js" defer)
+      script(id="ze-snippet", src="https://static.zdassets.com/ekr/snippet.js?key=a0d065e1-295a-4de9-89f4-106bb253506a" defer)
+      script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDo8ICXyf-BwI1tBv-PJxvHgm-0wUbTLAY&libraries=places" defer)
+      script(src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js" defer)
+      script(src="https://kit.fontawesome.com/a076d05399.js")
+      
     

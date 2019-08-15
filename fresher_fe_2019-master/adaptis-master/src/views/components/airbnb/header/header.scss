@@ -1,0 +1,62 @@
+.header {
+  width: 100%;
+  background-image: url("https://mediad.publicbroadcasting.net/p/wunc/files/styles/x_large/public/201905/SanFrancisco_12623927_PrivateRoomApt_LivingRoom.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 688.4px;
+  padding: 64px 0 0;
+  svg {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    fill: #fff;
+    top: 16px;
+    left: 24px;
+  }
+  &__content {
+    width: 100%;
+  }
+  &__container {
+    display: block;
+    width: 1080px;
+    padding: 0 24px;
+    margin: 0 auto;
+  }
+  &__form-desktop {
+    display: block;
+    width: 508px;
+    margin: 0 0 64px;
+    padding: 32px;
+    border-radius: 5px;
+    background-color: $color-white;
+  }
+  &__form-mobile {
+    display: none;
+  }
+  @include Responsive(SM) {
+    background: linear-gradient(351.58deg, #00383e -0.02%, #17989a 50%, #1baba8 80%),
+      radial-gradient(228.77px at 31.86% 0%, #19a2a0 0%, rgba(0, 122, 135, 0.9) 100%);
+    height: auto;
+    &__content {
+      width: 100%;
+      padding: 0;
+    }
+    &__container {
+      display: block;
+      width: auto;
+      padding: 15px 24px;
+      margin: 0 auto;
+      background-color: $color-white;
+    }
+    &__form-desktop {
+      display: none;
+    }
+    &__form-mobile {
+      display: block;
+      width: 100%;
+    }
+  }
+  @import "./form/form";
+}
