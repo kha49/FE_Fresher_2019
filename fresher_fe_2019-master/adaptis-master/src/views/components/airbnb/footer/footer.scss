@@ -1,0 +1,26 @@
+@import '../banner/banner.scss';
+
+.airbnb-footer__button--open {
+    display: flex;
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    padding: 6px 15px;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 0;
+    p {
+        @include airbnb-form__title();
+        font-size: 14px;
+        letter-spacing: 0.1mm;
+        padding-top: 1px;
+    }
+    .airbnb-footer-button__icon {
+        margin-top: 1px;
+    }
+    img {
+        width: 15px;
+    }
+}
+
+@include breakpoint();

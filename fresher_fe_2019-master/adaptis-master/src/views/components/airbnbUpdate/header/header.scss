@@ -1,0 +1,149 @@
+$breakpoint-small: 700px;
+$breakpoint-large: 800px;
+$breakpoint-huge: 1100px;
+
+@mixin breakpoint--small {
+    @media screen and (min-width: $breakpoint-small) {
+        @content;
+    }
+}
+
+@mixin breakpoint--large {
+    @media screen and (min-width: $breakpoint-large) {
+        @content;
+    }
+}
+
+@mixin breakpoint--minHuge {
+    @media screen and (min-width: $breakpoint-huge) {
+        @content;
+    }
+}
+
+@mixin breakpoint--maxHuge {
+    @media screen and (max-width: $breakpoint-huge) {
+        @content;
+    }
+}
+
+@mixin breakpoint__airbnbUpdate--header {
+    @media screen and (min-width: 525px) {
+        @content;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.airbnbUpdate-header__sticky {
+    @include breakpoint--maxHuge() {
+        display: none;
+    }
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    // right: 0px;
+    background-color: #fff;
+    transition: top 0.3s;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    &--logo {
+        margin: auto 60px;
+        a {
+            img {
+                width:  32px;
+            }
+        }
+    }
+    &--title {
+        display: flex;
+        &-Potential {
+            margin: auto;
+            p {
+                span {
+                    img {
+                        width: 11px;
+                    }
+                }
+            }
+        }
+        &-Total {
+            // margin: 23px 10px 0;
+            h3 {
+                margin: 0;
+            }
+            margin: auto 15px;
+        }
+        &-GetStartedButton {
+            margin: auto;
+            margin-right: 60px;
+        }
+    }
+}
+
+.airbnbUpdate-header {
+    position: relative;
+    background-image: url("https://a0.muscache.com/pictures/61f948dd-aab5-4e32-b9d2-1e849ae180b0.jpg");
+    background-position: top center;
+    background-size: cover;
+    height: 240px;
+    @include breakpoint--minHuge() {
+        margin-top: 80px;
+    }
+    @include breakpoint__airbnbUpdate--header() {
+        height: 210px;
+    }
+    @include breakpoint--small() {
+        height: 280px;
+    }
+    &__logo {
+        padding: 32px 0 0 24px;
+        a {
+            img {
+                width: 32px;
+            }
+        }
+        @include breakpoint--minHuge() {
+            display: none;
+        }
+    }
+    &__title {
+        position: absolute;
+        bottom: 100px;
+        width: 87%;
+        height: 36px;
+        padding: 0 15px;
+        h2{
+            color:rgb(255, 255, 255);
+            font-size: 34px;
+        }
+        @include breakpoint__airbnbUpdate--header() {
+            position: absolute;
+            bottom: 60px;
+        }
+        @include breakpoint--small() {
+            padding: 0 50px;
+        }
+    }
+}
+
+
+
+
+
+.airbnbUpdate-header-sticky__bottom {
+    position: fixed;
+    bottom: -50px;
+    width: 100%;
+    z-index: 1;
+    transition: bottom 0.3s;
+    &--title {
+        display: flex;
+        background-color: red;
+    }
+}

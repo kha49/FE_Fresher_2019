@@ -1,21 +1,23 @@
 block content
+    - var array = ["#", "../../assets/images/googlelogo_color_272x92dp.png", "../../assets/images/keyboard-solid.svg", "../../assets/images/th-solid.svg"]
+    //- +search-result-google-content(array[0], array[1], array[2], array[3])
     div.search-result-google-header
         div.search-result-google-header-brand-input
             div.search-result-google-brand
-                a(href="#")
-                    img(src="../../assets/images/googlelogo_color_272x92dp.png")
+                a(href=array[0])
+                    img(src=array[1])
             div.search-result-google-input
                 div.search-result-google-input-type
                     input
                 div.search-result-google-keyboard-icon
-                    a(href="#")
-                        img(src="../../assets/images/keyboard-solid.svg")
+                    a(href=array[0])
+                        img(src=array[2])
                 div.search-result-google-search
-                    a(href="") Tìm kiếm
+                    a(href="#") Tìm kiếm
         div.search-result-google-apps-login
             div.search-result-google-apps
-                a(href="#")
-                    img(src="../../assets/images/th-solid.svg")
+                a(href=array[0])
+                    img(src=array[3])
             div.search-result-google-login
                 a(href="#")
                     button Đăng nhập

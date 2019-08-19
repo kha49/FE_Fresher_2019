@@ -1,0 +1,121 @@
+mixin airbnbUpdate-header__sticky
+    .airbnbUpdate-header__sticky
+        .airbnbUpdate-header__sticky--logo
+            a(href="#")
+                img(src="../../assets/images/airbnb-brands__update.png", alt="")
+        .airbnbUpdate-header__sticky--title
+            .airbnbUpdate-header__sticky--title-Potential
+                p Monthly potential <span><img src="../../../assets/images/information.png"></span>
+            .airbnbUpdate-header__sticky--title-Total
+                h3 $1030
+            .airbnbUpdate-header__sticky--title-GetStartedButton
+                button Get started
+
+
+mixin airbnbUpdate-header
+    .airbnbUpdate-header
+        .airbnbUpdate-header__logo
+            a(href="#")
+                img(src="../../assets/images/airbnb-brands__update.png", alt="")
+        .airbnbUpdate-header__title
+            h2 Earn money as an Airbnb host
+        
+
+mixin airbnbUpdate-form
+    .airbnbUpdate-form
+        .airbnbUpdate-form__title
+            h4 Find out what you could earn
+        .airbnbUpdate-form__input
+            .airbnbUpdate-form__input--location
+                input(type="text" value="Hanoi" list="browsers" name="browsers" placeholder="Location")
+                datalist#browsers
+                    ontion(value="Vietnam")
+                    ontion(value="VIETNAM")
+            .airbnbUpdate-form__input--room
+                select
+                    option(value="Entire place") Entire place
+                    option(value="Private room") Private room
+                    option(value="Shared room") Shared room
+            .airbnbUpdate-form__input--guests
+                select
+                    option(value="1 guest") 1 guest
+                    option(value="2 guests") 2 guests
+                    option(value="3 guests") 3 guests
+                    option(value="4 guests" selected) 4 guests
+                    option(value="5 guests") 5 guests
+                    option(value="6 guests") 6 guests
+                    option(value="7 guests") 7 guests
+                    option(value="8 guests") 8 guests
+                    option(value="9 guests") 9 guests
+                    option(value="10 guests") 10 guests
+                    option(value="11 guests") 11 guests
+                    option(value="12 guests") 12 guests
+                    option(value="13 guests") 13 guests
+                    option(value="14 guests") 14 guests
+        .airbnbUpdate-form__total
+            .airbnbUpdate-form__total--cost
+                h3 $708
+            .airbnbUpdate-form__total--perMonth
+                p per month <span><img src="../../../assets/images/information.png"></span>
+        .airbnbUpdate-form__button
+            button Get started
+
+
+- const why={title: "Why host on Airbnb?", description: "No matter what kind of home or room you have to share, Airbnb makes it simple and secure to host travelers. You’re in full control of your availability, prices, house rules, and how you interact with guests."}
+- const protection={title: "Airbnb protects hosts", description: "To keep you, your home, and your belongings safe, we cover every booking with $1M USD in property damage protection and another $1M USD in insurance against accidents.", link: "Learn how Airbnb protects hosts"}
+- const verified={title: "Guests are verified", description: "Airbnb always requires guests to provide certain information before they can make a reservation—such as a confirmed phone number and email address. For added control, you can require guests to also provide recommendations from other hosts and a verified ID."}
+
+mixin airbnbUpdate-introduce__nolink(variable)
+    .airbnbUpdate-introduce
+        .airbnbUpdate-introduce__title
+            h2= variable.title
+        .airbnbUpdate-introduce__description
+            p= variable.description
+                
+mixin airbnbUpdate-introduce__link(variable)
+    .airbnbUpdate-introduce
+        .airbnbUpdate-introduce__title
+            h2= variable.title
+        .airbnbUpdate-introduce__description
+            p= variable.description
+        .airbnbUpdate-introduce__link
+            a(src="#")= variable.link
+
+mixin airbnbUpdate-introduce
+    +airbnbUpdate-introduce__nolink(why)
+    +airbnbUpdate-introduce__link(protection)
+    +airbnbUpdate-introduce__nolink(verified)
+
+
+- const step1={step: 1, title: "List your space for free", description: "Share any space without sign-up charges, from a shared living room to a second home and everything in-between."}
+- const step2={step: 2, title: "Decide how you want to host", description: "Choose your own schedule, prices and requirements for guests. We're there to help along the way."}
+- const step3={step: 3, title: "Welcome your first guest", description: "Once your listing is live, qualified guests can reach out. You can message them with any questions before they said."}
+- const array=[step1, step2, step3]
+
+mixin airbnbUpdate-step(variable)
+    .airbnbUpdate-step
+        .airbnbUpdate-step__step
+            p= variable.step
+        .airbnbUpdate-step__title
+            h2= variable.title
+        .airbnbUpdate-step__description
+            p= variable.description
+
+mixin airbnbUpdate-hosting
+    .airbnbUpdate-hosting__line
+    each n in array
+        +airbnbUpdate-step(n)
+
+
+mixin airbnbUpdate-header-sticky__bottom
+    .airbnbUpdate-header-sticky__bottom
+        //- .airbnbUpdate-header-sticky__bottom--logo
+        //-     a(href="#")
+        //-         img(src="../../assets/images/airbnb-brands__update.png", alt="")
+        .airbnbUpdate-header-sticky__bottom--title
+            //- .airbnbUpdate-header-sticky__bottom--title-Potential
+            //-     p Monthly potential <span><img src="../../../assets/images/information.png"></span>
+            .airbnbUpdate-header-sticky__bottom--title-Total
+                h3 $1030
+            .airbnbUpdate-header-sticky__bottm--title-GetStartedButton
+                button Get started

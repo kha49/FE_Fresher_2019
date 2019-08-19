@@ -1,0 +1,134 @@
+mixin airbnb-banner
+    div
+        .mySlides
+        .airbnb-brand
+            a(href="#").airbnb-logo
+                img(src="../../assets/images/airbnb-brands.png")
+            a(href="#").airbnb-down-button
+                img(src="../../assets/images/chevron-down-solid.png")
+        .airbnb-title
+            p Book unique places to stay and thing to do.
+
+- const menubar=["Host a home", "Host an experience", "Help", "Sign up", "Log in"]
+mixin airbnb-menubar
+    .airbnb-menubar
+        each n in menubar
+            div
+                a(href="#")= n
+    
+
+mixin airbnb-search
+    .airbnb-form-screen__medium
+        form(action="#")
+            .airbnb-form-screen-medium__title
+                p Book unique places to stay and things to do.
+            .airbnb-form-screen-medium__where
+                .airbnb-form-screen-medium__where--title
+                    p WHERE
+                .airbnb-form-screen-medium__where--input
+                    input(type="text" placeholder="Anywhere")
+            .airbnb-form-screen-medium__date
+                .airbnb-form-screen-medium-date__checkin
+                    .airbnb-form-screen-medium-date__checkin--title
+                        p CHECK-IN
+                    .airbnb-form-screen-medium-date__checkin--input
+                        input(type="text" placeholder="dd/mm/yyyy")
+                .airbnb-form-screen-medium-date__checkout
+                    .airbnb-form-screen-medium-date__checkout--title
+                        p CHECK-OUT
+                    .airbnb-form-screen-medium-date__checkout--input
+                        input(type="text" placeholder="dd/mm/yyyy")
+            .airbnb-form-screen-medium__guests
+                .airbnb-form-screen-medium__guests--title
+                    p GUESTS
+                .airbnb-form-screen-medium__guests--button
+                    button Guests
+                        span
+                            img(src="../../assets/images/chevron-down-solid-1.png")
+            .airbnb-form-screen-medium__search--button
+                div
+                    button Search
+
+    .airbnb-form__screen--small
+        form(action="#")
+            .airbnb-form-where
+                .airbnb-form-where__title
+                    p WHERE
+                .airbnb-form-where__input
+                    input(placeholder="Anywhere")
+            .airbnb-form-date
+                .airbnb-form-date__checkin
+                    .airbnb-form-date__checkin--title
+                        p CHECK_IN
+                    .airbnb-form-date__checkin--input
+                        input(placeholder="mm/dd/yyyy")
+                .airbnb-form-date__checkout
+                    .airbnb-form-date__checkout--title
+                        p CHECK-OUT
+                    .airbnb-form-date__checkout--input
+                        input(placeholder="mm/dd/yyyy")
+            .airbnb-form-guests
+                .airbnb-form-guests__title
+                    p GUESTS
+                .airbnb-form-guests__input
+                    button Guests
+                        span
+                            img(src="../../assets/images/chevron-down-solid-1.png")
+            .airbnb-search-button
+                button Search
+
+mixin airbnb-footer-fixed
+    button.airbnb-footer__button--open
+        .airbnb-footer-button__icon
+            img(src="../..//assets/images/worldwide 2.png")
+        .airbnb-footer-button__title
+            p Terms, Privacy, Currency & More
+
+
+- const stays={image: "../../../assets/images/airbnb-explore/969ae4bb-efd1-4fb9-a4e3-5cb3316dd3c9.jpg", title: "Stays", description: "Homes, boutique hotels & more"}
+- const experiences={image: "../../../assets/images/airbnb-explore/airbnb.jpg", title: "Experiences", description: "Activities hosted by locals"} 
+- const adventures={image: "../../../assets/images/airbnb-explore/Belinda-listing-4-_3403709b.jpg", title: "Adventures", description: "Hosted trips including lodging"}
+- const restaurants={image: "../../../assets/images/airbnb-explore/The_Terrace_Sicilian__1_.1497897195.jpg", title: "Restaurants", description: "Popular spots to eat & drink"}   
+- const array = [stays, experiences, adventures, restaurants]
+
+mixin airbnb-explore-slide(name)
+    .airbnb-explore-content__slide
+        .airbnb-explore-content__slide--image
+            img(src=name.image)
+        .airbnb-explore-content__slide--title
+            p=name.title
+        .airbnb-explore-content__slide--description
+            p=name.description
+
+mixin airbnb-explore
+    .airbnb-explore-title
+        p Explore Airbnb
+    .airbnb-explore-content.responsive
+            each n in array 
+                +airbnb-explore-slide(n)
+
+
+mixin introducing-airbnb-luxe
+    .introducing-airbnb-luxe
+        .introducing-airbnb-luxe__title
+            p Introducing Airbnb Luxe
+        .introducing-airbnb-luxe__content
+            .introducing-airbnb-luxe__content-image
+                a(href="#")
+                    img(src="../../../assets/images/lamhomestay-airbnb.jpg", alt="")
+            .introducing-airbnb-luxe__content-title
+                a(href="#").introducing-airbnb-luxe__content-title--icon
+                    img(src="../../../assets/images/airbnb-brands-2.png", alt="")
+                a(href="#").introducing-airbnb-luxe__content-title--text
+                    p luxe
+            a(href="#").introducing-airbnb-luxe__content-description
+                p Extraordinary homes with five-stars everything
+            a(href="#").introducing-airbnb-luxe__content-more
+                .introducing-airbnb-luxe__content-more--text
+                    p Explore Airbnb Luxe
+                .introducing-airbnb-luxe__content-more--icon
+                    img(src="../../../assets/images/chevron-right-solid.png", alt="")
+
+
+mixin airbnb-footer
+    div
