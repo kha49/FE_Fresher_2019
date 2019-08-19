@@ -1,25 +1,36 @@
 .heading-primary
-    h1.heading-primary__main Find places to stay in United States on Airbnb
-    p.heading-primary__sub Discover entire homes and private rooms perfect for any trip.
+    h1.heading-primary__main Find out what you could earn
 form(action="" method="method").form
+    h1.heading-primary__title Earn money as an Airbnb host
+    h1.heading-primary__main Find out what you could earn
     .form__element
-        label(for="") Where
-        input(type="text", placeholder="Anywhere")
+        input(type="text", placeholder="Thanh Chuong")
+    .form__element.col-md-6
+        select(name="", type="text", placeholder="")
+            option(value="") Entire place
+            option(value="") Private room
+            option(value="") Shared room
+    .form__element.col-md-6
+        select(name="", type="text", placeholder="")
+            option(value="") 1 guests
+            option(value="") 1 guests
+            option(value="") 1 guests
+            option(value="") 1 guests
+            option(value="") 1 guests
+            option(value="") 1 guests
+            option(value="") 1 guests
+            option(value="") 1 guests
+            option(value="") 1 guests
+            option(value="") 1 guests
+            option(value="") 1 guests
+            option(value="") 1 guests
+            option(value="") 1 guests
+            option(value="") 1 guests
+            option(value="") 1 guests
+            option(value="") 1 guests
     .form__element
-        .form__col-6
-            label(for="") CHECK-IN
-            input(type="date", placeholder="")
-        .form__col-6
-            label(for="") CHECKOUT
-            input(type="date", placeholder="")
+        br
+        h1.heading-primary__price $649 
+            span per month
     .form__element
-        .form__col-6
-            label(for="") ADULTS
-            select(name="", type="text", placeholder="")
-                option(value="") 1 adult
-        .form__col-6
-            label(for="") CHILDREN
-            select(name="", type="text", placeholder="")
-                option(value="") 0 children
-    .form__element
-        button.btn(type='submit') Search
+        button.btn(type='submit') Get started

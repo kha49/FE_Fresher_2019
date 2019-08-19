@@ -82,6 +82,7 @@ $(document).ready(() => {
       // instead of a settings object
     ]
   });
+  require ('./views/components/airbnb/header/nav/nav');
 });
 
 $(window).on('resize', () => {

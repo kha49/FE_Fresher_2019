@@ -6,20 +6,161 @@
   box-sizing: border-box;
   &__content {
     display: block;
-    width: 1080px;
-    padding: 48px 24px 0;
+    width: 100%;
+    padding: 0px 20px 0;
     margin: 0 auto;
-  }
-  @include Responsive(SM) {
-    &__content {
-      display: block;
-      width: auto;
-      padding: 48px 24px 0;
-      margin: 0 auto;
+    .btn {
+      padding: 10px 15px;
+      background: none;
+      border: 1.5px solid black;
+      border-radius: 3px;
+      font-size: 16px;
+      font-weight: bold;
     }
   }
-  @import "main-view/slide/sllide";
-  @import "main-view/utility/utility";
-  @import "main-view/pro-detail/detail";
-  @import "main-view/add-date/add-date";
+  &__box-content {
+    display: block;
+  }
+  &__box-questions {
+    a {
+      display: block;
+      width: 100%;
+      text-decoration: none;
+      color: $blue;
+      font-size: 1.6em;
+      padding: 24px 0;
+      border-bottom: 1px solid $gray;
+    }
+  }
+  &__span {
+    width: 48px;
+    height: 48px;
+    background-color: $blue;
+    border-radius: 999px;
+    span {
+      font-size: 20px;
+      font-weight: bold;
+      color: $color-white;
+      position: relative;
+      top: 29%;
+      left: 37%;
+    }
+  }
+
+  @include Responsive(MD) {
+    &__content {
+      display: block;
+      width: 100%;
+      padding: 0px 100px 0;
+      margin: 0 auto;
+    }
+    hr {
+      margin: 0 auto;
+    }
+    &__title {
+      display: block;
+      text-align: center;
+    }
+    &__blog {
+      display: flex;
+      margin: 0 -40px;
+    }
+    &__banner {
+      width: 324.8px;
+      padding: 0 25px;
+    }
+    &__card-content {
+      display: flex;
+    }
+    &__card {
+      margin: 0 -50px;
+    }
+  }
+  @include Responsive(XL) {
+   
+  }
+}
+
+.box-content {
+  display: block;
+  width: 100%;
+  margin: 15px 0 50px 0;
+  &__title {
+    display: block;
+    width: 100%;
+    font-size: 2.4em;
+    margin: 0;
+  }
+  &__content {
+    display: block;
+    width: 100%;
+    font-size: 1.6em;
+    margin: 16px 0;
+  }
+  a {
+    text-decoration: none;
+    color: $blue;
+  }
+}
+.card {
+  display: block;
+  width: 100%;
+  border: 1px solid $gray;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px 0 rbga(0, 0, 0, 0.06);
+  &__content {
+    display: flex;
+    width: 100%;
+  }
+  &__img {
+    background-size: cover;
+    width: 76px;
+    height: 76px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &__info {
+    display: block;
+    padding: 15px;
+    &--title {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    &--sub {
+      font-size: 1.6em;
+      margin-top: 15px;
+    }
+  }
+  @include Responsive(MD) {
+    display: block;
+    width: 100%;
+    height: 168px;
+    overflow: hidden;
+    margin: 0 15px 0 0;
+    &__content {
+      display: block;
+      width: 100%;
+      border-radius: 3px;
+      box-shadow: 0 2px 4px 0 rbga(0, 0, 0, 0.06);
+    }
+    &__img {
+      background-size: cover;
+      width: 100%;
+      height: 104.81px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &__info {
+      display: block;
+      padding: 5px 15px;
+      &--title {
+        font-size: 1.4em;
+        font-weight: bold;
+      }
+      &--sub {
+        font-size: 1.5em;
+        margin-top: 15px;
+      }
+    }
+  }
 }

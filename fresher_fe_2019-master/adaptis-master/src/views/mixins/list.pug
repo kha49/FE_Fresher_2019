@@ -5,20 +5,16 @@ mixin list(id, ...items)
     each item in items
       li= item
 
-//- main slider
-mixin slider(img, star, content, avt, name, contry)
-  .slide
-    img(src=img, alt="alt").slide__img
-    .slide__star
-        - for(i = 0; i< star; ++i){
-        i.fas.fa-star
-        - }
-    p.slide__content=content
-    .slide__avt
-        img(src=avt, alt="alt")
-        p=name
-            br 
-            =contry
+//- main box-content
+mixin box-content(title, content, link)
+  .box-content
+    div
+      h1.box-content__title=title
+    div
+      p.box-content__content=content
+    div
+      p.box-content__content
+        a(href="#", title="title")=link
             
 //- main-utility
 mixin utility(path, title, content)
