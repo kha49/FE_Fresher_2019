@@ -38,7 +38,7 @@
 - ]
 each val, index in modal
     .modal(id ="modal"+index)
-        .modal__content
+        .modal__content.modal__text-box
             span.close(id=index) &times;
             .modal__content--title=val.title
             if val.type

@@ -3,8 +3,15 @@ const Modal = {
         let modalLogin = document.getElementById('btnLogin');
         let modalLogin1 = document.getElementById('btnLogin1');
         let close = document.getElementById('close1');
-        let closeModal = document.getElementsByClassName('closeModal');
         let modal = document.getElementById('modalLogin');
+        $('#Language').click(function () {
+            let modal = document.getElementById('modal6');
+            modal.style.display = "block";
+        });
+        $('#Currency').click(function () {
+            let modal = document.getElementById('modal7');
+            modal.style.display = "block";
+        });
         $('.modaltext').click(function () {
             let modal = document.getElementById('modal' + this.id);
             modal.style.display = "block";

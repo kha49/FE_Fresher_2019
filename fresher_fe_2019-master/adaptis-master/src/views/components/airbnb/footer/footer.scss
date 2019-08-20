@@ -12,31 +12,14 @@
   &__list-box {
     display: none;
   }
-  @include Responsive(MD) {
-    &__list-box {
-      display: flex;
-      width: 100%;
-      margin: 0 auto;
-      padding: 90px 0 0 30px;
-    }
-  }
-  @include Responsive(XL) {
-    &__list-box {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      margin: 0 auto;
-      padding: 90px 0 0 30px;
-    }
-  }
-  &__banner {
-    background-image: url("https://a0.muscache.com/pictures/6ccbb3ea-fd7d-4681-ad4d-1d50ed595e34.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 90%;
-    margin: 0 auto;
-    height: 375px;
-  }
+  // &__banner {
+  //   background-image: url("https://a0.muscache.com/pictures/6ccbb3ea-fd7d-4681-ad4d-1d50ed595e34.jpg");
+  //   background-size: cover;
+  //   background-position: center;
+  //   width: 90%;
+  //   margin: 0 auto;
+  //   height: 375px;
+  // }
   &__box-options {
     display: flex;
     align-items: center;
@@ -63,6 +46,23 @@
       width: 21px;
       height: 21px;
       fill: $blue;
+    }
+  }
+  @include Responsive(MD) {
+    &__list-box {
+      display: flex;
+      width: 100%;
+      margin: 0 auto;
+      padding: 90px 0 0 30px;
+    }
+  }
+  @include Responsive(XL) {
+    &__list-box {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin: 0 auto;
+      padding: 90px 0 0 30px;
     }
   }
 }

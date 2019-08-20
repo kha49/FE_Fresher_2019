@@ -15,17 +15,18 @@
     margin: 0 auto;
     padding: 32px;
     background: $color-white;
-    &--title{
+    &--title {
       margin-top: 20px;
       font-size: 24px;
       color: $color-text;
       padding: 0 0 24px;
     }
-    &--sub{
+    &--sub {
       font-size: 16px;
       margin: 16px 0;
     }
   }
+
   .form {
     display: block;
     width: 100%;
@@ -169,6 +170,9 @@
       padding: 32px;
       background: $color-white;
     }
+    &__text-box {
+      height: auto;
+    }
     .form {
       display: block;
       width: 100%;
@@ -311,6 +315,10 @@
       margin: 0 auto;
       padding: 32px;
       background: $color-white;
+      height: auto;
+    }
+    &__text-box {
+      height: auto;
     }
     .form {
       display: block;
