@@ -77,7 +77,112 @@
     }
   }
   @include Responsive(XL) {
-   
+    &__content {
+      display: block;
+      width: 1080px;
+      padding: 0px 24px;
+      margin: 0 auto;
+    }
+    &__box-content {
+      display: flex;
+      margin: 50px 0;
+    }
+    .box-content {
+      display: block;
+      width: 100%;
+      margin: 15px;
+      &__title {
+        display: block;
+        width: 100%;
+        font-size: 2.4em;
+        margin: 0;
+      }
+      &__content {
+        display: block;
+        width: 100%;
+        font-size: 1.6em;
+        margin: 16px 0;
+      }
+      a {
+        text-decoration: none;
+        color: $blue;
+      }
+    }
+    hr {
+      margin: 0 auto;
+    }
+    &__title {
+      display: block;
+      text-align: center;
+    }
+    &__blog {
+      display: flex;
+      margin: 0 -40px;
+    }
+    &__banner {
+      width: 324.8px;
+      padding: 0 25px;
+    }
+    &__card-content {
+      display: flex;
+    }
+    &__card {
+      margin: 0 -50px;
+    }
+    &__box-steps {
+      margin-top: 120px;
+    }
+    &__steps {
+      display: flex;
+      padding: 50px 0;
+      .box-content {
+        display: block;
+        width: 100%;
+        margin: 15px 0;
+        padding: 0 35px 0 0;
+        &__title {
+          display: block;
+          width: 100%;
+          font-size: 2.4em;
+          margin: 0;
+        }
+        &__content {
+          display: block;
+          width: 100%;
+          font-size: 1.6em;
+          margin: 16px 0;
+        }
+        a {
+          text-decoration: none;
+          color: $blue;
+        }
+      }
+    }
+    &__blog {
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+    }
+    &__banner{
+      width: 516px;
+    }
+    &__about{
+      width: 432px;
+      h3{
+        font-size: 32px;
+      }
+      p{
+        font-size: 16px;
+      }
+    }
+    &__question{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      a{
+        display: block;
+        margin-right: 10px;
+      }
+    }
   }
 }
 
@@ -106,8 +211,8 @@
   display: block;
   width: 100%;
   border: 1px solid $gray;
-    border-radius: 3px;
-    box-shadow: 0 2px 4px 0 rbga(0, 0, 0, 0.06);
+  border-radius: 3px;
+  box-shadow: 0 2px 4px 0 rbga(0, 0, 0, 0.06);
   &__content {
     display: flex;
     width: 100%;
@@ -147,6 +252,38 @@
       background-size: cover;
       width: 100%;
       height: 104.81px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &__info {
+      display: block;
+      padding: 5px 15px;
+      &--title {
+        font-size: 1.4em;
+        font-weight: bold;
+      }
+      &--sub {
+        font-size: 1.5em;
+        margin-top: 15px;
+      }
+    }
+  }
+  @include Responsive(XL) {
+    display: block;
+    width: 100%;
+    height: 268px;
+    overflow: hidden;
+    margin: 0 15px 0 0;
+    &__content {
+      display: block;
+      width: 180;
+      border-radius: 3px;
+      box-shadow: 0 2px 4px 0 rbga(0, 0, 0, 0.06);
+    }
+    &__img {
+      background-size: cover;
+      width: 100%;
+      height: 171.81px;
       background-repeat: no-repeat;
       background-position: center;
     }

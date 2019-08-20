@@ -1,6 +1,8 @@
 // import './assets/styles/_app.scss';
 import Global from './views/components/global/global';
 import Header from './views/components/header/header';
+import Modal from './views/components/airbnb/modal/modal';
+import Form from './views/components/airbnb/header/form/form';
 
 import 'slick-carousel/slick/slick';
 
@@ -12,6 +14,8 @@ $(() => {
 
 $(document).ready(() => {
   Global.lazyLoad();
+  Modal.init();
+  Form.init();
   $('.multiple-items').slick({
     infinite: true,
     slidesToShow: 3,

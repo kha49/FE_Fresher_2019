@@ -18,10 +18,12 @@
             -    {title : "Decide how you want to host", content : "Choose your own schedule, prices, and requirements for guests. We’re there to help along the way."},
             -    {title : "Welcome your first guest", content : "Once your listing is live, qualified guests can reach out. You can message them with any questions before their stay.", link : "Learn how to start hosting"}
             - ]
-            each val,index in box_steps
-                .main__span
-                    span=index+1
-                +box-content(val.title, val.content, val.link)
+            .main__steps
+                each val,index in box_steps
+                    .box-steps
+                        .main__span
+                            span=index+1
+                        +box-content(val.title, val.content, val.link)
     .main__content
         .main__blog
             img(src="https://a0.muscache.com/pictures/2b6774ff-f366-4c1a-b941-198b92e87ffd.jpg", alt="alt", width=435).main__banner
@@ -41,10 +43,11 @@
             -    'How much does it cost to list my space?',
             -    'What protection do I have against property damage?',
             -    'How should I choose my listing’s price?',
-            -    'How can Airbnb help me with setting prices?',
+            -    'How can Airbnb help me with setting prices?'
             - ]
-            each val in link
-                a(href="#", title="title")=val
+            .main__question
+                each val, index in link
+                    a.modaltext(id=index, title="title")=val
     .main__content(style="margin-top: 90px;")
         .main__card
             h1.main_title More about hosting

@@ -6,31 +6,23 @@ form(action="" method="method").form
     .form__element
         input(type="text", placeholder="Thanh Chuong")
     .form__element.col-md-6
-        select(name="", type="text", placeholder="")
-            option(value="") Entire place
-            option(value="") Private room
-            option(value="") Shared room
+        - const room = [
+        -   {name:"Entire place", price:100},
+        -   {name:"Private room", price:150},
+        -   {name:"Shared room", price:200},
+        -];
+        select#Room(name="", type="text", placeholder="")
+            each val in room
+                option(value=val.price)=val.name
     .form__element.col-md-6
-        select(name="", type="text", placeholder="")
-            option(value="") 1 guests
-            option(value="") 1 guests
-            option(value="") 1 guests
-            option(value="") 1 guests
-            option(value="") 1 guests
-            option(value="") 1 guests
-            option(value="") 1 guests
-            option(value="") 1 guests
-            option(value="") 1 guests
-            option(value="") 1 guests
-            option(value="") 1 guests
-            option(value="") 1 guests
-            option(value="") 1 guests
-            option(value="") 1 guests
-            option(value="") 1 guests
-            option(value="") 1 guests
+        - const guests = 16;
+        select#People(name="", type="text", placeholder="")
+            - for (let i = 1; i < guests; ++i) {
+            option(value=i)=i+' guests'
+            - }
     .form__element
         br
-        h1.heading-primary__price $649 
+        h1.heading-primary__price#finalPrice $100 
             span per month
     .form__element
-        button.btn(type='submit') Get started
+        button.btn#btnLogin1(type='button') Get started
