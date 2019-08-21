@@ -1,0 +1,180 @@
+.airbnb-host__modal-header{
+    background-color: rgba(255, 255, 255, 0.808);
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.modal-header{
+    &__container{
+        padding: 2rem;
+
+        @include Responsive(Tablet){
+            margin: 2.4rem 16rem;
+            padding: 0;
+        }
+
+        @include Responsive(Laptop){
+            margin: 2.4rem 28.8rem;
+        }
+
+        @include Responsive(LaptopDefault){
+            margin: 2.4rem 45.9rem;
+        }
+        
+        @include Responsive(LaptopL){
+            margin: 2.4rem 49.6rem;
+        }
+
+        @include Responsive(LaptopHd){
+            margin: 2.4rem 73.6rem;
+        }
+
+        @include Responsive(Screen4k){
+            margin: 2.4rem 105.6rem;
+        }
+    }
+
+    &__icon-close{
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        cursor: pointer;
+        font-size: 20px;
+        color: $primary-color;
+
+        @include Responsive(Tablet){
+            left: 20px;
+            top: 20px;
+        }
+    }
+
+    &__form{
+        background-color: white;
+
+        @include Responsive(Tablet){
+            padding: 3.2rem;
+            border: 1px solid rgb(214, 214, 214);
+        }
+    }
+
+    &__inp-frame{
+        padding: 1rem 3.5rem 1rem 1rem;
+        position: relative;
+        border: 1px solid rgb(200, 200, 200);
+        margin-bottom: 0.6rem;
+    }
+
+    &__inp-modal{
+        color: $primary-color;
+        font-size: 16px;
+        height: 4.2rem;
+        border: 1px solid transparent;
+        font-weight: 300;
+        width: 100%;
+    }
+
+    &__icon-block-inp{
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: rgb(182, 182, 182);
+    }
+
+    &__support-container{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.6rem;
+    }
+
+    &__support-block{
+        @include text($font-family-general, 14px, 300, $primary-color); 
+    }
+
+    &__sign-up-container{
+        padding: 2rem;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__sign-up-text{
+        @include text($font-family-general, 16px, 300, $primary-color); 
+        line-height: 3.4rem;
+        letter-spacing: 1px;
+    }
+}
+
+.btn-login{
+    padding: 2rem 2.7rem;
+    margin-bottom: 0.6rem;
+    font-size: 15px;
+    line-height: 1.9rem;
+    position: relative;
+    font-weight: 400;
+
+
+    &__facebook{
+        background-color: #3b5998;
+    }
+
+    &__google{
+        background-color: white;
+        border: 1px solid rgb(211, 211, 211);
+        color: $primary-color;
+    }
+
+    &__general{
+        background-color: #ff5a5f;
+    }
+}
+
+.btn-sign-up{
+    padding: 0.7rem 2.1rem;
+    color: #ff5a5f;
+    border: 1px solid #ff5a5f;
+    background-color: transparent;
+    font-size: 13px;
+    width: 110%;
+    line-height: 1.8rem;
+}
+
+.icon-block{
+    position: absolute;
+    left: 2rem;
+
+    &__google{
+        color: rgb(255, 41, 41);
+    }
+}
+
+.separator{
+    padding: 0.8rem 0;
+    position: relative;
+
+    &__text{
+        line-height: 1.4rem;
+        color: $third-color;
+        vertical-align: middle;
+        padding: 0.8rem;
+        background-color: white;
+        font-size: 13px;
+        position: absolute;
+        bottom: 50%;
+        transform: translate(-50%, 50%);
+        left: 50%;
+    }
+
+    &__line{
+        height: 1px;
+        background-color: rgb(200, 200, 200);
+        outline: none;
+        border: none;
+    }
+}

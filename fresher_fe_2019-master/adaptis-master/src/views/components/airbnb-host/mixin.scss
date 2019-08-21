@@ -1,0 +1,38 @@
+$highlight-color: #008489;
+$primary-color: #484848;
+$second-color: #333333;
+$third-color: #767676;
+$fouth-color: #008489;
+$on-bg-color: #ffffff;
+$font-family-general: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif; 
+
+
+@mixin text($font-family, $font-size, $font-weight, $color-text) {
+    font: {
+        family: $font-family;
+        size: $font-size;
+        weight: $font-weight;
+    } 
+    color: $color-text;
+}
+
+@mixin border($border-size, $border-type, $border-color, $border-radius){
+    border: $border-size $border-type $border-color;
+    border-radius: $border-radius
+}
+
+@mixin content-title(){
+    color: $primary-color;
+    font-family: $font-family-general;
+    font-size: 24px;
+    padding: 0.2rem 0;
+    font-weight: 600;
+}
+
+@mixin content-para(){
+    color: $primary-color;
+    font-family: $font-family-general;
+    font-size: 16px;
+    font-weight: 400;
+}
+

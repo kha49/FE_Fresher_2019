@@ -1,0 +1,9 @@
+section.airbnb-host__content-feature
+    .content-feature__container
+        - var featureArr = [
+        - {title: "Why host on Airbnb?", para: "No matter what kind of home or room you have to share, Airbnb makes it simple and secure to host travelers. You’re in full control of your availability, prices, house rules, and how you interact with guests.", link: ""},
+        - {title: "Airbnb protects hosts", para: "To keep you, your home, and your belongings safe, we cover every booking with $1M USD in property damage protection and another $1M USD in insurance against accidents.", link: "Learn how Airbnb protects hosts"},
+        - {title: "Guests are verified", para: "Airbnb always requires guests to provide certain information before they can make a reservation—such as a confirmed phone number and email address. For added control, you can require guests to also provide recommendations from other hosts and a verified ID.", link: ""}
+        - ]
+        each feature in featureArr
+            +contentFeature(feature.title, feature.para, feature.link)

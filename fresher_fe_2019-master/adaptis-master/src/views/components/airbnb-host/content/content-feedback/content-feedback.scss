@@ -1,0 +1,121 @@
+.airbnb-host{
+    &__content-feedback{
+        padding: 0 2.4rem;
+        margin-top: 8rem;
+        margin-bottom: 4rem;
+
+        @include Responsive(Tablet){
+            margin: 10rem 3.6rem;
+        }
+
+        @include Responsive(Laptop){
+            margin: 10rem 16.4rem;
+        }
+
+        @include Responsive(LaptopDefault){
+            margin: 10rem 14.3rem;
+        }
+
+        @include Responsive(LaptopL){
+            margin: 10rem 18rem;
+        }
+
+        @include Responsive(LaptopHd){
+            margin: 10rem 42rem;
+        }
+
+        @include Responsive(Screen4k){
+            margin: 10rem 74rem;
+        }
+    }
+}
+
+.content-feedback{
+
+    &__container{
+        display: flex;
+        // flex-direction: column;
+        flex-wrap: wrap;
+
+        @include Responsive(Tablet){
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+    
+    &__img-frame{
+        width: 100%;
+        position: relative;
+
+        @include Responsive(Tablet){
+            width: 32.5rem;
+        }
+
+        @include Responsive(LaptopDefault){
+            width: 51.7rem;
+        }
+
+        &::before{
+            content: '';
+            display: block;
+            padding-top: 100%;
+        }
+    }
+
+    &__img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: url(../images/airbnb-host/content-feedback/content-feedback.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__info{
+        // background-color: yellow;
+        display: flex;
+        flex-direction: column;
+
+        @include Responsive(Tablet){
+            width: 42%;
+            justify-content: center;
+        }
+    }
+
+    &__quotation{
+        margin: 3.5rem 0 0;
+        @include text($font-family-general, 60px, 600, #fdb32b);
+        line-height: 0;
+    }
+
+    &__para{
+        @include text($font-family-general, 18px, 400, $primary-color);
+        line-height: 3.8rem;
+        margin-bottom: 1rem;
+
+        @include Responsive(LaptopDefault){
+            font-size: 32px;
+        }
+    }
+
+    &__customer{
+        @include text($font-family-general, 14px, 300, $third-color);
+
+        @include Responsive(LaptopDefault){
+            font-size: 16px;
+        }
+    }
+
+    &__btn{
+        width: 20.227rem;
+        color: $primary-color;
+        border: 2px solid $primary-color;
+        text-align: center;
+        background-color: transparent;
+        margin-top: 2rem;
+    }
+}

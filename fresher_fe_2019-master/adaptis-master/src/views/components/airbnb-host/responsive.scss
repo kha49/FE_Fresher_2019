@@ -1,0 +1,42 @@
+   
+$MobileS: 320px;   
+$MobileM: 375px;  
+$MobileL: 425px;   
+$Tablet: 768px;
+$Laptop: 1024px;
+$LaptopDefault: 1366px;
+$LaptopL: 1440px;
+$LaptopHd: 1920px;
+$Screen4k: 2560px;     
+
+// media queries
+
+@mixin Responsive($canvas) {
+  @if $canvas == MobileS {
+   @media only screen and (min-width: $MobileS) { @content; } 
+  }
+  @else if $canvas == MobileM {
+   @media only screen and (min-width: $MobileM) { @content; } 
+  }
+  @else if $canvas == MobileL {
+   @media only screen and (min-width: $MobileL) { @content; } 
+  }
+  @else if $canvas == Tablet {
+   @media only screen and (min-width: $Tablet) { @content; } 
+  }
+  @else if $canvas == Laptop {
+    @media only screen and (min-width: $Laptop) { @content; } 
+   }
+  @else if $canvas == LaptopDefault {
+    @media only screen and (min-width: $LaptopDefault) { @content; } 
+   }
+  @else if $canvas == LaptopL {
+    @media only screen and (min-width: $LaptopL) { @content; } 
+   }
+  @else if $canvas == LaptopHd {
+    @media only screen and (min-width: $LaptopHd) { @content; } 
+   }
+  @else if $canvas == Screen4k {
+    @media only screen and (min-width: $Screen4k) { @content; } 
+   }
+}

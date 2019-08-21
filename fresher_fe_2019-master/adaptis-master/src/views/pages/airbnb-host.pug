@@ -1,0 +1,16 @@
+extends ../layouts/master.pug
+
+block favicon
+    link(rel="shortcut icon", href="../../assets/images/airbnb-host/favicon/airbnb-favicon.png", type="image/x-icon")
+
+block title
+    title Rent out your house, apartment or room on Airbnb
+
+block content
+    include ../components/airbnb-host/mixin.pug
+    include ../components/airbnb-host/header/header.pug
+    include ../components/airbnb-host/content/content.pug
+    include ../components/airbnb-host/footer/footer.pug
+
+block scripts
+    script(src="https://kit.fontawesome.com/a076d05399.js")

@@ -1,0 +1,18 @@
+section.airbnb-host__content-question
+    .content-question__line
+    .content-question__big-title Your questions answered
+    .content-question__container
+
+        - var questionArr = [
+        - {question1: "Who can be an Airbnb host?"},
+        - {question2: "What is required of guests before booking?"},
+        - {question3: "How much does it cost to list my space?"},
+        - {question4: "What protection do I have against property damage?"},
+        - {question5: "How should I choose my listing’s price?"},
+        - {question6: "How can Airbnb help me with setting prices?"}
+        - ]
+        each question in questionArr
+            +contentQuestion(question)
+
+include ./content-question-modal/content-question-modal.pug
+

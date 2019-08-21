@@ -1,0 +1,76 @@
+.airbnb-host{
+    &__content-feature{
+        padding: 0 2.4rem;
+        // margin-bottom: 
+
+        @include Responsive(Tablet){
+            margin: 0 3.6rem;
+        }
+
+        @include Responsive(Laptop){
+            margin: 0 16.4rem;
+        }
+
+        @include Responsive(LaptopDefault){
+            margin: 0 14.3rem;
+        }
+
+        @include Responsive(LaptopL){
+            margin: 0 18rem;
+        }
+
+        @include Responsive(LaptopHd){
+            margin: 0 42rem;
+        }
+
+        @include Responsive(Screen4k){
+            margin: 0 74rem;
+        }
+    }
+}
+
+.content-feature{
+
+    &__container{
+        display: flex;
+        flex-wrap: wrap;
+
+        @include Responsive(LaptopDefault){
+            justify-content: space-between;
+        }
+    }
+    
+    &__block{
+        margin-top: 4.8rem;
+        width: 100%;
+
+        @include Responsive(Tablet){
+            margin-left: 5.6rem;
+            margin-right: 5.6rem;
+        }
+
+        @include Responsive(LaptopDefault){
+            margin-left: 0;
+            margin-right: 0;
+            width: 29%;
+            padding: 0 0.8rem
+        }
+    }
+
+    &__title{
+        @include content-title();
+    }
+
+    &__para{
+        @include content-para();
+    }
+
+    &__link-frame{
+        margin-top: 1.6rem;
+    }
+
+    &__link{
+        @include content-para();
+        color: $fouth-color;
+    }
+}

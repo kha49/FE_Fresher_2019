@@ -1,0 +1,68 @@
+.airbnb-host{
+    &__content-banner{
+        min-height: 37.5rem;
+        background-image: url(../images/airbnb-host/content-banner/content-banner.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        padding: 0 2rem 0 2.4rem;
+        margin: 6.4rem 0;
+
+        @include Responsive(Tablet){
+            min-height: 44rem;
+        }
+
+        @include Responsive(LaptopDefault){
+            margin: 6.4rem 6.4rem;
+        }
+
+        @include Responsive(LaptopHd){
+            margin: 6.4rem 32rem;
+        }
+
+        @include Responsive(Screen4k){
+            margin: 6.4rem 64rem;
+        }
+    }
+}
+
+.content-banner{
+    &__container{
+        @include Responsive(Tablet){
+            margin: 0 3.6rem;
+        }
+
+        @include Responsive(Laptop){
+            margin: 0 16.4rem;
+        }
+
+        @include Responsive(LaptopDefault){
+            margin: 0 10rem;
+        }
+    }
+
+    &__title{
+        @include text($font-family-general, 38px, 600, white);
+        width: 70%;
+        line-height: 4.4rem;
+        padding: 6.4rem 0 0.8rem 0;
+        margin-bottom: 2.5rem;
+
+        @include Responsive(Tablet){
+            font-size: 40px;
+        }
+
+        @include Responsive(LaptopDefault){
+            font-size: 60px;
+            padding-top: 9.6rem;
+            padding-bottom: 0.8rem;
+        }
+    }
+
+    &__btn{
+        width: 13.722rem;
+        background-color: white;
+        color: $primary-color;
+        margin-top: 3.2rem;
+    }
+}

@@ -1,0 +1,11 @@
+section.airbnb-host__content-about
+    .content-about__title More about hosting
+    .content-about__container
+        - var aboutArr = [
+        - {img: "about-1.jpg", title: "Setup", content: "How to start hosting"},
+        - {img: "about-2.jpg", title: "Safety", content: "How airbnb protects hosts"},
+        - {img: "about-3.jpg", title: "Financials", content: "How you make money on Airbnb"}
+        - ]
+        each about in aboutArr
+            +contentAbout(about.img, about.title, about.content)
+

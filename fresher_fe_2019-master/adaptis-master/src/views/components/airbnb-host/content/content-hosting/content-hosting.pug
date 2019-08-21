@@ -1,0 +1,12 @@
+section.airbnb-host__content-hosting
+    .content-hosting__line
+    .content-hosting__big-title Hosting in 3 steps
+    .content-hosting__container
+        - var hostingArr = [
+        - {img: "step-1.jpg", title: "List your space for free", para: "Share any space without sign-up charges, from a shared living room to a second home and everything in-between.", link: ""},
+        - {img: "step-2.jpg", title: "Decide how you want to host", para: "Choose your own schedule, prices, and requirements for guests. We’re there to help along the way.", link: ""},
+        - {img: "step-3.jpg", title: "Welcome your first guest", para: "Once your listing is live, qualified guests can reach out. You can message them with any questions before their stay.", link: "Learn how to start hosting"}
+        - ]
+        each hosting in hostingArr
+            +contentHosting(hosting.img, hosting.title, hosting.para, hosting.link)
+

@@ -1,0 +1,10 @@
+.airbnb-host-btn{
+    width: 100%;
+    padding: 1rem 2.2rem;
+    background-color: gray;
+    @include text($font-family-general, 16px, 500, $on-bg-color);
+    outline: none;
+    @include border(2px, solid, transparent, 3px);
+    line-height: 2.4rem;
+    cursor: pointer;
+}

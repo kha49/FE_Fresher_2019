@@ -1,0 +1,273 @@
+.airbnb-host-header{
+    @include Responsive(LaptopDefault){
+        position: relative;
+        width: 100%;
+        background-color: red;
+    }
+
+    &:before{
+        @include Responsive(LaptopDefault){
+            content: '';
+            display: block;
+            padding-top: 70%;
+        }
+
+        @include Responsive(Screen4k){
+            padding-top: 56.25%;
+        }
+    }
+
+    &__bg-header{
+        @include Responsive(LaptopDefault){
+            background-image: url(../images/airbnb-host/banner/banner.jpg);
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-position: 70% 60px;
+        }
+
+        @include Responsive(LaptopL){
+            background-size: 140%;
+        }
+    }
+
+    &__brand-header{
+        padding: 3.2rem 2.4rem 2.4rem 2.4rem;
+        min-height: 24rem;
+        background-image: url(../images/airbnb-host/banner/banner.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center 1%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include Responsive(Tablet){
+            min-height: 28rem;
+        }
+
+        @include Responsive(LaptopDefault){
+            background-image: none;
+            min-height: 0;
+            padding: 2.25rem 5.6rem 2.25rem 5.6rem;
+            background-color: white;
+            border-bottom: 1px solid rgb(226, 226, 226);
+            flex-direction: row;
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+    }
+
+    &__title{
+        @include text($font-family-general, 34px, 700, $on-bg-color);
+        line-height: 3.6rem;
+
+        @include Responsive(Tablet){
+            font-size: 40px;
+            line-height: 4rem;
+            padding-left: 6.4rem;
+        }
+
+        @include Responsive(Laptop){
+            padding-left: 8.8rem;
+        }
+
+        @include Responsive(LaptopDefault){
+            display: none;
+        }
+    }
+
+    &__title-form{
+        display: none;
+        @include text($font-family-general, 40px, 700, $second-color);
+        margin-bottom: 1.5rem;
+
+        @include Responsive(LaptopDefault){
+            display: block;
+        }
+    }
+
+    &__form-header{
+        margin: 2.4rem 2.4rem;
+
+        @include Responsive(Tablet){
+            margin-left: 9rem;
+            margin-right: 9rem;
+        }
+
+        @include Responsive(Laptop){
+            margin-left: 16.4rem;
+            margin-right: 16.4rem;
+        }
+
+        @include Responsive(LaptopDefault){
+            margin: 7.8rem 9.2rem 0 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
+
+.brand-header{
+
+    &__logo{
+        @include Responsive(LaptopDefault){
+            margin-left: 2.4rem;
+        }
+    }
+
+    &__info{
+        display: none;
+
+        @include Responsive(LaptopDefault){
+            display: flex;
+        }
+    }
+
+    &__price-brand{
+        display: flex;
+        align-items: center;
+    }
+}
+
+.price-brand{
+    &__month{
+        width: 11.5rem;
+        @include text($font-family-general, 14px, 300, $primary-color);
+    }
+
+    &__icon{
+        font-size: 14px;
+    }
+
+    &__number{
+        margin: 0 1.6rem 0 0.8rem;
+        @include text($font-family-general, 24px, 600, $primary-color);
+    }
+}
+
+.airbnb-host-btn__header-brand{
+    padding: 0.6rem 1.8rem;
+    background-color: #db3742;
+    font-size: 14px;
+    line-height: 2rem;
+}
+
+.form-header{
+    &__container{
+        background-color: white;
+
+        @include Responsive(LaptopDefault){
+            width: 46rem;
+            padding: 3.2rem;
+        }
+    }
+
+    &__desc{
+        @include text($font-family-general, 18px, 500, $primary-color);
+        margin-bottom: 0.5rem;
+
+        @include Responsive(Tablet){
+            font-size: 16px;
+        }
+    }
+
+    &__select-container{
+        @include Responsive(Tablet){
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__inp{
+        width: 100%;
+        padding: 1.1rem;
+        outline: none;
+        @include border(1px, solid, rgb(206, 206, 206), 3px);
+        margin: 0.5rem 0;
+        line-height: 2.2rem;
+
+        &::placeholder{
+            font-size: 16px;
+            line-height: 1.6rem;        
+            color: $primary-color;
+            text-transform: uppercase;
+        }
+    }
+
+    &__select{
+        width: 100%;
+        padding: 1.1rem 4rem 1.1rem 1.1rem;
+        outline: none;
+        @include border(1px, solid, rgb(206, 206, 206), 3px);
+        margin: 0.5rem 0;
+        appearance: none;
+        font-size: 16px;
+        line-height: 2.2rem;        
+        color: $primary-color;
+
+    }
+    
+    &__room{
+        position: relative;
+
+        @include Responsive(Tablet){
+            width: 59%;
+        }
+    }
+
+    &__people{
+        position: relative;
+
+        @include Responsive(Tablet){
+            width: 39%;
+        }
+    }
+
+    &__price{
+        margin: 2.4rem 0 1.6rem 0;
+        line-height: 4.1rem;
+    }
+}
+
+.dropdown-icon{
+    color: $primary-color;
+    font-size: 16px;
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.price{
+    &__number{
+        @include text($font-family-general, 32px, 700, $second-color);
+        padding: 0 0.4rem 0 0;
+
+        @include Responsive(Tablet){
+            font-size: 40px;
+        }
+    }
+
+    &__month{
+        @include text($font-family-general, 14px, 300, $primary-color);
+        padding: 0 0.4rem 0 0.7rem;
+        line-height: 1.8rem;
+        vertical-align: bottom;
+    }
+
+    &__icon{
+        vertical-align: bottom;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.airbnb-host-btn__header{
+    background-color: #ff5a5f;
+}
+

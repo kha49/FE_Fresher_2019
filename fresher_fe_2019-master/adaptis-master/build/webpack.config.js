@@ -188,7 +188,7 @@ module.exports = (env) => {
     ...utils.pages(env),
   );
   
-  if (!devMode) {
+  if (devMode === 'production') {
     config.plugins.push(
       new MinifyPlugin(),
     );

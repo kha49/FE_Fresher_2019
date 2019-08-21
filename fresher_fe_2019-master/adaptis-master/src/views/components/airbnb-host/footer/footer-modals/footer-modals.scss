@@ -1,0 +1,80 @@
+.airbnb-host{
+    &__modal-footer{
+        background-color: rgba(255, 255, 255, 0.582);
+        // background-color: yellow;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 4;
+        display: none;
+    }
+}
+
+.modal-footer{
+    &__container{
+        position: absolute;
+        // bottom: 0;  
+        z-index: 5;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        border: 1px solid rgb(226, 226, 226);
+        box-shadow: 1px 1px 10px 1px rgb(200, 199, 199);
+        overflow-y: scroll;
+        display: none;
+    
+        @include Responsive(Tablet){
+            width: 36.4rem;
+            margin: 0.4rem 0 0rem 0;
+            height: 80%;
+            right: 0;
+        }
+
+        @include Responsive(LaptopDefault){
+            margin-right: 9rem;
+        }
+
+        @include Responsive(LaptopL){
+            margin-right: 12rem;
+        }
+
+        @include Responsive(LaptopHd){
+            margin-right: 69rem;
+        }
+    }
+
+    &__close-container{
+        background-color: white;
+        padding: 2rem;
+        font-size: 18px;
+        color: $primary-color;
+        border-bottom: 1px solid rgb(209, 209, 209);
+        position: sticky;
+        top: 0;
+
+        @include Responsive(Tablet){
+            display: none;
+        }
+    }
+
+    &__close-icon{
+        cursor: pointer;
+    }
+
+    &__content-container{
+        padding: 0 1.6rem 0;
+    }
+
+    &__title{
+        @include text($font-family-general, 24px, 700, $primary-color);
+        margin: 0;
+        padding: 2px 0;
+    }
+
+    &__item{
+        padding: 1.6rem 0;
+        @include text($font-family-general, 16px, 300, $primary-color);
+        border-bottom: 1px solid rgb(209, 209, 209);
+        line-height: 2rem;
+    }
+}

@@ -1,0 +1,157 @@
+.airbnb-footer{
+    @include Responsive(Tablet){
+        padding: 4.8rem 2.4rem;
+    }
+
+    @include Responsive(LaptopDefault){
+        margin: 0 14.3rem;
+    }
+
+    @include Responsive(LaptopL){
+        margin: 0 18rem;
+    }
+
+    @include Responsive(LaptopHd){
+        margin: 0 44rem;
+    }
+
+    @include Responsive(Screen4k){
+        margin: 0 74rem;
+    }
+
+    &__category-container{
+        display: none;
+
+        @include Responsive(Tablet){
+            display: flex;
+            margin-bottom: 3.2rem;
+            background-color: white;
+        }
+    }
+
+    @include Responsive(Tablet){
+        &__category-block{
+            padding: 0 0.8rem;
+            margin: 0 0 0 6.32rem;
+            width: 18.88888%;
+            
+            &:first-child{
+                margin: 0;
+            }
+        }
+    }
+
+    &__license-block{
+        display: flex;
+        padding: 2.4rem;
+        align-items: center;
+
+        @include Responsive(Tablet){
+            padding: 0;
+            justify-content: space-between;
+        }
+    }
+}
+
+.category-block{
+    @include Responsive(Tablet){
+        &__title-link{
+            @include text($font-family-general, 14px, 700, $primary-color);
+        }
+
+        &__icon-link{
+            @include text($font-family-general, 18px, 700, $primary-color);
+            padding: 0 0.8rem;
+
+        }
+
+        &__list{
+            margin-top: 1.6rem;
+        }
+
+        &__item{
+            margin-bottom: 0.4rem;
+
+        }
+
+        &__link{
+            @include text($font-family-general, 14px, 400, $third-color);
+        }
+
+        &__status{
+            display: none;
+        }
+    }
+}
+
+.license-block{
+
+    &__brand-footer{
+        display: flex;
+        padding: 2.5rem 0;
+        align-items: center;
+
+        @include Responsive(MobileL){
+            padding: 1rem 0;
+            width: 60%;
+            margin-right: 2rem;
+        }
+    }
+
+    &__money-footer{
+
+        @include Responsive(Tablet){
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.brand-footer{
+
+    &__frame{
+        padding-right: 1rem;
+    }
+
+    &__copyright{
+        @include text($font-family-general, 14px, 400, $third-color);
+        letter-spacing: normal;
+    }
+}
+
+.money-footer{
+
+    &__language{
+        color: $primary-color;
+        font-size: 14px;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    &__money-type{
+        color: $primary-color;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+}
+
+.dropdown-icon__footer{
+    margin-left: 1rem;
+}
+
+.airbnb-footer__category-block:nth-of-type(3){
+
+        .category-block__item:nth-child(5){
+
+            .category-block__status{            
+                display: inline;
+                padding: 0 0.5rem;
+                background-color: #006a70;
+                @include text($font-family-general, 12px, 700, white);
+            }
+        }     
+    }
+
+

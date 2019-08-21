@@ -13,3 +13,24 @@
 // Component
 @import '../../views/components/header/header';
 @import '../../views/components/footer/footer';
+
+//airbnb-host
+@import '../../views/components/airbnb-host/mixin';
+@import '../../views/components/airbnb-host/reset';
+@import '../../views/components/airbnb-host/parent-components';
+@import '../../views/components/airbnb-host/responsive';
+@import '../../views/components/airbnb-host/header/header';
+@import '../../views/components/airbnb-host/header/header-modals/header-modals';
+@import '../../views/components/airbnb-host/footer/footer';
+@import '../../views/components/airbnb-host/footer/footer-modals/footer-modals';
+@import '../../views/components/airbnb-host/content/content';
+@import '../../views/components/airbnb-host/content/content-feature/content-feature';
+@import '../../views/components/airbnb-host/content/content-hosting/content-hosting';
+@import '../../views/components/airbnb-host/content/content-feedback/content-feedback';
+@import '../../views/components/airbnb-host/content/content-question/content-question';
+@import '../../views/components/airbnb-host/content/content-question/content-question-modal/content-question-modal.scss';
+@import '../../views/components/airbnb-host/content/content-about/content-about';
+@import '../../views/components/airbnb-host/content/content-banner/content-banner';
+
+
+

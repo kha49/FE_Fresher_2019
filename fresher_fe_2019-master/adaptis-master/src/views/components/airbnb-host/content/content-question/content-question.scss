@@ -1,0 +1,94 @@
+.airbnb-host{
+    &__content-question{
+        padding: 0 2.4rem;
+
+        @include Responsive(Tablet){
+            margin: 0 3.6rem;
+        }
+
+        @include Responsive(Laptop){
+            margin: 0 16.4rem;
+        }
+
+        @include Responsive(LaptopDefault){
+            margin: 0 14.3rem;
+        }
+
+        @include Responsive(LaptopL){
+            margin: 0 18rem;
+        }
+
+        @include Responsive(LaptopHd){
+            margin: 0 42rem;
+        }
+
+        @include Responsive(Screen4k){
+            margin: 0 74rem;
+        }
+    }
+}
+
+.content-question{
+
+    &__line{
+        width: 6.4rem;
+        height: 0.2rem;
+        background-color: $primary-color;
+        margin: 7rem 0 3rem 0;
+
+        @include Responsive(Tablet){
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__big-title{
+        @include text($font-family-general, 40px, 700, $second-color);
+        line-height: 4rem;
+
+        @include Responsive(Tablet){
+            text-align: center;
+            line-height: 6.4rem;
+        }
+
+        @include Responsive(LaptopDefault){
+            font-size: 60px;
+        }
+    }
+
+    &__container{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 4.8rem;
+
+        @include Responsive(LaptopDefault){
+            justify-content: space-between;
+        }
+    }
+
+    &__list{
+        width: 100%;
+        list-style-type: none;
+
+        @include Responsive(LaptopDefault){
+            width: 48%;
+        }
+    }
+
+    &__item{
+        @include text($font-family-general, 16px, 400, $fouth-color);
+        padding: 2.4rem 0;
+        line-height: 2.7rem;
+        border-bottom: 1px solid rgb(231, 231, 231);
+
+        &:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        @include Responsive(LaptopDefault){
+            font-size: 18px;
+        }
+    }
+}

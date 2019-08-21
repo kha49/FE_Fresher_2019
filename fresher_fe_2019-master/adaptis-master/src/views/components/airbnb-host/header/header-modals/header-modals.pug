@@ -1,0 +1,32 @@
+section.airbnb-host__modal-header(id="modal-header")
+    .modal-header__container
+        span.modal-header__icon-close(id="btn-close-header")
+            i(class="fas fa-times")
+        form.modal-header__form
+            +btn-modal("btn-login__facebook", "button", "Log in with Facebook", "icon-block__facebook", ["fab", "fa-facebook-f"])
+            +btn-modal("btn-login__google", "button", "Log in with Google", "icon-block__google", ["fab", "fa-google"])
+
+            .separator
+                span.separator__text or
+                hr.separator__line
+
+            - var inpArr = [
+            - {typeInp: "email", placeholderInp: "Email Address", icon: ["far", "fa-envelope"]},
+            - {typeInp: "password", placeholderInp: "Password", icon: ["fas", "fa-lock"]}    
+            - ]
+            each inpObject in inpArr
+                +inp-modal-header(inpObject.typeInp, inpObject.placeholderInp, inpObject.icon)
+            .modal-header__support-container
+                p.modal-header__support-block 
+                    input.check(type="checkbox", name="") 
+                    |Remember me
+                p.modal-header__support-block 
+                    |Forgot password?
+            button.airbnb-host-btn.btn-login.btn-login__general(type="submit")
+                |Log In
+            .modal-header__sign-up-container
+                span.modal-header__sign-up-text Don't have an acount
+                a(href="#")    
+                    button.airbnb-host-btn.btn-sign-up(type="button")
+                        |Sign up            
+

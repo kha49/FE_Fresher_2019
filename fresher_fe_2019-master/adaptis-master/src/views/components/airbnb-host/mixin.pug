@@ -1,0 +1,93 @@
+mixin room(roomArr)
+    select.form-header__select(id="room-type")
+        each roomType in roomArr
+            option(value= roomType.value)= roomType.content
+    span.dropdown-icon
+        i(class="fas fa-chevron-down")
+
+mixin people(peopleArr)
+    select.form-header__select(id="people-number")
+        each peopleNumber in peopleArr
+            option(value= peopleNumber.value)= peopleNumber.content
+    span.dropdown-icon
+        i(class="fas fa-chevron-down")
+
+mixin inp-modal-header(typeInp, placeholderInp, icon)
+    div(class= "modal-header__inp-frame")
+        input(class= "modal-header__inp-modal" type= typeInp placeholder= placeholderInp)
+        span(class= "modal-header__icon-block-inp")
+            i(class= icon)
+
+mixin btn-modal(classBtn, typeBtn, contentBtn, iconBtnBlock, iconBtn)
+    a(href="#")
+        button.airbnb-host-btn.btn-login(class= classBtn type= typeBtn)
+            span.icon-block(class= iconBtnBlock)
+                i(class= iconBtn)
+            = contentBtn
+
+mixin categoryList(categoryTitle, categoryTitleIcon, categoryList, categoryStatus)
+    .airbnb-footer__category-block
+        .category-block__title
+            a.category-block__title-link(href="#")= categoryTitle
+            each classIcon in categoryTitleIcon
+                a.category-block__icon-link(href="#")
+                    i(class= classIcon)
+        ul.category-block__list   
+            each categoryLink in categoryList
+                li.category-block__item
+                    a.category-block__link(href="#")= categoryLink
+                    span.category-block__status= categoryStatus
+
+mixin modalFooter(idModal, closeBtnFooter, modalFooterTitle, itemArr)
+    .modal-footer__container(id= idModal)
+        div.modal-footer__close-container
+            span.modal-footer__close-icon(id= closeBtnFooter)
+                i(class="fas fa-times")
+        div.modal-footer__content-container
+            h2.modal-footer__title= modalFooterTitle
+            ul.modal-footer__list
+                each item in itemArr
+                    li.modal-footer__item(class="")= item
+
+mixin contentFeature(contentFeatureTitle, contentFeaturePara, contentFeatureLink)
+    .content-feature__block
+        h2.content-feature__title= contentFeatureTitle
+        p.content-feature__para= contentFeaturePara
+        .content-feature__link-frame
+            a.content-feature__link(href="#")= contentFeatureLink
+
+mixin contentHosting(imgHostingStep, contentHostingTitle, contentHostingPara, contentHostingLink)
+    .content-hosting__block
+        div.content-hosting__step(style= "background-image: url(../../../../../assets/images/airbnb-host/content-hosting/"+imgHostingStep+")")
+        h2.content-hosting__title= contentHostingTitle
+        p.content-hosting__para= contentHostingPara
+        .content-hosting__link-frame
+            a.content-hosting__link(href="#")= contentHostingLink
+
+mixin contentQuestion(itemArr)
+    .content-question__list
+        each item, id in itemArr
+            li.content-question__item(id= id)= item
+
+mixin contentAbout(imgAbout, contentAboutSubtitle, contentAboutPara)
+    a(href="#").content-about__block
+        .content-about__img-frame
+            .content-about__img(style= "background-image: url(../../../../../assets/images/airbnb-host/content-about/"+imgAbout+")")
+        .content-about__info
+            h4.content-about__subtitle= contentAboutSubtitle
+            p.content-about__para= contentAboutPara
+            p.content-about__learn-more Learn more
+
+mixin modalQuestion(idQuestionModal, closeBtnQuestion, modalQuestionTitle, paraArr)
+    .modal-question__container(id= idQuestionModal)
+        div.modal-question__close-container
+            span.modal-question__close-icon(id= closeBtnQuestion)
+                i(class="fas fa-times")
+        div.modal-question__content-container
+            h2.modal-question__title= modalQuestionTitle
+            each para in paraArr
+                p.modal-question__para= para
+
+        
+
+

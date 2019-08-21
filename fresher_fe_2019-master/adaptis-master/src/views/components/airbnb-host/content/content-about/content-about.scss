@@ -1,0 +1,128 @@
+.airbnb-host{
+    &__content-about{
+        padding: 0 2.4rem;
+
+        @include Responsive(Tablet){
+            margin: 0 3.6rem;
+        }
+
+        @include Responsive(Laptop){
+            margin: 0 16.4rem;
+        }
+
+        @include Responsive(LaptopDefault){
+            margin: 0 14.3rem;
+        }
+
+        @include Responsive(LaptopL){
+            margin: 0 18rem;
+        }
+
+        @include Responsive(LaptopHd){
+            margin: 0 42rem;
+        }
+
+        @include Responsive(Screen4k){
+            margin: 0 74rem;
+        }
+    }
+}
+
+.content-about{
+
+    &__title{
+        @include content-title();
+        margin: 10rem 0 2rem 0;
+    }
+
+    &__container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        @include Responsive(Tablet){
+            justify-content: space-between;
+            flex-direction: row;
+        }
+    }
+
+    &__block{
+        border: 1px solid rgb(230, 230, 230);
+        display: flex;
+        margin-bottom: 1.6rem;
+        align-items: center;
+        width: 100%;
+        box-shadow: 1px 1px 10px 1px rgb(235, 235, 235);
+
+        @include Responsive(Tablet){
+            width: 32%;
+            flex-direction: column;
+        }
+    }
+
+    &__img-frame{
+        position: relative;
+        width: 7.6rem;
+
+        @include Responsive(Tablet){
+            width: 100%;
+        }
+
+        &::before{
+            content: '';
+            display: block;
+            padding-top: 100%;
+
+            @include Responsive(Tablet){
+                padding-top: 50%;
+            }
+        }
+    }
+
+    &__img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__info{
+
+        padding-left: 1.6rem;
+        width: 60%;
+
+        @include Responsive(Tablet){
+            width: 100%;
+            padding: 1rem 1.6rem;
+        }   
+    }
+
+    &__subtitle{
+        @include text($font-family-general, 14px, 600, $primary-color);
+        line-height: 1.8rem;
+        padding: 0;
+
+        @include Responsive(LaptopDefault){
+            font-size: 16px;
+        }
+    }
+
+    &__para{
+        @include text($font-family-general, 14px, 300 , $primary-color);
+        line-height: 1.8rem;
+    }
+
+    &__learn-more{
+        display: none;
+        @include text($font-family-general, 14px, 300 , $fouth-color);
+
+        @include Responsive(LaptopDefault){
+            display: block;
+            margin-top: 1rem;
+        }
+    }
+}
