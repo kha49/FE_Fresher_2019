@@ -1,6 +1,68 @@
 //- src/views/mixins/list.pug
 
-mixin list(id, ...items)
-  ul(id=id)
-    each item in items
-      li= item
+//- mixin list(id, ...items)
+//-   ul(id=id)
+//-     each item in items
+//-       li= item
+
+//- main box-content
+mixin box-content(title, content, link)
+  .box-content
+    div
+      h1(style='font-size: 24px').box-content_title=title
+    div
+      p(style='font-family:Circular, font-size: 16px, color:#484848').box-content__content=content
+    div
+      p.box-content__content
+        a(href="#", title="title")=link
+
+//-main comboBox
+mixin comboBox(index, title, content, link)
+  .comboBox
+    div
+      span(style='width: 48px,height: 48px,background-color: rgb(0, 132, 137),border-radius: 3px;')=index+1 
+    div
+      h1(style='font-size: 24px').box-content_title=title
+    div
+      p(style='font-family:Circular, font-size: 16px, color:#484848').box-content__content=content
+    div
+      p.box-content__content
+        a(href="#", title="title")=link
+      
+
+            
+//- main-utility
+//- mixin utility(path, title, content)
+//-   .utility
+//-     svg.utility__icon(viewBox="0 0 24 24",  focusable="false" aria-hidden="true" role="presentation" stroke-linecap="round" stroke-linejoin="round")
+//-       path(d=path)
+//-     .utility__content
+//-         p.utility__content--title
+//-             =title
+//-         p.utility__content--main
+//-             =content  
+
+
+//- main slide-pro-detail
+//- mixin pro-detail(img, name, title, price, star, sub)
+//-   .slide
+//-     img(src=img, alt="alt").slide__img
+//-     p.slide__content
+//-         p.slide__content--main=name
+//-         p.slide__content--sub=title
+//-         p.slide__content--price=price
+//-         p.slide__content--star
+//-             - for(i = 0; i< star; ++i){
+//-             i.fas.fa-star
+//-             - }
+//-             =sub
+
+
+//- footer list-box
+mixin list-box(title, subs, icons)
+  ul.list
+    li.list__title=title
+    each icon in icons
+      i(class=icon)
+    each sub in subs
+      li.list__sub=sub

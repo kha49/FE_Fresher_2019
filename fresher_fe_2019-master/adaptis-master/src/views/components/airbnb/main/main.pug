@@ -1,0 +1,67 @@
+#main.main
+    .main__content
+        .main__box-content(style='margin-left: 90px;')
+            - var box_content = [
+            -    {title : "Why become a host?", content : "Airbnb allows you, in a simple and secure way, to put your space available for rent, whether it is a room or an entire dwelling. You have complete control over your availability, your prices, your rules of procedure and your interaction with travelers."},
+            -    {title : "Airbnb protects guest", content : "To ensure your safety, that of your home, your belongings and of course your travelers, each reservation is protected against material damage up to 800 000 € and is covered by an insurance against accidents up to 800 000 €.", link:"Discover how Airbnb protected guest"},
+            -    {title : "Verified travelers", content : "Airbnb always requires travelers to confirm certain information before making a reservation, including their phone number and e-mail address. For even more security, you can only accept travelers who have been recommended by other guests and have provided verified ID."}
+            - ]
+            each val in box_content
+                +box-content(val.title, val.content, val.link)
+    .main__content
+        .main__box-steps
+            div(style="width: 100%; margin: 0 auto;")
+                hr(style="border:1px solid #767676; width: 64px; margin-left: 530px")
+            div.main__title
+                h1(style='font-size:60px; margin-left: 300px') Greet travelers, in 3 steps
+            .main__box-step(style='margin-left:90px;')
+                - var box_steps = [
+                -    {index:0,title : "Post your ad for free", content : "You have no registration fee to pay to share your accommodation, whether your guest room or your second home."},
+                -    {index:1,title : "Set your conditions", content : "It is you who set your schedule, your rates and your booking criteria. And if you need help, we are here for you."},
+                -    {index:2,title : "Welcome your first travelers", content : "Once your ad is published, eligible travelers will be able to contact you. If you have questions to ask them before their stay, send them a message.", link : "Discover how to welcome travelers"}
+                - ]
+                each val in box_steps
+                    +comboBox(val.index, val.title, val.content, val.link)
+    .main__content
+        .main__blog
+            div.main_img
+                img(src="https://a0.muscache.com/pictures/2b6774ff-f366-4c1a-b941-198b92e87ffd.jpg", alt="alt")
+            div.main__about
+                div(style="font-size: 60px;color: #FDB32B;font-weight: bold;letter-spacing: 0px;padding: 0px;margin-left: 0px;margin-top: 35px;line-height: 0") “
+                p#title "My host activity allowed me to refurbish my kitchen and make other improvements to my home. "
+                p#title-second Tessa is a guest in London to supplement her income.
+                button.btn(type='submit') Learn more
+    .main__content
+        .main__box-questions
+            div(style="width: 100%; margin: 0 auto;")
+                hr(style="border:1px solid #767676; width: 64px; margin-left: 530px")
+            div.main__title
+                h1(style="font-size: 60px") Answers to your questions
+            div.link-questions
+                div.link-left
+                        a(href="#") Who can become an Airbnb host?
+                        a(href="#") What criteria must travelers adhere to?
+                        a(href="#") Post an Ad: How Much Does It Cost?
+                div.link-right
+                        a(href="#") How am I protected in the event of property damage? 
+                        a(href="#") How to fix the price of my home?
+                        a(href="#") What help can Airbnb help me set rates?
+
+    .main__content(style="margin-top: 90px;")
+        .main__card
+            h1.main_title(style='margin-left:90px') Learn more about welcoming travelers
+            - var card = [
+            -   {img : "https://a0.muscache.com/pictures/8f287639-0b26-446d-8891-5b0517751da0.jpg", title: "First step", sub: "How to start hosting travelers"},    
+            -   {img : "https://a0.muscache.com/pictures/f5c99953-d8c0-44d3-b8cd-6aeafb0c5903.jpg", title: "Security", sub: "How Airbnb protect guest"},    
+            -   {img : "https://a0.muscache.com/pictures/b5816d12-bad2-4af0-a200-3d37beade068.jpg", title: "earnings", sub: "How you earn money on Airbnb"},    
+            - ]
+            .main__card-content
+                each val in card
+                    br
+                    .card
+                        .card__content
+                            .card__img(style="background-image: url('" + val.img + "')")
+                            .card__info
+                                p.card__info--title=val.title
+                                p.card__info--sub=val.sub
+            

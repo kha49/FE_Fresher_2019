@@ -1,0 +1,267 @@
+.main {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  clear: both;
+  box-sizing: border-box;
+  &__content {
+    display: block;
+    width: 100%;
+    padding: 0px 20px 0;
+    margin-bottom: 90px;
+    margin-top: 90px;
+    .btn {
+      padding: 10px 15px;
+      background: none;
+      border: 1.5px solid black;
+      border-radius: 3px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+  &__box-content {
+    display: flex;
+    @include Responsive(XS){
+      display: flex;
+      flex-direction: column;
+    }
+  }
+ 
+  &__box-steps{
+    .main__box-step{
+      display: flex;
+      .comboBox{
+        display: flex;
+        flex-direction: column;
+      }
+      span {
+        background-color: $blue;
+        border-radius: 999px;
+        font-size: 20px;
+        font-weight: bold;
+        color:white;
+        position: relative;
+        top: 29%;
+        left: 37%;
+        display: inline
+      }
+      }
+      @include Responsive(XS){
+        .main__title{
+          h1{
+            font-size: 40px !important;
+            margin-left: 20px !important;
+          }
+        }
+        .main__box-step{
+          display:flex;
+          flex-direction: column;
+        }
+      }
+  }
+  &__box-questions {
+    a {
+      display: block;
+      width: 100%;
+      text-decoration: none;
+      color: $blue;
+      font-size: 1.6em;
+      padding: 24px 0;
+      border-bottom: 1px solid $gray;
+    }
+  }
+ 
+  }
+.main__blog{
+  display: flex;
+  .main_img{ 
+    margin-right: 60px;      
+      img{
+        width: 460px;
+        height: 470px;
+        margin-left: 90px;
+
+      }
+  }
+  
+.main__about{
+    #title{
+      font-size: 40px;
+      font-family:Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    }
+    #title-second{
+      color: #767676;
+      font-size: 16px;
+    }
+  }
+  
+  @include Responsive(MD) {
+    &__content {
+      display: block;
+      width: 100%;
+      padding: 0px 100px 0;
+      margin: 0 auto;
+    }
+    hr {
+      margin: 0 auto;
+    }
+    &__title {
+      display: block;
+      text-align: center;
+    }
+    &__blog {
+      display: flex;
+      margin: 0 -40px;
+    }
+    &__banner {
+      width: 324.8px;
+      padding: 0 25px;
+    }
+    &__card-content {
+      display: flex;
+    }
+    &__card {
+      margin: 0 -50px;
+    }
+  }
+  @include Responsive(XS) {
+    display: flex;
+    flex-direction: column;
+    .main__img{
+      width: 400px;
+      height:400px;
+      margin-left: 10px !important;
+
+    }
+    
+  }
+}
+
+.main__box-questions{
+  .main__title{
+    text-align: center;
+
+  }
+  .link-questions{
+    margin-left: 90px;
+    display: flex;
+    width: 100%;
+    .link-left{
+      font-size: 14px;
+      margin-left: 90px;
+    }
+    .link-right{
+      font-size: 14px;
+      margin-left: 90px;
+    }
+    @include Responsive(XS){
+      display: flex;
+      flex-direction: column;
+      margin-left: 0px !important;
+    }
+  }
+
+}
+.box-content {
+  display: block;
+  width: 100%;
+  margin: 15px 0 50px 0;
+  &__title {
+    display: block;
+    width: 100%;
+    font-size: 2.4em;
+    margin: 0;
+  }
+  &__content {
+    display: block;
+    width: 100%;
+    font-size: 1.6em;
+    margin: 16px 0;
+  }
+  a {
+    text-decoration: none;
+    color: $blue;
+  }
+}
+
+
+.main__card-content{
+  display: flex;
+  margin-left: 90px;
+  .card {
+    display: block;
+    width: 100%;
+      border-radius: 3px;
+      box-shadow: 0 2px 4px 0 rbga(0, 0, 0, 0.06);
+    &__content {
+      display: block;
+      width: 100%;
+    }
+    &__img {
+      background-size: cover;
+      width: 333px;
+      height: 171px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &__info {
+      display: block;
+      padding: 15px;
+      &--title {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+      &--sub {
+        font-size: 1.6em;
+        margin-top: 15px;
+      }
+    }
+}
+  @include Responsive(MD) {
+    display: block;
+    width: 100%;
+    height: 168px;
+    overflow: hidden;
+    margin: 0 15px 0 0;
+    &__content {
+      display: block;
+      width: 100%;
+      border-radius: 3px;
+      box-shadow: 0 2px 4px 0 rbga(0, 0, 0, 0.06);
+    }
+    &__img {
+      background-size: cover;
+      width: 100%;
+      height: 104.81px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &__info {
+      display: block;
+      padding: 5px 15px;
+      &--title {
+        font-size: 1.4em;
+        font-weight: bold;
+      }
+      &--sub {
+        font-size: 1.5em;
+        margin-top: 15px;
+      }
+    }
+  }
+  @include Responsive(XS){
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@include Responsive(XS){
+  .main{
+    &__box-steps{
+      .main__title{
+        font-size: 19px;
+      }
+    }
+  }
+}
+

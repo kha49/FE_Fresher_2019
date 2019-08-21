@@ -1,0 +1,126 @@
+.header {
+  display: block;
+  width: 100%;
+  &__banner {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    height: 240px;
+  }
+  &__logo {
+    svg {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      fill: $blue;
+      top: 35px;
+      left: 25px;
+    }
+  }
+  &__title {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 0 23px;
+    top: 60%;
+  }
+  &__form {
+    display: block;
+    width: 100%;
+    padding: 25px 20px;
+  }
+  @include Responsive(MD) {
+    &__banner {
+      height: 280px;
+    }
+    &__title {
+      display: block;
+      text-align: center;
+      position: relative;
+      width: 100%;
+      padding: 0 23px;
+      top: 73%;
+      .heading-primary {
+        &__title {
+          font-size: 4em;
+        }
+      }
+    }
+    &__form {
+      display: block;
+      width: 100%;
+      padding: 25px 90px;
+    }
+  }
+  @include Responsive(XL) {
+    &__logo {
+      display: none;
+    }
+    &__form {
+      display: block;
+      position: absolute;
+      top: 25%;
+      right: 6%;
+      width: 460px;
+      padding: 25px 20px;
+      background-color: #fff;
+      border-radius: 3px;
+      .heading-primary__main{
+        display: none;
+      }
+    }
+    &__banner {
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      height: 600px;
+    }
+    &__title{
+      display: none;
+    }
+  }
+  @import "./form/form";
+  @import "./nav/nav";
+}
+
+.heading {
+  display: block;
+  &__title {
+    padding: 0;
+    margin: 0;
+    font-size: 3.4em;
+    color: white;
+  }
+  &__price {
+    padding: 0;
+    margin: 0;
+    font-size: 3.2em;
+    color: $color-text;
+  }
+  &__main {
+    padding: 0;
+    margin: 0;
+    font-size: 1.8em;
+  }
+  &__sub {
+    padding: 0;
+    margin: 8px 0;
+    font-size: 1.8em;
+  }
+  @include Responsive(MD) {
+    &__price {
+      margin-top: 70px;
+    }
+  }
+}
+.container {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+.container-fluid {
+  display: block;
+  width: 100%;
+}
