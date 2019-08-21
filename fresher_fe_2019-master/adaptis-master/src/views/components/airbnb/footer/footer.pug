@@ -1,0 +1,10 @@
+#footer.footer
+    .footer__list-box
+        - var list = [
+        -  {title:'Airbnb', sub:['Careers','News', 'Policies', 'Help', 'Diversity & Belonging'], icon:['']},
+        -  {title:'Discover', sub:['Trust & Safety','Crédit voyage', 'Gift Cards', 'Airbnb Citizen', 'Business Travel', 'Guidebooks', 'Airbnbmag'], icon:['']},
+        -  {title:'Hosting', sub:['Why Host','Hospitality', 'Responsible Hosting', 'Community Center', 'Host an Experience', 'Open Homes'], icon:['']},
+        -  {title:'', sub:['Terms','Privacy', 'Site Map'], icon:['fab fa-facebook-f', 'fab fa-twitter','fab fa-instagram']} ]
+        each val in list
+            +list-box(val.title, val.sub, val.icon)
+    

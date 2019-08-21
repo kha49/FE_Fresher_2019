@@ -1,0 +1,56 @@
+.main
+    .container
+        .main__content
+            - var box_content = [
+            -    {title : "Why host on Airbnb?", content : "No matter what kind of home or room you have to share, Airbnb makes it simple and secure to host travelers. You’re in full control of your availability, prices, house rules, and how you interact with guests."},
+            -    {title : "Airbnb protects hosts", content : "To keep you, your home, and your belongings safe, we cover every booking with $1M USD in property damage protection and another $1M USD in insurance against accidents.", link : "Learn how Airbnb protects hosts"},
+            -    {title : "Guests are verified", content : "Airbnb always requires guests to provide certain information before they can make a reservation—such as a confirmed phone number and email address. For added control, you can require guests to also provide recommendations from other hosts and a verified ID."}
+            - ]
+            each val in box_content
+                +content-list(val.title, val.content, val.link)
+        .main__content
+            .main__content-host-title
+                h1 Hosting in 3 steps
+        .main__content
+                - var box_host = [
+                -    {num:"1",title : "List your space for free", content : "Share any space without sign-up charges, from a shared living room to a second home and everything in-between."},
+                -    {num:"2",title : "Decide how you want to host", content : "Choose your own schedule, prices, and requirements for guests. We’re there to help along the way."},
+                -    {num:"3",title : "Welcome your first guest", content : "Once your listing is live, qualified guests can reach out. You can message them with any questions before their stay.", link : "Learn how to start hosting"}
+                - ]
+                each val,index in box_host
+                    +content-host(val.num,val.title, val.content, val.link)
+        .main__content
+            .main__content-box
+                img(src="https://a0.muscache.com/pictures/2b6774ff-f366-4c1a-b941-198b92e87ffd.jpg", alt="alt")
+            .main__content-box-about
+                h5 “
+                h3 Hosting has helped me pay for a new kitchen and other upgrades.”
+                p Tessa hosts in London to earn extra money
+                button.btn(type='submit') Learn how they host
+        .main__content
+            .main__content-question
+                h1 Your questions answered
+                - var link = [
+                -    {link1:"What is required of guests before booking?",link2:"What is required of guests before booking?"},
+                -    {link1:"What is required of guests before booking?",link2:"What is required of guests before booking?"},
+                -    {link1:"What is required of guests before booking?",link2:"What is required of guests before booking?"},
+                - ]
+                each val, index in link
+                    +link(val.link1,val.link2)
+        .main__content
+            .main__content-img-title
+                h3 More about hosting
+        .main__content
+            - var box_index =[
+            -   {index:"https://a0.muscache.com/pictures/8f287639-0b26-446d-8891-5b0517751da0.jpg",title:"Set up",sub:"How to star hosting",link:"Learn more"},
+            -   {index:"https://a0.muscache.com/pictures/f5c99953-d8c0-44d3-b8cd-6aeafb0c5903.jpg",title:"Set up",sub:"How to star hosting",link:"Learn more"},
+            -   {index:"https://images.fastcompany.net/image/upload/w_1280,f_auto,q_auto,fl_lossy/wp-cms/uploads/2017/12/p-1-oasis-is-the-home-sharing-company-that-doesnand8217t-consider-airbnb-a-rival.jpg",title:"Safety",sub:"How to star hosting",link:"Learn more"}
+            -   ]
+            each val in box_index
+                +content_image(val.index,val.title,val.sub,val.link)
+        .main__content
+            .main__content-last
+                h4 Ready to earn ?
+                div
+                    p Get Started
+                

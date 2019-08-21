@@ -1,0 +1,95 @@
+.heading-primary { 
+  &__main {
+    top: 10px;
+    padding: 0px;
+    margin: 5px;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  &__sub {
+    padding: 0;
+    margin: 8px 0;
+    font-size: 17px;
+    font-weight: bold;
+  }
+}
+.form {
+  margin-top: 5px;
+  &__element {
+    padding: 8px;
+    width: 100%;
+    display: block;
+    margin: 30 0 15px;
+    input {
+      width: 100%;
+      padding: 9px;
+      border: 1px solid rgb(220, 220, 220);
+      border-radius: 3px;
+      line-height: 1.7em;
+      &::placeholder {
+        font-size: 18px;
+      }
+    }
+    select {
+      width: 100%;
+      padding: 11px;
+      border: 1px solid rgb(220, 220, 220);
+      border-radius: 3px;
+      line-height: 1.7em;
+      font-size: 18px;
+    }
+    span{
+      font-size: 40px;
+      font-weight: bold;
+    }
+    p{
+      margin-left: 100px;
+    }
+    svg{
+      margin-left: 130px;
+    }
+  }
+  &__col-6 {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+  }
+}
+.btn {
+  padding: 10px 22px;
+  background-color: $color-red;
+  border: 1px solid $color-red;
+  border-radius: 3px;
+  margin: -30px 0 0 0;
+  color: $color-white;
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+}
+@include Responsive(SM) {
+  .heading-primary{
+    padding-top: 250px; 
+    &__main {
+      top: 20px;
+      padding: 0px;
+      margin: 5px;
+      font-size: 30px;
+      font-weight: bold;
+      color: #ffff;
+    }
+    &__sub{
+      padding-top: 20px ;
+    }
+    .form{
+      display: block;
+      width: 100%;
+      height:300px;
+      float: left;
+      &__col-6 {
+        float: left;
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
+  } 
+}

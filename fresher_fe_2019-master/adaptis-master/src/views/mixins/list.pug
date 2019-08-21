@@ -4,3 +4,43 @@ mixin list(id, ...items)
   ul(id=id)
     each item in items
       li= item
+
+
+mixin list-box(title, subs, icons)
+  ul.list
+    li.list__title=title
+    each icon in icons
+      i(class=icon)
+    each sub in subs
+      li.list__sub=sub
+
+
+mixin content-list(title, content, link)
+  .main__content-list
+      h5=title
+      p=content
+      a(href="#", title="title")=link
+
+mixin content-host(num,title, content, link)
+  .main__content-host
+    div.index
+      span=num
+    div
+      h3=title
+    div
+      p=content
+    div
+      a(href="#", title="title")=link
+
+
+mixin link(link1,link2)
+  .main__content-question
+    a= link1
+    a= link2
+
+mixin content_image(index,title,sub,link)
+  .main__content-image
+    img(src=index)
+    h4=title
+    p=sub
+    a=link
