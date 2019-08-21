@@ -1,0 +1,20 @@
+section.about-hosting
+    .container-fluid
+        .about-hosting__content
+            .about-hosting__content__title
+                h1 More about hosting
+            - var hosting = [
+            -   {img : "https://a0.muscache.com/pictures/8f287639-0b26-446d-8891-5b0517751da0.jpg", title: "Setup", description: "How to start hosting"},    
+            -   {img : "https://a0.muscache.com/pictures/f5c99953-d8c0-44d3-b8cd-6aeafb0c5903.jpg", title: "Safety", description: "How to start hosting"},    
+            -   {img : "https://a0.muscache.com/pictures/b5816d12-bad2-4af0-a200-3d37beade068.jpg", title: "Financials", description: "How to make money Airbnb"},    
+            - ]
+            .about-hosting__content__list
+                each val in hosting
+                    .hosting-list__item
+                        .hosting-list__item__content
+                            .images(style="background-image: url('" + val.img + "')")
+                            .info
+                                .info__title
+                                    p=val.title
+                                .info__description
+                                    p=val.description

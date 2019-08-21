@@ -4,3 +4,14 @@ mixin list(id, ...items)
   ul(id=id)
     each item in items
       li= item
+
+// Airbnb2 about-content
+mixin about-content(title, content, link)
+  .about-content__item
+    div.about-content__item__title
+      h1=title
+    div.about-content__item__content
+      p=content
+    div
+      p.about-content__content
+        a(href="#", title="title")=link

@@ -1,0 +1,85 @@
+.air-learn-host {
+    padding: 30px 0px 100px;
+    &__content {
+        @include min-sm {
+            @include flexbox();
+        }
+        @include min-md {
+            padding: 0 10%;
+        }
+        @include min-xl {
+            padding: 0;
+        }
+        &__img {
+            width: 100%;
+            padding: 15px;
+            padding-left: 0px;
+            img {
+                width: 100%;
+            }
+        }
+        &__about {
+            @include min-sm {
+                display: table-cell;
+                vertical-align: middle;
+                padding-left: 25px;
+                padding-top: 12%;
+            }
+            @include min-md {
+                padding-top: 18%;
+            }
+            @include min-xl {
+                padding-top: 6%;
+                padding-left: 65px;
+            }
+            .quoste {
+                color: #FDB32B;
+                font-size: 60px;
+                font-family: sans-serif;
+                font-weight: bold;
+                letter-spacing: 0px;
+                padding: 0px;
+                margin-left: 0px;
+                margin-top: 35px;
+                line-height: 0;
+                @include min-xl {
+                    font-size: 100px;
+                }
+            }
+            h3.title {
+                word-wrap: break-word;
+                font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 1.4444444444444444em;
+                color: #484848;
+                padding-top: 0px;
+                @include min-xl {
+                    font-size: 30px;
+                }
+            }
+            p.description {
+                font-size: 14px;
+                color: #767676;
+                font-weight: 400;
+                line-height: 1.2857142857142858em;
+                margin: 15px 0;
+                @include min-xl {
+                    font-size: 16px;
+                    margin: 25px 0;
+                }
+            }
+            button.btn-host {
+                cursor: pointer;
+                background-color: #ffffff;
+                color:#484848;
+                font-size: 16px;
+                font-weight: bold;
+                padding: 12px 23px;
+                border-radius: 4px;
+                border: 2px solid #484848;
+                text-align: center;
+            }
+        }
+    }
+}

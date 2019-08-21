@@ -1,0 +1,25 @@
+section.air-hosting
+    .container-fluid
+        .air-hosting__steps
+            div(style="width: 100%; margin: 0 auto;")
+                div(style="width: 64px;border: 1px solid #767676;margin: 0 auto;")
+            .air-hosting__steps__title
+                h1 Hosting in 3 steps
+            .air-hosting__steps__list
+                mixin hosting-content(index, title, content, link)
+                    .list__item
+                        div.index
+                            span=index
+                        div.title
+                            h1=title
+                        div.description
+                            p=content
+                        div.link-about
+                            a(href="#", title="title")=link
+                - var hosting_steps = [
+                -    {index : "1", title : "List your space for free", content : "Share any space without sign-up charges, from a shared living room to a second home and everything in-between."},
+                -    {index : "2", title : "Decide how you want to host", content : "Choose your own schedule, prices, and requirements for guests. We’re there to help along the way."},
+                -    {index : "3", title : "Welcome your first guest", content : "Once your listing is live, qualified guests can reach out. You can message them with any questions before their stay.", link : "Learn how to start hosting"}
+                - ]
+                each val in hosting_steps
+                    +hosting-content(val.index, val.title, val.content, val.link)

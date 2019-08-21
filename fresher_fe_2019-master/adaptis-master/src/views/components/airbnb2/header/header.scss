@@ -1,0 +1,208 @@
+#header {
+    width: 100%;
+    .header-nav {
+        @include flexbox();
+        justify-content: space-between;
+        width: 100%;
+        height: 82px;
+        align-items: center;
+        background-color: #ffffff;
+        border-bottom: 0.5px solid #ccc;
+        display: none;
+        @include min-xl {
+            display: block;
+            position: fixed;
+            @include flexbox();
+            justify-content: space-between;
+            top: 0;
+            padding: 0px 80px;
+        }
+        &__logo {
+            svg {
+                height:32px;
+                width:32px;
+                fill:#008489;
+            }
+        }
+        &__content {
+            @include flexbox();
+            &__description {
+                align-items: center;
+                @include flexbox();
+                span.monthly {
+                    font-size: 14px;
+                    color: #484848;
+                }
+                span.price {
+                    margin: 0px 10px;
+                    font-size: 24px;
+                    line-height: 30px;
+                    letter-spacing: normal;
+                    color: #333;
+                    font-weight: 800;
+                }
+            }
+            .button-get-started {
+                background: #DB3742;
+                padding: 6px 15px;
+                border-radius: 4px;
+                margin-left: 5px;
+                a {
+                    color: color(c-white);
+                }
+            }
+        }
+    }
+    .header-banner {
+        margin-top: 80px;
+        width: 100%;
+        @include min-xl {
+            background-size: cover;
+            background-image: url('../images/banner.jpg');
+            background-repeat: no-repeat;
+        }
+        &__background {
+            background-size: cover;
+            background-image: url('../images/banner.jpg');
+            background-repeat: no-repeat;
+            @include min-xl {
+                display: none;
+            }
+            &__logo {
+                padding: 30px 20px 50px 30px;
+            }
+            &__title {
+                padding: 0px 25px 20px 30px;
+                @include min-md {
+                    padding: 45px 25px 10px 100px;
+                }
+                h1 {
+                    color:#ffffff;
+                    font-size: 34px;
+                    font-weight: 800;
+                    line-height: 36px;
+                    letter-spacing: -1px;
+                    @include min-md {
+                        font-size: 45px;
+                        line-height: 40px;
+                        letter-spacing: -0.6px;
+                    }
+                }
+            }
+        }
+        &__form {
+            @include min-sm {
+                padding: 0px 80px;
+            }
+            @include min-md {
+                padding: 0px 100px;
+            }
+            @include min-lg {
+                padding: 0px 170px;
+            }
+            @include min-xl {
+                display: flex;
+                justify-content: flex-end;
+            }
+            h1.heading-form__description {
+                padding: 10px 15px 0px 15px;
+                font-size: 18px;
+                line-height: 26px;
+                font-weight: 600;
+                color: #484848;
+                letter-spacing: normal;
+                font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+                @include min-xl {
+                    display: none;
+                }
+            }
+            .form-content {
+                @include min-xl {
+                    width: 465px;
+                    background-color: #ffffff;
+                    margin: 90px -70px 90px 90px;
+                    padding: 30px 25px;
+                    border-radius: 5px;
+                }
+                form#form-header {
+                    .header-form {
+                        display: none;
+                        @include min-xl {
+                            padding-left: 15px;
+                            display: block;
+                            &__title {
+                                h1 {
+                                    margin-top: 0px;
+                                    font-size: 45px;
+                                    line-height: 40px;
+                                    letter-spacing: -0.6px;
+                                    color: #484848;
+                                }
+                            }
+                            &__description {
+                                h1 {
+                                    margin: 0px;
+                                    font-size: 18px;
+                                    line-height: 26px;
+                                    font-weight: 600;
+                                    color: #484848;
+                                }
+                            }
+                        }
+                    }
+                    .main-form {
+                        padding: 5px 15px;
+                        background-color: #ffffff;
+                        width: 100%;
+                        .form-group {
+                            margin-bottom: 18px;
+                            .form-control {
+                                display: block;
+                                border: 1px solid #ccc;
+                                width: 100%;
+                                padding: 8px 6px;
+                                border-radius: 5px;
+                                @include min-sm {
+                                    padding: 13px 6px;
+                                }
+                            }
+                        }
+                        .per-month {
+                            @include flexbox();
+                            span.price {
+                                margin: 0px 10px;
+                                font-weight: 800;
+                                font-size: 40px;
+                                line-height: 44px;
+                                letter-spacing: normal;
+                                color: #333;
+                            }
+                            span.monthly {
+                                padding-top: 25px;
+                                font-size: 14px;
+                                color: #484848;
+                            }
+                            span.icon {
+                                padding-top: 30px;
+                            }
+                        }
+                        .button {
+                            margin-top: 15px;
+                            padding: 13px;
+                            width: 100%;
+                            border: 1px solid #ccc;
+                            border-radius: 4px;
+                            text-align: center;
+                            background-color: #FF5A5F;
+                            a {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+        
+    }
+}

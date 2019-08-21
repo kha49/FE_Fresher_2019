@@ -2,6 +2,7 @@ import LazyLoad from 'vanilla-lazyload';
 
 const Global = {
   lazyLoad: (thresDistance) => {
+    // debugger;
     const distance = thresDistance || 0;
     const myLazyLoad = new LazyLoad({
       elements_selector: '.lazy',

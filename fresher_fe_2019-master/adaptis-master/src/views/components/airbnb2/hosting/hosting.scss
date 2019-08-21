@@ -1,0 +1,94 @@
+.air-hosting {
+    &__steps {
+        @include min-xs {
+            padding: 0px 35px;
+        }
+        @include min-sm {
+            padding: 0px 50px;
+        }
+        @include min-md {
+            padding: 0px 110px;
+        }
+        @include min-lg {
+            padding: 0px 150px;
+        }
+        @include min-xl {
+            padding: 0px;
+        }
+        &__title {
+            h1 {
+                text-align: center;
+                font-size: 40px;
+                line-height: 40px;
+                letter-spacing: -1.5px;
+                font-weight: 900;
+                color: #333333;
+                font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+                @include min-xl {
+                    font-size: 60px;
+                    line-height: 64px;
+                    letter-spacing: -2.5px;
+                }
+            }   
+        }
+        &__list {
+            @include min-xl {
+                display: flex;
+                justify-content: space-between;
+            }
+            .list__item {
+                padding-bottom: 40px;
+                @include min-xl {
+                    padding-right: 50px;
+                }
+                .index {
+                    width: 48px;
+                    height: 48px;
+                    background-color: #008489;
+                    border-radius: 50%;
+                    span {
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #ffffff;
+                    position: relative;
+                    top: 29%;
+                    left: 37%;
+                    }
+                }
+                .title {
+                    padding: 2px 0px;
+                    h1 {
+                        word-wrap: break-word;
+                        font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+                        font-size: 24px;
+                        font-weight: 800;
+                        line-height: 1.25em;
+                        color: #484848;
+                    }
+                }
+                .description {
+                    p {
+                        font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 1.75em;
+                        color: #484848;
+                    }
+                }
+                .link-about {
+                    padding-top: 15px;
+                    a {
+                        font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 1.75em;
+                        color: #008489;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
