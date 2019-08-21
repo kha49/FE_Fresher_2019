@@ -1,8 +1,7 @@
-// import './assets/styles/_app.scss';
 import Global from './views/components/global/global';
-import Header from './views/components/header/header';
-// import './views/components/airbnbUpdate/header/header';
+// import Header from './views/components/header/header';
 import HeaderAirBnb from './views/components/airbnbUpdate/header/header';
+import FormAirBnb from './views/components/airbnbUpdate/form/form';
 
 require('normalize.css');
 // require('slick.css');
@@ -61,4 +60,5 @@ window.onload = () => {
 };
 
 $(window).on('scroll', () => {HeaderAirBnb.scrollFunction();});
+$(window).on('click', () => {FormAirBnb.multipleFunction();});
 

@@ -21,20 +21,35 @@
                 @include form__style--input();
             }
         }
-        &--room {
-            @include form__style();
-            select {
-                @include form__style--input();
-                padding-left: 7px;
+        &--type {
+            &--room {
+                @include form__style();
+                select {
+                    @include form__style--input();
+                    padding-left: 7px;
+                }
+            }
+            &--guests {
+                @include form__style();
+                select {
+                    @include form__style--input();
+                    padding-left: 7px;
+                }
+            }
+            @include breakpoint--small() {
+                display: flex;
+                &--room {
+                    width: 55%;
+                }
+                &--guests {
+                    width: 45%;
+                    margin-left: 10px;
+                }
             }
         }
-        &--guests {
-            @include form__style();
-            select {
-                @include form__style--input();
-                padding-left: 7px;
-            }
-        }
+    }
+    @include breakpoint--minHuge() {
+        display: none;
     }
 }
 

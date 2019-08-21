@@ -2,31 +2,73 @@
 
 .airbnbUpdate-introduce {
     margin: 0 15px;
-}
-
-.airbnbUpdate-step {
-    margin: 15px;
-}
-
-.airbnbUpdate-hosting__line {
-    margin: 15px;
-    width: 64px;
-    border: 1px solid rgb(118, 118, 118);
-}
-
-.airbnbUpdate-step {
-    &__step {
-        position: relative;
-        width: 48px;
-        height: 48px;
-        background-color: #008489;
-        border-radius: 50%;
-        p {
-            position: absolute;
-            top: 12px;
-            left: 19px;
-            color: #fff;
-            font-weight: bold;
+    @include breakpoint--minHuge() {
+        margin: 0 35px 100px 50px;
+        display: flex;
+        &__nolink {
+            width: 33%;
+            margin-right: 15px;
+        }
+        &__link {
+            width: 33%;
+            margin-right: 15px;
         }
     }
 }
+
+
+
+.airbnbUpdate-hosting {
+    &__title {
+        margin: 15px;
+        @include breakpoint--minHuge() {
+            margin: auto;
+            h1 {
+                text-align: center;
+            }
+        }
+    }
+    &__line {
+        margin: 15px;
+        width: 64px;
+        border: 1px solid rgb(118, 118, 118);
+        @include breakpoint--minHuge() {
+            margin: auto;
+        }
+    }
+    &__steps {
+        .airbnbUpdate-step {
+            margin: 0 15px 15px;
+            &__step {
+                position: relative;
+                width: 48px;
+                height: 48px;
+                background-color: #008489;
+                border-radius: 50%;
+                p {
+                    position: absolute;
+                    top: 12px;
+                    left: 19px;
+                    color: #fff;
+                    font-weight: bold;
+                }
+            }
+            @include breakpoint--minHuge() {
+                width: 33%;
+            }
+        }
+        @include breakpoint--minHuge() {
+            display: flex;
+            margin: 0 30px;
+        }
+    }
+    &__link {
+        margin: 0 15px;
+    }
+}
+
+
+
+
+
+

@@ -1,15 +1,22 @@
+// @import '../form/form.scss';
+
 $breakpoint-small: 700px;
-$breakpoint-large: 800px;
 $breakpoint-huge: 1100px;
+
+@mixin form__style {
+    height: 46px;
+    margin-bottom: 15px;
+}
+
+@mixin form__style--input {
+    border: 1px solid #CAABAE;
+    border-radius: 4px; 
+    width: 100%;
+    padding: 14px 11px;
+}
 
 @mixin breakpoint--small {
     @media screen and (min-width: $breakpoint-small) {
-        @content;
-    }
-}
-
-@mixin breakpoint--large {
-    @media screen and (min-width: $breakpoint-large) {
         @content;
     }
 }
@@ -32,12 +39,6 @@ $breakpoint-huge: 1100px;
     }
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .airbnbUpdate-header__sticky {
     @include breakpoint--maxHuge() {
         display: none;
@@ -45,7 +46,6 @@ body {
     position: fixed;
     z-index: 1;
     top: 0px;
-    // right: 0px;
     background-color: #fff;
     transition: top 0.3s;
     display: flex;
@@ -61,7 +61,7 @@ body {
         }
     }
     &--title {
-        display: flex;
+        display: flex;  
         &-Potential {
             margin: auto;
             p {
@@ -86,20 +86,28 @@ body {
     }
 }
 
+.airbnbUpdate-header-modal {
+    width: 500px;
+    margin: auto;
+    border: 1px solid #000;
+}
+    
+
 .airbnbUpdate-header {
     position: relative;
     background-image: url("https://a0.muscache.com/pictures/61f948dd-aab5-4e32-b9d2-1e849ae180b0.jpg");
     background-position: top center;
     background-size: cover;
     height: 240px;
-    @include breakpoint--minHuge() {
-        margin-top: 80px;
-    }
     @include breakpoint__airbnbUpdate--header() {
         height: 210px;
     }
     @include breakpoint--small() {
         height: 280px;
+    }
+    @include breakpoint--minHuge() {
+        margin-top: 80px;
+        height: 700px;
     }
     &__logo {
         padding: 32px 0 0 24px;
@@ -129,21 +137,123 @@ body {
         @include breakpoint--small() {
             padding: 0 50px;
         }
+        @include breakpoint--minHuge() {
+            display: none;
+        }
     }
 }
 
+.airbnbUpdate-header__form {
+    background-color: #fff;
+    width: 430px;
+    height: 500px;
+    border-radius: 4px;
+    position: absolute;
+    right: 50px;
+    top: 140px;
+    &--title {
+        margin: 15px;
+    }
+    @include breakpoint--maxHuge() {
+        display: none;
+    }
+}
 
+.airbnbUpdate-form-header {
+    margin: 0 15px;
+    &__input {
+        &--location {
+            @include form__style();
+            input {
+                @include form__style--input();
+            }
+        }
+        &--type {
+            display: flex;
+            &--room {
+                @include form__style();
+                width: 55%;
+                select {
+                    @include form__style--input();
+                    padding-left: 7px;
+                }
+            }
+            &--guests {
+                @include form__style();
+                width: 45%;
+                margin-left: 10px;
+                select {
+                    @include form__style--input();
+                    padding-left: 7px;
+                }
+            }
+        }
+    }
+}
 
+.airbnbUpdate-form-header__total {
+    display: flex;
+    &--cost {
+        h3 {
+            margin: 0px;
+        }
+    }
+    &--perMonth {
+        p {
+            margin: 15px 0 0 10px;
+            span {
+                img {
+                    width: 11px;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
 
+.airbnbUpdate-form-header__button {
+    margin-top: 15px;
+    button {
+        width: 100%;
+        height: 46px;
+        border: 0px;
+        border-radius: 4px;
+        background-color: #FF5A5F;
+        color: #fff;
+        font-weight: bold;
+    }
+}
 
 .airbnbUpdate-header-sticky__bottom {
     position: fixed;
-    bottom: -50px;
+    bottom: -60px;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
+    height: 60px;
     z-index: 1;
     transition: bottom 0.3s;
+    background-color: #fff;
     &--title {
-        display: flex;
-        background-color: red;
+        margin: auto 15px;
+        &-Total {
+            h3 {
+                margin: 0px;
+            }
+        }
+        &-Potential {
+            p {
+                span {
+                    img {
+                        width: 11px;
+                    }
+                }
+            }
+        }
+    }
+    &--button {
+        margin: auto 15px;
     }
 }

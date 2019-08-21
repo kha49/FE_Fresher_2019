@@ -1,0 +1,44 @@
+@import '../header/header.scss';
+
+.airbnbUpdate-sub-footer {
+    display: flex;
+    justify-content: space-around;
+    @include breakpoint--maxHuge() {
+        display: none;
+    }
+    margin-top: 50px;
+}
+
+.airbnbUpdate-footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 25px;
+    &__brand {
+        display: flex;
+        justify-content: flex-start;
+        
+        &--logo {
+            img {
+                width: 21px;
+                height: auto;
+            }
+        }
+        &--copyright {
+            // margin-left: 10px;
+            p {
+                font-size: 13px;
+                span {
+                    img {
+                        width: 11px;
+                    }
+                }
+            }
+        }
+    }
+    &__buttons {
+        display: flex;
+        button {
+            width: 80px;
+        }
+    }
+}
