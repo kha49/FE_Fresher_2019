@@ -43,7 +43,7 @@
   }
   &__detail {
     font-size: 14px;
-    color: $color-text;
+    color:  #484848;
     padding: 0 10px;
     @include Responsive(XS){
       display: inline;
@@ -54,30 +54,31 @@
     button {
       padding: 10px;
       background: none;
-      border: 1px solid $gray;
+      border: 1px solid #EBEBEB;
       margin: 0 5px;
       font-size: 14px;
-      color: $color-text;
-      @include Responsive(XS){
-        display: none;
-      }
+      color: #484848;
+      // @include Responsive(XS){
+      //   display: none;
+      // }
     }
   }
   &__logo {
     svg {
       width: 21px;
       height: 21px;
-      fill: $blue;
+      fill: #008489;
     }
   }
 }
 
 .footer__logo{
   margin-left: 110px;
+  @include Responsive(XS){
+    margin-left: 0px;
+  }
 }
-.footer__btn{
-  
-}
+
 .list {
   display: block;
   width: 300px;
@@ -97,9 +98,9 @@
   span {
     padding: 5px;
     margin: 0 5px;
-    background: $color-blue;
+    background:#008489;
     border-radius: 3px;
-    color: $color-white;
+    color:  #FFFFFF;
     font-weight: bold;
   }
   i {
@@ -109,11 +110,11 @@
 }
 .btn {
   padding: 15px 22px;
-  background-color: $color-white;
-  border: 1px solid $color-white;
+  background-color:  #FFFFFF;
+  border: 1px solid  #FFFFFF;
   border-radius: 3px;
   margin: 15px 0 0 0;
-  color: $color-text;
+  color: #484848;
   font-size: 1.6em;
   font-weight: bold;
 }
@@ -122,6 +123,12 @@
   .footer__list-box{
     display: none;
   }
-
-
 }
+
+.footer__box-options{
+  display: flex;
+  .footer__btn{
+    display: flex;
+  }
+}
+

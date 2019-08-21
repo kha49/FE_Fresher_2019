@@ -2,6 +2,7 @@
   display: block;
   width: 100%;
   margin-top: 10px;
+  z-index:0;
   .heading__title {
     display: none;
   }
@@ -23,7 +24,7 @@
     input {
       width: 100%;
       padding: 10px;
-      border: 1px solid $gray;
+      border: 1px solid #EBEBEB ;
       border-radius: 3px;
       line-height: 1.7em;
       &::placeholder {
@@ -33,11 +34,11 @@
     select {
       width: 100%;
       padding: 9px;
-      border: 1px solid $gray;
+      border: 1px solid #EBEBEB;
       border-radius: 3px;
       line-height: 1.7em;
       font-size: 1.4em;
-      color: $color-text;
+      color: #484848;
       // appearance: none;
     }
     span {
@@ -66,7 +67,7 @@
       display: block;
       padding-bottom: 20px;
       font-size: 40px;
-      color: $color-text;
+      color: #484848;
     }
     .heading__main {
       padding-bottom: 5px;

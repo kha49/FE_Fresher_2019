@@ -1,8 +1,19 @@
 .navbar{
-  display: none;
+  display: fixed;
   position: fixed;
+  z-index:2;
   background-color: white;
+  @include Responsive(XS){
+    display: none;
+  }
+  @include Responsive(SM){
+    display: none;
+  }
+  @include Responsive(MD){
+    display: none;
+  }
 }
+
 @include Responsive(XL) {
   .navbar {
     width: 100%;
@@ -11,7 +22,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 4px 36px;
-    border-bottom: 1px solid $gray;
+    border-bottom: 1px solid #EBEBEB;
     &__icon {
       padding: 12px 40px 0 24px;
       svg {
@@ -19,7 +30,7 @@
         left: 20px;
         width: 32px;
         height: 32px;
-        fill: $blue;
+        fill: rgb(0, 132, 137)e;
       }
     }
     &__content{
@@ -32,7 +43,7 @@
       padding: 15px;
       &--title{
         font-size: 14px;
-        color: $color-text;
+        color: #484848;
         padding: 15px;
       }
       &--price{
