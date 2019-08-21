@@ -1,0 +1,58 @@
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.reload-array {
+    text-align: center;
+    .reload-array__button {
+        margin: 20px;
+        border-radius: 5px;
+        border: 1px solid #666DFF;
+        width: 200px;
+        height: 40px;
+        box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.28);
+        background-color: #CCFFFB;
+        color: #8C92FF;
+        font-weight: bold;
+        transition: .2s;
+        &:hover {
+            color: #CCFFFB;
+            background-color: #666DFF;
+        }
+    }
+}
+
+
+
+.options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    div {
+        button {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 20px 10px;
+            border-radius: 5px;
+            border: 1px solid #666DFF;
+            width: 150px;
+            height: 40px;
+            box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.28);
+            background-color: #CCFFFB;
+            color: #8C92FF;
+            font-weight: bold;
+            transition: .2s;
+            &:hover {
+                color: #CCFFFB;
+                background-color: #666DFF;
+            }
+        }
+    }
+}
+
+.result {
+    text-align: center;
+}
