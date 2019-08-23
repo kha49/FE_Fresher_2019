@@ -1,0 +1,63 @@
+// Air about-content
+mixin about-content(title, content, link)
+  .air-about__content__item
+      div.title
+          h1=title
+      div.description
+          p=content
+      div.link-about
+          a(href="#", title="title")=link
+
+// Air footer content
+mixin footer__list__item(title, subs, icons)
+    .footer__list__item
+        ul
+            li.list__title=title
+            each icon in icons
+                span.list__icon
+                    i(class=icon)
+            each sub in subs
+                li.list__sub=sub
+
+// Air Modal Question
+mixin modalQuestion(idModalQuestion,question,answer)
+    .modal-question-box__content(id=idModalQuestion)
+        .modal-question-box__content__button--closed
+            button.btn-closed(type="button" aria-busy="false")
+                svg(viewBox="0 0 24 24" role="img" aria-label="Close" focusable="false" style="height: 16px; width: 16px; display: block; fill: rgb(118, 118, 118);")
+                    path(d="m23.25 24c-.19 0-.38-.07-.53-.22l-10.72-10.72-10.72 10.72c-.29.29-.77.29-1.06 0s-.29-.77 0-1.06l10.72-10.72-10.72-10.72c-.29-.29-.29-.77 0-1.06s.77-.29 1.06 0l10.72 10.72 10.72-10.72c.29-.29.77-.29 1.06 0s .29.77 0 1.06l-10.72 10.72 10.72 10.72c.29.29.29.77 0 1.06-.15.15-.34.22-.53.22" fill-rule="evenodd")
+        .modal-question-box__content__question
+            h3=question
+        .modal-question-box__content__answer
+            p=answer[0]
+            p=answer[1]
+
+// Air Hosting Content
+mixin hosting-content(index, title, content, link)
+    .list__item
+        div.index
+            span=index
+        div.title
+            h1=title
+        div.description
+            p=content
+        div.link-about
+            a(href="#", title="title")=link
+
+// Air Modal Footer
+mixin modalFooter(idModal, modalFooterTitle, itemArr)
+    .modal-footer__content(id= idModal)
+        .modal-footer__content__button--closed
+            button.btn-closed(type="button" aria-busy="false")
+                svg(viewBox="0 0 12 12" role="img" aria-label="Close" focusable="false" style="height: 15px; width: 15px; display: block; fill: rgb(72, 72, 72);")
+                    path(d="m11.5 10.5c.3.3.3.8 0 1.1s-.8.3-1.1 0l-4.4-4.5-4.5 4.5c-.3.3-.8.3-1.1 0s-.3-.8 0-1.1l4.5-4.5-4.4-4.5c-.3-.3-.3-.8 0-1.1s.8-.3 1.1 0l4.4 4.5 4.5-4.5c.3-.3.8-.3 1.1 0s .3.8 0 1.1l-4.5 4.5z" fill-rule="evenodd")
+            .select-title-fix
+                h2.select-title-heading= modalFooterTitle
+        .modal-footer__content__select
+            .select-title
+                h2.select-title-heading= modalFooterTitle
+            .select-list
+                ul
+                    each item in itemArr
+                        li.select-list__item(class="")
+                            span= item

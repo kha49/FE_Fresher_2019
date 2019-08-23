@@ -1,14 +1,6 @@
 section.air-about
     .container-fluid
         .air-about__content
-            mixin about-content(title, content, link)
-                .air-about__content__item
-                    div.title
-                        h1=title
-                    div.description
-                        p=content
-                    div.link-about
-                        a(href="#", title="title")=link
             - var about_content = [
             -    {title : "Why host on Airbnb?", content : "No matter what kind of home or room you have to share, Airbnb makes it simple and secure to host travelers. You’re in full control of your availability, prices, house rules, and how you interact with guests."},
             -    {title : "Airbnb protects hosts", content : "To keep you, your home, and your belongings safe, we cover every booking with $1M USD in property damage protection and another $1M USD in insurance against accidents.", link : "Learn how Airbnb protects hosts"},

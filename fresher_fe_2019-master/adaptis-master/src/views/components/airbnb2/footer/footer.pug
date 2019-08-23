@@ -1,15 +1,6 @@
 section.footer
     .container-fluid
         .footer__list
-            mixin footer__list__item(title, subs, icons)
-                .footer__list__item
-                    ul
-                        li.list__title=title
-                        each icon in icons
-                            span.list__icon
-                                i(class=icon)
-                        each sub in subs
-                            li.list__sub=sub
             - var list = [
             -  {title:'Airbnb', sub:['Careers','News', 'Policies', 'Help', 'Diversity & Belonging'], icon:['']},
             -  {title:'Discover', sub:['Trust & Safety','Crédit voyage', 'Gift Cards', 'Airbnb Citizen', 'Business Travel', 'Guidebooks', 'Airbnbmag'], icon:['']},
@@ -26,4 +17,7 @@ section.footer
                 span © 2019 Airbnb, Inc. All rights reserved.
             .footer__bottom__right
                 button#language(type='submit') English    
-                button#currency(type='submit') USD - $  
+                button#currency(type='submit') USD - $
+.modal-footer
+    +modalFooter("modalLanguage", "Select your language", ["Pashtun", "Dari", "English", "Uzbek", "Turkmen", "Pashai", "Nuristan", "Baloch", "Pamir", "Albania", "Tamazight", "Catalan", "Guaraní", "Armenia", "Croatia", "Slovenia", "Hungary", "Kashubia", "Litva", "Belarus", "Digan", "Bosnia", "Croatia", "Serbia"])
+    +modalFooter("modalCurrency", "Current Money", ["Abkhazia", "Afghanistan", "Albania", "USD", "Alderney", "Algérie", "Andorra", "Angola", "Anguilla", "Argentina", "Armenia", "Aruba", "Bangladesh", "Bahrain", "Bahamas", "USD", "Australia", "Barbados", "Belarus", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia"])

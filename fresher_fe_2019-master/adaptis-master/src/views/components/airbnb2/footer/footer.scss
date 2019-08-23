@@ -71,3 +71,91 @@
         }
     }
 }
+
+.modal-footer {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1;
+    background-color: #ffffff;
+    @include min-sm {
+    background-color: rgba(255, 255, 255, 0.582);
+    }
+    &__content {
+        display: none;
+        background-color: white;
+        border: 1px solid rgb(226, 226, 226);
+        @include min-sm {
+            position: fixed;
+            background-color: #ffffff;
+            width: 350px;
+            box-shadow: 1px 1px 10px 1px rgb(200, 199, 199);
+            top: 45%;
+            left: 80%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+        &__button--closed {
+            padding: 20px;
+            border-bottom: 1px solid #ccc;
+            @include min-sm {
+                padding: 0px 10px;
+            }
+            button {
+                padding: 20px;
+                margin: -20px;
+                cursor: pointer;
+                background-color: transparent;
+                border: 0;
+                @include min-sm {
+                    display: none;
+                }
+            }
+            .select-title-fix {
+                display: none;
+                @include min-sm {
+                    display: block;
+                }
+            }
+        }
+        &__select {
+            padding-left: 20px;
+            overflow-y: scroll;           
+            width: 100%;
+            height: 510px;
+            .select-title {
+                @include min-sm {
+                    display: none;
+                }
+                
+            }
+            .select-list {
+                ul {
+                    li {
+                        padding: 16px 0px;
+                        border-bottom: 1px solid rgb(235, 235, 235);
+                        span {
+                            word-wrap: break-word;
+                            font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 1.375em;
+                            color: #484848;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+h2.select-title-heading {
+    word-wrap: break-word;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.25em;
+    color: #484848;
+}

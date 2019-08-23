@@ -54,6 +54,7 @@ $colors: (
     c-yellow: #f8b62d,
     c-gray: #e5ebee,
     c-gray-1: #ddd,
+    c-gray-2: #484848,
     c-pink-light: #EBCCD1,
     c-red: #A94442,
 );
@@ -71,6 +72,7 @@ $text-color-secondary: color(c-white);
 $text-color-black: color(c-black);
 $text-color-blue: color(c-blue);
 $text-color-gray-blur: color(c-gray-blur);
+$text-color-gray-2: color( c-gray-2);
 
 $page-border-radius: .3rem;
 $btn-bg-color-primary: color(c-yellow);

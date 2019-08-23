@@ -6,16 +6,6 @@ section.air-hosting
             .air-hosting__steps__title
                 h1 Hosting in 3 steps
             .air-hosting__steps__list
-                mixin hosting-content(index, title, content, link)
-                    .list__item
-                        div.index
-                            span=index
-                        div.title
-                            h1=title
-                        div.description
-                            p=content
-                        div.link-about
-                            a(href="#", title="title")=link
                 - var hosting_steps = [
                 -    {index : "1", title : "List your space for free", content : "Share any space without sign-up charges, from a shared living room to a second home and everything in-between."},
                 -    {index : "2", title : "Decide how you want to host", content : "Choose your own schedule, prices, and requirements for guests. We’re there to help along the way."},

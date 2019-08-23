@@ -31,7 +31,7 @@
                 @include flexbox();
                 span.monthly {
                     font-size: 14px;
-                    color: #484848;
+                    color: $text-color-gray-2;
                 }
                 span.price {
                     margin: 0px 10px;
@@ -47,6 +47,7 @@
                 padding: 6px 15px;
                 border-radius: 4px;
                 margin-left: 5px;
+                cursor: pointer;
                 a {
                     color: color(c-white);
                 }
@@ -54,9 +55,9 @@
         }
     }
     .header-banner {
-        margin-top: 80px;
         width: 100%;
         @include min-xl {
+            margin-top: 80px;
             background-size: cover;
             background-image: url('../images/banner.jpg');
             background-repeat: no-repeat;
@@ -109,7 +110,7 @@
                 font-size: 18px;
                 line-height: 26px;
                 font-weight: 600;
-                color: #484848;
+                color: $text-color-gray-2;
                 letter-spacing: normal;
                 font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
                 @include min-xl {
@@ -136,7 +137,7 @@
                                     font-size: 45px;
                                     line-height: 40px;
                                     letter-spacing: -0.6px;
-                                    color: #484848;
+                                    color: $text-color-gray-2;
                                 }
                             }
                             &__description {
@@ -145,7 +146,7 @@
                                     font-size: 18px;
                                     line-height: 26px;
                                     font-weight: 600;
-                                    color: #484848;
+                                    color: $text-color-gray-2;
                                 }
                             }
                         }
@@ -180,7 +181,7 @@
                             span.monthly {
                                 padding-top: 25px;
                                 font-size: 14px;
-                                color: #484848;
+                                color: $text-color-gray-2;
                             }
                             span.icon {
                                 padding-top: 30px;
@@ -194,6 +195,7 @@
                             border-radius: 4px;
                             text-align: center;
                             background-color: #FF5A5F;
+                            cursor: pointer;
                             a {
                                 color: #fff;
                             }

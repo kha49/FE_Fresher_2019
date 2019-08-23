@@ -7,10 +7,21 @@ section.air-question
                 h1 Your questions answered
             .air-question__content__item
                 .content-left
-                    a(href="#") Who can be an Airbnb host?
-                    a(href="#") What is required of guests before booking?
-                    a(href="#") How much does it cost to list my space?
+                    a(id="showModal1") Who can be an Airbnb host?
+                    a(id="showModal2") What is required of guests before booking?
+                    a(id="showModal3") How much does it cost to list my space?
                 .content-right
-                    a(href="#") What protection do I have against property damage?
-                    a(href="#") How should I choose my listing’s price?
-                    a(href="#") How can Airbnb help me with setting prices?
+                    a(id="showModal4") What protection do I have against property damage?
+                    a(id="showModal5") How should I choose my listing’s price?
+                    a(id="showModal6") How can Airbnb help me with setting prices?
+    - var questionArr = [
+    - {id: "modalQuestion1", question: "Who can be an Airbnb host?", answer: ["It’s easy to become an Airbnb host in most areas, and it’s always free to create a listing. Entire apartments and homes, private rooms, treehouses, and castles are just a few of the properties hosts have shared on Airbnb.", "For more details on what’s expected of hosts, check out Airbnb’s community standards, which revolve around safety, security, and reliability, and hospitality standards, which help hosts earn great guest reviews.s"]},
+    - {id: "modalQuestion2", question: "What is required of guests before booking?", answer: ["We ask everyone who uses Airbnb for a few pieces of information before they travel with us. Guests need to have this info completely filled out before they can make a reservation request. This info helps make sure you know who to expect, and how to contact the guest.", "Airbnb’s requirements for guests include: • Full name • Email address • Confirmed phone number • Introductory message • Agreement to your House Rules • Payment information", "Guests are expected, but not required, to have a profile picture. You may also require guests to provide ID before booking your space."]},
+    - {id: "modalQuestion3", question: "How much does it cost to list my space?", answer: ["Signing up for Airbnb and listing your home is completely free.", "Once you receive a reservation, we charge an Airbnb service fee for hosts, generally 3%, to help cover the cost of running of the business."]},
+    - {id: "modalQuestion4", question: "What protection do I have against property damage?", answer: ["The Airbnb Host Guarantee provides protection for up to $1,000,000 to a host for damages to covered property in the rare event of guest damages above the security deposit or if no security deposit is in place.", "The Host Guarantee program doesn't cover cash and securities, collectibles, rare artwork, jewelry, pets or personal liability. We recommend that hosts secure or remove valuables when renting their place. The program also doesn't cover loss or damage to property due to wear and tear.", "Learn more about the Host Guarantee at http://airbnb.com/guarantee"]},
+    - {id: "modalQuestion5", question: "How should I choose my listing’s price?", answer: ["The price you charge for your listing is completely up to you. To help you decide, you can search for comparable listings in your city or neighborhood to get an idea of market prices.", "Additional Fees • Cleaning fee: You can either incorporate a cleaning fee into your nightly price or you can add a cleaning fee in your pricing settings. • Other fees: To charge extra fees outside of your rates (like a late check-in or pet fee), you must first disclose these potential charges to guests prior to booking and then use our Resolution Center to securely request payment for additional fees."]},
+    - {id: "modalQuestion6", question: "How can Airbnb help me with setting prices?", answer: ["Airbnb’s Smart Pricing tool lets you set your prices to automatically go up or down based on changes in demand for listings like yours.", "You’re always responsible for your price, so Smart Pricing is controlled by other pricing settings you choose, and you can adjust nightly prices any time.", "Smart Pricing is based on the type and location of your listing, the season, demand, and other factors (like events in your area)."]}
+    - ]
+.modal-question-box
+    each valModal in questionArr
+        +modalQuestion(valModal.id, valModal.question, valModal.answer)
