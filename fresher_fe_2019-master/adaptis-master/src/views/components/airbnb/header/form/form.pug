@@ -5,25 +5,19 @@ form(action="" method="method").form
     .form__element
         input(type="text", placeholder="HaNoi")
     .form__element.col-md-6
-        select(name="", type="text", placeholder="")
-            option(value="") Entire place
-            option(value="") Private room
-            option(value="") Shared room
+        select(name="", type="text", placeholder="")#room
+            option(value="100") Entire place
+            option(value="150") Private room
+            option(value="200") Shared room
     .form__element.col-md-6
-        select(name="", type="text", placeholder="")
-            option(value="") 1 guests
-            option(value="") 2 guests
-            option(value="") 3 guests
-            option(value="") 4 guests
-            option(value="") 5 guests
-            option(value="") 6 guests
-            option(value="") 7 guests
-            option(value="") 8 guests
-            option(value="") 9 guests
-            option(value="") 10 guests
+        select(name="", type="text", placeholder="")#guests
+            - const people = 16;
+            - for(let i = 1; i<= people; i++){
+            option(value=i)=i + " guests"
+            - }
     .form__element
         br
-        h1.heading-primary__price $706 
+        h1.heading-primary__price#heading-primary__price $706 
             span per month
     .form__element
         button.btn(type='submit') To start

@@ -30,3 +30,25 @@ mixin list-box(title, subs, icons)
       i(class=icon)
     each sub in subs
       li.list__sub=sub
+
+//-modal-main
+
+mixin modalMainQuestions(idQuestions, idBtnQuestions, questionsTitle, subArr)
+  div.modal-questions(id=idQuestions) 
+    div.modal-questions__icon
+      span.modal-questions__icon-close(id=idBtnQuestions)
+        i(class='fas fa-times')
+    div.modal-questions__content
+      h2.modal-questions__title= questionsTitle 
+      each sub in subArr
+        p.modal-questions__sub= sub
+
+  //-modal footer
+mixin modalFooter(idModal, titleModal, elementArr)
+  div.footer-modal__content(id=idModal)
+    div.footer-modal__content__title
+      h1.title= titleModal
+    div.footer-modal__content__language-list
+      ul.language-list
+        each element in elementArr
+          li.li= element

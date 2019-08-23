@@ -1,0 +1,47 @@
+div.header-modal#header-modal
+  //-modal content
+  div.header-modal__content#formLgogin
+    button.header-modal__content__btn-close(type='button')#icon-close
+      span.header-modal__content__icon-close
+        i(class='fas fa-times')
+    div.header-modal__content__form-login
+      form
+        div.btn-login
+          div.btn-login__fb
+            button#fb(type='submit')
+              div.login-with-fb
+                span.icon-fb    
+                  i(class='fab fa-facebook')
+                span.title-fb Login with facebook
+          div.btn-login__gg
+            button#gg(type='submit')
+              div.signin-with-gg
+                span.icon-gg
+                  i(class='fab fa-google')
+                span.title-gg Sign in with google
+        div.form-control
+          div#or
+            span or
+        div.form-control
+          input.input(type='text' ,placeholder='Adresses e-mail')
+        div.form-control
+          input.input(type='current-password', placeholder='Mot de passes')
+        div.form-control#remember-me
+          div#element1
+            input.checkbox(type='checkbox') 
+            p(style='font-size: 14px') Remember me
+          div#element2
+            a(href="#" style='font-size: 14px; color: #008489') View password
+        div.btn-login#login
+          button(type='submit') Login
+        div.form-control
+          a(href='#' style='font-size: 14px; color: #008489; margin-top: 10px;') Forgot the password?
+        div#form-header.form-control
+          p You do not have an account? 
+          p 
+            a(href='#' style='font-size: 14px; color: #008489') Registration
+
+
+
+
+

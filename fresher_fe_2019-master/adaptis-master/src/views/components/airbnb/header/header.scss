@@ -30,6 +30,7 @@
     width: 100%;
     padding: 25px 20px;
   }
+  @import './header-modal/header-modal.scss';
   @include Responsive(MD) {
     &__banner {
       height: 280px;
