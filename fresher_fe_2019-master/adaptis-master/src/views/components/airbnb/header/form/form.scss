@@ -1,4 +1,4 @@
-.heading-primary { 
+.heading-form{ 
   &__main {
     top: 10px;
     padding: 0px;
@@ -67,7 +67,7 @@
   width: 100%;
 }
 @include Responsive(SM) {
-  .heading-primary{
+  .heading-form{
     padding-top: 250px; 
     &__main {
       top: 20px;

@@ -67,7 +67,7 @@
     }
     @include Responsive(SM) {
         .air-header-nav{
-            display: none;
+            display: block;
         }
     }
     .air-header-body{ 

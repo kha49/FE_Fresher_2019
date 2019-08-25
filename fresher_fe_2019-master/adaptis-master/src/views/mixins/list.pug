@@ -30,13 +30,13 @@ mixin content-host(num,title, content, link)
     div
       p=content
     div
-      a(href="#", title="title")=link
+      a(href="", title="title")=link
 
 
-mixin link(link1,link2)
+mixin link(link1,link2,id)
   .main__content-question
-    a= link1
-    a= link2
+    a(id=id, title="title")= link1
+    a(id=id+1, title="title")= link2
 
 mixin content_image(index,title,sub,link)
   .main__content-image

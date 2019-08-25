@@ -28,15 +28,15 @@
                 p Tessa hosts in London to earn extra money
                 button.btn(type='submit') Learn how they host
         .main__content
-            .main__content-question
+            .main__content-question.ContentQuestion 
                 h1 Your questions answered
                 - var link = [
-                -    {link1:"What is required of guests before booking?",link2:"What is required of guests before booking?"},
-                -    {link1:"What is required of guests before booking?",link2:"What is required of guests before booking?"},
-                -    {link1:"What is required of guests before booking?",link2:"What is required of guests before booking?"},
+                -    {id: 1, link1:"What is required of guests before booking?",link2:"What is required of guests before booking?"},
+                -    {id: 3,link1:"What is required of guests before booking?",link2:"What is required of guests before booking?"},
+                -    {id: 5,link1:"What is required of guests before booking?",link2:"What is required of guests before booking?"},
                 - ]
                 each val, index in link
-                    +link(val.link1,val.link2)
+                    +link(val.link1,val.link2,val.id)
         .main__content
             .main__content-img-title
                 h3 More about hosting
@@ -47,7 +47,7 @@
             -   {index:"https://images.fastcompany.net/image/upload/w_1280,f_auto,q_auto,fl_lossy/wp-cms/uploads/2017/12/p-1-oasis-is-the-home-sharing-company-that-doesnand8217t-consider-airbnb-a-rival.jpg",title:"Safety",sub:"How to star hosting",link:"Learn more"}
             -   ]
             each val in box_index
-                +content_image(val.index,val.title,val.sub,val.link)
+                +content_image(val.index,val.title,val.sub,val.link)    
         .main__content
             .main__content-last
                 h4 Ready to earn ?
