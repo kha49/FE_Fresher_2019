@@ -10,6 +10,19 @@
 @import './base/_flexboxgrid';
 @import './base/_lazyload';
 
-// Component
+// Component general
 @import '../../views/components/header/header';
 @import '../../views/components/footer/footer';
+@import '../../views/components/nav/nav';
+
+//Compnent kem homepage
+@import '../../views/components/kem-homepage/kem-homepage-banner/kem-homepage-banner';
+@import '../../views/components/kem-homepage/kem-homepage-search/kem-homepage-search';
+@import '../../views/components/kem-homepage/kem-homepage-hoteliers/kem-homepage-hoteliers';
+@import '../../views/components/kem-homepage/kem-homepage-mapbox/kem-homepage-mapbox';
+@import '../../views/components/kem-homepage/kem-homepage-experience/kem-homepage-experience';
+@import '../../views/components/kem-homepage/kem-homepage-gallery/kem-homepage-gallery';
+@import '../../views/components/kem-homepage/kem-homepage-offers/kem-homepage-offers';
+@import '../../views/components/kem-homepage/kem-homepage-explore/kem-homepage-explore';
+
+//Component kem destination
