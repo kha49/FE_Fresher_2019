@@ -249,3 +249,7 @@ p {
 .show-modal {
     display: block !important;
 }
+
+.is-noscroll {
+    overflow: hidden;
+}

@@ -2,66 +2,76 @@ const ModalQuestion = {
     init: () => {
         const arrModal = [
             {
-                idshowModal: 'showModal1',
-                idModalQuestion: 'modalQuestion1'
+                showModal: 'showModal1',
+                modalQuestion: 'modalQuestion1'
             },
             {
-                idshowModal: 'showModal2',
-                idModalQuestion: 'modalQuestion2'
+                showModal: 'showModal2',
+                modalQuestion: 'modalQuestion2'
             },
             {
-                idshowModal: 'showModal3',
-                idModalQuestion: 'modalQuestion3'
+                showModal: 'showModal3',
+                modalQuestion: 'modalQuestion3'
             },
             {
-                idshowModal: 'showModal4',
-                idModalQuestion: 'modalQuestion4'
+                showModal: 'showModal4',
+                modalQuestion: 'modalQuestion4'
             },
             {
-                idshowModal: 'showModal5',
-                idModalQuestion: 'modalQuestion5'
+                showModal: 'showModal5',
+                modalQuestion: 'modalQuestion5'
             },
             {
-                idshowModal: 'showModal6',
-                idModalQuestion: 'modalQuestion6'
+                showModal: 'showModal6',
+                modalQuestion: 'modalQuestion6'
             }
         ]
         arrModal.forEach((modal) => {
-            const idshowModal = document.querySelector(`#${modal.idshowModal}`);
-            const idModalQuestion = document.querySelector(`#${modal.idModalQuestion}`);
-            if (idshowModal) {
-                ModalQuestion.showModal(idshowModal,idModalQuestion);
-                ModalQuestion.closedModal(idModalQuestion);
+            const showModal = document.querySelector(`#${modal.showModal}`);
+            const modalQuestion = document.querySelector(`#${modal.modalQuestion}`);
+            if (showModal) {
+                ModalQuestion.showModal(showModal, modalQuestion);
+                ModalQuestion.closedModal(modalQuestion);
             }
         })
     },
 
-    showModal: (idshowModal, idModalQuestion) => {
+    showModal: (showModal, modalQuestion) => {
         const modalBox = document.querySelector('.modal-question-box');
-        if (idshowModal) {
-            idshowModal.addEventListener('click', () => {
-                idModalQuestion.classList.add('show-modal');
+        const airBody = document.querySelector('body');
+
+        if (showModal) {
+            showModal.addEventListener('click', () => {
+                modalQuestion.classList.add('show-modal');
                 modalBox.classList.add('show-modal');
+                airBody.classList.add('is-noscroll');
             });
         }
     },
 
-    closedModal: (idModalQuestion) => {
+    closedModal: (modalQuestion) => {
         const btnClosed = document.querySelectorAll(".btn-closed");
         const modalBox = document.querySelector(".modal-question-box");
-        if(btnClosed) {
+        const airBody = document.querySelector('body');
+        if (btnClosed) {
             btnClosed.forEach((item) => {
                 item.addEventListener('click', () => {
-                    idModalQuestion.classList.remove('show-modal');
+                    if (modalQuestion) {
+                        modalQuestion.classList.remove('show-modal');
+                    }
                     modalBox.classList.remove('show-modal');
+                    airBody.classList.remove('is-noscroll');
                 });
             });
         }
-        if(modalBox) {
+        if (modalBox) {
             modalBox.addEventListener('click', (event) => {
-                if(!event.target.closest('.modal-question-box__content')) {
-                    idModalQuestion.classList.remove('show-modal');
+                if (!event.target.closest('.modal-question-box__content')) {
+                    if (modalQuestion) {
+                        modalQuestion.classList.remove('show-modal');
+                    }
                     modalBox.classList.remove('show-modal');
+                    airBody.classList.remove('is-noscroll');
                 }
             });
         }

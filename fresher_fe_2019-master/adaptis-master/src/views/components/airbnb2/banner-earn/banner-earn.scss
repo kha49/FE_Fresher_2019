@@ -11,17 +11,17 @@
         height: 375px;
         padding: 70px 35px;
         @include min-sm {
-            padding: 70px 50px;
+            padding: 70px 60px;
             height: 440px;
         }
         @include min-md {
-            padding: 70px 100px;
+            padding: 70px 120px;
         }
         @include min-lg {
-            padding: 80px 130px;
+            padding: 80px 140px;
         }
         @include min-xl {
-            padding: 100px 120px;
+            padding: 100px 170px;
         }
         .banner-earn__heading {
             &__title {

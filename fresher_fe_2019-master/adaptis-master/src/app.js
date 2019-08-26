@@ -23,8 +23,6 @@ $(document).ready(() => {
   ModalFooter .showModal();
   ModalFooter .closedModal();
   ChangePrice .init();
-  ChangePrice .changeRoom();
-  ChangePrice .changePeople();
 });
 
 $(window).on('resize', () => {
