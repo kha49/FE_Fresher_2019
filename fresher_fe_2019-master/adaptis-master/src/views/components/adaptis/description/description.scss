@@ -1,6 +1,11 @@
 .description{
     &__content{
+        font-family: runda,sans-serif;
         display: block;
-        
+        justify-content: center;
+        padding: 100px 25px 50px;
+        font-size: 14px;
+        color:#393939;
+        line-height: 1.5;
     }
 }
