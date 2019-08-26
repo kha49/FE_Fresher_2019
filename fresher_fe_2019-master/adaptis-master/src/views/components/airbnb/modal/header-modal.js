@@ -62,6 +62,12 @@ const Modal = {
             modalBig.style.display='block';
         });
     },
+    closeModal: (btn, modalBig, modalCha)=>{
+        btn.addEventListener('click', ()=>{
+            modalCha.style.display='none';
+            modalCha.style.display='none;'
+        })
+    }
     
     
 }
