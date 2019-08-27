@@ -10,6 +10,17 @@
 // @import './base/_flexboxgrid';
 // @import './base/_lazyload';
 
+// Bootraps 4
+@import './scss/bootstrap-grid.scss';
+@import './scss/bootstrap-reboot';
+@import './scss/bootstrap';
+
+// my styles
+@import './group3/Abstracts/variable';
+@import './group3/Abstracts/function';
+@import './group3/Abstracts/mixin';
+@import './group3/Base/base';
+@import './group3/Base/typography';
+
 // Component
-// @import '../../views/components/header/header';
-// @import '../../views/components/footer/footer';
+@import '../../views/components/group3/header/header';

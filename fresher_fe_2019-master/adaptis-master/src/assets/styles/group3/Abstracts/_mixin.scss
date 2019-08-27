@@ -1,0 +1,37 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+// Khai báo kích thước tương ứng với màn hình thiết bị
+
+$XS: 480px;
+$SM: 744px;
+$MD: 1128px;
+$XL: 1170px;
+
+// media queries
+
+@mixin Responsive($canvas) {
+  @if $canvas == XS {
+    @media (min-width: 0) and (max-width: $XS) {
+      @content;
+    }
+  } @else if $canvas == SM {
+    @media (min-width: $XS + 1px) and (max-width: $SM) {
+      @content;
+    }
+  } @else if $canvas == MD {
+    @media (min-width: $SM + 1px) and (max-width: $MD) {
+      @content;
+    }
+  } @else if $canvas == XL {
+    @media only screen and (min-width: $MD + 1px) {
+      @content;
+    }
+  }
+}
