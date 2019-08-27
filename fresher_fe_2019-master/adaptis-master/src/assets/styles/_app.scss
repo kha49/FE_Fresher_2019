@@ -11,5 +11,19 @@
 @import './base/_lazyload';
 
 // Component
-@import '../../views/components/header/header';
-@import '../../views/components/footer/footer';
+// @import '../../views/components/header/header';
+// @import '../../views/components/footer/footer';
+
+// kem
+@import './group1/variables';
+@import '../../views/components/kem/kem-header/kem-header.scss';
+@import '../../views/components/kem/kem-nav/kem-nav.pug';
+@import '../../views/components/kem/kem-homepage/kem-homepage-banner/kem-homepage-banner';
+@import '../../views/components/kem/kem-homepage/kem-homepage-search/kem-homepage-search';
+@import '../../views/components/kem/kem-homepage/kem-homepage-hoteliers/kem-homepage-hoteliers';
+@import '../../views/components/kem/kem-homepage/kem-homepage-mapbox/kem-homepage-mapbox';
+@import '../../views/components/kem/kem-homepage/kem-homepage-experience/kem-homepage-experience';
+@import '../../views/components/kem/kem-homepage/kem-homepage-gallery/kem-homepage-gallery';
+@import '../../views/components/kem/kem-homepage/kem-homepage-offers/kem-homepage-offers';
+@import '../../views/components/kem/kem-homepage/kem-homepage-explore/kem-homepage-explore';
+@import '../../views/components/kem/kem-footer/kem-footer.scss';

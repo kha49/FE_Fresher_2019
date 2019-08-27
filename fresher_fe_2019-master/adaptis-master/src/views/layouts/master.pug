@@ -35,7 +35,8 @@ html(lang='jp')
 
 
     //- Favicons
-    link(rel='shortcut icon', href=require('images/favicons/favicon.ico'))
+    block link
+      link(rel='shortcut icon', href=require('images/favicons/favicon.ico'))
 
     //- Fonts
     //- link(href="https://fonts.googleapis.com/css?family=Quicksand", rel='stylesheet')
@@ -47,13 +48,17 @@ html(lang='jp')
       title Your project!
 
   body
+    //- mixin
+    include ../mixins/list.pug
+
+
     //- header
-    include ../components/header/header.pug
+    //- include ../components/header/header.pug
 
     //- block content
     block content
 
-    include ../components/footer/footer.pug
+    //- include ../components/footer/footer.pug
 
     //- block scripts
     block scripts

@@ -33,3 +33,12 @@
     font-weight: 700;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'KingsCaslon';
+    font-display: fallback;
+    src: url('./fonts/KingCalson/KingsCaslon-Italic.woff') format('woff'),
+        url('./fonts/KingCalson/KingsCaslon-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}

@@ -4,3 +4,10 @@ mixin list(id, ...items)
   ul(id=id)
     each item in items
       li= item
+
+//- heading
+mixin heading(classHeading, titleClass, titleContent, classDescFrame, descClass, descContent)
+  div(class= classHeading)
+    h1.kem-title(class= titleClass)= titleContent
+    div(class= classDescFrame)
+      span.kem-desc.kem-desc__separate(class= descClass)= descContent

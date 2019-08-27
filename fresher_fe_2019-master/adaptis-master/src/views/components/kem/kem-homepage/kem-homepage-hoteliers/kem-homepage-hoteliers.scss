@@ -1,0 +1,20 @@
+.kem-home-hoteliers {
+    text-align: center;
+    &__heading {
+        &__desc {
+            padding-bottom: 30px; 
+        }
+    }
+    &__para {
+        padding-bottom: 15px;
+        @include min-xs {
+            padding: 0 10%;
+        }
+        @include min-md {
+            padding: 0 16%;
+        }
+        @include min-xl {
+            padding: 0 22%;
+        }
+    }
+}
