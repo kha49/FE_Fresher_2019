@@ -1,13 +1,52 @@
 .develop{
     &__title{
+        margin-right: 20px;
         &__primary{
-            text-align: right;
+            p{  
+                text-align: right;
+                color: #6E6E6E;
+                font-size: 1.2em;
+            }
         }
         &__main{
-            font-size: 2.25em;
+            font-size: 2.22em;
             line-height: 1.25em;
             margin-bottom: 20px;
+            margin-top: 0px;
             text-align: right;
+            font-family: capitolium-2,sans-serif;
+            color: #393939;
+        }
+    }
+    &__intro{
+        margin-left: 30px;
+        &__hightlight{
+            display: flex;
+            flex-direction: column;
+            #span1{
+                color:#3C213A;
+            }
+            #span2{
+                color: #9F579E;
+            }
+        }
+        &__desc{
+            color: #393939;
+            line-height: 1.6rem;
+
+        }
+        &__link{
+            width: 250px;
+            height: 29px;
+            background-color: white;
+            border:1px solid black;
+            margin-bottom: 30px;
+            a{
+                color: #3C213A;
+                text-decoration: none;
+                font-size: 12px;
+                margin-left: 30px;
+            }
         }
     }
 }
