@@ -23,15 +23,13 @@ $fonts: (
     heading: ('Kreon', sans-serif),
     content: ('ProximaNova', sans-serif),
     icomoon: ('icomoon'),
-    fontawesome: ('Fontawesome'),
-    fontKingsCaslon: ('KingsCaslon', sans-serif)
+    fontawesome: ('Fontawesome')
 );
 
 $font-main: fonts(main);
 $font-heading: fonts(heading);
 $font-icomoon: fonts(icomoon);
 $font-fontawesome: fonts(fontawesome);
-$font-kingscaslon: fonts(fontKingsCaslon);
 
 $fontweight-light: fontWeight(light);
 $fontweight-regular: fontWeight(regular);
