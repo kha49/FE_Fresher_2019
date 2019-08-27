@@ -896,3 +896,10 @@
         order: 1;
     }
 }
+
+@media only screen and (min-width: breakpoints(xl)) {
+    .container-fluid {
+        width: 100%;
+        max-width: 117rem;
+    }
+}
