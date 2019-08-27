@@ -48,6 +48,7 @@
                 color: #fff;
                 min-width: 200px;
                 &::after {
+                    content: "";
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -59,18 +60,28 @@
                     transform: translate(-105%, 0);
                     border-right: 1px solid #fff;
                     background-color: rgba(255, 255, 255, 0.25);
-                    &:hover {
-                        opacity: 0;
-                        transform: translate(0, 0);
-                    }
+                }
+                &::before {
+                    content: "→";
+                    top: 50%;
+                    transition: all .2s ease-in-out;
+                    position: absolute;
+                    left: 80%;
+                    opacity: 0;
+                    font-size: 1rem;
+                    line-height: 0;
+                }
+                &:hover::after {
+                    opacity: 0;
+                    transform: translate(0, 0);
+                }
+                &:hover::before {
+                    left: 85%;
+                    opacity: 1;
                 }
             }
         }
     }
-}
-
-.adaptis-slide::before {
-
 }
 
 .adaptis-slide {
