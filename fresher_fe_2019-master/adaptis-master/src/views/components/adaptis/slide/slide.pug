@@ -1,0 +1,38 @@
+- const adaptisArray = ["Success Story", ["Kempinski Hotels S.A", "Johnnie Walker", "Burberry"], ["Kempinski manages and operates some of the world’s most iconic hotels, with a portfolio of five-star hotels and residences across the globe, Adaptis leads the digital revolution for the hotel group.", "The most widely distributed blended Scotch Whisky in the world", "Careers reinvented at this luxury fashion brand"], "VIEW THE WORK"]
+
+mixin adaptis-slide
+    .adaptis-slide
+        .adaptis-kempinski
+            .adaptis-kempinski-caption
+                .adaptis-kempinski-caption__title= adaptisArray[0]
+                .adaptis-kempinski-caption__subject= adaptisArray[1][0]
+                .adaptis-kempinski-caption__description= adaptisArray[2][0]
+                .adaptis-kempinski-caption__link
+                    a(href="#" title="VIEW THE WORK")= adaptisArray[3]
+        .adaptis-johnniewalker
+            .adaptis-johnniewalker-caption
+                .adaptis-johnniewalker-caption__title= adaptisArray[0]
+                .adaptis-johnniewalker-caption__subject= adaptisArray[1][1]
+                .adaptis-johnniewalker-caption__description= adaptisArray[2][1]
+                .adaptis-johnniewalker-caption__link
+                    a(href="#" title="VIEW THE WORK")= adaptisArray[3]
+        .adaptis-burberry
+            .adaptis-burberry-caption
+                .adaptis-burberry-caption__title= adaptisArray[0]
+                .adaptis-burberry-caption__subject= adaptisArray[1][2]
+                .adaptis-burberry-caption__description= adaptisArray[2][2]
+                .adaptis-burberry-caption__link
+                    a(href="#" title="VIEW THE WORK")= adaptisArray[3]
+
+//- mixin adaptis-slide
+//-     .adaptis-slide
+//-         each i in adaptisArray[1]
+//-             .adaptis-caption
+//-                 .adaptis-slide-caption__title= adaptisArray[0]
+//-                 .adaptis-slide-caption__subject= adaptisArray[1][i]
+//-                 .adaptis-slide-caption__description= adaptisArray[2][i]
+//-                 .adaptis-slide-caption__link
+//-                     button= adaptisArray[3]           
+
+block content
+    +adaptis-slide

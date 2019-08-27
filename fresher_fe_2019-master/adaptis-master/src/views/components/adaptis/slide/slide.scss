@@ -1,0 +1,90 @@
+@import '../shared/shared.scss';
+
+@mixin font($font-size) {
+    font-family: $main-font;
+    color: #fff;
+    font-size: $font-size;
+}
+
+@mixin caption($background-image) {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    background-image: url($background-image);
+    background-size: cover;
+    background-position: center;
+    &-caption {
+        position: absolute;
+        bottom: 0;
+        left: 30px;
+        width: 50%;
+        background: rgba(0,0,0,.75);
+        padding: 30px 40px 30px;
+        transition: opacity .5s ease-in-out .25s,transform .5s ease-in-out .25s,-webkit-transform .5s ease-in-out .25s;
+        &__title {
+            @include font(1rem);
+        }
+        &__subject {
+            @include font(1.375rem);
+            margin-bottom: 10px;
+        }
+        &__description {
+            @include font(.875rem);
+            line-height: 1.25rem;
+            margin-bottom: 30px;
+        }
+        &__link {
+            a {
+                font-family: $main-font;
+                font-size: .6875rem;
+                line-height: 2.182;
+                padding: 7px 60px 7px 20px;
+                overflow: hidden;
+                position: relative;
+                transition: all .2s ease-in-out;
+                border: 1px solid #fff;
+                display: inline-block;
+                letter-spacing: 2px;
+                color: #fff;
+                min-width: 200px;
+                &::after {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                    transition: all .5s ease-in-out;
+                    opacity: 1;
+                    transform: translate(-105%, 0);
+                    border-right: 1px solid #fff;
+                    background-color: rgba(255, 255, 255, 0.25);
+                    &:hover {
+                        opacity: 0;
+                        transform: translate(0, 0);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.adaptis-slide::before {
+
+}
+
+.adaptis-slide {
+    margin: 0 auto;
+    width: 90%;
+    height: 800px;
+    .adaptis-kempinski {
+        @include caption('../../assets/images/adaptis/adaptis-hero-kempinski.png');
+    }
+    .adaptis-johnniewalker {
+        @include caption('../../assets/images/adaptis/adaptis-hero-johnnie-walker.jpg');
+    }
+    .adaptis-burberry {
+        @include caption('../../assets/images/adaptis/adaptis-hero-burberry.jpg');
+    }
+    
+}
