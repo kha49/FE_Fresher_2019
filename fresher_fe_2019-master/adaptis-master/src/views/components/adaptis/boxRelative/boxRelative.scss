@@ -1,11 +1,11 @@
 .boxRelative{
-    margin-top: 40px;
+    margin-top: 60px;
     .boxRelative__block{
         margin-left: 15px;
         margin-right: 15px;
         .boxRelative__block__item-container{
             width: 100%;
-            height: 400px;
+            height: 380px;
             .item-img{
                 img{
                     width: 100%;
@@ -15,9 +15,12 @@
             .item-content{
                 margin-top: 20px;
                 color: #3C213A;
-                font-family: runda,sans-serif;
+                font-family: $main-font;
                 a{
                     text-decoration: none;
+                }
+                p{
+                    font-size: 13px;
                 }
                 .link-last{
                     font-size: 11px;
