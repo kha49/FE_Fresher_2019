@@ -97,20 +97,7 @@
             }
             &__link {
                 a {
-                    font-family: $main-font;
-                    font-size: .6875rem;
-                    line-height: 2.182;
-                    padding: 7px 60px 7px 20px;
-                    overflow: hidden;
-                    position: relative;
-                    transition: all .2s ease-in-out;
-                    border: 1px solid #fff;
-                    display: inline-block;
-                    letter-spacing: 2px;
-                    color: #fff;
-                    min-width: 200px;
-                    text-decoration: none;
-                    cursor: pointer;
+                    @include right-arrow(#fff);
                     &::after {
                         content: "";
                         position: absolute;
@@ -125,23 +112,9 @@
                         border-right: 1px solid #fff;
                         background-color: rgba(255, 255, 255, 0.25);
                     }
-                    &::before {
-                        content: "→";
-                        top: 50%;
-                        transition: all .2s ease-in-out;
-                        position: absolute;
-                        left: 80%;
-                        opacity: 0;
-                        font-size: 1rem;
-                        line-height: 0;
-                    }
                     &:hover::after {
                         opacity: 0;
                         transform: translate(0, 0);
-                    }
-                    &:hover::before {
-                        left: 85%;
-                        opacity: 1;
                     }
                 }
             }

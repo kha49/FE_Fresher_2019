@@ -1,7 +1,38 @@
-$main-font: runda,sans-serif;
+$main-font: runda, sans-serif;
 $sub-font: capitolium-2, sans-serif;
 $main-font-size: 16px;
 $md: 770px;
+
+@mixin right-arrow($color) {
+    font-family: $main-font;
+    font-size: .6875rem;
+    line-height: 2.182;
+    padding: 7px 60px 7px 20px;
+    overflow: hidden;
+    position: relative;
+    transition: all .2s ease-in-out;
+    border: 1px solid #fff;
+    display: inline-block;
+    letter-spacing: 2px;
+    color: $color;
+    min-width: 200px;
+    text-decoration: none;
+    cursor: pointer;
+    &::before {
+        content: "→";
+        top: 50%;
+        transition: all .2s ease-in-out;
+        position: absolute;
+        left: 80%;
+        opacity: 0;
+        font-size: 1rem;
+        line-height: 0;
+    }
+    &:hover::before {
+        left: 85%;
+        opacity: 1;
+    }
+}
 
 @mixin breakpoint-md {
     @media screen and (min-width: $md) {
