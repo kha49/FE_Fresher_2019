@@ -1,5 +1,4 @@
 import LazyLoad from 'vanilla-lazyload';
-require('slick-carousel');
 
 const Global = {
   lazyLoad: (thresDistance) => {

@@ -1,0 +1,9 @@
+mixin boxRelativeItem(relativeItem)
+    div.boxRelative__block__item-container
+            div.item-img
+                a(href="#")
+                    img(src=relativeItem.img)
+            div.item-content
+                a(href="")= relativeItem.title 
+                p= relativeItem.desc
+                a.link-last(href="")= relativeItem.link

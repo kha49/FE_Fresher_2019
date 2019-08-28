@@ -1,0 +1,49 @@
+.weAre{
+    &__item-img{
+        position: relative;
+        width: 290px;
+        height: 171px;
+        background-image: url('../../assets/images/adaptis/bgd-solvers.png');
+        background-position: center;
+        &__link{
+            position:absolute;
+            bottom: 0px;
+            width: 250px;
+            height: 29px;
+            background-color: white;
+            a{
+                color: #3C213A;
+                text-decoration: none;
+                font-size: 12px;
+                margin-left: 35px;
+            }
+        }
+    }
+    &__item-content{
+        &__item-title{
+            display: flex;
+            flex-direction: column;
+            margin-left: 25px;
+            #titlePrimary{
+            color: #6E6E6E;
+            font-size: 1.2em;
+            line-height: 1em;
+            }
+            #titleSeconds{
+            font-size: 30px;
+            }
+        }
+        &__item-sub{
+            margin-left: 35px;
+            color: #393939;
+            justify-content: center;
+            #sub1{
+                margin-bottom: 30px;
+                display: block;
+            }
+            #sub2{
+                display: block;
+            }
+        }
+    }
+}

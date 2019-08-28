@@ -1,0 +1,29 @@
+.boxRelative{
+    margin-top: 40px;
+    .boxRelative__block{
+        margin-left: 15px;
+        margin-right: 15px;
+        .boxRelative__block__item-container{
+            width: 100%;
+            height: 400px;
+            .item-img{
+                img{
+                    width: 100%;
+                    height: 200px;
+                }
+            }
+            .item-content{
+                margin-top: 20px;
+                color: #3C213A;
+                font-family: runda,sans-serif;
+                a{
+                    text-decoration: none;
+                }
+                .link-last{
+                    font-size: 11px;
+                }
+
+            }
+        }
+    }
+}
