@@ -5,7 +5,14 @@ mixin list(id, ...items)
     each item in items
       li= item
 
-// kem-home-offers__slider__item
+//- heading
+mixin heading(classHeading, titleClass, titleContent, classDescFrame, descClass, descContent)
+  div(class= classHeading)
+    h1.kem-title(class= titleClass)= titleContent
+    div(class= classDescFrame)
+      span.kem-desc.kem-desc__separate(class= descClass)= descContent
+
+//- kem-home-offers__slider__item
 mixin slider-offers(title, link, desc)
   .kem-home-offers__slider__item
     a.slider-img(style="background-image : url(../../../../assets/images/kem/kem-homepage/kem-homepage-offers/"+link+")")
@@ -17,6 +24,6 @@ mixin slider-offers(title, link, desc)
       .slider-caption__btn
         +button-link("FURTHER INFORMATION")
 
-// kem button link 
+//- kem button link 
 mixin button-link(title)
   a.kem-btn-link= title

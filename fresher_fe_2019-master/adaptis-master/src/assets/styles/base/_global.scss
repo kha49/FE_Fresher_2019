@@ -16,12 +16,12 @@ body {
     font-size: 1.6rem;
     font-weight: fontWeight(regular);
     color: $text-color-primary;    
-    padding-top: 60px;
+    padding-top: 0;
     line-height: 2.3rem;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     @include not-mobile {
-        padding-top: 90px;
+        padding-top: 0;
     }
     
     &.body__is__nav-open {
