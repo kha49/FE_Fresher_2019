@@ -66,13 +66,20 @@
     width: 90%;
     height: 800px;
     .adaptis-slide__stories {
+<<<<<<< HEAD
         // position: absolute;
         //position: relative;
+=======
+        position: absolute;
+        // position: relative;
+>>>>>>> 31e8aea8a9bf754234e26cb3fd9761ba77d76bdb
         width: 100%;
         height: 800px;
         background-size: cover;
         background-position: center;
         transition: 1s;
+        transform: translate(0);
+        opacity: 1;
         .adaptis-caption {
             position: absolute;
             bottom: 0;
@@ -107,6 +114,7 @@
                     letter-spacing: 2px;
                     color: #fff;
                     min-width: 200px;
+                    text-decoration: none;
                     cursor: pointer;
                     &::after {
                         content: "";
@@ -142,10 +150,11 @@
                     }
                 }
             }
+            @media screen and (max-width: $md) {
+                width: 90%;
+            }
         }
-            transform: translate(0);
-            opacity: 1;
-        }
+    }
     &:hover {
         .adaptis-slide-button {
             button {
