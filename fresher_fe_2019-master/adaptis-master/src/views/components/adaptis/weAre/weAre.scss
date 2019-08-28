@@ -1,4 +1,6 @@
 .weAre{
+    font-family: $main-font;
+    margin-bottom: 50px;
     &__item-img{
         position: relative;
         width: 290px;
@@ -14,13 +16,15 @@
             a{
                 color: #3C213A;
                 text-decoration: none;
-                font-size: 12px;
+                font-size: .6875rem;
                 margin-left: 35px;
             }
         }
     }
     &__item-content{
+        margin-top: 30px;
         &__item-title{
+            font-family:'Times New Roman', Times, serif;
             display: flex;
             flex-direction: column;
             margin-left: 25px;
@@ -31,10 +35,15 @@
             }
             #titleSeconds{
             font-size: 30px;
+            color: #393939;
             }
         }
         &__item-sub{
-            margin-left: 35px;
+            font-size: 13px;
+            line-height: 1.6rem;
+            margin-top: 5px;
+            margin-left: 40px;
+            margin-right: 39px;
             color: #393939;
             justify-content: center;
             #sub1{

@@ -1,11 +1,13 @@
 .description{
+    margin-top: 10px;
+    margin-left: 0px;
     &__content{
-        font-family: runda,sans-serif;
+        font-family:$main-font;
         display: block;
-        justify-content: center;
-        padding: 100px 25px 50px;
-        font-size: 1.1em;
-        color:#393939;
-        line-height: 1.5em;
+        font-size: 14px;
+        color:#424242;
+        line-height: 1.8em;
+        margin-right: 15px;
+        
     }
 }

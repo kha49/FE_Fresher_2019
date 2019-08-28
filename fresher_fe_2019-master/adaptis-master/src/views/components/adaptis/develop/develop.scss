@@ -2,27 +2,33 @@
     &__title{
         margin-right: 20px;
         &__primary{
-            p{  
-                text-align: right;
+            span{  
+                float: right;
                 color: #6E6E6E;
                 font-size: 1.2em;
             }
         }
         &__main{
-            font-size: 2.22em;
-            line-height: 1.25em;
+            clear: both;
+            display: flex;
+            flex-direction: column;
             margin-bottom: 20px;
-            margin-top: 0px;
-            text-align: right;
-            font-family: capitolium-2,sans-serif;
-            color: #393939;
+            margin-top: 30px;
+            span{
+                font-size: 2em;
+                line-height: 1.25em;
+                text-align: right;
+                color: #393939;
+            }
         }
     }
     &__intro{
-        margin-left: 30px;
+        margin-left: 40px;
+        font-family: $main-font;
         &__hightlight{
             display: flex;
             flex-direction: column;
+            font-size: 14px;
             #span1{
                 color:#3C213A;
             }
@@ -31,6 +37,9 @@
             }
         }
         &__desc{
+            margin-top: 25px;
+            margin-right: 25px;
+            font-size: 13px;
             color: #393939;
             line-height: 1.6rem;
 
@@ -44,8 +53,9 @@
             a{
                 color: #3C213A;
                 text-decoration: none;
-                font-size: 12px;
+                font-size: .6875rem;
                 margin-left: 30px;
+                
             }
         }
     }
