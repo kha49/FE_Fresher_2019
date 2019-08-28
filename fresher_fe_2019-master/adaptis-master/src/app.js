@@ -10,7 +10,9 @@ $(() => {
 
 $(document).ready(() => {
   Global.lazyLoad();
-  
+  $('.single-item').slick();
+  // adaptisSlider.init();
+  // adaptisSlider.plusDivs(n);
 });
 
 $(window).on('resize', () => {

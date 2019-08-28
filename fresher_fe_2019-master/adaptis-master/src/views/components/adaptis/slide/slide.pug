@@ -1,42 +1,40 @@
-- const adaptisArray = ["Success Story", ["Kempinski Hotels S.A", "Johnnie Walker", "Burberry"], ["Kempinski manages and operates some of the world’s most iconic hotels, with a portfolio of five-star hotels and residences across the globe, Adaptis leads the digital revolution for the hotel group.", "The most widely distributed blended Scotch Whisky in the world", "Careers reinvented at this luxury fashion brand"], "VIEW THE WORK"]
+- const adaptisBanner = [
+-   {
+-      title: "Success Story",
+-       subject: "Kempinski Hotels S.A",
+-       description: "Kempinski manages and operates some of the world’s most iconic hotels, with a portfolio of five-star hotels and residences across the globe, Adaptis leads the digital revolution for the hotel group.",
+-       link: "VIEW THE WORK",
+-       background: "../../assets/images/adaptis/adaptis-hero-kempinski.png"
+-   },
+-   {
+-      title: "Success Story",
+-       subject: "Johnnie Walker",
+-       description: "The most widely distributed blended Scotch Whisky in the world",
+-       link: "VIEW THE WORK",
+-       background: "../../assets/images/adaptis/adaptis-hero-johnnie-walker.jpg"
+-   },
+-   {
+-      title: "Success Story",
+-       subject: "Burberry",
+-       description: "Careers reinvented at this luxury fashion brand",
+-       link: "VIEW THE WORK",
+-       background: "../../assets/images/adaptis/adaptis-hero-burberry.jpg"
+-   }
+- ]
 
 mixin adaptis-slide
     .adaptis-slide
-        .adaptis-kempinski
-            .adaptis-kempinski-caption
-                .adaptis-kempinski-caption__title= adaptisArray[0]
-                .adaptis-kempinski-caption__subject= adaptisArray[1][0]
-                .adaptis-kempinski-caption__description= adaptisArray[2][0]
-                .adaptis-kempinski-caption__link
-                    a(href="#" title="VIEW THE WORK")= adaptisArray[3]
-        .adaptis-johnniewalker
-            .adaptis-johnniewalker-caption
-                .adaptis-johnniewalker-caption__title= adaptisArray[0]
-                .adaptis-johnniewalker-caption__subject= adaptisArray[1][1]
-                .adaptis-johnniewalker-caption__description= adaptisArray[2][1]
-                .adaptis-johnniewalker-caption__link
-                    a(href="#" title="VIEW THE WORK")= adaptisArray[3]
-        .adaptis-burberry
-            .adaptis-burberry-caption
-                .adaptis-burberry-caption__title= adaptisArray[0]
-                .adaptis-burberry-caption__subject= adaptisArray[1][2]
-                .adaptis-burberry-caption__description= adaptisArray[2][2]
-                .adaptis-burberry-caption__link
-                    a(href="#" title="VIEW THE WORK")= adaptisArray[3]
-        .adaptis-left-button
-            button(type="button") prev
-        .adaptis-right-button
-            button(type="button") next
-
-//- mixin adaptis-slide
-//-     .adaptis-slide
-//-         each i in adaptisArray[1]
-//-             .adaptis-caption
-//-                 .adaptis-slide-caption__title= adaptisArray[0]
-//-                 .adaptis-slide-caption__subject= adaptisArray[1][i]
-//-                 .adaptis-slide-caption__description= adaptisArray[2][i]
-//-                 .adaptis-slide-caption__link
-//-                     button= adaptisArray[3]           
+        each val, index in adaptisBanner
+            .adaptis-slide__stories.mySlides(style=`background-image: url(${val.background})`)
+                .adaptis-caption
+                    .adaptis-caption__title= val.title
+                    .adaptis-caption__subject= val.subject
+                    .adaptis-caption__description= val.description
+                    .adaptis-caption__link
+                        a(href="#")= val.link
+        .adaptis-slide-button
+            button(type="button" onclick="plusDivs(-1)").left-button
+            button(type="button" onclick="plusDivs(1)").right-button
 
 block content
     +adaptis-slide
