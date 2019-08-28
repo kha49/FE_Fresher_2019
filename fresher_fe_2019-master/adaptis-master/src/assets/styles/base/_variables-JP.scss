@@ -56,6 +56,7 @@ $colors: (
     c-gray-1: #ddd,
     c-pink-light: #EBCCD1,
     c-red: #A94442,
+    c-para: #212529,
 );
 // // main-colors:
 $bg-color-primary: color(c-blue);
@@ -71,6 +72,7 @@ $text-color-secondary: color(c-white);
 $text-color-black: color(c-black);
 $text-color-blue: color(c-blue);
 $text-color-gray-blur: color(c-gray-blur);
+$text-color-gray: color(c-para);
 
 $page-border-radius: .3rem;
 $btn-bg-color-primary: color(c-yellow);

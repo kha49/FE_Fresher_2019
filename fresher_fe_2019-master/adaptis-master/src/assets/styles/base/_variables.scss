@@ -6,7 +6,7 @@ $grid-breakpoints: (
     smplus: 769px,
     md: 992px,
     lg: 1025px,
-    xl: 1200px
+    xl: 1200px,
 ); 
 
 // fonts
@@ -23,13 +23,15 @@ $fonts: (
     heading: ('Kreon', sans-serif),
     content: ('ProximaNova', sans-serif),
     icomoon: ('icomoon'),
-    fontawesome: ('Fontawesome')
+    fontawesome: ('Fontawesome'),
+    fontKingsCaslon: ('KingsCaslon', sans-serif)
 );
 
 $font-main: fonts(main);
 $font-heading: fonts(heading);
 $font-icomoon: fonts(icomoon);
 $font-fontawesome: fonts(fontawesome);
+$font-kingscaslon: fonts(fontKingsCaslon);
 
 $fontweight-light: fontWeight(light);
 $fontweight-regular: fontWeight(regular);
@@ -56,6 +58,7 @@ $colors: (
     c-gray-1: #ddd,
     c-pink-light: #EBCCD1,
     c-red: #A94442,
+    c-para: #212529,
 );
 // // main-colors:
 $bg-color-primary: color(c-blue);
@@ -71,6 +74,7 @@ $text-color-secondary: color(c-white);
 $text-color-black: color(c-black);
 $text-color-blue: color(c-blue);
 $text-color-gray-blur: color(c-gray-blur);
+$text-color-gray: color(c-para);
 
 $page-border-radius: .3rem;
 $btn-bg-color-primary: color(c-yellow);
