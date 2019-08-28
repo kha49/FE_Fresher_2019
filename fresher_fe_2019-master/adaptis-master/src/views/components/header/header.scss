@@ -52,6 +52,7 @@
                 @include typography($font-primary, 400, 11px, 1.1rem);
                 color: white;
                 text-transform: uppercase;
+                // text-align: center;
                 padding: 1rem;
                 background-color: rgba(1, 15, 42, 0.5);
                 letter-spacing: 2px;
@@ -101,15 +102,16 @@
     vertical-align: middle;
 }
 
-// .icon-user{
-//     color: $color-second;
-// }
+.icon-user{
+    color: $color-second;
+}
 
 .toggle-block{
     width: 5rem;
     height: 5rem;
     position: fixed;
     top: 0;
+    z-index: 11;
     background-color: $color-primary;
 
     @include min-lg{

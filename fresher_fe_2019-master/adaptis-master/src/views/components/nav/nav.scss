@@ -1,0 +1,100 @@
+.kem-nav{
+    background-color: $color-primary;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    top: 17rem;
+    padding: 4rem 0;
+    // height: 1500px;
+    overflow: auto;
+
+    @include not-mobile{
+        top: 18.6rem;
+        width: 42.773rem;
+    }
+
+    @include min-lg{
+        top: 12rem;
+        width: 22.528rem;
+        background-color: rgba(1, 15, 42, 0.74);
+    }
+    
+    &__title {
+        @include typography($font-primary, 300, 20px, 3rem);
+        color: white;
+        padding: 0 5rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+
+        @include min-lg{
+            margin: 0;
+        }
+    }
+
+    &__item{
+        text-transform: uppercase;
+        position: relative;
+        line-height: 5rem;
+
+        @include min-lg  {
+            line-height: 2.5rem;
+            height: 2.5rem;
+
+            &:nth-child(9), &:nth-child(10), &:nth-child(11){
+                display: none;
+            }
+        }
+    }
+
+    &__link{
+        padding: 0.9rem 5rem;
+        @include typography($font-primary, 300, 14px, 3.2rem);
+        color: white;
+        white-space: nowrap;
+
+        @include min-lg{
+            font-size: 11px;
+            padding: 0 5rem;
+        }
+    }
+
+    &__icon-down-open{
+        color: white;
+        font-size: 22px;
+        position: absolute;
+        right: 5rem;
+        top: 1.7rem;
+        transform: translate(100%, -50%);
+
+        @include min-lg{
+            display: none;
+        }
+    }
+
+    &__list-small{
+        display: none;
+    }
+
+    &__item-small{
+        text-transform: uppercase;
+    }
+
+    &__link-small{
+        padding: 0 7.5rem;
+        @include typography($font-primary, 300, 14px, 3.2rem);
+        color: white;
+        white-space: nowrap;
+    }
+
+    &__item-small-lv3{
+        text-transform: uppercase;
+    }
+
+    &__link-small-lv3{
+        padding: 0 9.5rem;
+        @include typography($font-primary, 300, 14px, 3.2rem);
+        color: white;
+        white-space: nowrap;
+
+    }
+}

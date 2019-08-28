@@ -1,7 +1,7 @@
 extends ../layouts/master.pug
 
 block link
-    link(rel='shortcut icon', href=require('images/favicons/favicon.ico'))
+    link(rel='shortcut icon', href=require('images/kem/kem-favicon/favicon.ico'))
 
 block title
     title Luxury Five Star Hotels & Resorts | Kempinski Hotels
@@ -9,8 +9,8 @@ block title
 block content
     //- include ../mixins/list.pug
     include ../components/kem-homepage/kem-homepage-banner/kem-homepage-banner.pug
-    include ../components/kem-homepage/kem-homepage-search/kem-homepage-search.pug
     include ../components/nav/nav.pug
+    include ../components/kem-homepage/kem-homepage-search/kem-homepage-search.pug
     include ../components/kem-homepage/kem-homepage-hoteliers/kem-homepage-hoteliers.pug
     include ../components/kem-homepage/kem-homepage-mapbox/kem-homepage-mapbox.pug
     include ../components/kem-homepage/kem-homepage-experience/kem-homepage-experience.pug

@@ -12,6 +12,12 @@ mixin heading(classHeading, titleClass, titleContent, classDescFrame, descClass,
     div(class= classDescFrame)
       span.kem-desc.kem-desc__separate(class= descClass)= descContent
 
+//- banner
+mixin banner(imgLeft, imgRight)
+  .kem-homepage-banner__img-frame
+    .kem-homepage-banner__img-frame__img-banner.banner__small-left(style= "background-image: url(../../../../assets/images/kem/kem-homepage/kem-homepage-banner/"+imgLeft+")")
+    .kem-homepage-banner__img-frame__img-banner.banner__small-right(style= "background-image: url(../../../../assets/images/kem/kem-homepage/kem-homepage-banner/"+imgRight+")")
+
 //- kem-home-offers__slider__item
 mixin slider-offers(title, link, desc)
   .kem-home-offers__slider__item
