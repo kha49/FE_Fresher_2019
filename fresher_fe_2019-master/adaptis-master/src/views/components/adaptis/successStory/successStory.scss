@@ -1,0 +1,35 @@
+@import '../shared/shared.scss';
+
+.adaptis-successStory {
+    padding: 0 15px;
+    max-width: 960px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 150px;
+    position: relative;
+    &-ballon {
+        position: absolute;
+        left: calc(50% - 70px);
+        top: -65px;
+        z-index: 3;
+        transform: translate(0px, -150px);
+        opacity: 1;
+        &__bg {
+            background-image: url('../../assets/images/adaptis/adaptis-jw-ballon.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 141px;
+            height: 350px;
+            transform: rotate(5deg);
+            animation: ballon 8s ease-in-out infinite;
+        }
+        @keyframes ballon {
+            0% {transform: rotate(5deg);}
+            50% {transform: rotate(-5deg);}
+            100% {transform: rotate(5deg);}
+        }
+    }
+}

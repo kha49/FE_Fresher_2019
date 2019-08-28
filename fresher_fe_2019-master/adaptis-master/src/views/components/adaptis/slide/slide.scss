@@ -73,6 +73,8 @@
         background-size: cover;
         background-position: center;
         transition: 1s;
+        transform: translate(0);
+        opacity: 1;
         .adaptis-caption {
             position: absolute;
             bottom: 0;
@@ -107,6 +109,7 @@
                     letter-spacing: 2px;
                     color: #fff;
                     min-width: 200px;
+                    text-decoration: none;
                     cursor: pointer;
                     &::after {
                         content: "";
@@ -142,10 +145,11 @@
                     }
                 }
             }
+            @media screen and (max-width: $md) {
+                width: 90%;
+            }
         }
-            transform: translate(0);
-            opacity: 1;
-        }
+    }
     &:hover {
         .adaptis-slide-button {
             button {
