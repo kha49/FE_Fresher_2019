@@ -8,9 +8,9 @@
   }
   &__content {
     display: none;
-    width: 100vw;
+    width: 96vw;
     right: 15px;
-    border: 1px solid $color-text-price;
+    border-bottom: 1px solid $color-text-price;
     padding: 15px;
     position: absolute;
     z-index: 1;

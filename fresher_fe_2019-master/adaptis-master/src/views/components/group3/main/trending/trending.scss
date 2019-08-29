@@ -1,0 +1,149 @@
+.trending{
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    &__title-trend{   
+        display: block;
+        border-bottom: 1px dotted #000;
+        text-transform: uppercase;
+        h2{
+            color: $color-border-gray;
+            text-align: center;
+            margin: -10px auto;
+            background: $color-white;
+            font-size: 19px;
+            max-width: 320px;
+            font-weight: bold;
+        }
+    }
+    &__content-trend{
+        display: block;
+        text-align: center;
+       .grid-item{
+            a{
+                font-size: 16px;
+                font-family: 'Roboto';
+                color: $color-dark;
+                cursor: pointer;
+            }
+            img{
+                width: 100%;
+            }
+            span.label{
+                font-size: 14px;
+                font-weight: bold;
+                color: white;
+                top: 0;
+                font-family: "Roboto";
+                padding: 15px 10px;
+                right: 0;
+                background: rgba(255, 113, 113, 0.8);
+                border-color: rgba(255, 255, 255, 0.8);
+                position: absolute;
+                border: 2px dotted;
+                border-radius: 50%;
+                text-transform: uppercase;
+                z-index: 3;
+            }
+       }
+    }
+    &__content-price{
+        .old{
+            text-decoration: line-through;
+            display: inline;
+            font-weight: 400;
+            color: $color-text-price;
+            margin-right: 6px;
+            font-size: 17px;
+        }
+        .new{
+            color: $color-red;
+            font-weight: 700;
+            font-size: 17px;
+        }
+    }
+    .trend__content-hover{display: none;}
+    .trend__button-select{
+        width: 209px;
+        border: 2px solid  #bebebe;
+        background: $color-white;
+        margin: 20px auto;
+        cursor: pointer;
+        span{
+            color: #bebebe;
+            font-size: 16px;
+            line-height: 34px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-family: 'Montserrat';
+            padding: 0px 20px 0px 35px;
+            }
+    }
+    .row{
+        margin: 20px auto;
+    }  
+    @include Responsive(MD){
+        &__content-trend{
+            .grid-item.col-md-4{
+                img{
+                    &:hover{
+                        opacity: 0.6;
+                        transition: 0.5s;
+                    }
+                    width: 100%;
+                }
+            }
+        }
+        .trend__content-hover{display: none;}
+    }
+    @include Responsive(XL){
+        &__content-trend{
+            .grid-item.col-lg-3{
+                &:hover > img{
+                    opacity: 0.6;
+                    transition: 0.5s;
+                    backface-visibility: hidden;
+                }
+                &:hover > .trend__content-hover{
+                    opacity: 1;
+                }
+            }
+        }
+        .trend__content-hover{
+            display: none;
+            position: absolute;
+            opacity: 0;
+            .icon{
+                width: 100%;
+                position: relative;
+                z-index: 2;
+                border-radius: 999px;
+                background: $color-background;
+                i{
+                    width: 100%;
+                }
+            }
+            .select{
+                width: 100%;
+                border: 2px solid  #bebebe;
+                background: $color-white;
+                color: #bebebe;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                font-family: 'Montserrat';    
+            }
+            a.view{
+                width: 100%;
+                border: 2px solid  #bebebe;
+                background: $color-dark;
+                color: $color-white;
+            }
+        }
+        .trend__button-select{
+            display: none;
+        }
+    }
+}
