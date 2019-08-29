@@ -1,7 +1,7 @@
 $main-font: runda, sans-serif;
 $sub-font: capitolium-2, sans-serif;
 $main-font-size: 16px;
-$md: 770px;
+$medium: 768px;
 
 @mixin right-arrow($color) {
     font-family: $main-font;
@@ -34,13 +34,13 @@ $md: 770px;
     }
 }
 
-@mixin breakpoint-md {
-    @media screen and (min-width: $md) {
-        @content;
+@mixin breakpoint($class) {
+    @if $class == $medium {    
+        @media screen and (min-width: $medium) {
+            @content;
+        }
     }
-    @media screen and (max-width: $md) {
-        @content;
-    }
+    // @else if 
 }
 
 * {

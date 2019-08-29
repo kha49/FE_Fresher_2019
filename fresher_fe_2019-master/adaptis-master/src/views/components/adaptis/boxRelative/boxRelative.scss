@@ -1,4 +1,148 @@
+@import '../shared/shared.scss';
+
 .boxRelative {
     padding: 60px 0;
     background: #fff;
+    &-container {
+        max-width: 1024px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+
+.boxRelative-container__items {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    .boxRelative-container__item {
+        // opacity: 0;
+        flex: 2;
+        margin: 0 0 30px;
+        animation-delay: .2s;
+        animation: fadeInUp .5s ease-in-out forwards;
+        &-thumb {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-size: 9.6px;
+            line-height: 2;
+            letter-spacing: 1px;
+            text-decoration: none;
+            color: #fff;
+            transition: all .25s ease;
+            height: 200px;
+            margin-bottom: 20px;
+            position: relative;
+            display: block;
+            overflow: hidden;
+            &::before {
+                content: '';
+                height: 100%;
+                background: rgba(0,0,0,.5);
+                opacity: 0;
+                transform: scale(.75);
+                position: absolute;
+                width: 100%;
+                transition: all .3s ease-in-out;
+                top: 0;
+                left: 0;
+            }
+            &:hover::before {
+                opacity: 1;
+                transform: scale(1);
+            }
+            .boxRelative-container__item-caption {
+                font-family: $main-font;
+                font-weight: bold;
+                list-style-type: none;
+                text-transform: uppercase;
+                font-size: 9.6px;
+                line-height: 2;
+                letter-spacing: 1px;
+                position: absolute;
+                width: 100%;
+                transition: all .3s ease-in-out;
+                top: 0;
+                left: 0;
+                height: 100%;
+                padding: 15px;
+                z-index: 2;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                align-content: center;
+                text-align: center;
+                justify-content: center;
+                opacity: 0;
+                transform: translate(0, -10px);
+                &:hover {
+                    opacity: 1;
+                    transform: translate(0, 0);
+                }
+            }
+        }
+        &-title {
+            font-family: $main-font;
+            text-decoration: none;
+            line-height: 2;
+            transition: all .25s ease;
+            color: #3C213A;
+            font-size: 16px;
+            letter-spacing: 0;
+            font-weight: 400;
+            display: inline-block;
+            margin-bottom: 10px;
+            position: relative;
+            text-transform: none;
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 1px;
+                background: #3C213A;
+                transition: width .3s ease-in-out;
+            }
+            &:hover::before {
+                width: 100%;
+            }
+        }
+        &-desc {
+            font-family: $main-font;
+            // font-weight: bold;
+            font-size: 11.2px;
+            color: #3C213A;
+            padding-bottom: 10px;
+        }
+        &-link {
+            font-family: $main-font;
+            display: inline-block;
+            text-decoration: none;
+            transition: all .25s ease;
+            color: #3C213A;
+            font-weight: bold;
+            letter-spacing: 1px;
+            position: relative;
+            padding-right: 25px;
+            font-size: 8.8px;
+            line-height: 2.18182;
+            &::before {
+                content: "→";
+                position: absolute;
+                right: 5px;
+                top: 0;
+                opacity: 1;
+                transition: all .2s ease-in-out;
+                font-size: 12.8px;
+                line-height: 1.5;
+            }
+            &:hover::before {
+                right: 0;
+            }
+        }
+    }
 }

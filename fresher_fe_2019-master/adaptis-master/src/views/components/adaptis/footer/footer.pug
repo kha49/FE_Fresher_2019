@@ -1,0 +1,59 @@
+- const adaptisFooterArray = ["THE WORK", "THE AGENCY", "CAREERS", "CONTACT US"]
+- const adaptisFooterLocationsArray = [
+-   {
+-       clock: "australia",
+-       location: "Australia",
+-       phone: "+61 2 8776 3833",
+-       email: "australia@adatis.io"
+-   },
+-   {
+-       clock: "switzerland",
+-       location: "Switzerland",
+-       phone: "+41 22 539 16 32",
+-       email: "switzerland@adaptis.io"        
+-   },
+-   {
+-       clock: "thailand",
+-       location: "Thailand",
+-       phone: "+66 2 508 8443",
+-       email: "thailand@adaptis.io"    
+-   },
+-   {
+-       clock: "vietnam",
+-       location: "Vietnam",
+-       phone: "+84 244 4582 079",
+-       email: "vietnam@adaptis.io" 
+-   }
+- ]
+
+mixin adaptis-footer-clocks
+    each val, index in adaptisFooterLocationsArray
+        .adaptis-footer-clock
+            .adaptis-footer-clock__clock
+                div(class=`adaptis-footer-clock__clock--${val.clock}`)
+                    .adaptis-footer-clock__clock--location-hours
+                        .adaptis-footer-clock__clock-location-hours--hours
+                    .adaptis-footer-clock__clock--location-minutes
+                        .adaptis-footer-clock__clock-location-minutes--minutes
+                    .adaptis-footer-clock__clock--location-seconds
+                        .adaptis-footer-clock__clock-location-seconds--seconds
+            .adaptis-footer-clock__text
+                .adaptis-footer-clock__text--location= val.location
+                .adaptis-footer-clock__text--phone
+                    a(href="#")= val.phone
+                .adaptis-footer-clock__text--email
+                    a(href="#")= val.email
+
+mixin adaptis-footer-mixin
+    .adaptis-footer-container
+        a(href="#").adaptis-footer-container__logo
+            span ADAPTIS
+    .adaptis-footer-items
+        each val, index in adaptisFooterArray
+            a.adaptis-footer-item(href="#")= val
+    .adaptis-footer-clocks
+        +adaptis-footer-clocks
+
+block content
+    footer.adaptis-footer
+        +adaptis-footer-mixin
