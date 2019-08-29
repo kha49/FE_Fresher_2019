@@ -111,12 +111,9 @@
     height: 5rem;
     position: fixed;
     top: 0;
-    z-index: 11;
+    z-index: 12;
     background-color: $color-primary;
-
-    @include min-lg{
-        display: none;
-    }
+    opacity: 0;
 
     &__toggle{
         color: $color-second;
@@ -126,6 +123,10 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+
+    @include min-lg{
+        display: none;
     }
     
 }
@@ -163,4 +164,44 @@
             }
         }
     }
+}
+
+#headerCheckbox{
+    display: none;
+
+    &:checked{
+        ~ .kem-nav{
+            transform: translateX(0);
+        }
+
+        ~ .header-close-icon{
+            // display: unset;
+            opacity: 1;
+        }
+    }
+}
+
+.header-nav-toggle{
+    display: block;
+    background-color: $color-primary;
+    width: 5rem;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+    color: $color-second;
+    font-size: 25px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 1.25rem;
+
+    @include min-lg{
+        display: none;
+    }
+}
+
+.header-close-icon{
+    // display: none;
+    transition: 0.5s;
+    opacity: 0;
 }

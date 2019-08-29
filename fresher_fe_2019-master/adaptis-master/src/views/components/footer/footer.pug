@@ -1,0 +1,35 @@
+section.kem-footer
+    .kem-footer__container
+        .kem-footer__block.kem-footer__block__contact
+            a.kem-footer__title(href="#" style="display: block;") contact us
+            a.contact__link(href="") reservations.corporate@kempinski.com
+            .contact__icon-container
+
+                - var iconArr = [
+                - {socialIcon: "fab fa-facebook"},
+                - {socialIcon: "fab fa-instagram"},
+                - {socialIcon: "fab fa-twitter"},
+                - {socialIcon: "fab fa-youtube"},
+                - {socialIcon: "fab fa-linkedin"},
+                - {socialIcon: "fab fa-weibo"},
+                - {socialIcon: "fab fa-weixin"},
+                - {socialIcon: "fab fa-blogger"}
+                - ]
+                each icon in iconArr
+                    a(href="")
+                        span.contact__icon-block
+                            i(class= icon.socialIcon) 
+
+        .kem-footer__block.kem-footer__block__booking
+            a.kem-footer__title(href="#" style="display: block;") booking
+            .booking__function
+                span.booking__function__icon
+                    i(class= "fas fa-pencil-alt")
+                a.booking__function__modify(href="#") modify
+                span ||
+                a.booking__function__cancel(href="#") cancel
+
+        .kem-footer__block.kem-footer__block__info
+            a.kem-footer__title(href="#" style="display: block;") helpful info
+    //-     .kem-footer__block.kem-footer__block__brand
+    //- .kem-footer__scroll-up

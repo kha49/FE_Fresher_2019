@@ -1,7 +1,8 @@
 header.kem-header
     .toggle-block
-        span.toggle-block__toggle
-            i(class="fas fa-bars")
+        label(for="headerCheckbox")
+            span.toggle-block__toggle
+                i(class="fas fa-bars")
     .kem-header__logo-frame
         img.kem-header__logo-frame__logo(src="../../../../assets/images/kem/kem-header/logo.svg", alt="kem-logo")
     +heading("kem-heading-header", "kem-heading-header__title", "KEMPINSKI HOTELS", "kem-heading-header__desc-frame", "kem-heading-header__desc-frame__desc", "A Constellation of Havens")
@@ -25,4 +26,11 @@ header.kem-header
                         i(class="far fa-user")
                     span.header-link-text
                         |login
+
+input(type="checkbox" id="headerCheckbox")
+span.header-nav-toggle.header-bar-icon
+    i(class="fas fa-bars")
+span.header-nav-toggle.header-close-icon
+    i(class="fas fa-times")
+
 

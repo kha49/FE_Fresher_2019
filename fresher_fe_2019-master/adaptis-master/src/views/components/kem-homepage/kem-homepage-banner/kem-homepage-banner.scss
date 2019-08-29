@@ -16,6 +16,15 @@
             background-position: center center;
             display: flex;
             justify-content: space-between;
+            position: relative;
+
+            &:hover{
+                >.banner-hover{
+                    display: block;
+                    background-color: rgba(0, 0, 0, 0.4);
+                    cursor: pointer;
+                }
+            }
 
             @include min-lg{
                 width: 49.75%;
@@ -24,9 +33,10 @@
     }
 
     &__text{
-        @include typography($font-primary, 400, 11px, 6.5rem);
+        @include typography($font-primary, 300, 11px, 6.5rem);
         color: $color-third;
         padding-left: 10%;
+        letter-spacing: 4px;
     }
 }
 
@@ -42,5 +52,29 @@
             display: flex;
             flex-direction: column;
         }
+    }
+}
+
+.banner-hover{
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    &__text{
+        color: white;
+        @include typography($font-primary, 300, 10px, 1rem);
+        padding: 1rem 1.5rem;
+        border: 1px solid white;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        text-align: center;
     }
 }
