@@ -1,0 +1,61 @@
+.nav-canvas {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: $color-white;
+  border: 1px solid $color-text-gray;
+  box-shadow: 1px 1px 5px $color-text-gray inset;
+  overflow-x: hidden;
+  transition: 0.5s;
+  &__link {
+    li {
+      display: block;
+      a {
+        display: block;
+        padding: 13px 20px;
+        font-size: 13px;
+        font-family: "Montserrat";
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $color-text;
+        transition: 0.5s;
+        border-bottom: 1px solid $color-text-gray;
+        text-decoration: none;
+        &:hover {
+          background: $color-background-dark;
+          color: $color-white;
+        }
+      }
+      span {
+        position: absolute;
+        right: 0;
+        padding: 15px;
+        font-size: 15px;
+        &:hover{
+          color: $color-white;
+        }
+        &:hover + a{
+          background: $color-background-dark;
+          color: $color-white;
+        }
+      }
+    }
+  }
+  &__link-sub {
+    display: none;
+    li {
+      a {
+        font-size: 11px;
+        transition: none;
+        font-family: "Roboto";
+        &:hover {
+          background: $color-white;
+          color: $color-text;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.nav-user {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  &__content{
+    display: none;
+    padding: 10px 15px;
+  }
+  span {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+  }
+}
+.box-modal {
+  display: block;
+  font-size: 16px;
+  width: 100%;
+  background-color: $color-white;
+  border-bottom: 1px solid $color-text-gray;
+  ul{
+    display: block;
+    li{
+      list-style: none;
+      padding: 1px 0;
+      a{
+        color: $color-text;
+        text-transform: capitalize;
+      }
+      span{
+        margin: 0 5px;
+      }
+    }
+  }
+}

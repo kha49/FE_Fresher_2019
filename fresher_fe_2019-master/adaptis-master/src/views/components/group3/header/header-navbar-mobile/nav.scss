@@ -1,0 +1,30 @@
+.nav-mobile {
+  [class^="col-"] {
+    padding: 0;
+    margin: 0;
+  }
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: $color-white;
+  &__box-icon {
+    &:not(:last-child) {
+      border-right: 1px solid $color-white;
+    }
+    background-color: $color-dark;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    span {
+      width: 100%;
+      padding: 15px;
+      font-size: 16px;
+    }
+  }
+  @include Responsive(MD) {
+    display: none;
+  }
+  @include Responsive(XL) {
+    display: none;
+  }
+}
