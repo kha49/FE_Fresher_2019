@@ -5,6 +5,8 @@ import 'bootstrap';
 import user from './views/components/group3/header/header-navbar-mobile/header-box-user/user-content';
 import nav_canvas from './views/components/group3/header/header-navbar-mobile-canvas/nav-canvas';
 import '../node_modules/slick-carousel/slick/slick';
+import scrollBtn from './views/components/group3/footer/scroll_btn/btn';
+
 require('normalize.css');
 
 $(() => {
@@ -51,6 +53,7 @@ $(document).ready(() => {
       // instead of a settings object
     ]
   });
+  scrollBtn.init();
 });
 
 $(window).on('resize', () => {
