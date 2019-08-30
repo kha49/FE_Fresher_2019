@@ -71,6 +71,8 @@
         &__title-box{ 
             width: 715px;
             margin: 0 auto;
+            margin-bottom: 25px;
+            width: 90%;
             h2{
                 margin: -10px auto;
                 font-size: 24px;
@@ -78,6 +80,7 @@
             }
         }
         &__content-box{
+            width: 95%;
             display: flex;
             width: 760px;
             margin: 0 auto;
@@ -102,9 +105,11 @@
         }
     }
     @include Responsive(XL){
+        width: 90%;
         &__title-box{
             width: 97%;
-            margin: 0 auto;
+            margin: 30px auto;
+            margin-top: 0;
             h2{
                 margin: -10px auto;
                 font-size: 24px;

@@ -1,8 +1,9 @@
-.trending
-    .trending__title-trend
-        h2 LIPSTICK TRENDING NOW
-    .trending__content-trend.multiple-items
-            - const box_trend = [
+.hotsale
+    .hotsale__title-hotsale
+        h2 Hot Sellers
+    .hotsale__content-hotsale
+        .row
+            - const box_hotsale = [
             -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/products/product-image-932241012_large.jpg?v=1560166171",label:"sale",content:"O.TWO.O 12 Colors Lips Makeup Lipstick  Lip Gloss Long Lasting Moisture Cosmetic Lipstick Red Lip Matte Lipstick Waterproof",old:"$4.89",new:"$3.99",span: "Select option"},
             -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/products/product-image-986041898_large.jpg?v=1560167031",label:"sold out",content:"VIBELY 4 Colors Long Lasting Moisturizer Lipstick Makeup Waterproof Charming Lips Stick Lip Make Up Cosmetic Beauty maquiagem",old:"$4.28",new:"$3.83",span: "Select option"},
             -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/products/product-image-408654837_large.jpg?v=1560166171",label:"sale",content:"O.TWO.O High Quality Velvet Matte lipstick Long Lasting Lips Makeup Waterproof Liquid Lipgloss Lip stick Pigmented 12 Colors",old:"$1.67",new:"$0.99",span: "Select option"},
@@ -12,21 +13,22 @@
             -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/products/product-image-986036456_large.jpg?v=1560166169",label:"sale",content:"Kissbeauty Aloe Vera Color Changes Lip Cream Moisturizing Long Lasting Lipstick",old:"$1.67",new:"$0.99",span: "Select option"},
             -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/products/product-image-936322753_large.jpg?v=1560242577",label:"sold out",content:"Brand Makeup Lip Gloss Waterproof Batom Lips Tint Red Brown Nude Long Lasting Liquid Matte Lipstick Makeup Lipgloss kyliejenner",old:"$1.67",new:"$0.99",span: "Select option"},
             - ]
-            each val in box_trend 
-                .grid-item
-                    .trend__content-pro
+            each val in box_hotsale 
+                .grid-item.col-6.col-sm-4.col-lg-3
+                    .hotsale__content-pro
                         span(class="label")=val.label
-                        img.trend(src=val.img,)
-                        .trend__content-hover
+                        img.hotsale(src=val.img,)
+                        .hotsale__content-hover
                             span(class="icon")
                                 i.fas.fa-heart
                             span(class="select disable")=val.span
                             a(class="view") QUICK VIEW
-                    .trend__content-text
+                    .hotsale__content-text
                         a=val.content
-                    .trending__content-price
+                    .hotsale__content-price
                         span.old=val.old  
                         span.new=val.new 
-                    .trend__button-select
+                    .hotsale__button-select
                         span(class="select disable")=val.span
-                    
+    .hotsale__button
+         span Show more

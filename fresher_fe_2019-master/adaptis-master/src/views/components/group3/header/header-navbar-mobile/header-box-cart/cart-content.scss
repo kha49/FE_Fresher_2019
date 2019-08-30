@@ -1,13 +1,12 @@
-.nav-cart {
-  display: block;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  &:hover > .nav-cart__content {
+#nav-cartBtn{
+  &:hover > .nav-cart{
     display: block;
   }
+}
+.nav-cart {
+ display: none;
   &__content {
-    display: none;
+    display: block;
     width: 96vw;
     right: 15px;
     border-bottom: 1px solid $color-text-price;
