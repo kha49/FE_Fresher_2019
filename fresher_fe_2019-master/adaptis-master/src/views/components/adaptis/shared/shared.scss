@@ -2,6 +2,8 @@ $main-font: runda, sans-serif;
 $sub-font: capitolium-2, sans-serif;
 $main-font-size: 16px;
 $medium: 768px;
+$medium-large: 1199px;
+$large: 1200px;
 
 @mixin right-arrow($color) {
     font-family: $main-font;
@@ -40,6 +42,21 @@ $medium: 768px;
             @content;
         }
     }
+    @else if $class == $medium-large {
+        @media screen and (max-width: $medium-large) {
+            @content;
+        }
+    }
+    @else if $class == $large {
+        @media screen and (min-width: $large) {
+            @content;
+        }
+    }
+    @else if $class == 991px {
+        @media screen and (max-width: 991px) {
+            @content;
+        }
+    }
     // @else if 
 }
 
@@ -51,5 +68,6 @@ $medium: 768px;
 
 body {
     background-color: #fcfcfc;
+    overflow-x: hidden;
 }
 

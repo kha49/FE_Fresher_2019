@@ -1,7 +1,7 @@
 // import './assets/styles/_app.scss';
 import Global from './views/components/global/global';
 import Header from './views/components/header/header';
-import adaptisSlider from '../src/views/components/adaptis/slide/slide';
+import AdaptisHeader from './views/components/adaptis/header/header';
 require('normalize.css');
 
 $(() => {
@@ -10,9 +10,8 @@ $(() => {
 
 $(document).ready(() => {
   Global.lazyLoad();
-  $('.single-item').slick();
-  // adaptisSlider.init();
-  // adaptisSlider.plusDivs(n);
+  AdaptisHeader.scrollFunction();
+  AdaptisHeader.toggleClass();
 });
 
 $(window).on('resize', () => {
@@ -24,3 +23,5 @@ $(window).on('resize', () => {
 window.onload = () => {
 
 };
+
+$(window).on('scroll', () => {AdaptisHeader.scrollFunction();});
