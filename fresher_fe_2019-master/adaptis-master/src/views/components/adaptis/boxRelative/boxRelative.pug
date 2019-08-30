@@ -27,11 +27,11 @@ mixin boxRelativeItem
         ul.boxRelative-container__items
             each val, index in relativeBlockArray
                 li.boxRelative-container__item
-                    a.boxRelative-container__item-thumb(style=`background-image: url(${val.thumb})`)
+                    a(href="#").boxRelative-container__item-thumb(style=`background-image: url(${val.thumb})`)
                         .boxRelative-container__item-caption= val.caption
-                    a.boxRelative-container__item-title= val.title
+                    a(href="#").boxRelative-container__item-title= val.title
                     .boxRelative-container__item-desc= val.desc
-                    a.boxRelative-container__item-link= val.link
+                    a(href="#").boxRelative-container__item-link= val.link
  
 block content
     section.boxRelative
