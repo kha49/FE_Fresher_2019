@@ -1,0 +1,21 @@
+.checkout
+    .checkout__content
+        p.checkout__content--title ice-snow-lips
+    .showProd
+        .row.justify-content-between
+            .col-7
+                span.fas.fa-shopping-cart
+                span Show order sumary
+                span.fas.fa-chevron-down
+            .col-2
+                span $2.29
+    nav(aria-label = "breadcrumb")
+        ol.breadcrumb
+            li.breadcrumb-item
+                a(href="") Information
+            li.breadcrumb-item
+                a(href="") Shipping
+            li.breadcrumb-item
+                a(href="") Payment
+    include ./box-checkout/box-checkout.pug
+    
