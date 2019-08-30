@@ -1,13 +1,17 @@
+@import '../shared/shared.scss';
 .weAre{
     font-family: $main-font;
     margin-bottom: 50px;
-    margin-top: 120px;
+    // margin-top: 120px;
     &__item-img{
         position: relative;
-        width: 290px;
-        height: 171px;
+        width: 100%;
+        min-height: 30vh;
         background-image: url('../../assets/images/adaptis/bgd-solvers.png');
         background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
         &__link{
             position:absolute;
             bottom: 0px;
@@ -26,9 +30,6 @@
         margin-top: 30px;
         &__item-title{
             font-family:'Times New Roman', Times, serif;
-            display: flex;
-            flex-direction: column;
-            margin-left: 25px;
             #titlePrimary{
             color: #6E6E6E;
             font-size: 1.2em;
@@ -43,8 +44,6 @@
             font-size: 13px;
             line-height: 1.6rem;
             margin-top: 5px;
-            margin-left: 40px;
-            margin-right: 39px;
             color: #393939;
             justify-content: center;
             #sub1{
@@ -56,4 +55,5 @@
             }
         }
     }
+    
 }

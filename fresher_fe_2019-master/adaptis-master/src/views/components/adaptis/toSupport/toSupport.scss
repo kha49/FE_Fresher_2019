@@ -3,7 +3,6 @@
     &__heading{
         display: flex;
         flex-direction: column;
-        margin-left: 15px;
         #title-primary{
             color: #6E6E6E;
             font-size: 1.2em;
@@ -18,8 +17,6 @@
         margin-top: 30px;
         background-color: #d5d5d52b;
         &__line12{
-            margin-left: 15px;
-            margin-right: 15px;
             display: flex;
             flex-direction: column;
             &__line1{
