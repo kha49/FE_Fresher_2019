@@ -1,32 +1,4 @@
-.boxRelative{
-    margin-top: 60px;
-    .boxRelative__block{
-        margin-left: 15px;
-        margin-right: 15px;
-        .boxRelative__block__item-container{
-            width: 100%;
-            height: 380px;
-            .item-img{
-                img{
-                    width: 100%;
-                    height: 200px;
-                }
-            }
-            .item-content{
-                margin-top: 20px;
-                color: #3C213A;
-                font-family: $main-font;
-                a{
-                    text-decoration: none;
-                }
-                p{
-                    font-size: 13px;
-                }
-                .link-last{
-                    font-size: 11px;
-                }
-
-            }
-        }
-    }
+.boxRelative {
+    padding: 60px 0;
+    background: #fff;
 }

@@ -2,14 +2,21 @@
 import Global from './views/components/global/global';
 import Header from './views/components/header/header';
 import adaptisSlider from '../src/views/components/adaptis/slide/slide';
+import AOS from 'aos';
+import reveal from '../src/views/components/adaptis/develop/develop';
 require('normalize.css');
 
 $(() => {
   // Code here
 });
 
+
 $(document).ready(() => {
   Global.lazyLoad();
+  reveal.init();
+  // AOS.init();
+  // developAnimate.init();
+
   $('.single-item').slick();
   // adaptisSlider.init();
   // adaptisSlider.plusDivs(n);
