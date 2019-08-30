@@ -1,0 +1,134 @@
+.modal-footer{
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 13;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2.5rem 0;
+    display: none;
+
+    &__container{
+        width: 85%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 92%;
+        overflow: auto;
+
+        @include min-xs{
+            width: 40rem;
+        }
+    }
+
+    &__header{
+        background-color: $color-primary;
+        text-align: center;
+    }
+
+    &__close-block{
+        position: absolute;
+        right: 0;
+
+        &__icon{
+            color: #ffffff;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    }
+
+    &__header-block{
+        padding: 0 2.5rem 2rem;
+    }
+
+    &__img-frame{
+        padding: 1rem 0;
+
+        &__img{
+            width: 20rem;
+        }
+    }
+
+    &__title{
+        color: #ffffff;
+        font-size: 18px;
+    }
+
+    &__content{
+        background-color: #ffffff;
+        padding: 2.5rem;
+
+        &__title{
+            @include typography($font-second, 400, 22px, 2.7rem);
+            color: $color-second;
+            text-transform: uppercase;
+            font-style: italic;
+            margin: 0 0 1.5rem;
+            text-align: center;
+        }
+    }
+
+    &__btn-frame{
+        text-align: center;
+        margin: 1rem 0;
+
+        @include min-xs{
+            margin: 2rem 0;
+        }
+
+        &__btn{
+            @extend %kem-btn;
+            width: 70%;
+            background: $color-second;
+            text-transform: uppercase;
+            font-size: 13px;
+            border: 2px solid $color-second;
+            border-radius: 3px;
+        }
+    }
+}
+
+.form{
+    &__checkbox{
+        margin: 0 0 1.2rem;
+        
+        &__desc{
+            @include typography($font-primary, 300, 14px, 2.1rem);
+            color: #8c8179;
+        }
+    }
+
+    &__inp{
+        padding: 0.6rem 1.2rem;
+        background-color: #ffffff;
+        border: 1px solid rgb(189, 189, 189);
+        width: 100%;
+        margin: 1rem 0 2.5rem;
+        color: rgb(151, 151, 151);
+        
+        &::placeholder{
+            color: rgb(189, 189, 189);
+        }
+
+        &__desc{
+            @include typography($font-primary, 300, 12px, 1.6rem);
+            color: $color-second;
+
+            &--red{
+                color: red;
+            }
+        }
+    }
+}
+
+.modal-link{
+    color: $color-second;
+    font-size: 14px;
+    line-height: 1.8rem;
+}
+
+.padding-none{
+    padding-left: 0;
+}

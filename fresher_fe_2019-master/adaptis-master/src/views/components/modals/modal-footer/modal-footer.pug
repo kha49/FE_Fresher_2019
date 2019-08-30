@@ -1,0 +1,35 @@
+.modal-footer(id="modalFooter")
+    .modal-footer__container
+        .modal-footer__header
+            .modal-footer__close-block
+                .modal-footer__close-block__icon(class="fas fa-window-close" id="btnClose")
+            .modal-footer__header-block
+                .modal-footer__img-frame
+                    img(src="../../../../assets/images/kem/kem-header/logo.svg", alt="").modal-footer__img-frame__img
+                .kem-title.modal-footer__title kempinski hotels
+        .modal-footer__content
+            h5.modal-footer__content__title sign up to our newsletter
+            form.modal-footer__content__form
+                div
+                    p.form__inp__desc
+                        |Email
+                        span.form__inp__desc--red *
+                    input.form__inp(type="text", name="" placeholder="Email address")
+                div.row.form__checkbox
+                    div.col-xs-1.padding-none
+                        input(type="checkbox" id="footer-modal-checkbox-1")
+                    div.col-xs-11.padding-none
+                        label.form__checkbox__desc(for="footer-modal-checkbox-1")
+                            |I would like to receive emails about Kempinski Hotels brand promotions and special offers. I can manage my
+                            |email preferences or unsubscribe at any time from future emails.
+                div.row.form__checkbox
+                    div.col-xs-1.padding-none
+                        input(type="checkbox" id="footer-modal-checkbox-2")
+                    div.col-xs-11.padding-none
+                        label.form__checkbox__desc(for="footer-modal-checkbox-2")
+                            |I have read and agree with the 
+                            a(href="#").modal-link Privacy Policy.
+                div.modal-footer__btn-frame
+                    button.modal-footer__btn-frame__btn(type="submit" id="btnSubscribeModal") subscribe
+
+    

@@ -1,0 +1,239 @@
+.kem-footer{
+    background-color: $color-primary;
+    padding: 1.5rem 0 3rem;
+    position: relative;
+
+    @include min-sm {
+        padding: 2.5rem 0 3rem;
+    }
+
+    &__container {
+        padding: 0 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+
+        @include min-xs{
+            margin: 0 6.05rem;
+        }
+
+        @include min-sm{
+            margin: 0;
+        }
+
+        @include min-md{
+            margin: 0 12rem;
+        }
+
+        @include min-lg{
+            margin: 0 1.5rem;
+            justify-content: space-between;
+        }
+
+        @include min-xl{
+            margin: 0 9.5rem;
+        }
+    }
+
+    &__block{
+        padding: 0 1.5rem;
+        width: 100%;
+
+        @include min-sm{
+            width: 50%;
+
+            &__info{
+                width: 58%;
+            }
+
+            &__brand{
+                width: 42%;
+            }
+        }
+
+        @include min-lg{
+            &__contact{
+                width: 23%;
+            }
+
+            &__booking{
+                width: 19%;
+            }
+
+            &__info{
+                width: 36%;
+            }
+
+            &__brand{
+                width: 22%;
+            }
+        }
+        
+        &:nth-child(2){
+            .kem-footer__title{
+                text-transform: lowercase;
+                
+                &::first-letter{
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    &__scroll-up{
+        color: $color-second;
+        text-align: center;
+        margin-top: 1rem;
+
+        &__icon-up{
+            font-size: 25px;
+            cursor: pointer;
+        }
+    }
+
+    &__title{
+        @include typography($font-primary, 300, 12px, 1.4rem);
+        color: $color-second;
+        text-transform: uppercase;
+        margin: 2rem 0 1rem;
+        letter-spacing: 2px;
+        text-align: center;
+
+        @include min-sm{
+            text-align: left;
+        }
+    }
+}
+
+.contact{
+    &__link{
+        @include typography($font-primary, 300, 12px, 1.5rem);
+        color: $color-second;
+        text-align: center;
+        display: block;
+
+        @include min-sm{
+            text-align: left;
+        }
+    }
+
+    &__icon-container{
+        margin: 1rem 0 4.5rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @include min-lg{
+            justify-content: flex-start;
+        }
+    }
+
+    &__icon-block{
+        font-size: 36px;
+        color: $color-second;
+        margin: 0.5rem;
+        display: inline-block;
+
+        @include min-sm{
+            font-size: 30px;
+        }
+    }
+}
+
+.booking{
+    &__function{
+        display: flex;
+        align-items: center;
+        margin-bottom: 4.5rem;
+
+        &__icon{
+        font-size: 25px;
+        color: $color-second;
+        margin-right: 1rem;
+        }
+
+        &__link{
+            @include typography($font-primary, 300, 11px, 1.6rem);
+            color: $color-second;
+            text-transform: uppercase;
+
+            &:first-of-type{
+
+                &::after{
+                    content: '/';
+                    margin: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+.info{
+    &__container{
+        margin-bottom: 4.5rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__list{
+        padding: 1.5rem 0 0;
+        margin: 0 0 1rem;
+        width: 100%;
+
+        @include min-sm{
+            width: 50%;
+        }
+    }
+
+    &__item{
+        line-height: 2.3rem;
+    }
+
+    &__icon{
+        font-size: 14px;
+        color: $color-second;
+        margin-right: 1rem;
+    }
+
+    &__link{
+        @include typography($font-primary, 300, 11px, 2.3rem);
+        color: $color-second;
+        text-transform: uppercase;
+    }
+}
+
+.brand{
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include min-sm{
+            align-items: flex-start;
+        }
+    }
+
+    &__btn{
+        @extend %kem-btn;
+        margin: 0 0 2.5rem;
+        width: 100%;
+        background-color: $color-second; 
+        border: 2px solid $color-second;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover{
+            background-color: $color-primary;
+        }
+    }
+    &__copyright{
+        @include typography($font-primary, 300, 12px, 1.8rem);
+        color: $color-second;
+        text-transform: uppercase;
+        margin-top: 1rem;
+        display: none;
+
+        @include min-sm{
+            display: block;
+        }
+    }
+}

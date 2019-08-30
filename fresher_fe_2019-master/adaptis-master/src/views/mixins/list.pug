@@ -13,26 +13,24 @@ mixin heading(classHeading, titleClass, titleContent, classDescFrame, descClass,
       span.kem-desc.kem-desc__separate(class= descClass)= descContent
 
 //- banner
-mixin banner(imgLeft, textHoverLeft, imgRight, textHoverRight)
-  .kem-homepage-banner__img-frame
-    .kem-homepage-banner__img-frame__img-banner.banner__small-left(style= "background-image: url(../../../../assets/images/kem/kem-homepage/kem-homepage-banner/"+imgLeft+")")
-      .banner-hover
-        span.banner-hover__text= textHoverLeft
-    .kem-homepage-banner__img-frame__img-banner.banner__small-right(style= "background-image: url(../../../../assets/images/kem/kem-homepage/kem-homepage-banner/"+imgRight+")")
-      .banner-hover
-        span.banner-hover__text= textHoverRight
-
-//- mixin banner()
+//- mixin banner(imgLeft, textHoverLeft, imgRight, textHoverRight)
 //-   .kem-homepage-banner__img-frame
+//-     .kem-homepage-banner__img-frame__img-banner.banner__small-left(style= "background-image: url(../../../../assets/images/kem/kem-homepage/kem-homepage-banner/"+imgLeft+")")
+//-       .banner-hover
+//-         span.banner-hover__text= textHoverLeft
+//-     .kem-homepage-banner__img-frame__img-banner.banner__small-right(style= "background-image: url(../../../../assets/images/kem/kem-homepage/kem-homepage-banner/"+imgRight+")")
+//-       .banner-hover
+//-         span.banner-hover__text= textHoverRight
 
-//-     - var smallBannerArr = [
-//-     - {imgBannerSmall: "", textHover: ""},
-//-     - {imgBannerSmall: "", textHover: ""}
-//-     - ]
-//-     each smallBanner in smallBannerArr
-//-       .kem-homepage-banner__img-frame__img-banner.banner__small(style= "background-image: url(../../../../assets/images/kem/kem-homepage/kem-homepage-banner/"+smallBanner.imgBannerSmall+")")
-//-         .banner-hover
-//-           span.banner-hover__text= smallBanner.textHover
+
+
+
+mixin banner(smallBanners)
+  .kem-homepage-banner__img-frame
+    each smallBanner in smallBanners
+      .kem-homepage-banner__img-frame__img-banner.banner__small(style= "background-image: url(../../../../assets/images/kem/kem-homepage/kem-homepage-banner/"+smallBanner.imgBannerSmall+")")
+        .banner-hover
+          span.banner-hover__text= smallBanner.textHover
 
 //- kem-home-offers__slider__item
 mixin slider-offers(title, link, desc)

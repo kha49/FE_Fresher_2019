@@ -21,15 +21,39 @@ section.kem-footer
                             i(class= icon.socialIcon) 
 
         .kem-footer__block.kem-footer__block__booking
-            a.kem-footer__title(href="#" style="display: block;") booking
+            .kem-footer__title(href="#") booking
             .booking__function
                 span.booking__function__icon
                     i(class= "fas fa-pencil-alt")
-                a.booking__function__modify(href="#") modify
-                span ||
-                a.booking__function__cancel(href="#") cancel
+                a.booking__function__link(href="#") modify
+                a.booking__function__link(href="#") cancel
 
         .kem-footer__block.kem-footer__block__info
-            a.kem-footer__title(href="#" style="display: block;") helpful info
-    //-     .kem-footer__block.kem-footer__block__brand
-    //- .kem-footer__scroll-up
+            .kem-footer__title(href="#") helpful info
+            .info__container
+                - var infoListArr = [
+                - {linkList: ["about us", "contact us", "press room", "our partners", "career site"]},
+                - {linkList: ["best rate guarantee", "imprint", "legal", "privacy policy", "sitemap"]}
+                - ]
+
+                each infoList in infoListArr
+                    ul.info__list
+                        each infoItem in infoList.linkList
+                            li.info__item
+                                span.info__icon
+                                    i(class= "fas fa-chevron-circle-right")
+                                a.info__link= infoItem
+        
+        .kem-footer__block.kem-footer__block__brand
+            .kem-footer__title SIGN UP TO OUR NEWSLETTER
+            .brand__container
+                button.kem-btn.brand__btn(type="button" id="btnSubscribe") subscribe
+                .brand__img-frame
+                    img(src="../../../assets/images/kem/kem-footer/footer-brand.png", alt="brand-footer")
+                p.brand__copyright © 2019 KEMPINSKI HOTELS
+
+    .kem-footer__scroll-up
+        span.kem-footer__scroll-up__icon-up
+            i(class="fas fa-chevron-up")
+
+include ../modals/modal-footer/modal-footer.pug

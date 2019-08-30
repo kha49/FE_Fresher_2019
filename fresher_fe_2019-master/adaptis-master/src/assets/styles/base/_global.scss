@@ -316,3 +316,12 @@ p {
         color: #ffffff;
     }
 }
+
+// extends
+%kem-btn{
+    @include typography($font-primary, 300, 11px, 1.6rem);
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    outline: none;
+    color: white;
+}

@@ -2,6 +2,14 @@ section.kem-homepage-banner
     .kem-homepage-banner__img-frame
         .kem-homepage-banner__img-frame__img-banner.banner__big-left
         .kem-homepage-banner__img-frame__img-banner.banner__big-right
-            +banner("banner-small-1.jpg", "our destinations", "banner-small-2.jpg", "experiences")
+            - var smallBannerArr = [
+            - {imgBannerSmall: "banner-small-1.jpg", textHover: "our destinations"},
+            - {imgBannerSmall: "banner-small-2.jpg", textHover: "experiences"},
+            - ]
+            +banner(smallBannerArr)
             p.kem-homepage-banner__text HOW MAY WE ASSIST YOU ?
-            +banner("banner-small-3.jpg", "offers", "banner-small-4.jpg", "our hotels")
+            - var smallBanneArr = [
+            - {imgBannerSmall: "banner-small-3.jpg", textHover: "offers"},
+            - {imgBannerSmall: "banner-small-4.jpg", textHover: "our hotels"},
+            - ]
+            +banner(smallBanneArr)
