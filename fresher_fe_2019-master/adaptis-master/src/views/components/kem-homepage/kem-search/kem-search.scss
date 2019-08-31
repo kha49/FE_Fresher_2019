@@ -1,0 +1,334 @@
+.kem-search{
+    background-color: $color-primary;
+    max-height: 22rem;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 13;
+
+    &__container{
+        text-align: center;
+
+        @include min-lg {
+            margin: 0 5.5rem;
+        }
+    }
+
+    &__btn-search{
+        height: 3rem;
+        outline: none;
+        border: none;
+        padding: 0.7rem 4rem 0.7rem 1rem;
+        @include typography($font-primary, 300, 12px, initial);
+        color: $color-third;
+        background-color: #ffffff;
+        position: relative;
+
+        @include min-lg {
+            display: none;
+        }
+    }
+
+    &__text{
+        display: block;
+        width: 17rem;
+        text-align: left;
+
+        @include min-sm{
+            width: 35rem;
+        }
+    }
+
+    &__icon-search-block{
+        background-color: $color-second;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 3rem;
+        width: 3rem;
+        padding: 0.75rem 0;
+
+        &__icon-search{
+            color: #ffffff;
+            font-size: 15px;
+        }
+    }
+
+    &__block{
+        // display: none;
+        background-color: white;
+        position: fixed;
+        top: 5rem;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 100;
+        
+
+        @include min-lg {
+            display: unset;
+            background-color: unset;
+            position: unset;
+        }
+    }
+}
+
+.search {
+    &__form-header {
+        padding: 1rem 3rem;
+        background-color: #edefed;
+
+        @include min-lg {
+            display: none;
+        }
+
+        &__title {
+            @include typography($font-primary, 300, 24px, initial);
+            color: $color-primary;
+            margin: 0;
+        }
+
+        &__icon {
+            color: $color-primary;
+            font-size: 25px;
+            cursor: pointer;
+        }
+    }
+
+    &__form-primary{
+        padding: 2rem 3.5rem 0;
+
+        @include min-lg {
+            padding: unset;
+        }
+    }
+
+    &__form-second{
+        padding: 0 3.5rem 2rem;
+
+        @include min-lg {
+            margin-top: 2rem;
+            align-items: center;
+            padding: unset;
+        }
+    }
+}
+
+.form{
+    &__place{
+        background-color: #ffffff;
+        padding: 0.5rem 1rem 0.5rem 2.4rem;
+        color: $color-fouth;
+        line-height: 2rem;
+        cursor: pointer;
+        margin-bottom: 1.5rem;
+        text-align: left;    
+        position: relative;
+
+        @include min-lg {
+            margin-bottom: unset;
+        }
+
+        &__icon{
+            position: absolute;
+            left: 6px;
+        }
+
+        &__text{
+            @include typography($font-primary, 300, 13px, initial);
+            text-transform: uppercase;
+        }
+    }
+
+    &__date{
+        margin-bottom: 1.5rem;
+
+        @include min-lg {
+            margin-bottom: unset;
+        }
+
+        &__check{
+            position: relative;
+            padding: 0 0.5rem;
+
+            @include min-lg {
+                padding: 0 0 0 1rem;
+            }
+
+            &__inp{
+                width: 100%;
+                outline: none;
+                border: none;
+                padding: 0.5rem 4rem 0.5rem 1rem;
+                line-height: 2rem;
+                text-transform: uppercase;
+
+                &::placeholder{
+                    color: $color-fouth;
+                }
+            }
+
+            &__icon{
+                position: absolute;
+                color: $color-second;
+                right: 30px;
+
+                @include min-lg {
+                    right: 6px;
+                }
+            }
+        }
+    }
+
+    &__room{
+        margin-bottom: 1.5rem;     
+        
+        @include min-lg {
+            margin-bottom: unset;
+        }
+
+        &__choose{
+            padding: 0 0.5rem;
+
+            @include min-lg {
+                padding: 0 0 0 1rem;
+            }
+
+            &__select, &__btn{
+                padding: 0.5rem 1rem;
+                @include typography($font-primary, 300, 14px, 2rem);
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+    
+            &__select{
+                width: 100%;
+                color: #000000;
+                height: 3rem;
+            }
+    
+            &__btn{
+                display: none;
+                width: 100%;
+                background-color: $color-second;
+                color: #ffffff;
+                outline: none;
+                border: none;
+                font-size: 13px;
+
+                @include min-lg {
+                    display: unset;
+                }
+            }
+        }
+    }
+
+    &__people{
+        &__choose{
+            padding: 0 0.5rem;
+            margin: 0 0 1.5rem;
+
+            @include min-lg {
+                padding: 0 0 0 1rem;
+                margin: 1rem 0 0;
+            }
+
+            &__select{
+                @extend .form__room__choose__select;
+            }
+        }
+
+        &__age-children{
+            &__title{
+                @include typography($font-primary, 300, 13px, 1.4rem);
+                margin: 0 0 1rem;
+                text-transform: uppercase;
+                text-align: center;
+                color: $color-primary;
+
+                @include min-lg {
+                    padding: 1.5rem 0 1rem;
+                    color: #ffffff;
+                    border-bottom: 1px solid $color-second;
+                }
+            }
+
+            &__select {
+                width: 20%;
+            }
+        }
+    }
+
+    &__code-type{
+        margin-bottom: 1.5rem;
+        padding: 0 0.5rem;
+
+        @include min-lg {
+            padding: 0 0 0 1rem;
+            margin-bottom: unset;
+        }
+        
+
+        &__select{
+            @extend .form__room__choose__select;       
+        }
+
+        &__inp{
+            width: 100%;
+            padding: 0.5rem 1rem;
+            outline: none;
+            border: none;
+            line-height: 2rem;
+
+            &::placeholder{
+                @include typography($font-primary, 300, 12px, 2rem);
+            }
+        }
+
+        &__text{
+            display: none;
+            @include typography($font-primary, 300, 12px, 1.5rem);
+            text-transform: uppercase;
+            color: #ffffff;
+            text-align: left;
+            cursor: pointer;
+
+            @include min-lg {
+                display: block;
+            }
+        }
+    }
+}
+
+.search-hidden-block{
+    @include min-lg{
+        display: none;
+    }
+}
+
+.modal-search {
+    &__btn-frame {
+        padding: 0 0.5rem;
+
+        &__btn {
+            @extend .form__room__choose__btn;
+            display: unset;
+        }
+
+        @include min-lg {
+            display: none;
+        }
+    }
+}
+
+.modal-label-form-second {
+    text-transform: uppercase;
+    color: $color-fouth;
+    @include typography($font-primary, 300, 10.5px, 1.2rem);
+    text-align: left;
+    margin: 1.5rem 0;
+
+    @include min-lg {
+        display: none;
+    }
+}

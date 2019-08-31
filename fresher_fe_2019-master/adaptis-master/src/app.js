@@ -4,6 +4,8 @@ import Header from './views/components/header/header';
 import offersSlide from './views/components/kem-homepage/kem-homepage-offers/kem-homepage-offers';
 import footer from './views/components/footer/footer';
 import footerModal from './views/components/modals/modal-footer/modal-footer';
+import search from './views/components/kem-homepage/kem-search/kem-search';
+
 
 require('normalize.css');
 require('slick-carousel');
@@ -17,6 +19,7 @@ $(document).ready(() => {
   offersSlide.slickSlider();
   footer.init();
   footerModal.init();
+  search.init();
 });
 
 $(window).on('resize', () => {
