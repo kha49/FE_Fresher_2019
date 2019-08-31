@@ -16,6 +16,6 @@
 
 .adaptis-toSupport landt
 
-.adaptis-boxRelative landt
+.adaptis-boxRelative HoangTH
 
 .adaptis-footer HoangTH
