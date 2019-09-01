@@ -1,0 +1,39 @@
+section.kem-home-gallery
+    +heading("kem-home-gallery__heading","kem-home-gallery__heading__title","#KEMPINSKI GALLERY","kem-home-gallery__heading__desc","","Explore Kempinski through the eyes of our guests")
+    .container-fluid
+        .kem-home-gallery__slider.multiple-items-gallery
+            - var gallery = [
+            - {idImgGallery: "imgGallery1", link: "kem-homepage-gallery/slider1.jpg", username: "@baliweddingdiary"},
+            - {idImgGallery: "imgGallery2", link: "kem-homepage-gallery/slider2.jpg", username: "@ladyiindiamond"},
+            - {idImgGallery: "imgGallery3", link: "kem-homepage-gallery/slider3.jpg", username: "@pswaechter"},
+            - {idImgGallery: "imgGallery4", link: "kem-homepage-gallery/slider4.jpg", username: "@gravier_16"},
+            - {idImgGallery: "imgGallery5", link: "kem-homepage-gallery/slider5.jpg", username: "@christianmcm"},
+            - {idImgGallery: "imgGallery6", link: "kem-homepage-gallery/slider6.jpg", username: "@ksenia.rai"},
+            - {idImgGallery: "imgGallery7", link: "kem-homepage-gallery/slider7.jpg", username: "@barbara.osthoff"},
+            - {idImgGallery: "imgGallery8", link: "kem-homepage-gallery/slider8.jpg", username: "@barbara.osthoff"},
+            - {idImgGallery: "imgGallery9", link: "kem-homepage-gallery/slider9.jpg", username: "@xxmelissajeanxx"},
+            - {idImgGallery: "imgGallery10", link: "kem-homepage-gallery/slider10.jpg", username: "@wandertheworld.withme"}
+            - ]
+            each val in gallery
+                +slider-gallery(val.idImgGallery, val.link, val.username)
+        .kem-home-gallery__button
+            .kem-home-gallery__button__see-all
+                +button-link("Voir la galerie")
+            .kem-home-gallery__button__upload
+                +button-link("Ajouter une photo")
+
+.kem-home-gallery__modal-gallery.multiple-modal-gallery
+    - var modalGallery = [
+    - {idModalGallery: "modalGallery1", link_img: "slider1.jpg", author_info: "@baliweddingdiary",author_caption: "Say hello to your body, don't skip your breakfast, morning kempinskijkt ... no it's not the Borobodur Temple.It's the kempinskibali !! One of the craziest hotels I have seen !! Where modern architecture meets the cliffs of Nusa dua all the way down to the white sandy beach.", product_related: "Hotel Indonesia Kempinski Jakarta"},
+    - {idModalGallery: "modalGallery2", link_img: "slider2.jpg", author_info: "@ladyiindiamond", author_caption: "Probably last snow day this season in High Tatras and we were there! Made for me this weather!", product_related: "GRAND HOTEL KEMPINSKI HIGH TATRAS"},
+    - {idModalGallery: "modalGallery3", link_img: "slider3.jpg", author_info: "@pswaechter", author_caption: "Paradise on earth We found the most magnificent 5-star Palace-feel hotel in Bali, The Apurva Kempinski in Nusa Dua kempinskibali . Jaw dropping! The whole resort is so big and polished almost like it has its own luxurious village. Literally from the front to back door, from the lobby until its private beach. With its quality and what it offers, I got so surprised that the price is just like a 4-star hotel price in Denmark. ", product_related: "THE APURVA KEMPINSKI BALI"},
+    - {idModalGallery: "modalGallery4", link_img: "slider4.jpg", author_info: "@gravier_16", author_caption: "Say hello to your body, don't skip your breakfast, morning kempinskijkt", product_related: "KEMPINSKI HOTEL BAHIA MARBELLA ESTEPONA"},
+    - {idModalGallery: "modalGallery5", link_img: "slider5.jpg", author_info: "@christianmcm", author_caption: "#Enchanting sunsets for memorable pursuits! #KempinskiHotelMuscat #AlMouj #Muscat #Oman", product_related: "Hotel Indonesia Kempinski Jakarta"},
+    - {idModalGallery: "modalGallery6", link_img: "slider6.jpg", author_info: "@ksenia.rai", author_caption: "... no it's not the Borobodur Temple - It's the kempinskibali !! One of the craziest hotels I have seen !! Where modern architecture meets the cliffs of Nusa dua all the way down to the white sandy beach. Can't wait to one day mermaid in their coral-aquarium restaurant#architecture #breathtaking #sunday #justyouandme", product_related: "Hotel Indonesia Kempinski Jakarta"},
+    - {idModalGallery: "modalGallery7", link_img: "slider7.jpg", author_info: "@barbara.osthoff", author_caption: "Rediscovery the taste of hot chocolate prepared using the finest Ghanaian cocoa. . . . . . #KempinskiAccra #KempinskiDiscovery #DiscoveryLoyalty #GalleryLounge #HotChocolate #Ambience #Indulgnence #Cocoa #Signature #Delight ", product_related: "Hotel Indonesia Kempinski Jakarta"},
+    - {idModalGallery: "modalGallery8", link_img: "slider8.jpg", author_info: "@barbara.osthoff", author_caption: "#Enchanting sunsets for memorable pursuits! #KempinskiHotelMuscat #AlMouj #Muscat #Oman", product_related: "Hotel Indonesia Kempinski Jakarta"},
+    - {idModalGallery: "modalGallery9", link_img: "slider9.jpg", author_info: "@xxmelissajeanxx", author_caption: "ChocolateDelight #Relaxation #Refreshing #Rediscovery #Chocolate #DarkChocolate #Luxury #Blogger #BloggerLifeStyle . . Don’t forget to tag your images at @kempinskiaccra for a chance to be featured and follow us for exciting daily updates.", product_related: "Hotel Indonesia Kempinski Jakarta"},
+    - {idModalGallery: "modalGallery10", link_img: "slider10.jpg", author_info: "@wandertheworld.withme", author_caption: "Checking into Kempinski Hotel Bahia means arriving to a brand new era of beachfront elegance where life’s most treasured memories are made.", product_related: "Hotel Indonesia Kempinski Jakarta"}
+    - ]
+    each val in modalGallery
+        +modal-gallery(val.idModalGallery, val.link_img, val.author_info, val.author_caption, val.product_related)

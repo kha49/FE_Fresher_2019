@@ -1,28 +1,28 @@
 const offersSlide = {
     slickSlider:() => {
-        $('.multiple-items').slick({
-            dots: true,
+        $('.multiple-items-offers').slick({
+            dots: false,
             infinite: false,
             speed: 300,
             // loop: true,
             slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToScroll: 1,
             centerMode: false,
             responsive: [
               {
-                breakpoint: 1024,
+                breakpoint: 1025,
                 settings: {
-                  slidesToShow: 3,
-                  slidesToScroll: 3,
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
                   infinite: false,
-                  dots: true
+                  dots: false
                 }
               },
               {
                 breakpoint: 600,
                 settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 2
+                  slidesToShow: 1,
+                  slidesToScroll: 1
                 }
               },
               {
