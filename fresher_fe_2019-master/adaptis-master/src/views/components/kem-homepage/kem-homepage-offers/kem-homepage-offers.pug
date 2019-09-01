@@ -1,18 +1,15 @@
 section.kem-home-offers
-    section.kem-home-offers__heading.kem-bgd-primary
-        h2.kem-home-offers__heading__title.kem-title LUXURY HOTEL OFFERS
-        .kem-home-offers__heading__desc
-            span.kem-desc.kem-desc__separate  Exciting Packages
-    section.kem-home-offers__slider.multiple-items
-        - var offers = [
-        - {title: "ESCAPE IN STYLE THIS SUMMER", link: "slider1.jpg", desc: ["Book one of our special offers and enjoy a truly luxurious break the next time you stay with us.","Plan your dream trips to stunning hotels in spectacular destinations! Escape in Style this Summer with special offers from Kempinski Hotels and benefit with up to 30% off the regular rates"]}
-        - ,{title: "EARLY BOOKER OFFERS", link: "slider2.jpg", desc: ["Book one of our special offers and enjoy a truly luxurious break the next time you stay with us.", "Early Booker offers with up to 40% discount, when booking 15, 30 or 90 days in advance."]},
-        - {title: "SUITELY SENSATIONAL", link: "slider3.jpg", desc: ["Book one of our special offers and enjoy a truly luxurious break the next time you stay with us.", "Whether you are looking to spend a weekend away in one of Europe's best cities, enjoy the best in sightseeing, cuisine and entertainment, or basque in a week-long vacation on the shores of an idyllic island hideaway, there will always be a special suite offer that is perfect for you."]},
-        - {title: "WELLNESS &amp; SPA", link: "slider4.jpg", desc: ["Book one of our special offers and enjoy a truly luxurious break the next time you stay with us.", "No matter where you are in the world, and whatever the reason for your trip, it's always important to dedicate some time to yourself to relax and unwind."]},
-        - {title: "ROMANCE OFFERS", link: "slider5.jpg", desc: ["Book one of our special offers and enjoy a truly luxurious break the next time you stay with us.", "One of the most treasured gifts amongst couples is time well spent together. At Kempinski, we will do everything in our power to make your dreams come true!"]},
-        - {title: "FAMILY &amp; KIDS OFFERS", link: "slider6.jpg", desc: ["Book one of our special offers and enjoy a truly luxurious break the next time you stay with us.", "At Kempinski, we treat our younger guests just like we would any other! Enjoy some family time together while having all the fun in the world!"]},
-        - {title: "GOLF OFFERS", link: "slider7.jpg", desc: ["Book one of our special offers and enjoy a truly luxurious break the next time you stay with us.", "Kempinski doesn't just offer world-class courses for our guests to play on – we also provide some of the most luxurious golf packages to be found anywhere across the globe, meaning you can transform your passion into a truly unforgettable experience."]}
-        - ]
-        .multiple-items
+    +heading(["kem-home-offers__heading","kem-bgd-primary"],"kem-home-offers__heading__title","LUXURY HOTEL OFFERS","kem-home-offers__heading__desc","","Exciting Packages")
+    .container-fluid 
+        .kem-home-offers__slider.multiple-items-offers
+            - var offers = [
+            - {title: "ESCAPE IN STYLE THIS SUMMER", link: "slider1.jpg", desc: ["Book one of our special offers and enjoy a truly luxurious break the next time you stay with us.","Plan your dream trips to stunning hotels in spectacular destinations! Escape in Style this Summer with special offers from Kempinski Hotels and benefit with up to 30% off the regular rates"]}
+            - ,{title: "EARLY BOOKER OFFERS", link: "slider2.jpg", desc: ["Book one of our special offers and enjoy a truly luxurious break the next time you stay with us.", "Early Booker offers with up to 40% discount, when booking 15, 30 or 90 days in advance."]},
+            - {title: "SUITELY SENSATIONAL", link: "slider3.jpg", desc: ["Book one of our special offers and enjoy a truly luxurious break the next time you stay with us.", "Whether you are looking to spend a weekend away in one of Europe's best cities, enjoy the best in sightseeing, cuisine and entertainment, or basque in a week-long vacation on the shores of an idyllic island hideaway, there will always be a special suite offer that is perfect for you."]},
+            - {title: "WELLNESS & SPA", link: "slider4.jpg", desc: ["Book one of our special offers and enjoy a truly luxurious break the next time you stay with us.", "No matter where you are in the world, and whatever the reason for your trip, it's always important to dedicate some time to yourself to relax and unwind."]},
+            - {title: "ROMANCE OFFERS", link: "slider5.jpg", desc: ["Book one of our special offers and enjoy a truly luxurious break the next time you stay with us.", "One of the most treasured gifts amongst couples is time well spent together. At Kempinski, we will do everything in our power to make your dreams come true!"]},
+            - {title: "FAMILY & KIDS OFFERS", link: "slider6.jpg", desc: ["Book one of our special offers and enjoy a truly luxurious break the next time you stay with us.", "At Kempinski, we treat our younger guests just like we would any other! Enjoy some family time together while having all the fun in the world!"]},
+            - {title: "GOLF OFFERS", link: "slider7.jpg", desc: ["Book one of our special offers and enjoy a truly luxurious break the next time you stay with us.", "Kempinski doesn't just offer world-class courses for our guests to play on – we also provide some of the most luxurious golf packages to be found anywhere across the globe, meaning you can transform your passion into a truly unforgettable experience."]}
+            - ]
             each val in offers
                 +slider-offers(val.title, val.link, val.desc)
