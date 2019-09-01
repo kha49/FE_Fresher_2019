@@ -12,6 +12,10 @@
         @include min-lg {
             margin: 0 5.5rem;
         }
+
+        @include min-xl {
+            margin: 0 14.5rem;
+        }
     }
 
     &__btn-search{
@@ -55,10 +59,10 @@
     }
 
     &__block{
-        // display: none;
+        display: none;
         background-color: white;
         position: fixed;
-        top: 5rem;
+        top: 0;
         bottom: 0;
         right: 0;
         left: 0;
@@ -124,9 +128,12 @@
         margin-bottom: 1.5rem;
         text-align: left;    
         position: relative;
+        border: 1px solid rgb(202, 202, 202);
+    
 
         @include min-lg {
             margin-bottom: unset;
+            border: unset;
         }
 
         &__icon{
@@ -162,16 +169,24 @@
                 padding: 0.5rem 4rem 0.5rem 1rem;
                 line-height: 2rem;
                 text-transform: uppercase;
+                border: 1px solid rgb(202, 202, 202);
 
                 &::placeholder{
                     color: $color-fouth;
                 }
+
+                @include min-lg {
+                    border: unset;
+                }
             }
 
             &__icon{
+                
                 position: absolute;
                 color: $color-second;
-                right: 30px;
+                right: 15px;
+                top: 50%;
+                transform: translateY(-50%);
 
                 @include min-lg {
                     right: 6px;
@@ -254,7 +269,13 @@
             }
 
             &__select {
-                width: 20%;
+                width: 18%;
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+
+                @include min-lg {
+                    width: 25%;
+                }
             }
         }
     }
@@ -277,11 +298,15 @@
             width: 100%;
             padding: 0.5rem 1rem;
             outline: none;
-            border: none;
             line-height: 2rem;
+            border: 1px solid rgb(202, 202, 202);
 
             &::placeholder{
                 @include typography($font-primary, 300, 12px, 2rem);
+            }
+
+            @include min-lg {
+                border: none;
             }
         }
 

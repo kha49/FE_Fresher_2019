@@ -67,6 +67,14 @@
                 width: 22%;
             }
         }
+
+        &:first-child {
+            .kem-footer__title{
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
         
         &:nth-child(2){
             .kem-footer__title{
@@ -80,13 +88,13 @@
     }
 
     &__scroll-up{
-        color: $color-second;
         text-align: center;
         margin-top: 1rem;
 
         &__icon-up{
             font-size: 25px;
             cursor: pointer;
+            color: $color-second;
         }
     }
 
@@ -97,6 +105,9 @@
         margin: 2rem 0 1rem;
         letter-spacing: 2px;
         text-align: center;
+        display: block;
+
+
 
         @include min-sm{
             text-align: left;
@@ -110,6 +121,10 @@
         color: $color-second;
         text-align: center;
         display: block;
+
+        &:hover {
+            text-decoration: underline;
+        }
 
         @include min-sm{
             text-align: left;
@@ -133,6 +148,10 @@
         margin: 0.5rem;
         display: inline-block;
 
+        &:hover {
+            color: #a38d7a;
+        }
+
         @include min-sm{
             font-size: 30px;
         }
@@ -155,14 +174,6 @@
             @include typography($font-primary, 300, 11px, 1.6rem);
             color: $color-second;
             text-transform: uppercase;
-
-            &:first-of-type{
-
-                &::after{
-                    content: '/';
-                    margin: 0.5rem;
-                }
-            }
         }
     }
 }
@@ -198,6 +209,7 @@
         @include typography($font-primary, 300, 11px, 2.3rem);
         color: $color-second;
         text-transform: uppercase;
+        cursor: pointer;
     }
 }
 
@@ -234,6 +246,26 @@
 
         @include min-sm{
             display: block;
+        }
+    }
+}
+
+.line-bottom {
+    display: inline-block;
+    text-decoration: none;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 1px;
+        background: $color-second;
+        transition: width .3s;
+    }
+
+    &:hover {
+        &::after {
+            width: 100%;
         }
     }
 }

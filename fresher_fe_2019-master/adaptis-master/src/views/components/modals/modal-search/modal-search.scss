@@ -1,0 +1,121 @@
+.modal-search {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 21;
+    padding: 15rem 15rem 4rem;
+
+    @include min-lg {
+        width: 100%;
+    }
+
+    &__container {
+        background-color: #ffffff;
+        width: 72rem;
+        margin: 0 auto;
+    }
+
+    &__header {
+        padding: 2.5rem 1.5rem 0;
+        position: relative;
+
+        &__title {
+            margin: 0;
+            padding: 0.8rem 1rem;
+            @include typography($font-primary, 300, 12px, 1.7rem);
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: #ffffff;
+            background-color: $color-second;
+        }
+
+        &__back-btn {
+            @extend %kem-btn;
+            background-color: $color-primary;
+            outline: none;
+            border: none;
+            line-height: 1.7rem;
+            padding: 0.8rem 1rem;
+            font-size: 12px;
+            letter-spacing: 5px;
+        }
+
+        &__close-block {
+            position: absolute;
+            top: 0.3rem;
+            right: 0.6rem;
+
+            &__btn {
+                color: $color-second;
+                font-size: 12px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__body {
+        padding: 1rem 1.5rem 1.5rem;
+
+        &__desc{
+            margin: 0 0 1.28rem;
+            @include typography($font-primary, 300, 14px, 2.5rem);
+            color: $color-third;
+        }
+
+        &__form {
+            padding: 4rem 0 2.5rem;
+            border-bottom: 3px solid $color-second;
+        }
+    }
+}
+    
+.form-block {
+    margin: 0 0 0.6rem;
+    
+    &__label{
+        margin: 0 0 0.7rem;
+        color: #021843;
+        @include typography($font-primary, 300, 13px, 1.9rem);
+    }
+
+    &__inp {
+        position: relative;
+
+        &__select, &__date {
+            padding: 0.6rem 3.3rem 0.6rem 1.2rem;
+            width: 100%;
+            appearance: none;
+        }
+
+        &__date {
+            outline: none;
+            border: 1px solid rgb(190, 190, 190);
+        }
+
+        &__icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 1rem;
+            color: $color-second;
+        }
+    }
+
+    &__logo-frame {
+        width: 50%;
+    }
+
+    &__submit-btn {
+        @extend %kem-btn;
+        width: 100%;
+        background-color: $color-second;
+        padding: 0.48rem 0.96rem;
+        outline: none;
+        border: none;
+        font-size: 13px;
+        line-height: 2.2rem;
+    }
+}

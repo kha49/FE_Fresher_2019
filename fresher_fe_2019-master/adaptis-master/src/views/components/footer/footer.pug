@@ -1,7 +1,7 @@
 section.kem-footer
     .kem-footer__container
         .kem-footer__block.kem-footer__block__contact
-            a.kem-footer__title(href="#" style="display: block;") contact us
+            a.kem-footer__title(href="#") contact us
             a.contact__link(href="") reservations.corporate@kempinski.com
             .contact__icon-container
 
@@ -25,8 +25,9 @@ section.kem-footer
             .booking__function
                 span.booking__function__icon
                     i(class= "fas fa-pencil-alt")
-                a.booking__function__link(href="#") modify
-                a.booking__function__link(href="#") cancel
+                a.booking__function__link(href="#" class="line-bottom") modify
+                span(style="padding: 0 0.5rem; color: #b5a191") /
+                a.booking__function__link(href="#" class="line-bottom") cancel
 
         .kem-footer__block.kem-footer__block__info
             .kem-footer__title(href="#") helpful info
@@ -42,7 +43,7 @@ section.kem-footer
                             li.info__item
                                 span.info__icon
                                     i(class= "fas fa-chevron-circle-right")
-                                a.info__link= infoItem
+                                a.info__link(class="line-bottom")= infoItem
         
         .kem-footer__block.kem-footer__block__brand
             .kem-footer__title SIGN UP TO OUR NEWSLETTER
@@ -53,7 +54,7 @@ section.kem-footer
                 p.brand__copyright © 2019 KEMPINSKI HOTELS
 
     .kem-footer__scroll-up
-        span.kem-footer__scroll-up__icon-up
+        a(href="#header").kem-footer__scroll-up__icon-up
             i(class="fas fa-chevron-up")
 
 include ../modals/modal-footer/modal-footer.pug

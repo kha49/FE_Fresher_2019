@@ -74,6 +74,10 @@
                 justify-content: space-between;
                 margin-top: 4.5rem;
             }
+
+            &__item {
+                position: relative;
+            }
     
             &__link {
                 @include typography($font-primary, 400, 11px, 1.1rem);
@@ -175,7 +179,6 @@
         }
 
         ~ .header-close-icon{
-            // display: unset;
             opacity: 1;
         }
     }
@@ -201,7 +204,92 @@
 }
 
 .header-close-icon{
-    // display: none;
     transition: 0.5s;
     opacity: 0;
+}
+
+.language {
+    &__list {
+       display: none;
+       background-color: #021b4d;
+       position: absolute;
+       z-index: 18;
+       top: 3rem;
+       min-width: 13rem; 
+    }
+
+    &__item {
+        padding: 0.3rem 1.5rem;
+    }
+
+    &__link {
+        color: #ffffff;
+        text-transform: uppercase;
+        @include typography($font-primary, 300, 13px, 2.2rem);
+    }
+}
+
+.account{
+    &__container {
+        display: none;
+        position: absolute;
+        z-index: 17;
+        top: 3rem;
+        right: 0rem;
+        background-color: #ffffff;
+        min-width: 50rem;
+        padding: 1.7rem 2.2rem; 
+    }
+
+    &__login {
+        margin: 0 2px 10px;
+
+        &__login-way {
+            @include typography($font-primary, 300, 12px, 1.8rem);
+            color: $color-primary;
+            letter-spacing: -1px;
+        }
+
+        &__login-btn {
+            @extend %kem-btn;
+            font-size: 11px;
+            color: $color-primary;
+            letter-spacing: 1px;
+            padding: 0.48rem 0.96rem;
+            border: 2px solid $color-second;
+
+            &:first-child {
+                &::after {
+                    content: 'or';
+                    text-transform: uppercase;
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+
+    &__title {
+        @include typography($font-primary, 300, 18px, 2.2rem);
+        color: $color-primary;
+        text-transform: lowercase;
+        margin: 0;
+        text-align: left;
+        letter-spacing: 0;
+
+        &::first-letter {
+            text-transform: uppercase;
+        }
+    }
+
+    &__desc {
+        @extend .account__title;
+        font-size: 12px;
+        line-height: 2.1rem;
+        margin-bottom: 2rem;
+    }
+
+}
+
+.open {
+    display: block;
 }
