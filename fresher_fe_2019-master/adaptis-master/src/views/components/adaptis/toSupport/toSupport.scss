@@ -48,36 +48,39 @@
                 }
             }
            }
-            .item:nth-child(1){
-               animation:fadeInUp 0.9s linear forwards;
+           .animated:nth-child(1n){
+               animation-delay: .2s!important;
            }
-            .item:nth-child(2){
-            animation:fadeInUp  2s linear 0.3s forwards;
-            }
-            .item:nth-child(3){
-                animation:fadeInUp 0.9s linear 0.6s forwards;
-            }
-            .item:nth-child(4){
-                animation:fadeInUp 0.9s linear 0.9s forwards;
-            }
-            .item:nth-child(5){
-                animation:fadeInUp 0.9s linear 1.2s forwards;
-            }
-            .item:nth-child(6){
-                animation:fadeInUp 0.9s linear 1.5s forwards;
-            }
-            .item:nth-child(7){
-                animation:fadeInUp 0.9s linear 1.8s forwards;
-            }
-            .item:nth-child(8){
-                animation:fadeInUp 0.9s linear 2.1s forwards;
-            }
-            .item:nth-child(9){
-                animation:fadeInUp 0.9s linear 2.4s forwards;
-            }
-            .item:nth-child(10){
-                animation:fadeInUp 0.9s linear 2.7s forwards;
-            }
+           .animated:nth-child(2n) {
+               animation-delay:  .4s!important;
+           }
+           .animated:nth-child(3n) {
+               animation-delay: .6s!important;
+           }
+           .animated:nth-child(4n) {
+               animation-delay: .8s!important;
+           }
+           .animated:nth-child(5n) {
+               animation-delay: 1s!important;
+           }
+           .animated:nth-child(6n) {
+               animation-delay: 1.2s!important;
+           }
+           .animated:nth-child(7n) {
+               animation-delay: 1.4s!important;
+           }
+           .animated:nth-child(8n) {
+               animation-delay: 1.6s!important;
+           }
+           .animated:nth-child(9n) {
+               animation-delay: 1.8s!important;
+           }
+           .animated:nth-child(10n) {
+               animation-delay: 2s!important;
+           }
+           [data-animate] {
+               opacity: 0;
+           }
            .item:hover{
                img{
                    filter: grayscale(0);

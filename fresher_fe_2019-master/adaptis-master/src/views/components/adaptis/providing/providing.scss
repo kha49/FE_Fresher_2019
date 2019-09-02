@@ -81,7 +81,10 @@
                 margin-bottom: 20px;
                 margin-top: 30px;
             }
-            .item {
+            li:focus {
+                outline: -webkit-focus-ring-color auto 1px;
+            }
+            .item.animated {
                 animation: fadeInUp .5s ease-in-out forwards;
                 .item-content {
                     margin: auto 15px;
@@ -115,6 +118,9 @@
                         transition-delay: .2s;
                         color: #fff;
                     }
+                    span:last-child {
+                        transition-delay: .5s;
+                    }
                     span:focus{
                         outline: -webkit-focus-ring-color auto 1px;
                     }
@@ -123,24 +129,31 @@
             .item:active .item-text , .item:focus .item-text, .item:hover .item-text {
                 opacity: 1;
             }
+            .item:active .item-text span, .item:hover .item-text span, .item:focus .item-text span {
+                transform: translate(0,0);
+                opacity: 1;
+            }
             .item:first-child {
                 margin-left: 0;
                 background: #3c213a;
             }
-            .item:nth-child(1n) {
+            .animated:nth-child(1n) {
                 animation-delay: .2s!important;
             }
             .item:nth-child(2){
                 background: rgba(60, 33, 58,.85);
             }
-            .item:nth-child(2n){
+            .animated:nth-child(2n){
                 animation-delay: .4s!important;
             }
             .item:nth-child(3){
                 background: rgba(60,33,58, .7);
             }
-            .item:nth-child(3n){
+            .animated:nth-child(3n){
                 animation-delay: .6s!important;
+            }
+            [data-animate] {
+                opacity: 0;
             }
             @keyframes fadeInUp {
                 0% {

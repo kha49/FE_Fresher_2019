@@ -12,10 +12,11 @@
 
 .adaptis-viewTheWork LanDT
 
-.adaptis-providing landt 
+.adaptis-providing LanDT
 
-.adaptis-toSupport landt
+.adaptis-toSupport LanDT
 
 .adaptis-boxRelative HoangTH
 
 .adaptis-footer HoangTH
+.contact HoangTH
