@@ -1,0 +1,53 @@
+section.kem-destination-place
+    .container
+        .row(style="margin:0")
+            .col-xs-12(style="padding:0")
+                div.kem-destination-place__btn-block
+                    - var btnArr = [
+                    - {nameBtn: "Filter By Region", listBtn: ["Filter By Region", "Europe", "Asia Pacific", "Americas", "Middle East & Africa"]},
+                    - {nameBtn: "Filter By Country", listBtn: ["Filter By Country", "Australia", "Bulgaria", "China", "Croatia", "Cuba", "Democratic Republic of Congo", "Diibouti"]},
+                    - {nameBtn: "Filter By Experience", listBtn: ["Filter By Experience", "Weddings", "Culinary", "Golf", "Ski", "Spa", "SUITELY SENSATIONAL"]},
+                    - {nameBtn: "Filter By Property Type", listBtn: ["Filter By Property Type", "Kempinski Hotel", "Residence", "Combined Hotel Residence"]}
+                    - ]
+                    each btn in btnArr
+                        .col-xs-12(style="margin-bottom: 1rem;")
+                            button.kem-destination-place__btn-block__btn(type="button") 
+                                =btn.nameBtn
+                                span.kem-destination-place__btn-block__icon
+                                    i(class="fas fa-caret-down")
+                            ul.kem-destination-place__btn-block__list
+                                each link in btn.listBtn
+                                    li.kem-destination-place__btn-block__item
+                                        a.kem-destination-place__btn-block__link= link
+                                        
+        .row(style="margin:0")
+            .col-xs-12.col-md-9
+                ul.row
+                    - var itemLv1Arr = [
+                    - {blockArr: [{
+                    -               title: "europe",
+                    -               itemLv2Arr: [
+                    -                             {subtitle: "australia",
+                    -                              itemLv3Arr: ["Joohberg - Kitzbuhel", "Vienna"]},
+                    -                             {subtitle: "australia",
+                    -                              itemLv3Arr: ["Joohberg - Kitzbuhel", "Vienna"]},
+                    -                           ]                 
+                    -            }]
+                    - }
+                    - ]
+
+                    each itemLv1 in itemLv1Arr
+                        li.col-xs-12.col-md-4
+                            each block in itemLv1.blockArr
+                                div
+                                    h2.haha= block.title
+                                    ul
+                                        each itemLv2 in block.itemLv2Arr
+                                            li
+                                                h3= itemLv2.subtitle
+                                                ul
+                                                    each itemLv3 in itemLv2.itemLv3Arr
+                                                        li
+                                                            a= itemLv3 
+
+            //- .col-xs-12.col-md-3

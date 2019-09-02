@@ -1,0 +1,59 @@
+.kem-destination-place {
+    &__btn-block {
+        background: yellow;
+        padding: 3rem 0;
+
+        &__btn {
+            width: 100%;
+            padding: 0.8rem 2rem;
+            @include typography($font-primary, 300, 11px, 1.1rem);
+            outline: none;
+            border: 1px solid rgb(200, 200, 200);
+            background-color: #ffffff;
+            text-align: left;
+            position: relative;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $color-second;
+                color: #ffffff;
+
+                &__icon {
+                    color: white;
+                }
+            }
+        }
+
+        &__icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 1rem;
+        }
+
+        &__list {
+            display: none;
+            width: 100%;
+            background: #ffffff;
+        }
+
+        &__item {
+            padding: 0.3rem 2rem;
+            width: 100%;
+            cursor: pointer;
+
+            &:hover {
+                background-color: blue;
+
+                .kem-destination-place__btn-block__link {
+                    color: #ffffff;
+                }
+            }
+        }
+
+        &__link {
+            @include typography($font-primary, 300, 14px, 2rem);
+            color: $color-primary;
+        }
+    }
+}
