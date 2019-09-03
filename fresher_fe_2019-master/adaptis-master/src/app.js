@@ -22,7 +22,9 @@ $(document).ready(() => {
     speed: 300,
     slidesToShow: 5,
     slidesToScroll: 1,
-    arrows: false,
+    arrows: true,
+    prevArrow: $('.prev'),
+    nextArrow: $('.next'),
     responsive: [
       {
         breakpoint: 1128,
@@ -47,9 +49,6 @@ $(document).ready(() => {
           slidesToScroll: 1
         }
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
     ]
   });
   scrollBtn.init();

@@ -23,16 +23,16 @@
                     .trend__content-pro
                         span(class="label")=val.label
                         img.trend(src=val.img,)
-                        //- .trend__content-hover
-                        //-     a(class="icon")
-                        //-         span.fas.fa-heart
-                        //-     //- if val.status == 0 
-                        //-     //-     .trend__button-selectd(class="select disable")
-                        //-     //-         span=val.span
-                        //-     //- else
-                        //-     //-     .trend__button-selectd(class="select")
-                        //-     //-         span=val.span
-                        //-     a(class="view") QUICK VIEW
+                        .trend__content-hover
+                            a(class="icon")
+                                span.fas.fa-heart
+                            if val.status == 0 
+                                .trend__button-selectd(class="select disable")
+                                    span=val.span
+                            else
+                                .trend__button-selectd(class="select")
+                                    span=val.span
+                            a(class="view") QUICK VIEW
                     .trend__content-text
                         a=val.content
                     .trending__content-price
