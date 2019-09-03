@@ -1,3 +1,4 @@
+
 .a-solution-block{
     position: relative;
     .a-solution-block__decor{
@@ -68,7 +69,11 @@
             position: relative;
             margin: 0 0 20px;
             width: 100%;
-            @media (min-width: 768px){
+            // @media (min-width: 768px){
+            //     flex-direction: row;
+            //     margin-bottom: 200px;
+            // } 
+            @include Responsive(MD) {
                 flex-direction: row;
                 margin-bottom: 200px;
             }
@@ -132,6 +137,9 @@
             .item:active .item-text span, .item:hover .item-text span, .item:focus .item-text span {
                 transform: translate(0,0);
                 opacity: 1;
+            }
+            .item {
+                padding-top: 20px;
             }
             .item:first-child {
                 margin-left: 0;
