@@ -7,7 +7,7 @@ import Explore from './views/components/kem-homepage/kem-homepage-explore/kem-ho
 import experienceSlide from './views/components/kem-homepage/kem-homepage-experience/kem-homepage-experience';
 require('normalize.css');
 require('slick-carousel');
-require('lightgallery');
+require('mapbox-gl');
 
 $(() => {
   // Code here
@@ -24,7 +24,7 @@ $(document).ready(() => {
   Gallery.modalSlider();
   Explore.doubleSlider();
   Explore.singleSlider();
-  Explore.showButton();
+  // Explore.showButton();
 
 });
 
