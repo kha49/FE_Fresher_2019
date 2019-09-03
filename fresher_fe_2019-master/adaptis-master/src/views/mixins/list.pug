@@ -12,6 +12,9 @@ mixin heading(classHeading, titleClass, titleContent, classDescFrame, descClass,
     div(class= classDescFrame)
       span.kem-desc.kem-desc__separate(class= descClass)= descContent
 
+//- kem button link 
+mixin button-link(title)
+  a.kem-btn-link= title
 //- banner
 //- mixin banner(imgLeft, textHoverLeft, imgRight, textHoverRight)
 //-   .kem-homepage-banner__img-frame
@@ -35,7 +38,7 @@ mixin banner(smallBanners)
 //- kem-home-offers__slider__item
 mixin slider-offers(title, link, desc)
   .kem-home-offers__slider__item
-    a.slider-img(style="background-image : url(../../../../assets/images/kem/kem-homepage/kem-homepage-offers/"+link+")")
+    a.slider-img.slider-offers-img(style="background-image : url(../../../../assets/images/kem/kem-homepage/kem-homepage-offers/"+link+")")
     .slider-caption 
       h4.slider-caption__title.kem-title= title
       .slider-caption__desc
@@ -44,6 +47,68 @@ mixin slider-offers(title, link, desc)
       .slider-caption__btn
         +button-link("FURTHER INFORMATION")
 
-//- kem button link 
-mixin button-link(title)
-  a.kem-btn-link= title
+//- kem-home-experience__slider__item
+mixin slider-experience(link, title, desc)
+  .kem-home-experience__slider__item.kem-bgd-primary
+    a.slider-img.slider-experience-img(style="background-image : url(../../../../assets/images/kem/kem-homepage/"+link+")")
+    .slider-experience-caption 
+        h4.slider-experience-caption__title.kem-title= title
+        .slider-experience-caption__desc
+          p.kem-para= desc[0]
+          p.kem-para= desc[1]
+        .slider-experience-caption__btn
+          +button-link("FURTHER INFORMATION")
+
+//- kem-home-gallery__slider__item
+mixin slider-gallery(idImgGallery,link,username)
+  .kem-home-gallery__slider__item
+    a.slider-img.slider-gallery-img(id=idImgGallery, style="background-image : url(../../../../assets/images/kem/kem-homepage/"+link+"); width: 100%")
+      span.gallery-username= username
+
+//- kem-home-gallery__modal__item
+mixin modal-gallery(idModalGallery,link_img, author_info, author_caption, product_related)
+  .kem-home-gallery__modal-gallery__item(id=idModalGallery)
+    .row
+      .col-md-12
+        a.modal-gallery__closed
+      .col-md-7.col-xs-12.modal-gallery__images
+        img(src="../../../../assets/images/kem/kem-homepage/kem-homepage-gallery/"+link_img, alt="", width="100%")
+      .col-md-5.col-xs-12.modal-gallery__content
+        .modal-gallery__content__author
+          a.author-info= author_info
+          p.author-caption= author_caption
+        .modal-gallery__content__product
+          h3.product-name DÉCOUVREZ CET HÔTEL
+          p.product-related= product_related
+        .modal-gallery__content__sharing
+          .sharing-title
+            span PARTAGEZ MAINTENTANT
+          .sharing-with
+            .sharing-with__social
+              a.sharing-with__social__fb(href="")
+              a.sharing-with__social__pin(href="")
+            .sharing-with__copyright
+              a Powered by Olapic
+
+//- kem-home-explore__countries__name
+mixin countries-name(countries_name)
+ .name 
+  a= countries_name
+  span
+
+//- kem-home-explore__hotel-info
+mixin hotel-info(countries_name)
+  .hotel-info(class=countries_name)
+//- kem-home-explore__hotel-info__item
+mixin hotel-info-item(img,title,desc)
+  .hotel-info__item
+    a.hotel-info__item__img.slider-img(style="background-image :url(../../../../assets/images/kem/kem-homepage/"+ img +")")
+    .hotel-info__item__caption
+      .caption-title
+        h4.kem-title= title
+      .caption-desc
+        p.kem-para= desc[0]
+        p.kem-para= desc[1]
+        p.kem-para= desc[2]
+      .caption-button
+        +button-link("FURTHER INFORMATION")

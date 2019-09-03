@@ -15,6 +15,8 @@
 @import '../../../node_modules/slick-carousel/slick/slick-theme.scss';
 @import '../../../node_modules/slick-carousel/slick/slick.scss';
 
+// mapboxgl
+
 // Component general
 @import '../../views/components/header/header';
 @import '../../views/components/footer/footer';
@@ -32,6 +34,8 @@
 @import '../../views/components/modals/modal-footer/modal-footer.scss';
 @import '../../views/components/modals/modal-search/modal-search.scss';
 @import '../../views/components/kem-destination/kem-destination-place/kem-destination-place';
+@import '../../views/components/kem-destination/kem-destination-head/kem-destination-head';
+
 
 
 //Component kem destination
