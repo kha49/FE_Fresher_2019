@@ -1,14 +1,9 @@
-.description{
-    margin-top: 10px;
-    margin-left: 0px;
+.description {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+    line-height: 1.8;
     padding: 120px 25px 50px;
-    &__content{
-        font-family:$main-font;
-        display: block;
-        font-size: 14px;
-        color:#424242;
-        line-height: 1.8em;
-        margin-right: 15px;
-        
-    }
 }

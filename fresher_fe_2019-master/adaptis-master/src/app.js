@@ -2,17 +2,27 @@
 import Global from './views/components/global/global';
 import Header from './views/components/header/header';
 import adaptisSlider from '../src/views/components/adaptis/slide/slide';
+// bootstrap;
+import 'bootstrap';
+// import reveal from '../src/views/components/adaptis/develop/develop';
 require('normalize.css');
-
+// require(['skrollr'], function(skrollr){
+// 	var s = skrollr.init();
+// });
+require('../src/skrollr.min.js');
 $(() => {
   // Code here
 });
-
-
 $(document).ready(() => {
   Global.lazyLoad();
-  AdaptisHeader.scrollFunction();
-  AdaptisHeader.toggleClass();
+  skrollr.init();
+  // reveal.init();
+  // AOS.init();
+  // developAnimate.init();
+
+  $('.single-item').slick();
+  // adaptisSlider.init();
+  // adaptisSlider.plusDivs(n);
 });
 
 $(window).on('resize', () => {

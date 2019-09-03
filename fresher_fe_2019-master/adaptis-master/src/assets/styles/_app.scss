@@ -13,9 +13,12 @@
 // Component
 // @import '../../views/components/header/header';
 // @import '../../views/components/footer/footer';
+// Bootstrap
+@import '../../../node_modules/bootstrap/scss/bootstrap';
 
 //components
 @import '../../views/components/adaptis/shared/shared.scss';
+@import './airbnb/mixin/mixin';
 @import '../../views/components/adaptis/header/header.scss';
 @import '../../views/components/adaptis/description/description.scss';
 @import '../../views/components/adaptis/slide/slide.scss';

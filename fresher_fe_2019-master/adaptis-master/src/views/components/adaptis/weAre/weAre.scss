@@ -1,59 +1,107 @@
-.weAre{
-    font-family: $main-font;
-    margin-bottom: 50px;
-    margin-top: 120px;
-    &__item-img{
-        position: relative;
-        width: 290px;
-        height: 171px;
-        background-image: url('../../assets/images/adaptis/bgd-solvers.png');
-        background-position: center;
-        &__link{
-            position:absolute;
-            bottom: 0px;
-            width: 250px;
-            height: 29px;
-            background-color: white;
-            a{
+.weAre.container-fluid {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    position: relative;
+    max-width: 1024px;
+    .weAre-introduction {
+        transform: translate(0,0);
+        opacity: 1;
+        width: 100%;
+        flex: 1;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media(min-width: 768px) {
+            width: 50%;
+        }
+        .weAre-bgd {
+            background-image: url('../../assets/images/adaptis/bgd-solvers.png');
+            width: 100%;
+            display: inline-block;
+            min-height: 30vh;
+            position: relative;
+            margin-bottom: 30px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            @media (min-width: 768px) {
+                width: 350px;
+                min-height: 550px;
+                margin-bottom: 0;
+            }
+            .link {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                border-color: #fff;
+                width: 50%;
+                min-width: 200px;
                 color: #3C213A;
-                text-decoration: none;
                 font-size: .6875rem;
-                margin-left: 35px;
+                line-height: 2.18182;
+                padding: 7px 60px 7px 20px;
+                background: #fff;
+                white-space: nowrap;
+                transition: all .2s ease-in-out;
+                border: 1px solid #fff;
+                display: inline-block;
+                letter-spacing: 2px;
+                font-weight: 500;
+                text-decoration: none;
+            }
+            .link:before {
+                position: absolute;
+                left: 80%;
+                opacity: 0;
+                font-size: 16px;
+                line-height: 0;
+                transition: all .2s ease-in-out;
+                content: "→";
+                top: 50%;
+            }
+            .link:hover{
+                color: #3C213A;
+            }
+            .link:focus {
+                outline: 0;
+            }
+            .link:hover:before {
+                left: 85%;
+                opacity: 1;
             }
         }
     }
-    &__item-content{
-        margin-top: 30px;
-        &__item-title{
-            font-family:'Times New Roman', Times, serif;
-            display: flex;
-            flex-direction: column;
-            margin-left: 25px;
-            #titlePrimary{
-            color: #6E6E6E;
-            font-size: 1.2em;
-            line-height: 1em;
-            }
-            #titleSeconds{
-            font-size: 30px;
-            color: #393939;
-            }
-        }
-        &__item-sub{
-            font-size: 13px;
-            line-height: 1.6rem;
-            margin-top: 5px;
-            margin-left: 40px;
-            margin-right: 39px;
-            color: #393939;
-            justify-content: center;
-            #sub1{
-                margin-bottom: 30px;
-                display: block;
-            }
-            #sub2{
+    .weAre-introduction:focus{
+        outline: -webkit-focus-color auto 1px;
+    }
+    .item-content {
+        padding: 0 5%;
+        flex: 2;
+        .item-title {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2.25em;
+            line-height: 1.25em;
+            margin-bottom: 20px;
+            span:first-child {
+                font-size: .6em;
+                color: #6E6E6E;
+                line-height: 1em;
                 display: block;
             }
         }
+        .item-context {
+            padding: 0 0 0 5%;
+            color: #393939;
+            font-size: 1em;
+            @media (min-width: 768px){
+                padding: 0 20% 0 0;
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        margin-bottom: 60px;
+        flex-direction: row-reverse;
     }
 }

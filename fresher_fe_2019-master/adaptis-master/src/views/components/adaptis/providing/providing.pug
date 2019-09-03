@@ -1,21 +1,27 @@
-div.providing
-    div.providing__container
-        div.providing__container__title
-            p#providing Providing 
-            div.providing__container__title__header
-                span digital 
-                span solutions
-        div.providing__container__desc
-            section 
-                p Helping companies to become more digitally connected is one of our specialities. From design thinking to machine learning, we start with a holistic approach that combines core values with the value of technology solutions. 
-                p The result, clients have a much deeper grasp on their company's purpose and are better prepared to maintain consistency in the connected age.
-    div.providing__solution-block
-        div.providing__solution-block__item-experience
-            span#span-item1 User Experience 
-            span Design 
-        div.providing__solution-block__item-development
-            span#span-item2 Development  
-            span Delivery
-        div.providing__solution-block__item-agency
-            span#span-item3 Agency  
-            span Partnership
+section.a-solution-block 
+    div.a-solution-block__decor(class="skrollable skrollable-before" data-top-bottom='transform: translateY(100px)' data-center-center='transform: translateY(-200px)')
+    div.container
+        div.a-solution-block__content
+            div.a-solution-block__title.a-section-title
+                span Providing
+                br
+                span digital solutions
+            div.a-solution-block__desc
+                p Helping companies to become more digitally connected is one of our specialities. From design thinking to machine learning, we start with a holistic approach that combines core values with the value of technology solutions.
+                p The result, clients have a much deeper grasp on their company’s purpose and are better prepared to maintain consistency in the connected age.
+        ul.a-solution-block__items
+            li.item(class='animated' data-animate)
+                span.item-content User Experience
+                br
+                span.item-content Design 
+                div.item-text
+                    span.text-icon UX
+                    span.text-icon UI
+            li.item(class='animated' data-animate)
+                span.item-content Development 
+                br
+                span.item-content &amp; Delivery
+            li.item(class='animated' data-animate)
+                span.item-content Agency
+                br
+                span.item-content Parnership 
