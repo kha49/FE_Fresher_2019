@@ -17,6 +17,9 @@
     list-style-type: none;
     display: flex;
     flex-direction: column;
+    @include breakpoint($medium) {
+        flex-direction: row;
+    }
     .boxRelative-container__item {
         // opacity: 0;
         flex: 2;
@@ -139,10 +142,26 @@
                 transition: all .2s ease-in-out;
                 font-size: 12.8px;
                 line-height: 1.5;
+                @include breakpoint($medium) {
+                    opacity: 0;
+                }
             }
             &:hover::before {
                 right: 0;
+                @include breakpoint($medium) {
+                    opacity: 1;
+                }
             }
+        }
+    }
+    .boxRelative-container__item:nth-child(2n) {
+        @include breakpoint($medium) {
+            margin-left: 16px;
+        }
+    }
+    .boxRelative-container__item:nth-child(3n) {
+        @include breakpoint($medium) {
+            margin-left: 16px;
         }
     }
 }

@@ -20,21 +20,28 @@
     backface-visibility: hidden;
     &__brand {
         position: absolute;
-        top: 25px;
-        left: 15px;
         height: 32px;
+        left: 40px;
+        top: 25px;
         z-index: 9;
         opacity: 1;
         transition: all .25s;
+        @include breakpoint(991px) {
+            top: 25px;
+            left: 15px;
+        }
         a {
             font-family: $main-font;
             transition: all .25s ease;
             text-decoration: none;
             display: inline-block;
-            letter-spacing: 12px;
+            letter-spacing: 24px;
             font-size: $main-font-size;
             color: #000;
             line-height: 2;
+            @include breakpoint(991px) {
+                letter-spacing: 12px;
+            }
         }
     }
     &__menubar {
@@ -117,5 +124,12 @@
                 transition: opacity .2s ease-in-out,transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
             }
         }
+    }
+}
+
+.toggleLine {
+    .adaptis-header__menubar-hamburger-1 {
+        width: 0;
+        transition: width .2s ease-in-out;
     }
 }

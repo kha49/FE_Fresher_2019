@@ -27,3 +27,5 @@ $(window).on('resize', () => {
 window.onload = () => {
 
 };
+
+$(window).on('scroll', () => {AdaptisHeader.scrollFunction();});

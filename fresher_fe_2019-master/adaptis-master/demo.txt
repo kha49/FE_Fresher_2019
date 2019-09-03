@@ -1,0 +1,22 @@
+.adaptis-header LanDT
+
+.adaptis-description LanDT
+
+.adaptis-slide HoangTH
+
+.adaptis-develop LanDT
+
+.adaptis-successStory HoangTH
+
+.adaptis-weAre LanDT
+
+.adaptis-viewTheWork LanDT
+
+.adaptis-providing LanDT
+
+.adaptis-toSupport LanDT
+
+.adaptis-boxRelative HoangTH
+
+.adaptis-footer HoangTH
+.contact HoangTH
