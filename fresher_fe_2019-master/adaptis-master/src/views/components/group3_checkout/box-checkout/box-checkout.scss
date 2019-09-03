@@ -1,14 +1,14 @@
 .form-checkout {
-  &__pro {
-    img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    p {
-      width: 100%;
-      font-size: 15px;
-      font-weight: 500;
-    }
+  padding: 15px;
+  background-color:  $color-background-checkout;
+  img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  p {
+    width: 100%;
+    font-size: 15px;
+    font-weight: 500;
   }
   &__button {
     padding: 20px 0;

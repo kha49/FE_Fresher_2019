@@ -1,32 +1,31 @@
-.row.p-4.form-checkout
-    .col-sm-12.form-checkout__pro
-        .row.pt-2
-            .col-2.pl-0
-                img(src="https://cdn.shopify.com/s/files/1/0098/9705/0209/products/product-image-986041657_small.jpg?v=1560167019", alt="")
-            .col-8.p-0
-                p Lorem, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            .col-2.pr-0
-                p.text-right
-                    span $2.0
-        .row.border-bottom.border-top.form-checkout__button
-            .col-10.p-0
-                input.form-control(type="text" placeholder="Discount code")
-            .col-2.pr-0
-                button(type='submit')
-                    span.fas.fa-arrow-right
-        .row.justify-content-between
-            .col-3
-                p  Total
-            .col-3
-                p  $4.80
-        .row.justify-content-between
-            .col-4
-                p  Total
-            .col-4
-                p  $4.80
-        .form-checkout__totalPrice
-            .row.justify-content-between
-                .col-3
-                    h3  Total
-                .col-3
-                    h3  $4.80
+.form-checkout.border-bottom
+    .row
+        .col-2
+            img(src="https://cdn.shopify.com/s/files/1/0098/9705/0209/products/product-image-986041657_small.jpg?v=1560167019", alt="")
+        .col-8.p-0
+            p Lorem, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        .col-2
+            p.text-right
+                span $2.0
+    .row.form-checkout__button.border-bottom.border-top
+        div.border-bottom.border-top
+        .col-10
+            input.form-control(type="text" placeholder="Discount code")
+        .col-2.pl-0
+            button(type='submit')
+                span.fas.fa-arrow-right
+    .row
+        .col-3
+            p Subtoal
+        .col-9.text-right
+            p $2.27
+        .col-3
+            p Shipping
+        .col-9.text-right
+            p Calculated at next step
+    .row.border-top.pt-5
+        .col-3
+            h3 Total
+        .col-9.text-right
+            p USD 
+                span $2.27

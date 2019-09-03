@@ -1,22 +1,18 @@
-.checkout{
-    width: 100%;
-    display: block;
+.primary{
+    font-family: Arial, Helvetica, sans-serif;
     &__title{
         font-size: 24px;
-        font-weight: normal;
     }
 }
-
 .showProd{
-    display: block;
-    width: 100%;
     padding: 15px;
-    border-top: 1px solid $color-text-price;
-    border-bottom: 1px solid $color-text-price;
-    background-color: $color-text-gray;
+    background-color: $color-background-checkout;
     cursor: pointer;
     span{
         font-size: 16px;
+        &:not(:last-child){
+            margin-right: 10px;
+        }
     }
 }
 .breadcrumb{
@@ -26,4 +22,39 @@
         color: $color-text-price;
         font-size: 12px;
     }
+}
+
+.form_checkout{
+    font-size: 15px;
+    font-family: "Roboto";
+    input{
+        padding: 20px 15px;
+        font-size: 14px;
+    }
+    select{
+        height: 42px;
+        font-size: 14px;
+        font-family: "Roboto";
+    }
+    button{
+        width: 100%;
+        background-color: black;
+        padding: 20px;
+        color: #fff;
+        font-size: 14px;
+    }
+    @include Responsive(MD){
+        button{
+            width: 40%;
+        }
+    }
+    @include Responsive(XL){
+        button{
+            width: 40%;
+        }
+    }
+}
+
+#Proc-box{
+    display: none;
 }

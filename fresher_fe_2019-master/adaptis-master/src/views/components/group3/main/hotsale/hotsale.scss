@@ -1,198 +1,45 @@
-.hotsale{
-    width: 100%;
-    margin: 0 auto;
-    padding: 10px;
-    margin-bottom:  30px; 
-    &__title-hotsale{   
-        display: block;
-        border-bottom: 1px dotted #000;
+.hotsale__button{
+    display: block;
+    width: 70%;
+    border:2px solid $color-border-dark;
+    background: $color-background-white;
+    margin: 0 auto;    
+    padding: 6px;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    &:hover{
+        background-color: $color-background-dark;
+        span{
+            color: $color-white;
+        }
+    }
+    span{
+        color: $color-dark;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0.09em;
         text-transform: uppercase;
-        h2{
-            color: $color-border-gray;
-            text-align: center;
-            margin: -10px auto;
-            background: $color-white;
-            font-size: 19px;
-            max-width: 200px;
-            font-weight: bold;
-        }
+        font-family: "Montserrat";
     }
-    &__content-hotsale{
-        display: block;
-        text-align: center;
-       .grid-item{
-           padding: 6px;
-           
-       }
-    }
-    .hotsale__content-pro{
-        img{
-            width: 100%;
-        }
-        span.label{
-            font-size: 14px;
-            font-weight: bold;
-            color: white;
-            top: 23px;
-            font-family: "Roboto";
-            padding: 16px 10px;
-            right:17px;
-            background: rgba(255, 113, 113, .8);
-            border-color: rgba(255, 255, 255, .8);
-            position: absolute;
-            border: 2px dotted;
-            border-radius: 50%;
-            text-transform: uppercase;
-            z-index: 2;
-        }
-    }
-    .hotsale__content-text{
-        a{
-            font-size: 16px;
-            font-family: 'Roboto';
-            color: $color-dark;
-            cursor: pointer;
-            text-decoration: none;
-            box-sizing: border-box;
-            margin: 0 0 6px;
-        }
-     
-    }
-    &__content-price{
-        .old{
-            text-decoration: line-through;
-            display: inline;
-            font-weight: 400;
-            color: $color-text-price;
-            margin-right: 6px;
-            font-size: 17px;
-        }
-        .new{
-            color: $color-red;
-            font-weight: 700;
-            font-size: 17px;
-        }
-    }
-    .hotsale__content-hover{display: none;}
-    .hotsale__button-select{
-        width: 209px;
-        border: 2px solid  #bebebe;
-        background: $color-white;
-        margin: 20px auto;
-        cursor: pointer;
-        span{
-            color: #bebebe;
-            font-size: 16px;
-            line-height: 34px;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            font-family: 'Montserrat';
-            padding: 0px 20px 0px 35px;
-            }
-    }
-    .row{
-        margin: 20px auto;
-    } 
-    &__button{
-        display: block;
-        width: 75%;
-        border:2px solid $color-border-dark;
-        background: $color-background-white;
-        margin: 0 auto;    
-        padding: 6px;
-        text-align: center;
-        &:hover{
-            background-color: $color-background-dark;
-            span{
-                color: $color-white;
-            }
-        }
-        span{
-            color: $color-dark;
-            font-size: 16px;
-            font-weight: bold;
-            letter-spacing: 0.09em;
-            text-transform: uppercase;
-            font-family: "Montserrat";
-        }
-    } 
     @include Responsive(MD){
-        &__title-hotsale{
-            margin: 0 auto;   
-            margin-bottom: 25px;
-            width: 95%;
-            h2{
-                font-size: 24px;
-                max-width: 320px;
-                font-weight: bold;
-            }
-        }
-        &__button{
-            width: 40%;
-        }
-        .hotsale__content-hover{display: none;}
+        width: 35%;
     }
     @include Responsive(XL){
-        width: 90%;
-        &__title-hotsale{
-            margin: 0 auto;   
-            margin-bottom: 30px;
-            h2{
-                font-size: 24px;
-                max-width: 260px;
-                font-weight: bold;
-            }
+        width: 35%;
+    }
+} 
+
+.d-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include Responsive(MD){
+        grid-template-columns: 1fr 1fr 1fr;
+        .hotsale__button{
+            width: 53%;
         }
-        &__content-hotsale{
-            .grid-item.col-lg-3{
-                &:hover > img{
-                    opacity: 0.6;
-                    transition: 0.5s;
-                    backface-visibility: hidden;
-                }
-                &:hover > .hotsale__content-hover{
-                    opacity: 1;
-                }
-            }
-        }
-        &__button{
-            width: 30%;
-        }
-        .hotsale__content-hover{
-            display: none;
-            position: absolute;
-            opacity: 0;
-            .icon{
-                width: 100%;
-                position: relative;
-                z-index: 2;
-                border-radius: 999px;
-                background: $color-background;
-                i{
-                    width: 100%;
-                }
-            }
-            .select{
-                width: 100%;
-                border: 2px solid  #bebebe;
-                background: $color-white;
-                color: #bebebe;
-                font-size: 16px;
-                font-weight: 700;
-                letter-spacing: 0.05em;
-                text-transform: uppercase;
-                font-family: 'Montserrat';    
-            }
-            a.view{
-                width: 100%;
-                border: 2px solid  #bebebe;
-                background: $color-dark;
-                color: $color-white;
-            }
-        }
-        .hotsale__button-select{
-            display: block;
-        }
+    }
+    @include Responsive(XL){
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
 }

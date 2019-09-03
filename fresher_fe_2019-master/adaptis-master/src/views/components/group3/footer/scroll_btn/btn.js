@@ -3,9 +3,13 @@ const scrollBtn = {
         let scrollBtn = document.getElementById("scrollTop");
         window.addEventListener("scroll", () => {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrollBtn.style.display = "block";
+                if (scrollBtn) {
+                    scrollBtn.style.display = "block";
+                }
             } else {
-                scrollBtn.style.display = "none";
+                if (scrollBtn) {
+                    scrollBtn.style.display = "none";
+                }
             }
         });
         $("#scrollTop").click(function () {

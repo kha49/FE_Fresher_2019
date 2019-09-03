@@ -6,6 +6,7 @@ import user from './views/components/group3/header/header-navbar-mobile/header-b
 import nav_canvas from './views/components/group3/header/header-navbar-mobile-canvas/nav-canvas';
 import '../node_modules/slick-carousel/slick/slick';
 import scrollBtn from './views/components/group3/footer/scroll_btn/btn';
+import box_checkout from './views/components/group3_checkout/box-checkout/box-checkout';
 require('normalize.css');
 
 $(() => {
@@ -27,7 +28,7 @@ $(document).ready(() => {
       {
         breakpoint: 1128,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4,
           slidesToScroll: 1,
           infinite: true,
           dots: false
@@ -53,6 +54,7 @@ $(document).ready(() => {
     ]
   });
   scrollBtn.init();
+  box_checkout.init();
   new WOW().init();
 });
 
@@ -60,8 +62,8 @@ $(window).on('resize', () => {
   setTimeout(() => {
     Global.lazyLoad();
   }, 250);
+
 });
 
 window.onload = () => {
-
 };
