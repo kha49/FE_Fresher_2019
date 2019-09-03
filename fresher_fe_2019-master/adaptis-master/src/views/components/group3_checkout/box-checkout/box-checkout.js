@@ -3,6 +3,7 @@ const box_checkout = {
         $("#showProd").click(()=>{
             $("#Proc-box").toggle();
         });
+        // let phone = /^/;
     }
 }
 

@@ -12,7 +12,8 @@
                 a(href="") Login
         .col-12.pt-3.pb-3
             .form-group
-                input.form-control(type="text", placeholder="Email or mobile phone number")
+                input.form-control#email(type="text", placeholder="Email or mobile phone number")
+                span#email-erro
         .col-12
             .form-check
                 input.form-check-input(type="checkbox", name="") 
@@ -23,19 +24,20 @@
             .row
                 .col-12.col-sm-6
                     .form-group
-                        input.form-control(type="text", placeholder="Email or mobile phone number")
+                        input.form-control#u_email(type="text", placeholder="Email or mobile phone number")
+                        span#u_email-erro
                 .col-12.col-sm-6
                     .form-group
-                        input.form-control(type="text", placeholder="First name (optional)")
+                        input.form-control#u_fname(type="text", placeholder="First name (optional)")
                 .col-12
                     .form-group
-                        input.form-control(type="text", placeholder="Last name")
+                        input.form-control#u_lname(type="text", placeholder="Last name")
                 .col-12
                     .form-group
-                        input.form-control(type="text", placeholder="Address")
+                        input.form-control#u_address(type="text", placeholder="Address")
                 .col-12
                     .form-group
-                        input.form-control(type="text", placeholder="Apartment, suite, ect. (optional)")
+                        input.form-control#u_ap(type="text", placeholder="Apartment, suite, ect. (optional)")
                 .col-12.col-sm-6
                     .form-group
                         select.form-control(type="text", placeholder="City")
@@ -43,10 +45,10 @@
                             option(value="") Viet Nam
                 .col-12.col-sm-6
                     .form-group
-                        input.form-control(type="text", placeholder="Postal code")
+                        input.form-control#u_code(type="text", placeholder="Postal code")
                 .col-12
                     .form-check
                         input.form-check-input(type="checkbox", name="") 
                         |Save this information for next time
                 .col-12.text-right.pt-4.pb-4.col-12.text-right.pt-4
-                    button.btn(type='submit') Continue to shipping
+                    button.btn#checkoutBtn(type='button') Continue to shipping
