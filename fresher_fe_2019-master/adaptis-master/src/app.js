@@ -23,7 +23,7 @@ $(document).ready(() => {
     speed: 300,
     slidesToShow: 5,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: false,
     // prevArrow: $('.prev'),
     // nextArrow: $('.next'),
     responsive: [
