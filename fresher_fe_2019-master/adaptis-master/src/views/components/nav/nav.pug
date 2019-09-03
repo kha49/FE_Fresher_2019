@@ -1,0 +1,39 @@
+.kem-nav
+    .kem-nav__title overviews
+    ul.kem-nav__list
+
+        - var itemArr = [
+        - {navLink: "Destinations", iconClass: "", navCheckbox: "navCheckbox1", iconClassUp: "",navLinkSmall:""},
+        - {navLink: "experiences", iconClass: "fas fa-angle-down", navCheckbox: "navCheckbox2", iconClassUp: "fas fa-angle-up", navLinkSmall: [{navLv2: "wedding", navLv3: ""}, {navLv2: "gastronomy", navLv3: ""}, {navLv2: "spa", navLv3: ""}, {navLv2: "golf", navLv3: ""}, {navLv2: "ski", navLv3: ""}, {navLv2: "signature suites", navLv3: ""}, {navLv2: "my kempinski experience magazine", navLv3: ""}, {navLv2: "the world of kempinski brand book", navLv3: ""}]},
+        - {navLink: "special offers", iconClass: "fas fa-angle-down", navCheckbox: "navCheckbox3", iconClassUp: "fas fa-angle-up", navLinkSmall: [{navLv2: "escape in style this summer", navLv3: ""}, {navLv2: "early booker", navLv3: ""}, {navLv2: "suitely sensational", navLv3: ""}, {navLv2: "wellness & spa offers", navLv3: ""}, {navLv2: "romance offers", navLv3: ""}, {navLv2: "family offers", navLv3: ""}, {navLv2: "golf offers", navLv3: ""}]},
+        - {navLink: "kempinski loyalty", iconClass: "", navCheckbox: "navCheckbox4", iconClassUp: "", navLinkSmall: ""},
+        - {navLink: "meetings and events", iconClass: "fas fa-angle-down", navCheckbox: "navCheckbox5", iconClassUp: "fas fa-angle-up", navLinkSmall: [{navLv2: "inspiring offers", navLv3: ""}, {navLv2: "meeting & events", navLv3: ""}, {navLv2: "conventions & congresses", navLv3: ""}, {navLv2: "incentives", navLv3: ""}, {navLv2: "weddings", navLv3: ""}, {navLv2: "private events", navLv3: ""}, {navLv2: "mice factsheet", navLv3: ""}]},
+        - {navLink: "blog", iconClass: "", navCheckbox: "navCheckbox6", iconClassUp: "", navLinkSmall: ""},
+        - {navLink: "about us", iconClass: "fas fa-angle-down", navCheckbox: "navCheckbox7", iconClassUp: "fas fa-angle-up", navLinkSmall: [{navLv2: "history", navLv3: ""}, {navLv2: "management board", navLv3: ""}, {navLv2: "corporate social responsibility", navLv3: ["be health", "company policies"]}, {navLv2: "lady in red", navLv3: ""}, {navLv2: "hotel development", navLv3: ""}, {navLv2: "kempinski residences", navLv3: ""}, {navLv2: "our partners", navLv3: ["airline partners", "automobile partners", "partner offers"]}, {navLv2: "culinary concepts", navLv3: ""}, {navLv2: "my kempinski experience magazine", navLv3: ""}, {navLv2: "the world of kempinski brand book", navLv3: ""}]},
+        - {navLink: "#kempinski gallery", iconClass: "", navCheckbox: "navCheckbox8", iconClassUp: "", navLinkSmall: ""},
+        - {navLink: "english", iconClass: "fas fa-angle-down", navCheckbox: "navCheckbox9", iconClassUp: "fas fa-angle-up", navLinkSmall: [{navLv2: "ai cập", navLv3: ""}, {navLv2: "espanol", navLv3: ""}, {navLv2: "france", navLv3: ""}, {navLv2: "pyccknn", navLv3: ""}, {navLv2: "tàu", navLv3: ""}, {navLv2: "deutsch", navLv3: ""}]},
+        - {navLink: "login to your account", iconClass: "", navCheckbox: "navCheckbox10", iconClassUp: "", navLinkSmall: ""},
+        - {navLink: "create a new account", iconClass: "", navCheckbox: "navCheckbox11", iconClassUp: "", navLinkSmall: ""}
+        - ]
+
+        each item in itemArr
+            li.kem-nav__item
+                a.kem-nav__link= item.navLink
+                label.nav-label(for= item.navCheckbox)
+                    span.kem-nav__icon-down-open.toggle-btn
+                        i(class= item.iconClass)
+                input(type="checkbox", id= item.navCheckbox)
+                span.kem-nav__icon-down-open.icon-down-btn
+                    i(class= item.iconClass)
+                span.kem-nav__icon-down-open.icon-up-btn
+                    i(class= item.iconClassUp)
+                if(item.navLinkSmall)
+                    ul.kem-nav__list-small
+                        each smallItem in item.navLinkSmall
+                            li.kem-nav__item-small
+                                a.kem-nav__link-small= smallItem.navLv2
+                                if(smallItem.navLv3)
+                                    ul.kem-nav__list-small-lv3
+                                        each smallItemLv3 in smallItem.navLv3
+                                            li.kem-nav__item-small-lv3
+                                                a.kem-nav__link-small-lv3= smallItemLv3

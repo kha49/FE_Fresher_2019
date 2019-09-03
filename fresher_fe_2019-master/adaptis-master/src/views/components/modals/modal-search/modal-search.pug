@@ -1,0 +1,58 @@
+.modal-search(id="modalSearch")
+    .modal-search__container
+        .modal-search__header
+            .modal-search__header__close-block
+                span.modal-search__header__close-block__btn(id="btnCloseSearchModal")
+                    i(class="fas fa-times")
+            .row(style="margin:0")
+                h4.col-lg-8.modal-search__header__title VISIT OUR PARTNER DESTINATIONS
+                button.col-lg-4.modal-search__header__back-btn(type="button") BACK TO KEMPINSKI
+        .modal-search__body
+            p.modal-search__body__desc
+                |Take advantage of Kempinski Hotels' International partners for luxury stays worldwide. Global Hotel Alliance offers 
+                |more than 550 hotels in 76 countries.
+            form.modal-search__body__form
+                .row
+                    .col-lg-8
+                        .row.form-block
+                            .col-lg-3
+                                p.form-block__label Country:
+                            .col-lg-9
+                                .div.form-block__inp
+                                    select(name="").form-block__inp__select
+                                        option(value="") -- Please Select --
+                                    span.form-block__inp__icon
+                                        i(class="fas fa-chevron-down")
+                        .row.form-block    
+                            .col-lg-3
+                                p.form-block__label Destination:
+                            .col-lg-9
+                                .div.form-block__inp
+                                    select(name="").form-block__inp__select
+                                        option(value="") -- Please Select --
+                                    span.form-block__inp__icon
+                                        i(class="fas fa-chevron-down")
+                        .row.form-block
+                            .col-lg-3
+                                p.form-block__label Check-in:
+                            .col-lg-9
+                                .div.form-block__inp
+                                    input(type="date" placeholder="ạ").form-block__inp__date
+                                    span.form-block__inp__icon
+                                        i(class="fas fa-calendar-alt")
+                        .row.form-block
+                            .col-lg-3
+                                p.form-block__label Check-out:
+                            .col-lg-9
+                                .div.form-block__inp
+                                    input(type="date").form-block__inp__date
+                                    span.form-block__inp__icon
+                                        i(class="fas fa-calendar-alt")
+                    .col-lg-4
+                .row
+                    .col-lg-8
+                        .form-block__logo-frame
+                            img.form-block__logo-frame__img(src="../../../assets/images/kem/kem-search/logo-gha-color.svg", alt="logo-search-modal")
+                    .col-lg-4
+                        button.form-block__submit-btn(type="submit") Continue
+

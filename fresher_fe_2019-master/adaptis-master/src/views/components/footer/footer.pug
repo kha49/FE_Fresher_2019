@@ -1,0 +1,60 @@
+section.kem-footer
+    .kem-footer__container
+        .kem-footer__block.kem-footer__block__contact
+            a.kem-footer__title(href="#") contact us
+            a.contact__link(href="") reservations.corporate@kempinski.com
+            .contact__icon-container
+
+                - var iconArr = [
+                - {socialIcon: "fab fa-facebook"},
+                - {socialIcon: "fab fa-instagram"},
+                - {socialIcon: "fab fa-twitter"},
+                - {socialIcon: "fab fa-youtube"},
+                - {socialIcon: "fab fa-linkedin"},
+                - {socialIcon: "fab fa-weibo"},
+                - {socialIcon: "fab fa-weixin"},
+                - {socialIcon: "fab fa-blogger"}
+                - ]
+                each icon in iconArr
+                    a(href="")
+                        span.contact__icon-block
+                            i(class= icon.socialIcon) 
+
+        .kem-footer__block.kem-footer__block__booking
+            .kem-footer__title(href="#") booking
+            .booking__function
+                span.booking__function__icon
+                    i(class= "fas fa-pencil-alt")
+                a.booking__function__link(href="#" class="line-bottom") modify
+                span(style="padding: 0 0.5rem; color: #b5a191") /
+                a.booking__function__link(href="#" class="line-bottom") cancel
+
+        .kem-footer__block.kem-footer__block__info
+            .kem-footer__title(href="#") helpful info
+            .info__container
+                - var infoListArr = [
+                - {linkList: ["about us", "contact us", "press room", "our partners", "career site"]},
+                - {linkList: ["best rate guarantee", "imprint", "legal", "privacy policy", "sitemap"]}
+                - ]
+
+                each infoList in infoListArr
+                    ul.info__list
+                        each infoItem in infoList.linkList
+                            li.info__item
+                                span.info__icon
+                                    i(class= "fas fa-chevron-circle-right")
+                                a.info__link(class="line-bottom")= infoItem
+        
+        .kem-footer__block.kem-footer__block__brand
+            .kem-footer__title SIGN UP TO OUR NEWSLETTER
+            .brand__container
+                button.kem-btn.brand__btn(type="button" id="btnSubscribe") subscribe
+                .brand__img-frame
+                    img(src="../../../assets/images/kem/kem-footer/footer-brand.png", alt="brand-footer")
+                p.brand__copyright © 2019 KEMPINSKI HOTELS
+
+    .kem-footer__scroll-up
+        a(href="#header").kem-footer__scroll-up__icon-up
+            i(class="fas fa-chevron-up")
+
+include ../modals/modal-footer/modal-footer.pug
