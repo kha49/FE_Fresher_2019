@@ -1,0 +1,120 @@
+$medium-width: 740px;
+$large-width: 1000px;
+
+@mixin medium-width() {@media screen and (min-width: $medium-width) {
+        @content;
+    }
+}
+
+@mixin title {
+    padding: 20px 30px;    
+    p {
+        color: rgb(72, 72, 72);
+        font-size: 25px;
+        font-weight: bold;
+        line-height: 35px;
+        letter-spacing: 0.3mm;
+    }
+}
+
+.airbnb-explore-title {
+    @include title();
+}
+
+.airbnb-explore-content {
+    display: flex;
+    &__slide {
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+        box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px;
+        width: 480px;
+        margin: 0 12px;
+        .airbnb-explore-content__slide--image {
+            img {
+                width: 439px;
+            }
+        }
+        &--title {
+            padding: 16px 16px 0 16px;
+        }
+        &--description {
+            padding: 6px 16px 16px;
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.introducing-airbnb-luxe {
+    &__title {
+        @include title();
+    }
+    &__content {
+        background-color: rgb(244, 242, 239);
+        border-radius: 4px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: 0 20px;
+        &-image {
+            @include medium-width() {
+                float: right;
+            }
+            a {
+                img {
+                    width: 100%;
+                    border-radius: 4px;
+                    @include medium-width() {
+                        height: 232px;
+                        width: auto;
+                        
+                        margin: 10px;
+                    }
+                }
+            }
+        }
+        &-title {
+            margin: 20px;
+            display: flex;
+            &--icon {
+                img {
+                    width: 31px;
+                }
+            }
+            &--text {
+                margin: auto 5px;
+            }
+        }
+        &-description {
+            margin: 0 30px 15px 20px;
+            @include medium-width() {
+                width: 30%;
+            }
+            p {
+                color: black;
+                font-size: 20px;
+                line-height: 26px;
+            }
+        }
+        &-more {
+            display:flex;
+            margin: 0 30px 15px 20px;
+            &--text {
+                p {
+                    color:#460479;
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            &--icon {
+                margin: auto 5px;
+                img {
+                    width: 12px;
+                }
+            }
+        }
+    }
+}

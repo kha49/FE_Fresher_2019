@@ -1,0 +1,275 @@
+mixin airbnbUpdate-header__sticky
+    .airbnbUpdate-header__sticky
+        .airbnbUpdate-header__sticky--logo
+            a(href="#")
+                img(src="../../assets/images/airbnb-brands__update.png", alt="")
+        .airbnbUpdate-header__sticky--title
+            .airbnbUpdate-header__sticky--title-Potential
+                p Monthly potential <span><img src="../../../assets/images/information.png"></span>
+            .airbnbUpdate-header__sticky--title-Total
+                h3#title-total $100
+            .airbnbUpdate-header__sticky--title-GetStartedButton
+                button#getStarted Get started
+
+mixin airbnbUpdate-header-modal
+    .airbnbUpdate-header-modal(id= "modal-form")
+        .modal-content
+            .airbnbUpdate-header-modal__close
+                button#close Close
+            .airbnbUpdate-header-modal__facebook
+                button Log in with Facebook
+                    .airbnbUpdate-header-modal__facebook--logo
+                    .airbnbUpdate-header-modal__facebook--title
+            .airbnbUpdate-header-modal__google
+                button Log in with Google
+                .airbnbUpdate-header-modal__google--logo
+                .airbnbUpdate-header-modal__google--title
+            .airbnbUpdate-header-modal__or
+                span or
+                hr 
+            .airbnbUpdate-header-modal__email
+                input(name="email" type="email" placeholder="Email Address")
+            .airbnbUpdate-header-modal__password
+                input(name="password" type="password" placeholder="Password")
+            .airbnbUpdate-header-modal__more
+                .airbnbUpdate-header-modal__more--rememberMe
+                    input(type="checkbox" id="checkbox")
+                    label(for="checkbox") Remember me
+                .airbnbUpdate-header-modal__more--forgotPassword
+                    a(href="#") Forgot password?
+            .airbnbUpdate-header-modal__login
+                button Log in
+            .airbnbUpdate-header-modal__signup
+                .airbnbUpdate-header-modal__signup--question
+                    p Don't have an account?
+                .airbnbUpdate-header-modal__signup--button
+                    button Sign up
+
+mixin airbnbUpdate-header
+    .airbnbUpdate-header
+        .airbnbUpdate-header__logo
+            a(href="#")
+                img(src="../../assets/images/airbnb-brands__update.png", alt="")
+        .airbnbUpdate-header__title
+            h2 Earn money as an Airbnb host
+    .airbnbUpdate-header__form
+        .airbnbUpdate-header__form--title
+            h2 Earn money as an Airbnb host
+        .airbnbUpdate-form-header
+            .airbnbUpdate-form-header__title
+                h4 Find out what you could earn
+            .airbnbUpdate-form-header__input
+                .airbnbUpdate-form-header__input--location
+                    input(type="text" value="Hanoi" list="browsers" name="browsers" placeholder="Location")
+                    datalist#browsers
+                        ontion(value="Vietnam")
+                        ontion(value="VIETNAM")
+                .airbnbUpdate-form-header__input--type
+                    .airbnbUpdate-form-header__input--type--room
+                        select#room-type
+                            option(value="100") Entire place
+                            option(value="150") Private room
+                            option(value="200") Shared room
+                    .airbnbUpdate-form-header__input--type--guests
+                        select#guests-number
+                            option(value="1") 1 guest
+                            option(value="2") 2 guests
+                            option(value="3") 3 guests
+                            option(value="4") 4 guests
+                            option(value="5") 5 guests
+                            option(value="6") 6 guests
+                            option(value="7") 7 guests
+                            option(value="8") 8 guests
+                            option(value="9") 9 guests
+                            option(value="10") 10 guests
+                            option(value="11") 11 guests
+                            option(value="12") 12 guests
+                            option(value="13") 13 guests
+                            option(value="14") 14 guests
+            .airbnbUpdate-form-header__total
+                .airbnbUpdate-form-header__total--cost
+                    h3#total $100
+                .airbnbUpdate-form-header__total--perMonth
+                    p per month <span><img src="../../../assets/images/information.png"></span>
+            .airbnbUpdate-form-header__button
+                button Get started
+        
+mixin airbnbUpdate-form
+    .airbnbUpdate-form
+        .airbnbUpdate-form__title
+            h4 Find out what you could earn
+        .airbnbUpdate-form__input
+            .airbnbUpdate-form__input--location
+                input(type="text" value="Hanoi" list="browsers" name="browsers" placeholder="Location")
+                datalist#browsers
+                    ontion(value="Vietnam")
+                    ontion(value="VIETNAM")
+            .airbnbUpdate-form__input--type
+                .airbnbUpdate-form__input--type--room
+                    select
+                        option(value="Entire place") Entire place
+                        option(value="Private room") Private room
+                        option(value="Shared room") Shared room
+                .airbnbUpdate-form__input--type--guests
+                    select
+                        option(value="1 guest") 1 guest
+                        - for(let i = 2; i < 15; i++)
+                            option(value="i")= i + " guests"
+        .airbnbUpdate-form__total
+            .airbnbUpdate-form__total--cost
+                h3 $708
+            .airbnbUpdate-form__total--perMonth
+                p per month <span><img src="../../../assets/images/information.png"></span>
+        .airbnbUpdate-form__button
+            button Get started
+
+
+- const why={title: "Why host on Airbnb?", description: "No matter what kind of home or room you have to share, Airbnb makes it simple and secure to host travelers. You’re in full control of your availability, prices, house rules, and how you interact with guests."}
+- const protection={title: "Airbnb protects hosts", description: "To keep you, your home, and your belongings safe, we cover every booking with $1M USD in property damage protection and another $1M USD in insurance against accidents.", link: "Learn how Airbnb protects hosts"}
+- const verified={title: "Guests are verified", description: "Airbnb always requires guests to provide certain information before they can make a reservation—such as a confirmed phone number and email address. For added control, you can require guests to also provide recommendations from other hosts and a verified ID."}
+
+mixin airbnbUpdate-introduce__nolink(variable)
+    .airbnbUpdate-introduce__nolink
+        .airbnbUpdate-introduce__title
+            h2= variable.title
+        .airbnbUpdate-introduce__description
+            p= variable.description
+                
+mixin airbnbUpdate-introduce__link(variable)
+    .airbnbUpdate-introduce__link
+        .airbnbUpdate-introduce__title
+            h2= variable.title
+        .airbnbUpdate-introduce__description
+            p= variable.description
+        .airbnbUpdate-introduce__link
+            a(src="#")= variable.link
+
+mixin airbnbUpdate-introduce
+    .airbnbUpdate-introduce
+        +airbnbUpdate-introduce__nolink(why)
+        +airbnbUpdate-introduce__link(protection)
+        +airbnbUpdate-introduce__nolink(verified)
+
+
+- const step1={step: 1, title: "List your space for free", description: "Share any space without sign-up charges, from a shared living room to a second home and everything in-between."}
+- const step2={step: 2, title: "Decide how you want to host", description: "Choose your own schedule, prices and requirements for guests. We're there to help along the way."}
+- const step3={step: 3, title: "Welcome your first guest", description: "Once your listing is live, qualified guests can reach out. You can message them with any questions before they said."}
+- const array=[step1, step2, step3]
+
+mixin airbnbUpdate-step(variable)
+    .airbnbUpdate-step
+        .airbnbUpdate-step__step
+            p= variable.step
+        .airbnbUpdate-step__title
+            h2= variable.title
+        .airbnbUpdate-step__description
+            p= variable.description
+
+mixin airbnbUpdate-hosting
+    .airbnbUpdate-hosting__line
+    .airbnbUpdate-hosting__title
+        h1 Hosting in 3 steps
+    .airbnbUpdate-hosting__steps
+        each n in array
+            +airbnbUpdate-step(n)
+    .airbnbUpdate-hosting__link
+        a(href="#") Learn how to start hosting
+
+
+mixin airbnbUpdate-header-sticky__bottom
+    .airbnbUpdate-header-sticky__bottom
+        //- .airbnbUpdate-header-sticky__bottom--logo
+        //-     a(href="#")
+        //-         img(src="../../assets/images/airbnb-brands__update.png", alt="")
+        .airbnbUpdate-header-sticky__bottom--title
+            .airbnbUpdate-header-sticky__bottom--title-Total
+                    h3 $1030
+            .airbnbUpdate-header-sticky__bottom--title-Potential
+                p Monthly potential <span><img src="../../../assets/images/information.png"></span>
+        .airbnbUpdate-header-sticky__bottom--button
+            button Get started
+
+
+mixin airbnbUpdate-quote
+    .airbnbUpdate-quote
+        .airbnbUpdate-quote-image
+            img(src="../../../../assets/images/2b6774ff-f366-4c1a-b941-198b92e87ffd.jpg", alt="")
+        .airbnbUpdate-quote-article
+            .airbnbUpdate-quote-article-quotes "
+            .airbnbUpdate-quote-article-citation
+                p Hosting has helped me pay for a new kitchen and other upgrades."
+            .airbnbUpdate-quote-article-author
+                p Tessa hosts in London to earn extra money
+            .airbnbUpdate-quote-article-button
+                button Learn how they host
+
+- const questions = ["Who can be an Airbnb host", "What is required of guests before booking?", "How much does it cost to list my space", "What protection do I have against property damage?", "How should I choose my listing's price?", "How can Airbnb help me with setting price?"]
+
+mixin airbnbUpdate-question
+    .airbnbUpdate-question
+        .airbnbUpdate-hosting__line
+        .airbnbUpdate-question__title
+            h1 Your questions answered
+        each n in questions
+            .airbnbUpdate-question__question
+                a(href="#")= n
+
+
+- const post1 = {image: "../../../../assets/images/8f287639-0b26-446d-8891-5b0517751da0.jpg", title: "Setup", description: "How to start hosting"}
+- const post2 = {image: "../../../../assets/images/f5c99953-d8c0-44d3-b8cd-6aeafb0c5903.jpg", title: "Safety", description: "How Airbnb protects hosts"}
+- const post3 = {image: "../../../../assets/images/b5816d12-bad2-4af0-a200-3d37beade068.jpg", title: "Finacials", description: "How you make money on Airbnb"}
+- const moreArray = [post1, post2, post3]
+
+mixin airbnbUpdate-more
+    .airbnbUpdate-more
+        .airbnbUpdate-more__title
+            h2 More about hosting
+        .airbnbUpdate-more-articles
+            each n in moreArray
+                a(href="#").airbnbUpdate-more-articles-posts
+                    .airbnbUpdate-more-articles-posts__image
+                        img(src=n.image)
+                    .airbnbUpdate-more-articles-posts__post
+                        .airbnbUpdate-more-articles-posts__post--title
+                            h4= n.title
+                        .airbnbUpdate-more-articles-posts__post--description
+                            p= n.description
+
+mixin airbnbUpdate-ready
+    .airbnbUpdate-ready
+        .airbnbUpdate-ready__title
+            h1 Ready to earn?
+        .airbnbUpdate-ready__button
+            button Get started
+
+mixin list-box(title, subs, icons)
+    ul.list
+        li.list__title=title
+        each icon in icons
+            i(class=icon)
+        each sub in subs
+            li.list__sub=sub
+
+mixin airbnbUpdate-sub-footer
+    .airbnbUpdate-sub-footer
+        -  const list = [
+        -  {title:'Airbnb', sub:['Careers','News', 'Policies', 'Help', 'Diversity & Belonging', 'Accessibility'], icon:['']},
+        -  {title:'Discover', sub:['Trust & Safety','Crédit voyage', 'Gift Cards', 'Airbnb Citizen', 'Business Travel', 'Guidebooks', 'Airbnbmag'], icon:['']},
+        -  {title:'Hosting', sub:['Why Host','Hospitality', 'Responsible Hosting', 'Community Center', 'Host an Experience', 'Open Homes'], icon:['']},
+        -  {title:'', sub:['Terms','Privacy', 'Site Map'], icon:['fab fa-facebook-f', 'fab fa-twitter','fab fa-instagram']}]
+        each val in list
+            +list-box(val.title, val.sub, val.icon)
+
+mixin airbnbUpdate-footer
+    .airbnbUpdate-footer
+        .airbnbUpdate-footer__brand
+            .airbnbUpdate-footer__brand--logo
+                img(src="../../assets/images/airbnb-brands__update.png", alt="")
+            .airbnbUpdate-footer__brand--copyright
+                p <span><img src="../../../../assets/images/copyright-regular.png"></span> 2019 Airbnb, Inc. All rights reserved.
+        .airbnbUpdate-footer__buttons
+            .airbnbUpdate-footer__button--languages
+                button English
+            .airbnbUpdate-footer__button--currency
+                button USD - $
+

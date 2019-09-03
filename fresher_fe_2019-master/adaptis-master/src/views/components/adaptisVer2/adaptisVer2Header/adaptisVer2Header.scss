@@ -5,7 +5,7 @@
     @include transition(all, .5s, ease-in-out);
     backface-visibility: hidden;
     &-logo {
-        @include transition(all, .25s, initial);
+        @include transition(all, .5s, ease-in-out);
         opacity: 1;
         @include absolute(absolute, 25px, initial,initial, 40px);
         z-index: 9;
@@ -15,6 +15,12 @@
             font-size: 1rem;
             @include max-md {
                 letter-spacing: 12px;
+            }
+            &:hover {
+                animation: shine 2s infinite;
+                -webkit-mask-image: linear-gradient(-75deg,rgba(0,0,0,.6) 30%,#000 50%,rgba(0,0,0,.6) 70%);
+                -webkit-mask-size: 200%;
+                mask-mode: luminance;
             }
         }
     }
@@ -43,6 +49,9 @@
                     background: #{color(c-white)};
                     @include transition(width, .5s, ease-in-out);
                 }
+            }
+            a:nth-child(1) {
+                display: none;
             }
         }
         &__hamburger {
@@ -80,4 +89,9 @@
             }
         }
     }
+}
+
+@keyframes shine {
+    0% {-webkit-mask-position: 150%;};
+    100% {-webkit-mask-position: -50%;}
 }

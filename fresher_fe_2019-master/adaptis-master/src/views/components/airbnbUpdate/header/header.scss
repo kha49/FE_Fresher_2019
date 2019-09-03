@@ -1,0 +1,275 @@
+// @import '../form/form.scss';
+
+$breakpoint-small: 700px;
+$breakpoint-huge: 1100px;
+
+@mixin form__style {
+    height: 46px;
+    margin-bottom: 15px;
+}
+
+@mixin form__style--input {
+    border: 1px solid #CAABAE;
+    border-radius: 4px; 
+    width: 100%;
+    padding: 14px 11px;
+}
+
+@mixin breakpoint--small {
+    @media screen and (min-width: $breakpoint-small) {
+        @content;
+    }
+}
+
+@mixin breakpoint--minHuge {
+    @media screen and (min-width: $breakpoint-huge) {
+        @content;
+    }
+}
+
+@mixin breakpoint--maxHuge {
+    @media screen and (max-width: $breakpoint-huge) {
+        @content;
+    }
+}
+
+@mixin breakpoint__airbnbUpdate--header {
+    @media screen and (min-width: 525px) {
+        @content;
+    }
+}
+
+.airbnbUpdate-header__sticky {
+    @include breakpoint--maxHuge() {
+        display: none;
+    }
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    background-color: #fff;
+    transition: top 0.3s;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    &--logo {
+        margin: auto 60px;
+        a {
+            img {
+                width:  32px;
+            }
+        }
+    }
+    &--title {
+        display: flex;  
+        &-Potential {
+            margin: auto;
+            p {
+                span {
+                    img {
+                        width: 11px;
+                    }
+                }
+            }
+        }
+        &-Total {
+            // margin: 23px 10px 0;
+            h3 {
+                margin: 0;
+            }
+            margin: auto 15px;
+        }
+        &-GetStartedButton {
+            margin: auto;
+            margin-right: 60px;
+        }
+    }
+}
+
+.airbnbUpdate-header {
+    position: relative;
+    background-image: url("https://a0.muscache.com/pictures/61f948dd-aab5-4e32-b9d2-1e849ae180b0.jpg");
+    background-position: top center;
+    background-size: cover;
+    height: 240px;
+    @include breakpoint__airbnbUpdate--header() {
+        height: 210px;
+    }
+    @include breakpoint--small() {
+        height: 280px;
+    }
+    @include breakpoint--minHuge() {
+        margin-top: 80px;
+        height: 700px;
+    }
+    &__logo {
+        padding: 32px 0 0 24px;
+        a {
+            img {
+                width: 32px;
+            }
+        }
+        @include breakpoint--minHuge() {
+            display: none;
+        }
+    }
+    &__title {
+        position: absolute;
+        bottom: 100px;
+        width: 87%;
+        height: 36px;
+        padding: 0 15px;
+        h2{
+            color:rgb(255, 255, 255);
+            font-size: 34px;
+        }
+        @include breakpoint__airbnbUpdate--header() {
+            position: absolute;
+            bottom: 60px;
+        }
+        @include breakpoint--small() {
+            padding: 0 50px;
+        }
+        @include breakpoint--minHuge() {
+            display: none;
+        }
+    }
+}
+
+.airbnbUpdate-header-modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    padding-top: 100px;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    background-color: #fff;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        border-radius: 5px;
+        width: 50%;
+    }
+}
+
+.airbnbUpdate-header__form {
+    background-color: #fff;
+    width: 430px;
+    height: 500px;
+    border-radius: 4px;
+    position: absolute;
+    right: 50px;
+    top: 140px;
+    &--title {
+        margin: 15px;
+    }
+    @include breakpoint--maxHuge() {
+        display: none;
+    }
+}
+
+.airbnbUpdate-form-header {
+    margin: 0 15px;
+    &__input {
+        &--location {
+            @include form__style();
+            input {
+                @include form__style--input();
+            }
+        }
+        &--type {
+            display: flex;
+            &--room {
+                @include form__style();
+                width: 55%;
+                select {
+                    @include form__style--input();
+                    padding-left: 7px;
+                }
+            }
+            &--guests {
+                @include form__style();
+                width: 45%;
+                margin-left: 10px;
+                select {
+                    @include form__style--input();
+                    padding-left: 7px;
+                }
+            }
+        }
+    }
+}
+
+.airbnbUpdate-form-header__total {
+    display: flex;
+    &--cost {
+        h3 {
+            margin: 0px;
+        }
+    }
+    &--perMonth {
+        p {
+            margin: 15px 0 0 10px;
+            span {
+                img {
+                    width: 11px;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.airbnbUpdate-form-header__button {
+    margin-top: 15px;
+    button {
+        width: 100%;
+        height: 46px;
+        border: 0px;
+        border-radius: 4px;
+        background-color: #FF5A5F;
+        color: #fff;
+        font-weight: bold;
+    }
+}
+
+.airbnbUpdate-header-sticky__bottom {
+    position: fixed;
+    bottom: -60px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    z-index: 1;
+    transition: bottom 0.3s;
+    background-color: #fff;
+    &--title {
+        margin: auto 15px;
+        &-Total {
+            h3 {
+                margin: 0px;
+            }
+        }
+        &-Potential {
+            p {
+                span {
+                    img {
+                        width: 11px;
+                    }
+                }
+            }
+        }
+    }
+    &--button {
+        margin: auto 15px;
+    }
+}

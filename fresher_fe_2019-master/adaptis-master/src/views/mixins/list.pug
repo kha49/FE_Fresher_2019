@@ -4,3 +4,25 @@ mixin list(id, ...items)
   ul(id=id)
     each item in items
       li= item
+
+mixin search-result-google-content(link, img-brand, img-keyboard-icon, img-apps-icon)
+  div.search-result-google-header
+        div.search-result-google-header-brand-input
+            div.search-result-google-brand
+                a(href=link)
+                    img(src=img-brand)
+            div.search-result-google-input
+                div.search-result-google-input-type
+                    input
+                div.search-result-google-keyboard-icon
+                    a(href=link)
+                        img(src=img-keyboard-icon)
+                div.search-result-google-search
+                    a(href="#") Tìm kiếm
+        div.search-result-google-apps-login
+            div.search-result-google-apps
+                a(href=link)
+                    img(src=img-apps-icon)
+            div.search-result-google-login
+                a(href="#")
+                    button Đăng nhập

@@ -1,0 +1,352 @@
+@mixin position($position, $top, $left) {
+    position: $position;
+    top: $top;
+    left: $left;
+}
+
+@mixin airbnb-form__title {
+    font-size: 12px;
+    letter-spacing: 0.5mm;
+    font-weight: bold;
+    color: #484848;
+    padding: 0 12px;
+}
+
+@mixin airbnb-form--input($width) {
+    height: 46px;
+    border: solid 1px rgb(235, 235, 235);
+    border-radius: 5px;
+    width: $width;
+    margin: 0 12px;
+    input {
+        margin: 10px 0 0 0;
+        height: 23px;
+        padding: 0 12px;
+        border: 0;
+        width: $width;
+    }
+}
+
+@mixin breakpoint() {
+    @media (max-width: 740px) {
+        .airbnb-form-screen__medium {
+            display: none;
+        }
+        .airbnb-footer__button--open {
+            display: none;
+        }
+    }
+    @media (min-width: 740px) {
+        .airbnb-form__screen--small {
+            display: none;
+        }
+        .mySlides {
+            height: 702px;
+        }
+        .airbnb-title {
+            display: none;
+        }
+        .airbnb-form-title {
+            p {
+                color: rgb(72, 72, 72);
+            }
+        }
+    }
+    @media (max-width: 1000px) {
+        .airbnb-menubar {
+            display: none;
+        }
+    }
+    @media (min-width: 1000px) {
+        .airbnb-brand {
+            .airbnb-down-button {
+                display: none;
+            }
+        }
+        .airbnb-form-screen__medium {
+            @include position(absolute, 120px, 69px);
+        }
+    }
+}
+
+@mixin airbnb-title-breakpoints() {
+    @media (max-width: 643px) {
+        .airbnb-title {
+            top: 124px;
+        }
+    }
+    @media (max-width: 331px) {
+        .airbnb-title {
+            top: 98px;
+        }
+    }
+}
+
+body {
+    font-size: 14px;
+    line-height: 1.43;
+    color: #484848;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.mySlides {
+    background-image: url("https://mediad.publicbroadcasting.net/p/wunc/files/styles/x_large/public/201905/SanFrancisco_12623927_PrivateRoomApt_LivingRoom.jpg");
+    height: 220px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.airbnb-brand {
+    @include position(absolute, 22px, 27px);
+    .airbnb-logo {
+        img {
+            width: 31px;
+        }
+    }
+    .airbnb-down-button {
+        @include position(absolute, 12px, 40px);
+        img {
+            width: 9px;
+        }
+    }
+}
+
+.airbnb-title {
+    @include position(absolute, 164px, 20px);
+    width: 90%;
+    p {
+        color: #fff;
+        font-size: 30px;
+        font-weight: bold;
+    }
+}
+
+.airbnb-form-screen__small {
+    padding: 0 24px;
+}
+
+.airbnb-form-where__title {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    p {
+        @include airbnb-form__title();
+    }
+}
+
+.airbnb-form-where__input {
+    @include airbnb-form--input(95%);
+}
+
+.airbnb-form-date {
+    margin: 16px 0 16px 0;
+    display: flex;
+    flex-wrap: wrap;
+    &__checkin {
+        width: 47.5%;
+    }
+    &__checkout {
+        width: 47.5%;
+    }
+}
+
+.airbnb-form-date__checkin--title {
+    margin-bottom: 8px;
+    p {
+        @include airbnb-form__title();
+    }
+}
+
+.airbnb-form-date__checkout--title {
+    margin-bottom: 8px;
+    p {
+        @include airbnb-form__title();
+    }
+}
+
+.airbnb-form-date__checkin--input {
+    @include airbnb-form--input(100%);
+    border-radius: 5px 0 0 5px;
+}
+
+.airbnb-form-date__checkout--input {
+    @include airbnb-form--input(100%);
+    border-radius: 0 5px 5px 0;
+}
+
+.airbnb-form-guests__title {
+    margin-bottom: 8px;
+    p {
+        @include airbnb-form__title();
+    }
+}
+
+.airbnb-form-guests__input {
+    position: relative;
+    button {
+        @include airbnb-form--input(100%);
+        position: relative;
+        text-align: left;
+        background-color: #fff;
+        color: #6d7f78;
+        width: 95%;
+    }
+    img {
+        position: absolute;
+        top: 16px;
+        right: 8px;
+        width: 12px;
+        color: #000;
+    }
+}
+
+.airbnb-search-button {
+    margin-top: 16px;
+    button {
+        @include airbnb-form--input(95%);
+        font-weight: bold;
+        color: #fff;
+        background-color: #FF5A5F;
+    }
+}
+
+.airbnb-menubar {
+    display: flex;
+    position: absolute;
+    top: 33px;
+    right: 13px;
+    div {
+        margin-right: 15px;
+        a {
+            color: rgb(72, 72, 72);
+            font-weight: 500;
+        }
+    }
+}
+
+.airbnb-form-screen__medium {
+    @include position(absolute, 120px, 119px);
+    width: 440px;
+    height: 450px;
+    background: rgb(255, 255, 255);
+    border-radius: 4px;
+    padding: 32px 32px 24px;
+}
+
+.airbnb-form-screen-medium__title {
+    width: 95%;
+    p {
+        color: rgb(72, 72, 72);
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 35px;
+        letter-spacing: 0.3mm;
+    }
+}
+
+.airbnb-form-screen-medium__where {
+    &--title {
+        margin-top: 20px;
+        margin-bottom: 8px;
+        p {
+            @include airbnb-form__title();
+            padding: 0;
+        }
+    }
+    &--input {
+        @include airbnb-form--input(100%);
+        margin: 0;
+    }
+}
+
+.airbnb-form-screen-medium__date {
+    margin: 16px 0 16px 0;
+    display: flex;
+    flex-wrap: nowrap;
+    .airbnb-form-screen-medium-date__checkin {
+        width: 50%;
+        &--title {
+            margin-bottom: 8px;
+            p {
+                @include airbnb-form__title();
+                padding: 0;
+            }
+        }
+        &--input {
+            @include airbnb-form--input(100%);
+            margin: 0;
+            border-radius: 5px 0 0 5px;
+        }
+    }
+    .airbnb-form-screen-medium-date__checkout {
+        width: 50%;
+        &--title {
+            margin-bottom: 8px;
+            p {
+                @include airbnb-form__title();
+                padding: 0;
+            }
+        }
+        &--input {
+            @include airbnb-form--input(100%);
+            margin: 0;
+            border-radius: 0 5px 5px 0;
+        }
+    }
+}
+
+.airbnb-form-screen-medium__guests {
+    margin-bottom: 16px;
+    &--title {
+        p {
+            @include airbnb-form__title();
+            padding: 0;
+        }
+    }
+    &--button {
+        position: relative;
+        button {
+            @include airbnb-form--input(100%);
+            margin: 0;
+            position: relative;
+            text-align: left;
+            background-color: #fff;
+            color: #6d7f78;
+            width: 100%;
+        }
+        img {
+            position: absolute;
+            top: 16px;
+            right: 8px;
+            width: 12px;
+            color: #000;
+        }
+    }
+}
+
+.airbnb-form-screen-medium__search--button {
+    display: flex;
+    justify-content: right;
+    div {
+        button {
+            cursor: pointer;
+            color: #fff;
+            background-color: #FF5A5F;
+            margin: 0;
+            padding: 0 20px;
+            // width: 52px;
+        }
+    }
+}
+
+.airbnb-form-screen-medium__search--button {
+    button {
+        @include airbnb-form--input(95%);
+    }
+}
+
+@include breakpoint();
+@include airbnb-title-breakpoints();

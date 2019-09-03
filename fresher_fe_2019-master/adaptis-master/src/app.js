@@ -1,19 +1,20 @@
-// import './assets/styles/_app.scss';
 import Global from './views/components/global/global';
-import Header from './views/components/header/header';
-import adaptisSlider from '../src/views/components/adaptis/slide/slide';
-// import reveal from '../src/views/components/adaptis/develop/develop';
+// import HeaderAirBnb from './views/components/airbnbUpdate/header/header';
+//adaptisVer2
+import adaptisHeaderLogo from './views/components/adaptisVer2/adaptisVer2Header/adaptisVer2Header';
+
 require('normalize.css');
-require('../src/skrollr.min.js');
 $(() => {
   // Code here
 });
+
 $(document).ready(() => {
   Global.lazyLoad();
   skrollr.init();
+  // HeaderAirBnb.init();
+  // HeaderAirBnb.modal();
+  //adaptisVer2
 
-  new WOW().init();
-  $('.single-item').slick();
 });
 
 $(window).on('resize', () => {
@@ -26,4 +27,4 @@ window.onload = () => {
 
 };
 
-$(window).on('scroll', () => {AdaptisHeader.scrollFunction();});
+$(window).on('scroll', () => {adaptisHeaderLogo.scrollFunction()});

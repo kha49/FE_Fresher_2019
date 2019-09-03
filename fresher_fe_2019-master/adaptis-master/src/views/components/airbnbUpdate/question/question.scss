@@ -1,0 +1,24 @@
+@import '../header/header.scss';
+
+.airbnbUpdate-question {
+    .airbnbUpdate-hosting__line {
+        margin: 30px 15px;
+        @include breakpoint--small() {
+            margin: auto;
+        }
+    }
+    &__title {
+        margin: 15px;
+        @include breakpoint--small() {
+            text-align: center;
+        }
+    }
+    &__question {
+        margin: 15px;
+        border-bottom: 1px solid rgb(235, 235, 235);
+        padding-bottom: 20px;
+        @include breakpoint--small() {
+            margin: 15px 80px;
+        }
+    }
+}
