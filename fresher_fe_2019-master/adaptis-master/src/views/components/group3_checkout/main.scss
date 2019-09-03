@@ -1,12 +1,9 @@
 .checkout{
     width: 100%;
     display: block;
-    &__content{
-        padding: 10px;
-        &--title{
-            font-size: 24px;
-            padding: 5px;
-        }
+    &__title{
+        font-size: 24px;
+        font-weight: normal;
     }
 }
 
@@ -20,7 +17,6 @@
     cursor: pointer;
     span{
         font-size: 16px;
-        padding-right: 10px;
     }
 }
 .breadcrumb{

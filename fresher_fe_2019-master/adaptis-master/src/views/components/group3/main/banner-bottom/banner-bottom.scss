@@ -8,6 +8,26 @@
     &__content{
         display: none;
     }
+    &__title-button{
+        text-align: center;
+        display: block;
+        width: 250px;
+        border:2px solid $color-border-dark;
+        background: $color-background-dark;
+        span{
+            color: $color-white;
+            font-size: 16px;
+            line-height: 34px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        i{
+            color: $color-white;
+            font-size: 15px;
+            padding-left: 15px;
+        }
+    }
     
     @include Responsive (MD){
         .banner-bottom{
