@@ -70,3 +70,26 @@ mixin modal-gallery(idModalGallery,link_img, author_info, author_caption, produc
               a.sharing-with__social__pin(href="")
             .sharing-with__copyright
               a Powered by Olapic
+
+//- kem-home-explore__countries__name
+mixin countries-name(countries_name)
+ .name 
+  a= countries_name
+  span
+
+//- kem-home-explore__hotel-info
+mixin hotel-info(countries_name)
+  .hotel-info(class=countries_name)
+//- kem-home-explore__hotel-info__item
+mixin hotel-info-item(img,title,desc)
+  .hotel-info__item
+    a.hotel-info__item__img.slider-img(style="background-image :url(../../../../assets/images/kem/kem-homepage/"+ img +")")
+    .hotel-info__item__caption
+      .caption-title
+        h4.kem-title= title
+      .caption-desc
+        p.kem-para= desc[0]
+        p.kem-para= desc[1]
+        p.kem-para= desc[2]
+      .caption-button
+        +button-link("FURTHER INFORMATION")

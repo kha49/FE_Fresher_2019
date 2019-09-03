@@ -1,9 +1,243 @@
-.kem-home-explore {
-    padding-bottom: 50px;
-    &__heading {
-        text-align: center;
-        &__desc {
-            padding-bottom: 30px; 
-        }
+@mixin button {
+  button {
+    &::before {
+      font-size: 80px;
+      color: rgba(255, 255, 255, 0.6);
+      opacity: 0.6;
+      display: block;
+      background-color: white;
+      border-radius: 50%;
     }
+
+    &:hover::before {
+      color: white;
+      opacity: 0.8;
+    }
+  }
+}
+
+@mixin before_after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 12px;
+  background: #b5a191;
+
+  @include mobile {
+    width: 80%;
+  }
+}
+
+.kem-home-explore {
+  padding-bottom: 50px;
+
+  &__heading {
+    text-align: center;
+    padding: 30px;
+
+    &__desc {
+      padding-bottom: 30px;
+    }
+  }
+
+  &__slider-double {
+    &__countries {
+      .select-countries {
+        position: relative;
+        height: 70px;
+
+        .countries-name {
+          margin-bottom: 0;
+          text-align: center;
+          z-index: 1;
+          @include flexbox();
+          .name {
+            // margin-right: 100px;
+            a {
+              text-transform: uppercase;
+              font-size: 12px;
+              color: black;
+              letter-spacing: 4px;
+              cursor: pointer;
+              max-width: 230px;
+              line-height: 1.428571429;
+            }
+          }
+          ul {
+            display: none !important;
+          }
+
+          >.slick-prev {
+            left: 2%;
+            top: 420%;
+            opacity: 0;
+            z-index: 1;
+            width: 0;
+
+            @include mobile {
+              opacity: 0.2;
+              top: 370% !important;
+            }
+
+            @include min-sm {
+              opacity: 0.3;
+              left: 1%;
+            }
+            @include min-md {
+              opacity: 0.3;
+              top: 420%;
+            }
+          }
+
+          >.slick-next {
+            right: 20%;
+            top: 420%;
+            opacity: 0;
+            z-index: 1;
+            width: 0;
+
+            @include mobile {
+              opacity: 0.2;
+              right: 15%;
+              top: 370% !important;
+            }
+
+            @include min-sm {
+              opacity: 0.3;
+              right: 10%;
+              top: 420%;
+            }
+            @include min-lg {
+              right: 8%;
+            }
+          }
+
+          @include button;
+        }
+
+        .slick-slide {
+          position: relative;
+          height: 70px;
+
+          .name {
+            max-width: 228px;
+            line-height: 17px;
+
+            span {
+              position: absolute;
+              background: url(https://www.kempinski.com/images/spritesheet_v2.png);
+              background-position: -348px -62px;
+              width: 16px;
+              height: 20px;
+              top: 40px;
+              left: 48%;
+              display: none;
+            }
+          }
+        }
+
+        .slick-slide.slick-current {
+          span {
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    .bg-filter {
+      position: absolute;
+      top: 40px;
+
+      img {
+        width: 100%;
+        height: 25px;
+      }
+
+      &__left {
+        width: 300px;
+        height: 50px;
+        position: absolute;
+        left: 0;
+        top: -40px;
+        z-index: 10;
+
+        @include min-xl {
+          width: 100px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &__right {
+        width: 300px;
+        height: 50px;
+        position: absolute;
+        right: 0;
+        top: -40px;
+        z-index: 10;
+
+        @include min-xl {
+          width: 100px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    &__hotel {
+      .hotel-info {
+        &__item {
+          @include min-sm {
+            position: relative;
+          }
+          &__img {
+            width: 100%;
+            height: 350px;
+
+            @include min-sm {
+              height: 450px;
+            }
+
+            @include min-xl {
+              height: 580px;
+            }
+          }
+
+          &__caption {
+            background-color: #fff;
+            position: relative;
+            padding: 5px 20px 50px;
+
+            @include min-sm {
+              position: absolute;
+              top: 100px;
+              bottom: 0;
+              margin-left: 10%;
+              width: 620px;
+            }
+            .caption-desc {
+              overflow: hidden;
+              height: 231px;
+
+              p {
+                margin-bottom: 15px;
+              }
+            }
+
+            .caption-button {
+              position: absolute;
+              bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
 }
