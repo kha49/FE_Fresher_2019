@@ -1,6 +1,6 @@
 .kem-destination-place {
     &__btn-block {
-        background: yellow;
+        background: #ffffff;
         padding: 3rem 0;
 
         &__btn {
@@ -54,6 +54,50 @@
         &__link {
             @include typography($font-primary, 300, 14px, 2rem);
             color: $color-primary;
+        }
+    }
+
+    &__area {
+        background-color: #ffffff;
+        padding: 2rem 0;
+
+        &__block {
+            padding-bottom: 3rem;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid rgb(197, 197, 197);
+
+            @include min-md {
+                border: none;
+            }
+        }
+
+        &__title {
+            @include typography($font-primary, 300, 18px, initial);
+            color: $color-primary;
+            margin: 0;
+            text-transform: uppercase;
+            min-height: 2.9rem;
+            letter-spacing: 3px;
+        }
+
+        &__itemLv2 {
+            padding: 2.4rem 0 0;
+        }
+
+        &__subtitle {
+            @extend .kem-destination-place__area__title;
+            font-size: 13px;
+            font-weight: 700;
+            min-height: 2.4rem;
+            letter-spacing: -1px;
+        }
+
+        &__linkLv3 {
+            @extend .kem-destination-place__area__subtitle;
+            font-weight: 300;
+            line-height: 1.7rem;
+            text-transform: unset;
+            letter-spacing: 1px;
         }
     }
 }
