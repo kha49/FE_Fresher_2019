@@ -24,8 +24,8 @@ $(document).ready(() => {
     slidesToShow: 5,
     slidesToScroll: 1,
     arrows: true,
-    prevArrow: $('.prev'),
-    nextArrow: $('.next'),
+    // prevArrow: $('.prev'),
+    // nextArrow: $('.next'),
     responsive: [
       {
         breakpoint: 1128,
