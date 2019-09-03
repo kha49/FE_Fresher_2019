@@ -1,8 +1,6 @@
 .trending{
     width: 100%;
     margin: 0 auto;
-    padding: 10px;
-    margin-bottom:  30px; 
     &__title-trend{   
         display: block;
         border-bottom: 1px dotted #000;
@@ -21,11 +19,14 @@
         display: block;
         text-align: center;
        .grid-item{
-           padding: 6px;
-           
+           padding: 10px;   
+           text-decoration: none;
+           margin-top: 20px;
        }
     }
     .trend__content-pro{
+        display: block;
+        width: 100%;
         img{
             width: 100%;
         }
@@ -33,10 +34,10 @@
             font-size: 14px;
             font-weight: bold;
             color: white;
-            top: 39px;
+            top: 37px;
             font-family: "Roboto";
             padding: 16px 10px;
-            left: 68px;
+            left: 62px;
             background: rgba(255, 113, 113, .8);
             border-color: rgba(255, 255, 255, .8);
             position: relative;
@@ -46,6 +47,7 @@
             z-index: 2;
         }
     }
+    
     .trend__content-text{
         a{
             font-size: 16px;
@@ -53,8 +55,10 @@
             color: $color-dark;
             cursor: pointer;
             text-decoration: none;
-            box-sizing: border-box;
         }  
+    }
+    .trend__content-hover{
+        display: none;
     }
     &__content-price{
         .old{
@@ -71,11 +75,9 @@
             font-size: 17px;
         }
     }
-    .trend__content-hover{display: none;}
+    
     .trend__button-select{
         width: 209px;
-        border: 2px solid  #bebebe;
-        background: $color-white;
         margin: 20px auto;
         cursor: pointer;
         span{
@@ -88,80 +90,105 @@
             font-family: 'Montserrat';
             padding: 0px 20px 0px 35px;
             }
+        }
+    .select{
+        border: 2px solid  #bebebe;
+        background: $color-white;
+        
+    }
+    .disable{
+        border: 2px solid #000;
+        span{
+            color: #000;    
+        }
     }
     .row{
         margin: 20px auto;
     }  
     @include Responsive(MD){
         &__title-trend{
+            z-index: 2;
             margin: 0 auto;   
             margin-bottom: 25px;
             width: 95%;
             h2{
                 font-size: 24px;
-                max-width: 420px;
+                max-width: 385px;
                 font-weight: bold;
             }
         }
-        .trend__content-hover{display: none;}
-    }
-    @include Responsive(XL){
-        width: 90%;
-        &__title-trend{
-            margin: 0 auto;   
-            margin-bottom: 30px;
-            h2{
-                font-size: 24px;
-                max-width: 420px;
-                font-weight: bold;
-            }
-        }
-        &__content-trend{
-            .grid-item.col-lg-3{
-                &:hover > img{
-                    opacity: 0.6;
+        .trend__content-pro{
+            img{
+                &:hover{
+                    opacity: 0.8;
                     transition: 0.5s;
-                    backface-visibility: hidden;
-                }
-                &:hover > .trend__content-hover{
-                    opacity: 1;
                 }
             }
         }
         .trend__content-hover{
             display: none;
-            position: absolute;
-            opacity: 0;
-            .icon{
-                width: 100%;
-                position: relative;
-                z-index: 2;
-                border-radius: 999px;
-                background: $color-background;
-                i{
-                    width: 100%;
+        }
+    }
+    @include Responsive(XL){
+        width: 100%;
+        &__title-trend{
+            margin: 0 auto;   
+            margin-bottom: 30px;
+            h2{
+                font-size: 24px;
+                max-width: 385px;
+                font-weight: bold;
+            }
+        }
+        .trend__content-pro{
+            &:hover > img{
+                opacity: 0.6;
+                transition: 0.5s;
+                backface-visibility: hidden;
+                img:hover > .trend__content-hover{
+                    opacity: 1;
                 }
             }
-            .select{
+        } 
+        .trend__content-hover{
+            display: block;
+            position: relative;
+            background-color: red;
+            bottom: 200px;
+            text-align: center;
+            z-index: 1000;
+            a{
+                display: block;
                 width: 100%;
-                border: 2px solid  #bebebe;
-                background: $color-white;
+                color: #fff;
+                text-decoration: none;
+                text-align: center;
+            }
+            .icon{
+                span{
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    margin: 0 auto;
+                    padding: 10px;
+                    border: 1px solid $color-background-nav;
+                    border-radius: 999px;
+                    background-color: $color-background-nav;
+                }
+            }
+        }
+        .trend__button-selectd{
+            cursor: pointer;
+            span{
                 color: #bebebe;
                 font-size: 16px;
+                line-height: 34px;
                 font-weight: 700;
                 letter-spacing: 0.05em;
                 text-transform: uppercase;
-                font-family: 'Montserrat';    
+                font-family: 'Montserrat';
+                padding: 0px 20px 0px 35px;
+                }
             }
-            a.view{
-                width: 100%;
-                border: 2px solid  #bebebe;
-                background: $color-dark;
-                color: $color-white;
-            }
-        }
-        .trend__button-select{
-            display: none;
-        }
     }
 }

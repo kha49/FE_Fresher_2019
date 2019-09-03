@@ -1,15 +1,15 @@
 .collection
-    .collection__title-box
-        h2 Collections by Ice Snow Lips
-    .collection__content-box
-            - const box_content = [
-            -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/t/2/assets/banner-home-bottom-1.jpg?129",title:"OUR LIPSTICKS",span: "Shop now", icon:["fas", "fa-caret-right"]},
-            -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/t/2/assets/banner-home-bottom-2.jpg?129",title:"OUR MAKEUP TOOLS",span: "Shop now", icon:["fas", "fa-caret-right"]},
-            -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/t/2/assets/banner-home-bottom-3.jpg?129",title:"OTHER COSMETICS",span: "Shop now", icon:["fas", "fa-caret-right"]} ]
-            each val in box_content
-                .collection__content-box-small
-                    img(src=val.img, alt="")
-                    p=val.title
-                    .collection__content-button
-                        span=val.span
+    h2(style="") Collections by Ice Snow Lips
+.row.collection__content-box.wow
+    - const box_content = [
+    -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/t/2/assets/banner-home-bottom-1.jpg?129",title:"OUR LIPSTICKS",span: "Shop now", icon:["fas", "fa-caret-right"]},
+    -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/t/2/assets/banner-home-bottom-2.jpg?129",title:"OUR MAKEUP TOOLS",span: "Shop now", icon:["fas", "fa-caret-right"]},
+    -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/t/2/assets/banner-home-bottom-3.jpg?129",title:"OTHER COSMETICS",span: "Shop now", icon:["fas", "fa-caret-right"]} ]
+    each val,index in box_content
+        .col-12.col-md-4.wow.fadeInUp(data-wow-delay=(index/2)+"s", data-wow-duration="2s")
+            img(src=val.img, alt="")
+            p=val.title
+            .row
+                .col-6.col-md-9.col-lg-7.collection__content-button
+                    a(href="#", title="title")=val.span
                         i(class=val.icon)
