@@ -1,0 +1,341 @@
+- const adaptisHeaderMenuBarItems = ["THE WORK", "THE AGENCY", "CAREERS", "CONTACT US"]
+- const adaptisHeaderMenuBarHamburgerLine = ["1", "2", "3", "4", "5"]
+- const adaptisSlideItemCaptionArray = [
+-   {
+-       image: "../../assets/images/adaptis/adaptis-hero-kempinski.png",
+-       item: "item1",
+-       itemCaption: "item1-caption",
+-       itemCaptionTitle: "title",
+-       itemCaptionSubject: "subject",
+-       itemCaptionDesc: "desc",
+-       itemCaptionLink: "link",
+-       title: "Success Story",
+-       subject: "Kempinski Hotels S.A.",
+-       desc: "Kempinski manages and operates some of the world’s most iconic hotels, with a portfolio of five-star hotels and residences across the globe, Adaptis leads the digital revolution for the hotel group.",
+-       link: "VIEW THE WORK"
+-   },
+-   {
+-       image: "../../assets/images/adaptis/adaptis-hero-johnnie-walker.jpg",    
+-       item: "item2",
+-       itemCaption: "item2-caption",
+-       itemCaptionTitle: "title",
+-       itemCaptionSubject: "subject",
+-       itemCaptionDesc: "desc",
+-       itemCaptionLink: "link",
+-       title: "Success Story",
+-       subject: "Johnnie Walker",
+-       desc: "The most widely distributed blended Scotch Whisky in the world.",
+-       link: "VIEW THE WORK"
+-   },
+-   {
+-       image: "../../assets/images/adaptis/adaptis-hero-burberry.jpg",    
+-       item: "item3",
+-       itemCaption: "item3-caption",
+-       itemCaptionTitle: "title",
+-       itemCaptionSubject: "subject",
+-       itemCaptionDesc: "desc",
+-       itemCaptionLink: "link",
+-       title: "Success Story",
+-       subject: "Burberry",
+-       desc: "Careers reinvented at this luxury fashion brand.",
+-       link: "VIEW THE WORK"
+-   }
+- ]
+- const adaptisClientsArray = [
+-   {
+-       src: "../../assets/images/adaptis/adaptis-case-study-kempinski.png",
+-       alt: "Kempinski Hotels"   
+-   },
+-   {
+-       src: "../../assets/images/adaptis/adaptis-case-study-korn-ferry.png",
+-       alt: "Burger King"    
+-   },
+-   {
+-       src: "../../assets/images/adaptis/adaptis-case-study-burberry.png",
+-       alt: "Burberry"        
+-   },
+-   {
+-       src: "../../assets/images/adaptis/adaptis-case-study-bidv.png",
+-       alt: "BIDV Bank"    
+-   },
+-   {
+-       src: "../../assets/images/adaptis/adaptis-case-study-johnnie-walker.png",
+-       alt: "Johnnie Walker"    
+-   },
+-   {
+-       src: "../../assets/images/adaptis/adaptis-case-study-sit.png",
+-       alt: "Singapore Institute of Technology"    
+-   },
+-   {
+-       src: "../../assets/images/adaptis/adaptis-case-study-vicostone.png",
+-       alt: "Vicostone"    
+-   },
+-   {
+-       src: "../../assets/images/adaptis/adaptis-case-study-burger-king.png",
+-       alt: "Burger King"    
+-   },
+-   {
+-       src: "../../assets/images/adaptis/adaptis-case-study-ibm.png",
+-       alt: "IBM"    
+-   },
+-   {
+-       src: "../../assets/images/adaptis/adaptis-case-study-adib.png",
+-       alt: "ADIB Bank"    
+-   }
+- ]
+- const adaptisRelativeBlockArray = [
+-   {
+-       backgroundImage: "../../assets/images/adaptis/adaptis-credentials.jpg",
+-       caption: "Download now!",
+-       title: "2018 Digital Credentials",
+-       desc: "Register now to download our credentials in PDF format. The selected projects will provide a range of our experience in delivering global solutions.",
+-       link: "SEND TO ME"  
+-   },
+-   {
+-       backgroundImage: "../../assets/images/adaptis/adaptis-careers-bg.jpg",
+-       caption: "Work with the best!",
+-       title: "Careers",
+-       desc: "Collaborate with other passionate people, like yourself, who enthusiastically seek out new challenges and continuous learning to create bigger, better and bolder experiences.",
+-       link: "APPLY NOW"       
+-   },
+-   {
+-       backgroundImage: "../../assets/images/adaptis/adaptis-contact-us.png",
+-       caption: "Get in touch",
+-       title: "Contact Us",
+-       desc: "Have a project you want to discuss? Just looking for someone to speak with. Get in touch now and we’ll be sure to find the right person to speak with.",
+-       link: "LETS TALK"       
+-   }
+- ]
+- const adaptisFooterLocationsArray = [
+-   {
+-       clock: "australia",
+-       location: "Australia",
+-       phone: "+61 2 8776 3833",
+-       email: "australia@adatis.io"
+-   },
+-   {
+-       clock: "switzerland",
+-       location: "Switzerland",
+-       phone: "+41 22 539 16 32",
+-       email: "switzerland@adaptis.io"        
+-   },
+-   {
+-       clock: "thailand",
+-       location: "Thailand",
+-       phone: "+66 2 508 8443",
+-       email: "thailand@adaptis.io"    
+-   },
+-   {
+-       clock: "vietnam",
+-       location: "Vietnam",
+-       phone: "+84 244 4582 079",
+-       email: "vietnam@adaptis.io" 
+-   }
+- ]
+- const adaptisContactFields = [
+-   {
+-       labelFor: "firstName",
+-       ID: "firstName",
+-       name: "firstName",
+-       labelText: "First name*",
+-       inputType: "text"   
+-   },
+-   {
+-       labelFor: "lastName",
+-       ID: "lastName",
+-       name: "lastName",
+-       labelText: "Last name*",
+-       inputType: "text"    
+-   },
+-   {
+-       labelFor: "email",
+-       ID: "email",
+-       name: "email",
+-       labelText: "Email address*",
+-       inputType: "email"
+-   },
+-   {
+-       labelFor: "company",
+-       ID: "company",
+-       name: "company",
+-       labelText: "Company",
+-       inputType: "text"        
+-   },
+-   {
+-       labelFor: "phoneNumber",
+-       ID: "phoneNumber",
+-       name: "phoneNumber",
+-       labelText: "Phone number",
+-       inputType: "phone"        
+-   }
+- ]
+mixin adaptisVer2Header
+    header.adaptisVer2Header
+        .adaptisVer2Header-logo
+            a(href="#") ADAPTIS
+        .adaptisVer2Header-menu-bar
+            .adaptisVer2Header-menu-bar__items
+                each val, index in adaptisHeaderMenuBarItems
+                    a(href="#" title=`${val}`)= val
+            .adaptisVer2Header-menu-bar__hamburger
+                each val, index in adaptisHeaderMenuBarHamburgerLine
+                    i.adaptisVer2Header-menu-bar__hamburger--line(class=`adaptisVer2Header-menu-bar__hamburger--line-${val}`)
+
+mixin adaptisVer2Title
+    section.adaptisVer2Title
+        p Adaptis is an independent digital agency with footprints in Australia, Hong Kong, Singapore, Switzerland, Thailand and Vietnam. We are curiosity-led, goal-focused and inspired by our desire to tell stories and create brands for a wide range of businesses that matter. We do this by solving problems through strategy, design, technology, and production.
+
+mixin adaptisVer2Slide
+    .adaptisVer2Slide
+        .adaptisVer2Slide-button
+            button.adaptisVer2Slide-button__left prev
+            button.adaptisVer2Slide-button__right next
+        .adaptisVer2Slide-slides
+            .adaptisVer2Slide-slides-mySlides
+                section.adaptisVer2Slide-slides-mySlides-section
+                    each val, index in adaptisSlideItemCaptionArray
+                        .adaptisVer2Slide-item(class=`adaptisVer2Slide-slides-mySlides-section-${val.item}` style=`background-image: url(${val.image})`)
+                            .adaptisVer2Slide__caption(class=`adaptisVer2Slide-slides-mySlides-section-${val.itemCaption}`)
+                                .adaptisVer2Slide__title(class=`adaptisVer2Slide-slides-mySlides-section-${val.itemCaption}__${val.itemCaptionTitle}`)= val.title
+                                .adaptisVer2Slide__subject(class=`adaptisVer2Slide-slides-mySlides-section-${val.itemCaption}__${val.itemCaptionSubject}`)= val.subject
+                                .adaptisVer2Slide__desc(class=`adaptisVer2Slide-slides-mySlides-section-${val.itemCaption}__${val.itemCaptionDesc}`)= val.desc
+                                .adaptisVer2Slide__link(class=`adaptisVer2Slide-slides-mySlides-section-${val.itemCaption}__${val.itemCaptionLink}`)
+                                    a(href="#" title=`${val.link}`)= val.link
+
+mixin adaptis-introduction-item
+    .adaptis-introduction-item
+        .adaptis-introduction-item-content(class='skrollable skrollable-after skrollable-between' data-bottom-center='transform: translateX(200px); opacity: 0' data-center-center='transform: translateX(0); opacity: 1')
+            .adaptis-introduction-item-content__title
+                span We develop
+                span mission critical applications
+            .adaptis-introduction-item-content__context
+                .adaptis-introduction-item-content__context-highlight
+                    span Delivering results
+                    span Delivering solutions
+                .adaptis-introduction-item-content__context-desc At Adaptis, we take challenges head-on. We are a collective of problem solvers and creative thinkers, web engineers and analysts. If you need a digital agency that has the experience in delivering critical web platforms for your business, then let’s talk.
+                a(href="#").adaptis-introduction-item-content__context-link LET'S TALK
+
+mixin adaptis-introduction-item--special
+    .adaptis-introduction-item-special
+        .adaptis-introduction-item-special-balloon
+            .adaptis-introduction-item-special-balloon__bgd
+        .adaptis-introduction-item-special-thumb
+        .adaptis-introduction-item-special-content
+            .adaptis-introduction-item-special-content__subtitle Success Story
+            .adaptis-introduction-item-special-content__title Johnnie Walker CRM Program
+            .adaptis-introduction-item-special-content__desc As apart of launching Johnnie Walkers CRM program, we built a personalisation studio that allows you to customise a Johnnie Walker Wiskey.
+            a(href="#").adaptis-introduction-item-special-content__link VIEW THE WORK
+
+mixin adaptis-introduction-item--switch
+    .adaptis-introduction-item-switch
+        .adaptis-introduction-item-switch-thumb
+            .adaptis-introduction-item-switch-thumb__bgd
+                a(href="#" title="LET'S TALK").adaptis-introduction-item-switch-thumb__bgd-link LET'S TALK
+        .adaptis-introduction-item-switch-content
+            .adaptis-introduction-item-switch-content__title
+                span We are
+                span problem solvers
+            .adaptis-introduction-item-switch-content__context
+                .adaptis-introduction-item-switch-content__context--desc
+                    p Adaptis crafts engaging end-to-end digital solutions that aim to solve real problems. We are a collective of problem solvers and creative thinkers. Engineers and analysts.
+                    p Some clients call us a digital agency, others see us as a development partner. We just see it as investing in our people to work alongside the most demanding of clients. Welcome to Adaptis, a global technical agency with locations in Australia, Switzerland, South East Asia, and Vietnam.
+
+mixin adaptis-highlight-block
+    section.adaptis-highlight-block
+        .adaptis-highlight-block-bgd
+        .adaptis-highlight-block-content
+            .adaptis-highlight-block-content__desc View our work for Vicostone Quartz.  Customize your new quartz stone through the online visualiser and learn about new trends in home improvements.
+            a(href="#").adaptis-highlight-block-content__link VIEW THE WORK     
+
+mixin adaptis-solution-block
+    section.adaptis-solution-block
+        .adaptis-solution-decor
+        .adaptis-solution-container
+            .adaptis-solution-container-content
+                .adaptis-solution-container-content-title
+                    span Providing
+                    span digital solutions
+                .adaptis-solution-container-content-desc
+                    p Helping companies to become more digitally connected is one of our specialities. From design thinking to machine learning, we start with a holistic approach that combines core values with the value of technology solutions. 
+                    p The result, clients have a much deeper grasp on their company’s purpose and are better prepared to maintain consistency in the connected age.
+            ul.adaptis-solution-container-items
+                li.adaptis-solution-container-items__item
+                    p.adaptis-solution-container-items__item--content User Experience <br> Design
+                    .adaptis-solution-container-items__item--text
+                        span UX
+                        span UI
+                li.adaptis-solution-container-items__item
+                    p.adaptis-solution-container-items__item--content Development <br> & Delivery
+                li.adaptis-solution-container-items__item
+                    p.adaptis-solution-container-items__item--content Agency <br> Partnership
+            .adaptis-solution-container-title
+                span To support 
+                span global companies
+
+mixin adaptis-clients
+    section.adaptis-clients
+        .adaptis-clients-container
+            .adaptis-clients-container-grid
+                each val, index in adaptisClientsArray
+                    .adaptis-clients-container-grid-item
+                        a(href="#")
+                            img(class="load done" src=`${val.src}` alt=`${val.alt}`)
+
+mixin adaptis-relative-block
+    section.adaptis-relative-block
+        .adaptis-relative-block-container
+            ul.adaptis-relative-block-container-items
+                each val, index in adaptisRelativeBlockArray
+                    li.adaptis-relative-block-container-items__item
+                        a(href="#" style=`background-image: url(${val.backgroundImage})`).adaptis-relative-block-container-items__item-thumb
+                            .adaptis-relative-block-container-items__item-caption= val.caption
+                        a(href="#").adaptis-relative-block-container-items__item-title= val.title
+                        .adaptis-relative-block-container-items__item-desc= val.desc
+                        a(href="#").adaptis-relative-block-container-items__item-link= val.link
+
+mixin adaptis-footer-clocks
+    each val, index in adaptisFooterLocationsArray
+        .adaptis-footer-clock
+            .adaptis-footer-clock__clock
+                div(class=`adaptis-footer-clock__clock--${val.clock}`)
+                    .adaptis-footer-clock__clock--location-hours
+                        .adaptis-footer-clock__clock-location-hours--hours
+                    .adaptis-footer-clock__clock--location-minutes
+                        .adaptis-footer-clock__clock-location-minutes--minutes
+                    .adaptis-footer-clock__clock--location-seconds
+                        .adaptis-footer-clock__clock-location-seconds--seconds
+            .adaptis-footer-clock__text
+                .adaptis-footer-clock__text--location= val.location
+                .adaptis-footer-clock__text--phone
+                    a(href="#")= val.phone
+                .adaptis-footer-clock__text--email
+                    a(href="#")= val.email
+
+mixin adaptis-footer
+    footer.adaptis-footer
+        .adaptis-footer-container
+            a(href="#").adaptis-footer-container__logo
+                span ADAPTIS
+        .adaptis-footer-items
+            each val, index in adaptisHeaderMenuBarItems
+                a.adaptis-footer-item(href="#")= val
+        .adaptis-footer-clocks
+            +adaptis-footer-clocks
+
+mixin adaptis-contact
+    section.adaptis-contact
+        .adaptis-contact-container
+            .adaptis-contact-container-title
+                span Every project
+                span Starts with a conversation
+            .adaptis-contact-container-desc We’re always looking to meet and work with companies that have forwarded thinking views. Our team is a mixed bunch of strategists, designers, developers, analysts, with passionate and all-round nice people.
+            form(method="POST").adaptis-contact-container-form
+                each val, index in adaptisContactFields
+                    .adaptis-contact-container-form__field
+                        label(for=`${val.labelFor}`).adaptis-contact-container-form__field--label= val.labelText
+                        input(id=`${val.ID}` type=`${val.inputType}` name=`${val.name}`).adaptis-contact-container-form__field--input
+                .adaptis-contact-container-form__field
+                    button(type="submit").adaptis-contact-container-form__field--button
+                        span Submit
+
+

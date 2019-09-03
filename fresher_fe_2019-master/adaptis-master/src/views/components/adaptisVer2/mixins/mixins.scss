@@ -1,0 +1,44 @@
+@import '../../../../assets/styles/base/variables';
+@import '../../../../assets/styles/base/mixins';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    @include typography($adaptis-main-font, #{fontWeight(light)}, 16px, 1.5);
+    background-color: $bg-color-primary-white;
+    color: #{color(adaptis-font-color)};
+    overflow-y: scroll;
+    min-height: 100%;
+    touch-action: manipulation;
+    @include min-sm {
+        font-size: 1em;
+    }
+}
+
+body {
+    transition: opacity 0.3s ease-in-out;
+    @include typography($adaptis-main-font, #{fontWeight(light)}, 1rem, 1.6rem);
+    background-color: #{color(adaptis-bg-color)};
+    opacity: 1;
+    overflow: hidden;
+    color: #{color(adaptis-font-color)};
+    p, a {
+        font-family: $adaptis-main-font;
+        font-weight: 300;
+        color: #{color(adaptis-font-color)};
+        font-size: 1.1em;
+    }
+
+}
+
+a {
+    @include display(inline-block, initial);
+    font-size: 0.75rem;
+    line-height: 2;
+    text-decoration: none;
+    transition: all .25s ease;
+}

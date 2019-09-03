@@ -1,0 +1,151 @@
+.adaptis-solution-block {
+    position: relative;
+    .adaptis-solution-decor {
+        @include adaptisVer2BackgroundImage(url('../images/adaptis/visualisation.png'));
+        @include translateY(-200px);
+        @include absolute(absolute, 0, 0, initial, initial);
+        @include scale(250px, 350px);
+        display: none;
+        @include min-sm {
+            @include scale(414px, 582px);
+            display: block;
+        }
+    }
+    .adaptis-solution-container {
+        max-width: 1024px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 15px;
+        &-content {
+            @include flexbox;
+            align-content: center;
+            margin-bottom: 60px;
+            &-title {
+                @include typography($adaptis-sub-font, initial, 2.25em, 1.25em);
+                margin-bottom: 40px;
+                flex: 1.5;
+                @include min-sm {
+                    font-size: 2.625em;
+                }
+                span {
+                    display: block;
+                }
+                span:first-child {
+                    font-size: .6em;
+                    color: #6E6E6E;
+                    line-height: 1em;
+                }
+            }
+            &-desc {
+                flex: 2;
+                @include min-sm {
+                    padding-right: 15%;
+                }
+                p {
+                    margin-bottom: 20px;
+                }
+                p:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &-items {
+            margin-bottom: 100px;
+            @include flexbox;
+            flex-direction: column;
+            @include min-sm {
+                margin-bottom: 200px;
+                flex-direction: row;
+            }
+            &__item {
+                animation: fadeInUp .5s ease-in-out forwards;
+                flex: 2;
+                color: #{color(c-white)};
+                padding: 30px 20px;
+                position: relative;
+                margin: 0 0 20px;
+                @include min-sm {
+                    flex: 1;
+                    margin-left: 20px;
+                }
+                p {
+                    color: #{color(c-white)};
+                }
+            }
+            &__item:first-child {
+                animation-delay: .2s;
+                margin-left: 0;
+                background: #3C213A;
+                p {
+                    font-size: 1.125em;
+                }
+            }
+            &__item:nth-child(2) {
+                animation-delay: .4s;
+                background: rgba(60,33,58,.85);
+            }
+            &__item:nth-child(3) {
+                animation-delay: .6s;
+                background: rgba(60,33,58,.7);
+            }
+            @keyframes fadeInUp {
+                0% {opacity: 0; @include translate3D(0, 40px, 0)}
+                100% {opacity: 1; @include translate3D(0, 0, 0)}
+            }
+        }
+        &-title {
+            @include typography($adaptis-sub-font, initial, 2.25em, 1.25em);
+            margin-bottom: 20px;
+            @include min-sm {
+                font-size: 2.625em;
+                margin-bottom: 30px;
+            }
+            span {
+                display: block;
+                color: #{color(adaptis-font-color)};
+            }
+            span:first-child {
+                font-size: .6em;
+                color: #6E6E6E;
+                line-height: 1em;
+            }
+        }
+    }
+}
+
+.adaptis-solution-container-items__item:first-child:hover {
+    .adaptis-solution-container-items__item--text {
+        opacity: 1;
+        span {
+            opacity: 1;
+            @include translate2D(0, 0);
+        }
+    }
+}
+
+.adaptis-solution-container-items__item--text {
+    @include absolute(absolute, 50%, 0, initial, initial);
+    @include translate2D(0, -50%);
+    width: 60px;
+    opacity: 0;
+    @include transition(opacity, .5s, ease-in-out);
+    &::before {
+        content: '';
+        @include absolute(absolute, 50%, initial, initial, initial);
+        @include scale(100%, 1px);
+        background: #{color(c-white)};                        
+    }
+    span {
+        display: block;
+        text-align: center;
+        line-height: 2.5em;
+        font-size: .75em;
+        @include translate2D(10px, 0);
+        opacity: 0;
+        @include transition(all, .5s, ease-in-out);
+        transition-delay: .2s;
+    }
+    span:last-child {
+        transition-delay: .4s;
+    }
+}

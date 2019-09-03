@@ -1,0 +1,57 @@
+.adaptis-highlight-block {
+    overflow: hidden;
+    @include display(flex, center);
+    align-items: center;
+    position: relative;
+    min-height: 400px;
+    margin-bottom: 40px;
+    @include min-sm {
+        margin-bottom: 100px;
+    }
+    &::before {
+        content: '';
+        @include absolute(absolute, 0, initial, initial, 0);
+        z-index: 1;
+        @include scale(100%, 100%);
+        background: rgba(0,0,0,.5);
+    }
+    .adaptis-highlight-block-bgd {
+        @include adaptisVer2BackgroundImage(url('../images/adaptis/adaptis-vicostone.jpg'));
+        @include translateX(0px);
+        @include absolute(absolute, -150px, initial, initial, 0);
+        @include scale(100%, 600px);
+    }
+    .adaptis-highlight-block-content {
+        max-width: 1024px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 15px;
+        position: relative;
+        z-index: 2;
+        @include flexbox;
+        flex-direction: column;
+        @include min-sm {
+            flex-direction: row;
+        }
+        &__desc {
+            color: #{color(c-white)};
+            text-align: center;
+            padding: 0 5%;
+            width: 100%;
+            margin-bottom: 30px;
+            @include min-sm {
+                margin-bottom: 0;
+                text-align: right;
+                width: 70%;
+
+            }
+        }
+        &__link {
+            @include adaptisVer2Link(#{color(c-white)});
+            position: relative;
+            background: rgba(255,255,255,.25);
+            align-self: center;
+            @include adaptisVer2LinkBefore(#{color(c-white)});
+        }
+    }
+}

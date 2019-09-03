@@ -23,13 +23,19 @@ $fonts: (
     heading: ('Kreon', sans-serif),
     content: ('ProximaNova', sans-serif),
     icomoon: ('icomoon'),
-    fontawesome: ('Fontawesome')
+    fontawesome: ('Fontawesome'),
+    //ADAPTIS-FONT
+    adaptisFonts: ("runda", sans-serif),
+    adaptisSubFonts: ("capitolium-2", sans-serif)
 );
 
 $font-main: fonts(main);
 $font-heading: fonts(heading);
 $font-icomoon: fonts(icomoon);
 $font-fontawesome: fonts(fontawesome);
+//ADAPTIS-FONT
+$adaptis-main-font: fonts(adaptisFonts);
+$adaptis-sub-font: fonts(adaptisSubFonts);
 
 $fontweight-light: fontWeight(light);
 $fontweight-regular: fontWeight(regular);
@@ -56,6 +62,9 @@ $colors: (
     c-gray-1: #ddd,
     c-pink-light: #EBCCD1,
     c-red: #A94442,
+    //ADAPTIS-COLOR
+    adaptis-font-color: #393939,
+    adaptis-bg-color: #fcfcfc
 );
 // // main-colors:
 $bg-color-primary: color(c-blue);

@@ -1,0 +1,129 @@
+.adaptis-relative-block {
+    padding: 60px 0;
+    background: #{color(c-white)};
+    &-container {
+        max-width: 1024px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 15px;
+        &-items {
+            @include flexbox;
+            flex-direction: column;
+            @include min-sm {
+                flex-direction: row;
+            }
+        }
+    }
+}
+
+.adaptis-relative-block-container-items__item {
+    animation: fadeInUp .5s ease-in-out forwards;
+    flex: 2;
+    margin: 0 0 30px;
+    @include min-sm {
+        flex: 1;
+        margin-left: 16px;
+    }
+    &:first-child {
+        animation-delay: .2s;
+        @include min-sm {
+            margin-left: 0px;
+        }
+    }
+    &:nth-child(2) {
+        animation-delay: .4s;
+    }
+    &:nth-child(3) {
+        animation-delay: .6s;
+    }
+    &-thumb {
+        @include adaptisVer2BackgroundImageProperties;
+        height: 200px;
+        margin-bottom: 20px;
+        position: relative;
+        display: block;
+        overflow: hidden;
+        @include min-sm {
+            height: 220px;
+            margin-bottom: 30px;
+        }
+        &::before {
+            content: '';
+            @include absolute(absolute, 0, initial, initial, 0);
+            @include scale(100%, 100%);
+            transform: scale(.75);
+            opacity: 0;
+            background: rgba(0,0,0,.5);
+            @include transition(all, .3s, ease-in-out);
+        }
+        &:hover::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .adaptis-relative-block-container-items__item-caption {
+            @include absolute(absolute, 0, initial, initial, 0);
+            @include scale(100%, 100%);
+            @include transition(all, .3s, ease-in-out);
+            @include display(flex, center);
+            padding: 15px;
+            z-index: 2;
+            color: #{color(c-white)};
+            align-items: center;
+            opacity: 0;
+            @include translate2D(0, -10px);
+            &:hover {
+                opacity: 1;
+                @include translate2D(0, 0);
+            }
+        }
+    }
+    &-title {
+        color: #3C213A;
+        font-size: 1.25em;
+        position: relative;
+        margin-bottom: 10px;
+        @include min-sm {
+            margin-bottom: 20px;
+        }
+        &::before {
+            content: '';
+            @include absolute(absolute, initial, initial, 0, 0);
+            @include scale(0, 1px);
+            background: #3C213A;
+            @include transition(width, .3s, ease-in-out);
+        }
+        &:hover::before {
+            width: 100%;
+        }
+    }
+    &-desc {
+        font-size: .875em;
+        color: #3C213A;
+        padding-bottom: 10px;
+        @include min-sm {
+            overflow: hidden;
+            height: 130px;
+        }
+    }
+    &-link {
+        @include adaptisVer2LinkBefore(#3C213A);
+        @include absolute(absolute, 0, 0, initial, initial);
+        color: #3C213A;
+        letter-spacing: 1px;
+        position: relative;
+        padding-right: 25px;
+        font-size: .6875rem;
+        line-height: 2.18182;
+        font-weight: bold;
+        line-height: 1.5;
+        &:hover::before {
+            // left: initial;
+            right: 0;
+        }
+    }
+}
+
+@keyframes fadeInUp {
+    0% {opacity: 0; @include translate3D(0, 40px, 0)};
+    100% {opacity: 1; @include translate3D(0, 0, 0)};
+}

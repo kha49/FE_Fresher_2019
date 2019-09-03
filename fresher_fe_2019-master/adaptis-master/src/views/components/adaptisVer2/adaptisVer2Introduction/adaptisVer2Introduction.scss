@@ -1,0 +1,250 @@
+.adaptis-introduction {
+    @include paddings(50px, 0, 50px, 0);
+    @include min-sm {
+        @include paddings(100px, 0, 100px, 0);
+    }
+    &-container {
+        margin: 0 auto;
+        width: 100%;
+        @include paddings(0, 15px, 0, 15px);
+        // max-width: 1024px;
+        max-width: 960px;
+    }
+}
+
+.adaptis-introduction-item {
+    @include flexbox();
+    flex-direction: column;
+    margin-bottom: 150px;
+    position: relative;
+    @include min-sm {
+        flex-direction: row;
+    }
+    &-content {
+        flex: 2;
+        padding: 0 5%;
+        @include translateX(0px);
+        opacity: 1;
+        @include min-sm {
+            padding: 0 0 0 10%;
+        }
+        &__title {
+            @include typography($adaptis-sub-font, initial, 2.25em, 1.25em);
+            margin-bottom: 20px;
+            text-align: right;
+            @include min-sm {
+                font-size: 2.625em;
+                margin-bottom: 30px;
+            }
+            span {
+                display: block;
+                color: #{color(adaptis-font-color)};
+            }
+            span:first-child {
+                font-size: .6em;
+                color: #6E6E6E;
+                line-height: 1em;
+            }
+        }
+        &__context {
+            @include paddings(0, 0, 0, 5%);
+            color: #{color(adaptis-font-color)};
+            font-size: 1em;
+            @include min-sm {
+                @include paddings(0, 0, 0, 50%);
+            }
+            &-highlight {
+                font-size: 1.125em;
+                margin-bottom: 30px;
+                font-weight: #{font-weight(light)};
+                span {
+                    display: block;
+                    color: #9F579E;
+                }
+                span:first-child {
+                    color: #3C213A;
+                }
+            }
+            &-desc {
+                margin-bottom: 30px;
+            }
+            &-link {
+                @include adaptisVer2Link(#3C213A);
+                @include adaptisVer2LinkBefore(#3C213A);
+            }
+        }
+    }
+}
+
+.adaptis-introduction-item-special {
+    @include flexbox;
+    flex-direction: column;
+    margin-bottom: 150px;
+    position: relative;
+    width: 100%;
+    align-items: normal;
+    @include min-sm {
+        flex-direction: row;
+    }
+    @include min-sm_max-xl {
+        width: 90%;
+        @include translate2D(0, 0);
+    }
+    @include min-xl {
+        width: 110%;
+        @include translate2D(-20%, 0);
+    }
+    &-balloon {
+        @include absolute(absolute, -65px, initial, initial, calc(50%-70px));
+        z-index: 3;
+        @include translate2D(0px, -150px);
+        opacity: 1;
+        @include min-sm {
+            left: 7%;
+        }
+        &__bgd {
+            @include adaptisVer2BackgroundImage(url('../images/adaptis/adaptis-jw-ballon.png'));
+            @include scale(141px, 350px);
+            @include rotate(5deg);
+            animation: ballon 8s ease-in-out infinite;
+            @include min-sm {
+                @include scale(213px, 527px);
+            }
+        }
+        @keyframes ballon {
+            0% {@include rotate(5deg)}
+            50% {@include rotate(-5deg)}
+            100% {@include rotate(5deg)}
+        }
+    }
+    &-thumb {
+        @include adaptisVer2BackgroundImage(url('../images/adaptis/adaptis-jw-bgd.jpg'));
+        @include scale(100%, 300px);
+        @include translateX(0px);
+        opacity: 1;
+        @include min-sm {
+            width: 335px;
+        }
+    }
+    &-content {
+        flex: 2;
+        background: #{color(adaptis-font-color)};
+        color: #{color(c-white)};
+        padding: 30px;
+        position: relative;
+        @include translateX(0px);
+        opacity: 1;
+        @include min-sm {
+            min-height: 290px;
+        }
+        &__subtitle {
+            font-size: 1em;
+        }
+        &__title {
+            font-size: 1.375em;
+            margin-bottom: 20px;
+        }
+        &__desc {
+            font-size: 0.875em;
+            margin-bottom: 30px;
+        }
+        &__link {
+            @include adaptisVer2Link(#3C213A);
+            border-color: #3C213A;
+            background: #{color(c-white)};
+            @include adaptisVer2LinkBefore(#3C213A);
+            @include min-xl {
+                @include absolute(absolute, initial, -50px, 10%, initial);
+            }
+        }
+    }
+}
+
+.adaptis-introduction-item-switch {
+    @include flexbox;
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 0;
+    @include min-sm {
+        margin-bottom: 60px;
+        flex-direction: row-reverse;
+    }
+    &-thumb {
+        width: 100%;
+        flex: 1;
+        text-align: center;
+        @include display(flex, center);
+        align-items: center;
+        @include translateX(0px);
+        opacity: 1;
+        @include min-sm {
+            width: 50%;
+        }
+        &__bgd {
+            @include adaptisVer2BackgroundImage(url('../images/adaptis/bgd-solvers.png'));
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            min-height: 30vh;
+            margin-bottom: 30px;
+            @include min-sm {
+                width: 350px;
+                min-height: 550px;
+                margin-bottom: 0;
+            }
+            &-link {
+                @include adaptisVer2Link(#{color(c-white)});
+                color: #3C213A;
+                background: #{color(c-white)};
+                @include absolute(absolute, initial, initial, 0, 0);
+                border-color: #{color(c-white)};
+                width: 50%;
+                min-width: 200px;
+                @include adaptisVer2LinkBefore(#3C213A);
+            }
+        }
+    }
+    &-content {
+        flex: 2;
+        padding: 0 5%;
+        @include translateX(0px);
+        opacity: 1;
+        @include min-sm {
+            @include paddings(0, 10%, 0, 0);
+        }
+        &__title {
+            @include typography($adaptis-sub-font, #{fontWeight(light)}, 2.25rem, 1.25rem);
+            @include min-sm {
+                font-size: 2.625rem;
+                margin-bottom: 30px;
+            }
+            span {
+                font-family: $adaptis-sub-font;
+                display: block;
+                height: 36px;
+            }
+            span:first-child {
+                font-size: .6em;
+                color: #6E6E6E;
+                line-height: 1em;
+            }
+        }
+        &__context {
+            font-size: 1em;
+            color: #{color(adaptis-font-color)};
+            padding: 0 0 0 5%;
+            @include min-sm {
+                padding: 0 30% 0 0;
+            }
+            &--desc {
+                margin-bottom: 30px;
+                p {
+                    margin-bottom: 30px;
+                }
+                p:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}

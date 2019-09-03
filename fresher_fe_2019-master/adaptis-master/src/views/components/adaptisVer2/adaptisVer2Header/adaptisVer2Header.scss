@@ -1,0 +1,83 @@
+.adaptisVer2Header {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    @include transition(all, .5s, ease-in-out);
+    backface-visibility: hidden;
+    &-logo {
+        @include transition(all, .25s, initial);
+        opacity: 1;
+        @include absolute(absolute, 25px, initial,initial, 40px);
+        z-index: 9;
+        a {
+            letter-spacing: 24px;
+            color: #{color(c-black)};
+            font-size: 1rem;
+            @include max-md {
+                letter-spacing: 12px;
+            }
+        }
+    }
+    &-menu-bar {
+        float: right;
+        background: rgba(60,33,58,.9);
+        @include scale(80px, 80px);
+        position: relative;
+        white-space: nowrap;
+        @include transition(width, .5s, ease-in-out);
+        &__items {
+            @include absolute(absolute, 0, initial, 0, 0);
+            @include display(flex, center);
+            align-items: center;
+            align-content: center;
+            flex-direction: column;
+            overflow: hidden;
+            a {
+                @include paddings(0, 0, 10px, 0);
+                margin-bottom: 30px;
+                line-height: 1.5em;
+                &::before {
+                    content: '';
+                    @include absolute(absolute, initial, initial, 0, 0);
+                    @include scale(100%, 2px);
+                    background: #{color(c-white)};
+                    @include transition(width, .5s, ease-in-out);
+                }
+            }
+        }
+        &__hamburger {
+            @include absolute(absolute, 30px, initial, initial, 25px);
+            @include scale(30px, 20px);
+            z-index: 3;
+            cursor: pointer;
+            &--line-1 {
+                @include absolute(absolute, 0, 0, initial, initial);
+                @extend %hamburgerLine;
+                transition-delay: .4s;
+            }
+            &--line-2 {
+                @include absolute(absolute, 0, 0, 0, initial);
+                @extend %hamburgerLine;
+                margin: auto;
+                transition-delay: .3s;
+            }
+            &--line-3 {
+                @include absolute(absolute, initial, 0, 0, initial);
+                @extend %hamburgerLine;
+                transition-delay: .2s;
+            }
+            &--line-4 {
+                @include absolute(absolute, 9px, 0, initial, initial);
+                @extend %hamburgerCrossLine;
+                transition-delay: 0.2s, 0.2s, 0.2s;
+                transform: rotate(45deg) translate3d(-30px, 0, 0);
+            }
+            &--line-5 {
+                @include absolute(absolute, 9px, 0, initial, initial);
+                @extend %hamburgerCrossLine;
+                transition-delay: 0s, 0s, 0s;
+                transform: rotate(-45deg) translate3d(30px, 0, 0);
+            }
+        }
+    }
+}

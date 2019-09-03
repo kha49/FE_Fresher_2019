@@ -17,8 +17,32 @@
     }
 }
 
+@mixin max-md {
+    @media (max-width: #{breakpoints(md)}) {
+        @content;
+    }
+}
+
 @mixin min-sm {
     @media (min-width: #{breakpoints(sm)}) {
+        @content;
+    }
+}
+
+@mixin max-sm {
+    @media (max-width: #{breakpoints(sm)}) {
+        @content;
+    }
+}
+
+@mixin min-xl {
+    @media (min-width: #{breakpoints(xl)}) {
+        @content;
+    }
+}
+
+@mixin max-xl {
+    @media (max-width: #{breakpoints(xl)}) {
         @content;
     }
 }
@@ -91,6 +115,12 @@
 
 @mixin ie {
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        @content;
+    }
+}
+
+@mixin min-sm_max-xl {
+    @media (min-width: #{breakpoints(sm)}) and (max-width: #{breakpoints(xl)}) {
         @content;
     }
 }
@@ -205,5 +235,193 @@
     }
     &::-ms-input-placeholder {
         @content;
+    }
+}
+
+@mixin display($flex, $justify-content) {
+    display: $flex;
+    justify-content: $justify-content;
+}
+
+@mixin paddings($top, $right, $bottom, $left) {
+    padding: $top $right $bottom $left;
+}
+
+@mixin scale($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin absolute($absolute, $top, $right, $bottom, $left) {
+    position: $absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin transition($transition, $duration, $timingFunction) {
+    transition: $transition $duration $timingFunction;
+}
+
+%hamburgerLine {
+    @include transition(width, .2s, ease-in-out);
+    @include scale(100%, 2px);
+    background-color: #{color(c-white)};
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+%hamburgerCrossLine {
+    transition: opacity .2s ease-in-out,transform .2s ease-in-out,-webkit-transform .2s ease-in-out;
+    @include scale(100%, 2px);
+    background-color: #{color(c-white)};
+    border-radius: 2px;
+    pointer-events: none;
+    opacity: 1;
+}
+
+%adaptisVer2SlideTransitionCaption {
+    background: rgba(0,0,0,.75);
+    width: 100%;
+    transition: opacity .5s ease-in-out .25s,transform .5s ease-in-out .25s,-webkit-transform .5s ease-in-out .25s;
+}
+
+%adaptisVer2SlideButtons {
+    @include scale(50px, 50px);
+    position: relative;
+    background: 0 0;
+    border: 1px solid #{color(c-white)};
+    border-radius: 50%;
+    text-indent: -9999px;
+    opacity: 1;
+    cursor: pointer;
+    @include transition(all, .3s, ease-in-out);
+}
+
+%adaptisVer2SlideButtonsBefore {
+    content: '';
+    @include absolute(absolute, 50%, initial, initial, 50%);
+    color: #{color(c-white)};
+    border: solid #{color(c-white)};
+    border-width: 0 3px 3px 0;
+    padding: 5px;
+    cursor: pointer;
+}
+
+@mixin adaptisVer2SlideTransition($opacity, $transform, $duration, $timingFunction, $delay) {
+    transition: $opacity $duration $timingFunction $delay, $transform $duration $timingFunction $delay, -webkit-transform $duration $timingFunction $delay;
+    @include translate2D(0, 0);
+    opacity: 1;
+}
+
+@mixin adaptisVer2Link($color) {
+    border: 1px solid $color;
+    display: inline-block;
+    letter-spacing: 2px;
+    font-weight: #{fontWeight(medium)};
+    color: $color;
+    min-width: 200px;
+    @include transition(all, .2s, ease-in-out);
+    font-size: .6875rem;
+    line-height: 2.18182;
+    @include paddings(7px, 60px, 7px, 20px);
+    overflow: hidden;
+    background: 0 0;
+    position: relative;
+}
+
+@mixin adaptisVer2LinkBefore($color) {
+    &::before {
+        content: "→";
+        @include transition(all, .2s, ease-in-out);
+        @include absolute(absolute, 50%, initial, initial, 80%);
+        font-size: 16px;
+        line-height: 0;
+        opacity: 0;
+        color: $color;
+    }
+    &:hover::before {
+        left: 85%;
+        opacity: 1;
+    }
+}
+
+@mixin adaptisVer2LinkAfter {
+    &::after {
+        content: '';
+        @include absolute(absolute, 0, initial, initial, 0);
+        @include scale(100%, 100%);
+        z-index: 1;
+        @include transition(all, .5s, ease-in-out);
+        opacity: 1;
+        @include translate2D(-105%, 0);
+        border-right-width: 1px;
+        border-right-style: solid;
+        border-right-color: #{color(c-white)};
+        background-color: rgba(255,255,255,.25);
+    }
+    &:hover::after {
+        opacity: 0;
+        @include translate2D(0, 0);
+    }
+}
+
+@mixin adaptisVer2BackgroundImageProperties {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@mixin adaptisVer2BackgroundImage($backgroundImage) {
+    background-image: $backgroundImage;
+    @include adaptisVer2BackgroundImageProperties;
+}
+
+@mixin adaptisVer2Clients {
+    display: inline-block;
+    font-size: .75rem;
+    line-height: 2;
+    @include transition(all, .25s, ease);
+    img {
+        width: 100%;
+        filter: grayscale(1);
+        opacity: .8;
+        @include transition(all, .4s, ease-in-out);
+        &:hover {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+    }
+}
+
+@mixin adaptisVer2ClientsAfter {
+    &::after {
+        content: '';
+        @include absolute(absolute, initial, initial, 0, 50%);
+        @include translate2D(-50%, 0);
+        @include scale(50%, 1px);
+        background: #d5d5d5;
+    }
+}
+
+@mixin adaptisVer2ClientsBefore {
+    &::before {
+        content: '';
+        @include absolute(absolute, 50%, initial, initial, initial);
+        @include translate2D(0, -50%);
+        @include scale(1px, 50%);
+        display: inline-block;
+        background: #d5d5d5;
+        z-index: 1;
+    }
+}
+
+@mixin adaptisVer2FooterClockText {
+    font-size: .6875rem;
+    line-height: 1.75rem;
+    a {
+        letter-spacing: 1px;
+        color: #{color(c-white)};
     }
 }

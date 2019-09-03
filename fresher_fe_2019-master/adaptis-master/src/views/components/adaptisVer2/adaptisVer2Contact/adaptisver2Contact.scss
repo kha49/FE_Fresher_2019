@@ -1,0 +1,96 @@
+.adaptis-contact {
+    background: #{color(c-white)};
+    padding: 160px 0 60px;
+    &-container {
+        margin:0 auto;
+        width: 100%;
+        padding: 0 15px;
+        max-width: 1200px;
+        &-title {
+            @include typography($adaptis-sub-font,normal , 2.25em, 1.25em);
+            margin-bottom: 20px;
+            @include min-sm {
+                font-size: 2.625em;
+                margin-bottom: 30px;
+            }
+            span {
+                display: block;
+                position: relative;
+                overflow: hidden;
+                &::before {
+                    content: '';
+                    @include absolute(absolute, 0, initial, initial, 0);
+                    @include scale(100%, 100%);
+                    @include translate2D(0, 100%);
+                    background: #{color(c-white)};                    
+                }
+            }
+            span:first-child {
+                font-size: .6em;
+                color: #6E6E6E;
+                line-height: 1em;
+            }
+        }
+        &-desc {
+            margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+            @include min-md {
+                max-width: 63%;
+            }
+            &::before {
+                content: '';
+                @include absolute(absolute, 0, initial, initial, 0);
+                @include scale(100%, 100%);
+                @include translate2D(0, 100%);
+                background: #{color(c-white)};  
+            }
+        }
+        &-form {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            background: 0 0;
+            max-width: 100%;
+            padding: 0;
+            &__field {
+                position: relative;
+                display: block;
+                margin-bottom: 30px;
+                &--label {
+                    font-size: .9em;
+                    display: block;
+                    cursor: pointer;
+                }
+                &--input {
+                    display: block;
+                    width: 100%;
+                    padding: 10px 0;
+                    border: none;
+                    border-bottom: 1px solid #CBCBCB;
+                    font-size: 16px;
+                    margin: 0;
+                    color: #182F45;
+                }
+                &--button {
+                    border: 1px solid #{color(c-white)};
+                    display: inline-block;
+                    letter-spacing: 2px;
+                    min-width: 200px;
+                    line-height: 2.18182;
+                    position: relative;
+                    background: #3C213A;
+                    color: #{color(c-white)};
+                    font-size: 12px;
+                    cursor: pointer;
+                    padding: 10px 60px;
+                    margin-top: 30px;
+                    @include adaptisVer2LinkBefore(#{color(c-white)});
+                    span {
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}
