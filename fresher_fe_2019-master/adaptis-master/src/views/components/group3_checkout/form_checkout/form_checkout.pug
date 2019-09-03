@@ -1,0 +1,52 @@
+.col-12
+    p.form_checkout__title.text-center Express checkout
+    div.border.text-center.p-3
+        img.w-25(src="https://www.stickpng.com/assets/images/5895ceb8cba9841eabab6072.png", alt="alt")
+    p.text-center|or
+.col-12
+    .row
+        .col-6
+            h3 Contact information
+        .col-6
+            span Already have an account?
+                a(href="") Login
+        .col-12.pt-3.pb-3
+            .form-group
+                input.form-control(type="text", placeholder="Email or mobile phone number")
+        .col-12
+            .form-check
+                input.form-check-input(type="checkbox", name="") 
+                |Keep me up to date on news and exclusive offers
+    .col-12.p-0.pt-5
+        h3 Shipping address
+        form(action="" method="method")
+            .row
+                .col-12.col-sm-6
+                    .form-group
+                        input.form-control(type="text", placeholder="Email or mobile phone number")
+                .col-12.col-sm-6
+                    .form-group
+                        input.form-control(type="text", placeholder="First name (optional)")
+                .col-12
+                    .form-group
+                        input.form-control(type="text", placeholder="Last name")
+                .col-12
+                    .form-group
+                        input.form-control(type="text", placeholder="Address")
+                .col-12
+                    .form-group
+                        input.form-control(type="text", placeholder="Apartment, suite, ect. (optional)")
+                .col-12.col-sm-6
+                    .form-group
+                        select.form-control(type="text", placeholder="City")
+                            option(value="") Viet Nam
+                            option(value="") Viet Nam
+                .col-12.col-sm-6
+                    .form-group
+                        input.form-control(type="text", placeholder="Postal code")
+                .col-12
+                    .form-check
+                        input.form-check-input(type="checkbox", name="") 
+                        |Save this information for next time
+                .col-12.text-right.pt-4.pb-4.col-12.text-right.pt-4
+                    button.btn(type='submit') Continue to shipping
