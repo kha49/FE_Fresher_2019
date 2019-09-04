@@ -10,6 +10,7 @@ import box_checkout from './views/components/group3_checkout/box-checkout/box-ch
 import form_checkout from './views/components/group3_checkout/form_checkout/form_checkout';
 import Modal from './views/components/group3/modal/modal';
 import hotSale from './views/components/group3/main/hotsale/hotsale';
+import Trending from './views/components/group3/main/trending/trending';
 require('normalize.css');
 
 $(() => {
@@ -21,45 +22,11 @@ $(document).ready(() => {
   user.init();
   nav_canvas.init();
   hotSale.init();
-  $('.multiple-items').slick({
-    dots: false,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    arrows: true,
-    // prevArrow: $('.prev'),
-    // nextArrow: $('.next'),
-    responsive: [
-      {
-        breakpoint: 1128,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: false
-        }
-      },
-      {
-        breakpoint: 744,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
   scrollBtn.init();
   box_checkout.init();
   form_checkout.init();
   Modal.init();
+  Trending.init();
   new WOW().init();
 });
 
