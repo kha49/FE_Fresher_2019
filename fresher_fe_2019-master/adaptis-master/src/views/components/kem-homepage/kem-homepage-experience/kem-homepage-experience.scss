@@ -114,18 +114,24 @@
 
     .slick-prev::before,
     .slick-next::before {
-        font-size: 90px;
-        opacity: 0.5;
+        font-size: 50px;
+        opacity: 0.45;
+        @include min-sm {
+            font-size: 90px;
+        }
     }
 
     .slick-arrow {
         position: absolute;
         display: inline-block;
-        top: 50%;
+        top: 25%;
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
         background-repeat: no-repeat;
         background-size: cover;
         z-index: 10;
+        @include min-sm {
+            top: 46%;
+        }
     }
 }

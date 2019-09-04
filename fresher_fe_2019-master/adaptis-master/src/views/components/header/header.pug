@@ -1,0 +1,57 @@
+header.kem-header(id="header")
+    .toggle-block
+        label(for="headerCheckbox")
+            span.toggle-block__toggle
+                i(class="fas fa-bars")
+    .kem-header__logo-frame
+        img.kem-header__logo-frame__logo(src="../../../../assets/images/kem/kem-header/logo.svg", alt="kem-logo")
+    +heading("kem-heading-header", "kem-heading-header__title", "KEMPINSKI HOTELS", "kem-heading-header__desc-frame", "kem-heading-header__desc-frame__desc", "A Constellation of Havens")
+
+    .kem-header__function
+        a.kem-header__function__title(href="#") 
+            span.header-link-title
+                |kempinski hotel
+            span.icon-down-title
+                i(class="fas fa-angle-down")
+        ul.kem-header__function__list
+            .kem-header__function__item
+                .kem-header__function__link(id="lang")
+                    span.header-link-text
+                        |english
+                    span.icon-down
+                        i(class="fas fa-angle-down")
+                ul.language__list(id="langList")
+                    - var langArr = ["Ai Cập", "Espanol", "France", "Pyccknm", "Tàu", "Deutsch"]
+                    each lang in langArr
+                        li.language__item
+                            a.language__link(href="")= lang        
+            .kem-header__function__item
+                .kem-header__function__link(id= "account")
+                    span.icon-user    
+                        i(class="far fa-user")
+                    span.header-link-text
+                        |login
+                    .account__container(id= "accountContainer")
+                        .row.between-lg.account__login
+                            - var linkArr = [
+                            - {classContent: "my account"},
+                            - {classContent: "Need assistant"}
+                            - ]
+                            each link in linkArr
+                                a(href="" class= "account__login__login-way")= link.classContent
+
+                        h5.account__title Need something special for your upcoming stay?
+                        p.account__desc Access your upcoming trip to modify or cancel your booking.
+                        .row.between-lg.account__login
+                            - var linkArr = [
+                            - {classContent: "create a new account"},
+                            - {classContent: "login to your account"}
+                            - ]
+                            each link in linkArr
+                                a(href="" class= "account__login__login-btn")= link.classContent
+
+input(type="checkbox" id="headerCheckbox")
+span.header-nav-toggle.header-bar-icon
+    i(class="fas fa-bars")
+span.header-nav-toggle.header-close-icon
+    i(class="fas fa-times")

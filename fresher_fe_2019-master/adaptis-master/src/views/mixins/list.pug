@@ -15,6 +15,25 @@ mixin heading(classHeading, titleClass, titleContent, classDescFrame, descClass,
 //- kem button link 
 mixin button-link(title)
   a.kem-btn-link= title
+//- banner
+//- mixin banner(imgLeft, textHoverLeft, imgRight, textHoverRight)
+//-   .kem-homepage-banner__img-frame
+//-     .kem-homepage-banner__img-frame__img-banner.banner__small-left(style= "background-image: url(../../../../assets/images/kem/kem-homepage/kem-homepage-banner/"+imgLeft+")")
+//-       .banner-hover
+//-         span.banner-hover__text= textHoverLeft
+//-     .kem-homepage-banner__img-frame__img-banner.banner__small-right(style= "background-image: url(../../../../assets/images/kem/kem-homepage/kem-homepage-banner/"+imgRight+")")
+//-       .banner-hover
+//-         span.banner-hover__text= textHoverRight
+
+
+
+
+mixin banner(smallBanners)
+  .kem-homepage-banner__img-frame
+    each smallBanner in smallBanners
+      .kem-homepage-banner__img-frame__img-banner.banner__small(style= "background-image: url(../../../../assets/images/kem/kem-homepage/kem-homepage-banner/"+smallBanner.imgBannerSmall+")")
+        .banner-hover
+          span.banner-hover__text= smallBanner.textHover
 
 //- kem-home-offers__slider__item
 mixin slider-offers(title, link, desc)
@@ -70,3 +89,26 @@ mixin modal-gallery(idModalGallery,link_img, author_info, author_caption, produc
               a.sharing-with__social__pin(href="")
             .sharing-with__copyright
               a Powered by Olapic
+
+//- kem-home-explore__countries__name
+mixin countries-name(countries_name)
+ .name 
+  a= countries_name
+  span
+
+//- kem-home-explore__hotel-info
+mixin hotel-info(countries_name)
+  .hotel-info(class=countries_name)
+//- kem-home-explore__hotel-info__item
+mixin hotel-info-item(img,title,desc)
+  .hotel-info__item
+    a.hotel-info__item__img.slider-img(style="background-image :url(../../../../assets/images/kem/kem-homepage/"+ img +")")
+    .hotel-info__item__caption
+      .caption-title
+        h4.kem-title= title
+      .caption-desc
+        p.kem-para= desc[0]
+        p.kem-para= desc[1]
+        p.kem-para= desc[2]
+      .caption-button
+        +button-link("FURTHER INFORMATION")

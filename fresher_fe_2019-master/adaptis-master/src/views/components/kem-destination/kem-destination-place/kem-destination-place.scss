@@ -1,0 +1,112 @@
+.kem-destination-place {
+    &__btn-block {
+        background: #ffffff;
+        padding: 3rem 0;
+
+        &__btn {
+            width: 100%;
+            padding: 0.8rem 2rem;
+            @include typography($font-primary, 300, 11px, 1.1rem);
+            outline: none;
+            border: 1px solid rgb(200, 200, 200);
+            background-color: #ffffff;
+            text-align: left;
+            position: relative;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $color-second;
+                color: #ffffff;
+
+                &__icon {
+                    color: white;
+                }
+            }
+        }
+
+        &__icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 1rem;
+        }
+
+        &__list {
+            display: none;
+            width: 100%;
+            background: #ffffff;
+            border: 1px solid rgb(202, 202, 202);
+        }
+
+        &__item {
+            padding: 0.3rem 2rem;
+            width: 100%;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgb(202, 202, 255);
+                cursor: pointer;
+            }
+        }
+
+        &__link {
+            @include typography($font-primary, 300, 14px, 2rem);
+            color: $color-primary;
+        }
+    }
+
+    &__area {
+        background-color: #ffffff;
+        padding: 2rem 0;
+
+        &__block {
+            padding-bottom: 3rem;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid rgb(197, 197, 197);
+
+            @include min-md {
+                border: none;
+            }
+        }
+
+        &__title {
+            @include typography($font-primary, 300, 18px, initial);
+            color: $color-primary;
+            margin: 0;
+            text-transform: uppercase;
+            min-height: 2.9rem;
+            letter-spacing: 3px;
+        }
+
+        &__itemLv2 {
+            padding: 2.4rem 0 0;
+        }
+
+        &__subtitle {
+            @extend .kem-destination-place__area__title;
+            font-size: 13px;
+            font-weight: 700;
+            min-height: 2.4rem;
+            letter-spacing: 0;
+        }
+
+        &__linkLv3 {
+            @extend .kem-destination-place__area__subtitle;
+            font-weight: 300;
+            line-height: 1.7rem;
+            text-transform: unset;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+.show-list-filter {
+    display: unset;
+    position: absolute;
+    top: 120%;
+    left: 0;
+}
+
+.is-checked {
+    background-color: yellow; 
+}

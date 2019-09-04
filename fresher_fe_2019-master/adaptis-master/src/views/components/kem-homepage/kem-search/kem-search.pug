@@ -1,0 +1,82 @@
+.kem-search(id="kemSearch")
+    .kem-search__container
+        //- not desktop haha đây là file backup phụ thôi nhé kp file chính đâu
+        button.kem-search__btn-search(id="btnSearchNotDesktop")
+            span.kem-search__text where would you like to go?
+            span.kem-search__icon-search-block
+                span.kem-search__icon-search-block__icon-search
+                    i(class="fas fa-search")
+
+        //- destop
+        .kem-search__block(id="searchBlockModal")
+            .row.between-xs.middle-xs.search__form-header
+                h3.search__form-header__title Search
+                span.search__form-header__icon(id="closeSearchModalMobile")
+                    i(class="fas fa-times")
+            .row.search__form-primary.end-lg
+                .col-xs-12.col-lg-4.form__place
+                    .row
+                        .col-xs-12.col-lg-12
+                            span
+                                span.form__place__icon
+                                    i(class="fas fa-map-marker-alt")
+                                span.form__place__text 
+                                    |where would you like to go?
+                .col-xs-12.col-lg-5.form__date
+                    .row(id="dateCheck")
+                        .col-xs-6.col-lg-6.form__date__check
+                            input.form__date__check__inp(type="text" readonly="" name="checkIn" id="checkIn" placeholder="Check-in")
+                            span.form__date__check__icon
+                                i(class="fas fa-calendar-alt")
+                        .col-xs-6.col-lg-6.form__date__check
+                            input.form__date__check__inp(type="text" readonly="" name="checkOut" id="checkOut" placeholder="Check-out")
+                            span.form__date__check__icon
+                                i(class="fas fa-calendar-alt")
+    
+                .col-xs-12.col-lg-3.form__room
+                    .row
+                        .col-xs-12.col-lg-6.form__room__choose
+                            select.form__room__choose__select
+                                option(value="") jasss
+                                option(value="") lal
+                        .col-xs-12.col-lg-6.form__room__choose
+                            button.form__room__choose__btn(type="button") search
+                .col-xs-12.col-lg-3.form__people.search-hidden-block(id="formPrimaryPeople")
+                    .row
+                        .col-xs-12.col-lg-6.form__people__choose
+                            select.form__people__choose__select
+                                option(value="") jassss
+                                option(value="") lal
+                        .col-xs-12.col-lg-6.form__people__choose
+                            select.form__people__choose__select(id="input")
+                                option(value="1") 1
+                                option(value="2") 2
+                                option(value="3") 3
+                                option(value="4") 4
+                    .row    
+                        .col-xs-12.col-lg-12.form__people__age-children
+                            .form__people__age-children__title age of children
+                            #test
+
+            .row.search__form-second.center-lg.search-hidden-block(id="formSecond")
+                .modal-label-form-second options
+                .col-xs-12.col-lg-2.form__code-type
+                    select.form__code-type__select
+                        option(value="") jassssssss
+                        option(value="") lal
+                .col-xs-12.col-lg-2.form__code-type
+                    input.form__code-type__inp(type="text", name="" placeholder="Code")
+                .col-xs-12.col-lg-2.form__code-type
+                    input.form__code-type__inp(type="text", name="" placeholder="Promotion Code")
+                .col-lg-3.form__code-type
+                    span.form__code-type__text(id="partnerDestinations")
+                        |partner destinations
+                .col-xs-12.modal-search__btn-frame
+                    button.modal-search__btn-frame__btn(type="button") search
+            
+    include ../../modals/modal-search/modal-search.pug   
+
+span(id="closeFormSearch" style="color: red; position: fixed; bottom: 0; z-index: 2")
+    i(class="fas fa-times")
+
+             
