@@ -10,11 +10,11 @@ $(() => {
 
 $(document).ready(() => {
   Global.lazyLoad();
+  adaptisHeaderLogo.init();
   skrollr.init();
   // HeaderAirBnb.init();
   // HeaderAirBnb.modal();
   //adaptisVer2
-
 });
 
 $(window).on('resize', () => {
