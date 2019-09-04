@@ -3,9 +3,8 @@ import Global from './views/components/global/global';
 //adaptisVer2
 import load from './views/components/adaptisVer2/adaptisVer2SolutionBlock/adaptisVer2SolutionBlock';
 // import loadClient from './views/components/adaptisVer2/adaptisVer2Clients/adaptisVer2Clients';
-
-// import adaptisHeaderLogo from './views/components/adaptisVer2/adaptisVer2Header/adaptisVer2Header';
-// import skrollr from '../node_modules/skrollr/dist/skrollr.min.js';
+import adaptisHeaderLogo from './views/components/adaptisVer2/adaptisVer2Header/adaptisVer2Header';
+import skrollr from '../node_modules/skrollr/src/skrollr';
 require('normalize.css');
 // require('./skrollr.min.js');
 $(() => {
@@ -16,7 +15,7 @@ $(document).ready(() => {
   Global.lazyLoad();
   load.init();
   // loadClient.init();
-  // skrollr.init();
+  skrollr.init();
   // new WOW().init();
   
     // lazy.init();

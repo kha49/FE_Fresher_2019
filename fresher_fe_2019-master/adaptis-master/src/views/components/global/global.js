@@ -1,5 +1,6 @@
 import LazyLoad from 'vanilla-lazyload';
 require('slick-carousel');
+require('../../../skrollr.min.js');
 
 const Global = {
   lazyLoad: (thresDistance) => {
