@@ -1,6 +1,6 @@
 const offersSlide = {
     slickSlider:() => {
-        $('.multiple-items-offers').slick({
+        $('.multiple-items-offers').not('.slick-initialized').slick({
             dots: false,
             infinite: false,
             speed: 300,

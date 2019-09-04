@@ -1,0 +1,123 @@
+section.kem-destination-place
+    .container-fluid
+        .col-md-10.col-lg-10.col-md-offset-1
+            .row(style="margin:0")
+                .col-xs-12(style="padding:0")
+                    div.row.kem-destination-place__btn-block
+                        - var btnArr = [
+                        - {nameBtn: "Filter By Region", idBtn: 1, listFilter: 1, listBtn: ["Filter By Region", "Europe", "Asia Pacific", "Americas", "Middle East & Africa"]},
+                        - {nameBtn: "Filter By Country", idBtn: 2, listFilter: 2, listBtn: ["Filter By Country", "Australia", "Bulgaria", "China", "Croatia", "Cuba", "Democratic Republic of Congo", "Diibouti"]},
+                        - {nameBtn: "Filter By Experience", idBtn: 3, listFilter: 3, listBtn: ["Filter By Experience", "Weddings", "Culinary", "Golf", "Ski", "Spa", "SUITELY SENSATIONAL"]},
+                        - {nameBtn: "Filter By Property Type", idBtn: 4, listFilter: 4, listBtn: ["Filter By Property Type", "Kempinski Hotel", "Residence", "Combined Hotel Residence"]}
+                        - ]
+                        each btn in btnArr
+                            .col-xs-12.col-sm-6.col-md-3(style="margin-bottom: 1rem")
+                                button.kem-destination-place__btn-block__btn(type="button" id= "idBtn"+ btn.idBtn) 
+                                    =btn.nameBtn
+                                    span.kem-destination-place__btn-block__icon
+                                        i(class="fas fa-caret-down")
+                                ul.kem-destination-place__btn-block__list(id= "listFilter"+ btn.listFilter)
+                                    each link in btn.listBtn
+                                        li.kem-destination-place__btn-block__item
+                                            a.kem-destination-place__btn-block__link= link
+                                            
+            .row(style="margin:0")
+                .col-xs-12.col-md-12
+                    ul.row.kem-destination-place__area
+                        - var itemLv1Arr = [
+                        - {blockArr: [{
+                        -               title: "europe",
+                        -               itemLv2Arr: [
+                        -                             {subtitle: "australia",
+                        -                              itemLv3Arr: ["Joohberg - Kitzbuhel", "Vienna"]},
+                        -                             {subtitle: "Bulgaria",
+                        -                              itemLv3Arr: ["Banko"]},
+                        -                             {subtitle: "croatia",
+                        -                              itemLv3Arr: ["savudrjia - latria"]},
+                        -                             {subtitle: "germany",
+                        -                              itemLv3Arr: ["Berchtesgaden", "Berlin - Adlon", "Berlin - Bristol (Partner Hotel)", "Dresden", "Frankfurt - Gravenbruch", "Hamburg", "Königstein – Falkenstein Grand", "Königstein - Villa Rothschild", "Munich"]},
+                        -                             {subtitle: "HUNGARY",
+                        -                              itemLv3Arr: ["Budapest"]},
+                        -                             {subtitle: "ITALY",
+                        -                              itemLv3Arr: ["Venice"]},
+                        -                             {subtitle: "LATVIA",
+                        -                              itemLv3Arr: ["Riga"]},
+                        -                             {subtitle: "LITHUANIA",
+                        -                              itemLv3Arr: ["Vilnius"]},
+                        -                             {subtitle: "MALTA",
+                        -                              itemLv3Arr: ["Gozo - San Lawrenz"]},
+                        -                             {subtitle: "RUSSIA",
+                        -                              itemLv3Arr: ["Black Sea - Gelendzhik", "Moscow", "St. Petersburg"]},
+
+                        -                           ]                 
+                        -            }]
+                        - },
+                        - {blockArr: [{
+                        -               title: "ASIA PACIFIC",
+                        -               itemLv2Arr: [
+                        -                             {subtitle: "CHINA",
+                        -                              itemLv3Arr: ["Beijing ", "Beijing Yanqi Lake - Boutique", "Hotels", "Beijing Yanqi Lake - Sunrise", "Beijing Yanqi Lake - Yanqi Hotel", "Changsha", "Chengdu", "Chongqing", "Dalian", "Fuzhou", "Guiyang", "Hangzhou", "Huizhou", "Nanjing", "Shanghai - Pudong", "Shanghai - Puxi", "Shenyang", "Shenzhen", "Suzhou", "Taiyuan", "Xiamen", "Yinchuan"]},
+                        -                             {subtitle: "INDONESIA",
+                        -                              itemLv3Arr: ["Bali - Nusa Dua", "Jakarta"]},
+                        -                             {subtitle: "MONGOLIA",
+                        -                              itemLv3Arr: ["Ulaanbaatar"]},
+                        -                             {subtitle: "MYANMAR",
+                        -                              itemLv3Arr: ["Nay Pyi Taw"]},
+                        -                             {subtitle: "SINGAPORE",
+                        -                              itemLv3Arr: ["Singapore"]},
+                        -                             {subtitle: "THAILAND",
+                        -                              itemLv3Arr: ["Bangkok - Siam "]},
+                        -                           ]                 
+                        -            }]
+                        - },
+                        - {blockArr: [{
+                        -               title: "AMERICAS",
+                        -               itemLv2Arr: [
+                        -                             {subtitle: "CUBA",
+                        -                              itemLv3Arr: ["Havana"]},
+                        -                             {subtitle: "DOMINICA",
+                        -                              itemLv3Arr: ["Portsmouth - Douglas Bay"]},
+                        -                           ]                 
+                        -            }]
+                        - },
+                        - {blockArr: [{
+                        -               title: "MIDDLE EAST & AFRICA",
+                        -               itemLv2Arr: [
+                        -                             {subtitle: "DEMOCRATIC REPUBLIC OF CONGO",
+                        -                              itemLv3Arr: ["Kinshasa - Gombe"]},
+                        -                             {subtitle: "DJIBOUTI",
+                        -                              itemLv3Arr: ["Djibouti"]},
+                        -                             {subtitle: "EGYPT",
+                        -                              itemLv3Arr: ["Cairo - New Cairo", "Cairo - Nile", "Soma Bay - Red Sea"]},
+                        -                             {subtitle: "GHANA",
+                        -                              itemLv3Arr: ["Accra - Ridge"]},
+                        -                             {subtitle: "JORDAN",
+                        -                              itemLv3Arr: ["Amman", "Aqaba - Red Sea", "Dead Sea"]},
+                        -                             {subtitle: "KENYA",
+                        -                              itemLv3Arr: ["Masai Mara", "Nairobi"]},
+                        -                             {subtitle: "LEBANON",
+                        -                              itemLv3Arr: ["Beirut"]},
+                        -                             {subtitle: "OMAN",
+                        -                              itemLv3Arr: ["Muscat"]},
+                        -                             {subtitle: "QATAR",
+                        -                              itemLv3Arr: ["Doha", "Doha - The Pearl-Qatar"]},
+                        -                             {subtitle: "SAUDI ARABIA",
+                        -                              itemLv3Arr: ["Al Khobar"]},
+                        -                           ]                 
+                        -            }]
+                        - },
+                        - ]
+
+                        each itemLv1 in itemLv1Arr
+                            li.col-xs-12.col-md-3.kem-destination-place__area__item
+                                each block in itemLv1.blockArr
+                                    div.kem-destination-place__area__block
+                                        h2.kem-destination-place__area__title= block.title
+                                        ul.kem-destination-place__area__listLv2
+                                            each itemLv2 in block.itemLv2Arr
+                                                li.kem-destination-place__area__itemLv2
+                                                    h3.kem-destination-place__area__subtitle= itemLv2.subtitle
+                                                    ul.kem-destination-place__area__listLv3
+                                                        each itemLv3 in itemLv2.itemLv3Arr
+                                                            li.kem-destination-place__area__itemLv3
+                                                                a.kem-destination-place__area__linkLv3(href="#")= itemLv3
