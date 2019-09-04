@@ -9,10 +9,13 @@ import footer from './views/components/footer/footer';
 import footerModal from './views/components/modals/modal-footer/modal-footer';
 import search from './views/components/kem-homepage/kem-search/kem-search';
 import searchModal from './views/components/modals/modal-search/modal-search';
+import destinationPlace from './views/components/kem-destination/kem-destination-place/kem-destination-place';
 
 
+require('isotope-layout');
 require('normalize.css');
 require('slick-carousel');
+require('daterangepicker');
 require('mapbox-gl');
 
 $(() => {
@@ -35,7 +38,10 @@ $(document).ready(() => {
   footer.init();
   footerModal.init();
   search.init();
+  search.daterp()
   searchModal.init();
+  destinationPlace.init();
+  destinationPlace.filter();
 });
 
 $(window).on('resize', () => {

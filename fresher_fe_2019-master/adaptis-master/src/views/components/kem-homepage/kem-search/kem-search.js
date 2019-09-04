@@ -114,6 +114,25 @@ const search = {
             modalSearch.style.display = "unset";    
         }
     },
+
+    daterp: () => {
+        $(document).ready(function() {
+            $('#dateCheck').daterangepicker(
+                {
+                    separator: ' to ',
+                    getValue: function () {
+                        if ($('#checkIn').val() && $('#checkOut').val())
+                            return $('#checkIn').val() + ' to ' + $('#checkOut').val();
+                        else
+                            return '';
+                    },
+                    setValue: function (s, s1, s2) {
+                        $('#checkIn').val(s1);
+                        $('#checkOut').val(s2);
+                    }
+                });
+    		});
+    },
 };
 
 export default search;
