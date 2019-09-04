@@ -31,7 +31,7 @@ mixin button-link(title)
 mixin banner(smallBanners)
   .kem-homepage-banner__img-frame
     each smallBanner in smallBanners
-      .kem-homepage-banner__img-frame__img-banner.banner__small(style= "background-image: url(../../../../assets/images/kem/kem-homepage/kem-homepage-banner/"+smallBanner.imgBannerSmall+")")
+      a.kem-homepage-banner__img-frame__img-banner.banner__small(href= smallBanner.idBanner style= "background-image: url(../../../../assets/images/kem/kem-homepage/kem-homepage-banner/"+smallBanner.imgBannerSmall+")")
         .banner-hover
           span.banner-hover__text= smallBanner.textHover
 

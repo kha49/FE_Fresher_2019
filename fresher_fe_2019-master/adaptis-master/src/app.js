@@ -11,6 +11,7 @@ import footerModal from './views/components/modals/modal-footer/modal-footer';
 import search from './views/components/kem-homepage/kem-search/kem-search';
 import searchModal from './views/components/modals/modal-search/modal-search';
 import destinationPlace from './views/components/kem-destination/kem-destination-place/kem-destination-place';
+import Mapbox from './views/components/kem-homepage/kem-homepage-mapbox/kem-homepage-mapbox';
 
 require('isotope-layout');
 require('normalize.css');
@@ -40,11 +41,14 @@ $(document).ready(() => {
   header.init();
   footer.init();
   footerModal.init();
+  footerModal.validate();
   search.init();
   search.daterp()
   searchModal.init();
   destinationPlace.init();
   destinationPlace.filter();
+  Mapbox.viewMap();
+
 });
 
 $(window).on('resize', () => {
@@ -56,9 +60,12 @@ $(window).on('resize', () => {
     Gallery.modalSlider();
     Explore.doubleSlider();
     Explore.singleSlider();
+    // Mapbox.viewMap();
+
   }, 250);
 });
 
 window.onload = () => {
-
+  destinationPlace.filter();
+  Mapbox.viewMap();
 };

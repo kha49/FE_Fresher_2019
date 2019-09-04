@@ -37,22 +37,27 @@
                     .row
                         .col-xs-12.col-lg-6.form__room__choose
                             select.form__room__choose__select
-                                option(value="") jasss
-                                option(value="") lal
+                                option(value="") 1 room
+                                option(value="") 2 room
+                                option(value="") 3 room
+                                option(value="") 4 room
                         .col-xs-12.col-lg-6.form__room__choose
                             button.form__room__choose__btn(type="button") search
                 .col-xs-12.col-lg-3.form__people.search-hidden-block(id="formPrimaryPeople")
                     .row
                         .col-xs-12.col-lg-6.form__people__choose
                             select.form__people__choose__select
-                                option(value="") jassss
-                                option(value="") lal
+                                option(value="") 1 adult per room
+                                option(value="") 2 adults per room
+                                option(value="") 3 adults per room
+                                option(value="") 4 adults per room
                         .col-xs-12.col-lg-6.form__people__choose
                             select.form__people__choose__select(id="input")
-                                option(value="1") 1
-                                option(value="2") 2
-                                option(value="3") 3
-                                option(value="4") 4
+                                option(value="0") 0 child per room
+                                option(value="1") 1 child per room
+                                option(value="2") 2 children per room
+                                option(value="3") 3 children per room
+                                option(value="4") 4 children per room
                     .row    
                         .col-xs-12.col-lg-12.form__people__age-children
                             .form__people__age-children__title age of children
@@ -62,8 +67,11 @@
                 .modal-label-form-second options
                 .col-xs-12.col-lg-2.form__code-type
                     select.form__code-type__select
-                        option(value="") jassssssss
-                        option(value="") lal
+                        option(value="0") 0 child per room
+                        option(value="1") 1 child per room
+                        option(value="2") 2 children per room
+                        option(value="3") 3 children per room
+                        option(value="4") 4 children per room
                 .col-xs-12.col-lg-2.form__code-type
                     input.form__code-type__inp(type="text", name="" placeholder="Code")
                 .col-xs-12.col-lg-2.form__code-type
@@ -76,7 +84,7 @@
             
     include ../../modals/modal-search/modal-search.pug   
 
-span(id="closeFormSearch" style="color: red; position: fixed; bottom: 0; z-index: 2")
+span(id="closeFormSearch" style="color: #010f2a; position: fixed; bottom: 0; z-index: 2")
     i(class="fas fa-times")
 
              

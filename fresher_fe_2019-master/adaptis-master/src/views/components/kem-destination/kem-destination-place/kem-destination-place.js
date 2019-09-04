@@ -41,6 +41,7 @@ const destinationPlace = {
         // $(window).trigger('load', function(){
             // jQuery( function() {
             // init Isotope
+        $(document).ready(function() {
             var $area = $('.kem-destination-place__area').isotope({
                 itemSelector: '.kem-destination-place__area__item'
             });
@@ -79,7 +80,7 @@ const destinationPlace = {
                 }
                 return value;
             }
-        // });
+        });
     }
 };
 
