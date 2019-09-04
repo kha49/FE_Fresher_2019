@@ -9,7 +9,7 @@ const adaptisHeaderLogo = {
         let adaptisScroll = document.querySelector('.adaptisVer2Header-logo');
         let firstItem = document.querySelector('#firstChildItem');
         let hamburger = document.querySelector('.hamburgerOpen');
-        let menuBarIsOpened = document.querySelector('.menu-bar-isOpened');
+        // let menuBarIsOpened = document.querySelector('.menu-bar-isOpened');
         if($(window).scrollTop() > 80 || document.documentElement.scrollTop > 80) {
             if(adaptisScroll) {
                 adaptisScroll.style.top = "-25px";
@@ -24,11 +24,6 @@ const adaptisHeaderLogo = {
             if(firstItem && hamburger) {
                 firstItem.style.display= "none";
             }
-            // if(menuBarIsOpened) {
-            //     firstItem.style.display= "block";
-            // } else {
-            //     firstItem.style.display= "none";
-            // }
         }
     },
     showHamburger: (className, menuBarName) => {

@@ -201,6 +201,9 @@
                 width: 50%;
                 min-width: 200px;
                 @include adaptisVer2LinkBefore(#3C213A);
+                &:hover {
+                    color: #3C213A;
+                }
             }
         }
     }
