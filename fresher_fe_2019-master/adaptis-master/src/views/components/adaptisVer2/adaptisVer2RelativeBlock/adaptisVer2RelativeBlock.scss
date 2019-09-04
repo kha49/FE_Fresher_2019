@@ -116,6 +116,12 @@
         line-height: 2.18182;
         font-weight: bold;
         line-height: 1.5;
+        opacity: 1;
+        @include min-sm {
+            .adaptis-relative-block-container-items__item-link::before {
+                opacity: 0;
+            }
+        }
         &:hover::before {
             // left: initial;
             right: 0;

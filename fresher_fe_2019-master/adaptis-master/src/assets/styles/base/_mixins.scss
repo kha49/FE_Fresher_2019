@@ -330,6 +330,10 @@
     overflow: hidden;
     background: 0 0;
     position: relative;
+    &:hover {
+        text-decoration: none;
+        color: $color;
+    }
 }
 
 @mixin adaptisVer2LinkBefore($color) {

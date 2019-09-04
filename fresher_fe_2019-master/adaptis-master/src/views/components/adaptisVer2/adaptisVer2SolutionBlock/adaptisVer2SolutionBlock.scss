@@ -2,7 +2,7 @@
     position: relative;
     .adaptis-solution-decor {
         @include adaptisVer2BackgroundImage(url('../images/adaptis/visualisation.png'));
-        @include translateY(-200px);
+        // @include translateY(-200px);
         @include absolute(absolute, 0, 0, initial, initial);
         @include scale(250px, 350px);
         display: none;
@@ -12,7 +12,7 @@
         }
     }
     .adaptis-solution-container {
-        max-width: 1024px;
+        max-width: 1200px;
         margin: 0 auto;
         width: 100%;
         padding: 0 15px;
@@ -40,6 +40,7 @@
                 flex: 2;
                 @include min-sm {
                     padding-right: 15%;
+                    font-size: 1.3rem;
                 }
                 p {
                     margin-bottom: 20px;
@@ -66,6 +67,7 @@
                 @include min-sm {
                     flex: 1;
                     margin-left: 20px;
+                    font-size: 1.3rem;
                 }
                 p {
                     color: #{color(c-white)};

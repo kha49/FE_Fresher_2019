@@ -1,12 +1,9 @@
 import Global from './views/components/global/global';
-// import HeaderAirBnb from './views/components/airbnbUpdate/header/header';
-//adaptisVer2
 import load from './views/components/adaptisVer2/adaptisVer2SolutionBlock/adaptisVer2SolutionBlock';
-// import loadClient from './views/components/adaptisVer2/adaptisVer2Clients/adaptisVer2Clients';
 import adaptisHeaderLogo from './views/components/adaptisVer2/adaptisVer2Header/adaptisVer2Header';
 import skrollr from '../node_modules/skrollr/src/skrollr';
 require('normalize.css');
-// require('./skrollr.min.js');
+require('./skrollr.min.js');
 $(() => {
   // Code here
 });
