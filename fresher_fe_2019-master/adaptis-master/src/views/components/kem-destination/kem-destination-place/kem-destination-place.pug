@@ -17,50 +17,50 @@ section.kem-destination-place
                         -                {dataFilter:".americas", select:"Americas"}, 
                         -                {dataFilter:".mea", select:"Middle East & Africa"}
                         -             ]
+                        - },
+                        - {
+                        -    idBtn: 2, 
+                        -    nameBtn: "Filter By Country", 
+                        -    listFilter: 2,
+                        -    dataFilterGroup: "country",  
+                        -    listBtn: [
+                        -                {dataFilter:"", select:"Filter By Country"},
+                        -                {dataFilter:".Australia", select:"Australia"},
+                        -                {dataFilter:".Bulgaria", select:"Bulgaria"},
+                        -                {dataFilter:".China", select:"China"},
+                        -                {dataFilter:".Croatia", select:"Croatia"},
+                        -                {dataFilter:".Cuba", select:"Cuba"},
+                        -                {dataFilter:".DRC", select:"Democratic Republic of Congo"},
+                        -                {dataFilter:".Diibouti", select:"Diibouti"}
+                        -             ]
+                        - },
+                        - {
+                        -    idBtn: 3, 
+                        -    nameBtn: "Filter By Experience", 
+                        -    listFilter: 3,
+                        -    dataFilterGroup: "experience",  
+                        -    listBtn: [
+                        -                {dataFilter:"", select:"Filter By Experience"}, 
+                        -                {dataFilter:".Weddings", select:"Weddings"},
+                        -                {dataFilter:".Culinary", select:"Culinary"},
+                        -                {dataFilter:".Golf", select:"Golf"},
+                        -                {dataFilter:".Ski", select:"Ski"},
+                        -                {dataFilter:".Spa", select:"Spa"},
+                        -                {dataFilter:".SS", select:"SUITELY SENSATIONAL"}
+                        -             ]
+                        - },
+                        - {
+                        -    idBtn: 4, 
+                        -    nameBtn: "Filter By Property Type", 
+                        -    listFilter: 4,
+                        -    dataFilterGroup: "", 
+                        -    listBtn: [
+                        -                {select:"Filter By Property Type"},
+                        -                {select:"Kempinski Hotel"},
+                        -                {select:"Residence"},
+                        -                {select:"Combined Hotel Residence"}
+                        -             ]
                         - }
-                        //- - {
-                        //- -    idBtn: 2, 
-                        //- -    nameBtn: "Filter By Country", 
-                        //- -    listFilter: 2,
-                        //- -    dataFilterGroup: "country",  
-                        //- -    listBtn: [
-                        //- -                {dataFilter:"", select:"Filter By Country"},
-                        //- -                {dataFilter:".Australia", select:"Australia"},
-                        //- -                {dataFilter:".Bulgaria", select:"Bulgaria"},
-                        //- -                {dataFilter:".China", select:"China"},
-                        //- -                {dataFilter:".Croatia", select:"Croatia"},
-                        //- -                {dataFilter:".Cuba", select:"Cuba"},
-                        //- -                {dataFilter:".DRC", select:"Democratic Republic of Congo"},
-                        //- -                {dataFilter:".Diibouti", select:"Diibouti"}
-                        //- -             ]
-                        //- - },
-                        //- - {
-                        //- -    idBtn: 3, 
-                        //- -    nameBtn: "Filter By Experience", 
-                        //- -    listFilter: 3,
-                        //- -    dataFilterGroup: "experience",  
-                        //- -    listBtn: [
-                        //- -                {dataFilter:"", select:"Filter By Experience"}, 
-                        //- -                {dataFilter:".Weddings", select:"Weddings"},
-                        //- -                {dataFilter:".Culinary", select:"Culinary"},
-                        //- -                {dataFilter:".Golf", select:"Golf"},
-                        //- -                {dataFilter:".Ski", select:"Ski"},
-                        //- -                {dataFilter:".Spa", select:"Spa"},
-                        //- -                {dataFilter:".SS", select:"SUITELY SENSATIONAL"}
-                        //- -             ]
-                        //- - },
-                        //- - {
-                        //- -    idBtn: 4, 
-                        //- -    nameBtn: "Filter By Property Type", 
-                        //- -    listFilter: 4,
-                        //- -    dataFilterGroup: "", 
-                        //- -    listBtn: [
-                        //- -                {select:"Filter By Property Type"},
-                        //- -                {select:"Kempinski Hotel"},
-                        //- -                {select:"Residence"},
-                        //- -                {select:"Combined Hotel Residence"}
-                        //- -             ]
-                        //- - }
                         - ]
                         each btn in btnArr
                             .col-xs-12.col-sm-6.col-md-3(style="margin-bottom: 1rem")
@@ -74,8 +74,8 @@ section.kem-destination-place
                                                 li.kem-destination-place__btn-block__item(data-filter= link.dataFilter)
                                                     a.kem-destination-place__btn-block__link= link.select
                                             
-                    //- .row(style="margin:0")
-                    //- .col-xs-12.col-md-12
+            .row(style="margin:0")
+                .col-xs-12.col-md-12
                     ul.row.kem-destination-place__area
                         - var itemLv1Arr = [
                         - {
