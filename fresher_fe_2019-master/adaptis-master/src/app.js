@@ -24,7 +24,7 @@ $(document).ready(() => {
     speed: 300,
     slidesToShow: 5,
     slidesToScroll: 1,
-    arrows: false,
+    arrows: true,
     // prevArrow: $('.prev'),
     // nextArrow: $('.next'),
     responsive: [
