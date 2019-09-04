@@ -8,6 +8,8 @@ import '../node_modules/slick-carousel/slick/slick';
 import scrollBtn from './views/components/group3/footer/scroll_btn/btn';
 import box_checkout from './views/components/group3_checkout/box-checkout/box-checkout';
 import form_checkout from './views/components/group3_checkout/form_checkout/form_checkout';
+import Modal from './views/components/group3/modal/modal';
+import hotSale from './views/components/group3/main/hotsale/hotsale';
 require('normalize.css');
 
 $(() => {
@@ -18,6 +20,7 @@ $(document).ready(() => {
   Global.lazyLoad();
   user.init();
   nav_canvas.init();
+  hotSale.init();
   $('.multiple-items').slick({
     dots: false,
     infinite: false,
@@ -56,6 +59,7 @@ $(document).ready(() => {
   scrollBtn.init();
   box_checkout.init();
   form_checkout.init();
+  Modal.init();
   new WOW().init();
 });
 

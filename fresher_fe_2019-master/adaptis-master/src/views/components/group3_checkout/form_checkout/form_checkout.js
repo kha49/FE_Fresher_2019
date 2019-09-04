@@ -1,6 +1,5 @@
 const form_checkout = {
     init: () => {
-
         let checkoutBtn = document.getElementById("checkoutBtn");
         let email = document.getElementById("email");
         let u_email = document.getElementById("u_email");
@@ -27,10 +26,11 @@ const form_checkout = {
             form_checkout.MessageEvent(a.id+"-erro");
         }else{
             a.style.border = "1px solid";
+            let erro = document.getElementById(a.id+"-erro")
+            erro.innerHTML = " ";
         }
     },
     MessageEvent: (b) => {
-        console.log(b);
         const erro = document.getElementById(b);
         if(erro){
             erro.style.color = "red";

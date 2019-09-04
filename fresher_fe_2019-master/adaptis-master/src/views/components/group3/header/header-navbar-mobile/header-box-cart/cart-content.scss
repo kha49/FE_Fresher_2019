@@ -5,16 +5,13 @@
 }
 .nav-cart {
  display: none;
-  &__content {
-    display: block;
-    width: 96vw;
-    right: 15px;
-    border-bottom: 1px solid $color-text-price;
-    padding: 15px;
-    position: absolute;
-    z-index: 1;
-    background: $color-white;
-  }
+ position: absolute;
+ width: 96vw;
+ right: 0;
+ border-bottom: 1px solid $color-text-price;
+ padding: 15px;
+ z-index: 1;
+ background: $color-white;
 }
 .box-modal {
   display: block;

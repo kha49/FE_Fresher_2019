@@ -29,15 +29,19 @@
                 .col-12.col-sm-6
                     .form-group
                         input.form-control#u_fname(type="text", placeholder="First name (optional)")
+                        span#u_fname-erro
                 .col-12
                     .form-group
                         input.form-control#u_lname(type="text", placeholder="Last name")
+                        span#u_lname-erro
                 .col-12
                     .form-group
                         input.form-control#u_address(type="text", placeholder="Address")
+                        span#u_address-erro
                 .col-12
                     .form-group
                         input.form-control#u_ap(type="text", placeholder="Apartment, suite, ect. (optional)")
+                        span#u_ap-erro
                 .col-12.col-sm-6
                     .form-group
                         select.form-control(type="text", placeholder="City")
@@ -46,6 +50,7 @@
                 .col-12.col-sm-6
                     .form-group
                         input.form-control#u_code(type="text", placeholder="Postal code")
+                        span#u_code-erro
                 .col-12
                     .form-check
                         input.form-check-input(type="checkbox", name="") 

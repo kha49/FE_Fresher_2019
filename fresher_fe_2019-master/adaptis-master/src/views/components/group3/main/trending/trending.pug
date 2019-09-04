@@ -19,7 +19,7 @@
             -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/products/product-image-934683218_large.jpg?v=1560242547",label:"sold out",content:"Brand Makeup Lip Gloss Waterproof Batom Lips Tint Red Brown Nude Long Lasting Liquid Matte Lipstick Makeup Lipgloss kyliejenner",old:"$1.67",new:"$0.99",span: "Unavailable", status: 1},
             - ]
             each val,index in box_trend 
-                .grid-item.wow.fadeIn(data-wow-delay=(index/5)+"s", data-wow-duration="2s")
+                .grid-item.wow.fadeIn.ModalTrending(data-wow-delay=(index/5)+"s", data-wow-duration="2s")
                     .trend__content-pro
                         span(class="label")=val.label
                         img.trend(src=val.img,)
@@ -27,10 +27,10 @@
                             a(class="icon")
                                 span.fas.fa-heart
                             if val.status == 0 
-                                .trend__button-selectd(class="select disable")
+                                .trend__button-selectd(class="select disable",id=("modalBtn" + index))
                                     span=val.span
                             else
-                                .trend__button-selectd(class="select")
+                                .trend__button-selectd(class="select",id=("modalBtn" + index))
                                     span=val.span
                             a(class="view") QUICK VIEW
                     .trend__content-text
