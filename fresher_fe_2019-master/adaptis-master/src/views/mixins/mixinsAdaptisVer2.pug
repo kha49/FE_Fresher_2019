@@ -173,12 +173,12 @@ mixin adaptisVer2Header
     header.adaptisVer2Header
         .adaptisVer2Header-logo
             a(href="#") ADAPTIS
-        .adaptisVer2Header-menu-bar
+        .adaptisVer2Header-menu-bar#menuBar
             .adaptisVer2Header-menu-bar__items
-                a(href="#", title="ADAPTIS") ADAPTIS 
+                a(href="#", title="ADAPTIS")#firstChildItem ADAPTIS
                 each val, index in adaptisHeaderMenuBarItems
                     a(href="#" title=`${val}`)= val
-            .adaptisVer2Header-menu-bar__hamburger
+            .adaptisVer2Header-menu-bar__hamburger#hamburger
                 each val, index in adaptisHeaderMenuBarHamburgerLine
                     i.adaptisVer2Header-menu-bar__hamburger--line(class=`adaptisVer2Header-menu-bar__hamburger--line-${val}`)
 

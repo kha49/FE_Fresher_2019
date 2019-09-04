@@ -39,15 +39,25 @@
             flex-direction: column;
             overflow: hidden;
             a {
-                @include paddings(0, 0, 10px, 0);
-                margin-bottom: 30px;
-                line-height: 1.5em;
+                @include max-sm {
+                    @include paddings(0, 0, 10px, 0);
+                    margin-bottom: 30px;
+                    line-height: 1.5em;
+                }
+                display: none;
+                margin: 0 15px;
+                font-size: 1.25em;
+                position: relative;
+                transition: all .5s ease-in-out;
                 &::before {
                     content: '';
                     @include absolute(absolute, initial, initial, 0, 0);
-                    @include scale(100%, 2px);
+                    @include scale(0%, 2px);
                     background: #{color(c-white)};
                     @include transition(width, .5s, ease-in-out);
+                }
+                &:hover::before {
+                    width: 100%;
                 }
             }
             a:nth-child(1) {
@@ -55,23 +65,23 @@
             }
         }
         &__hamburger {
-            @include absolute(absolute, 30px, initial, initial, 25px);
+            @include absolute(absolute, 30px, 25px, initial, initial);
             @include scale(30px, 20px);
             z-index: 3;
             cursor: pointer;
             &--line-1 {
-                @include absolute(absolute, 0, 0, initial, initial);
+                @include absolute(absolute, 0, initial, initial, 0);
                 @extend %hamburgerLine;
                 transition-delay: .4s;
             }
             &--line-2 {
-                @include absolute(absolute, 0, 0, 0, initial);
+                @include absolute(absolute, 0, initial, 0, 0);
                 @extend %hamburgerLine;
                 margin: auto;
                 transition-delay: .3s;
             }
             &--line-3 {
-                @include absolute(absolute, initial, 0, 0, initial);
+                @include absolute(absolute, initial, initial, 0, 0);
                 @extend %hamburgerLine;
                 transition-delay: .2s;
             }
@@ -88,10 +98,66 @@
                 transform: rotate(-45deg) translate3d(30px, 0, 0);
             }
         }
+        @include min-sm_max-xl {
+            padding-left: 25px;
+            width: 550px;
+            .adaptisVer2Header-menu-bar__items {
+                flex-direction: row;
+                a {
+                    font-size: .75em;
+                }
+            }
+        }
     }
 }
 
 @keyframes shine {
     0% {-webkit-mask-position: 150%;};
     100% {-webkit-mask-position: -50%;}
+}
+
+.hamburgerOpen {
+    left: initial;
+    right: 25px;
+    .adaptisVer2Header-menu-bar__hamburger--line-1 {
+        width: 0;
+        transition: width .2s ease-in-out .2s;
+    }
+    .adaptisVer2Header-menu-bar__hamburger--line-2 {
+        width: 0;
+        transition: width .2s ease-in-out .3s;
+    }
+    .adaptisVer2Header-menu-bar__hamburger--line-3 {
+        width: 0;
+        transition: width .2s ease-in-out .4s;
+    }
+    .adaptisVer2Header-menu-bar__hamburger--line-4 {
+        opacity: 1;
+        transform: rotate(45deg) translate3d(0, 0, 0);
+        transition: opacity .2s ease-in-out .4s,transform .2s ease-in-out .4s,-webkit-transform .2s ease-in-out .4s;
+    }
+    .adaptisVer2Header-menu-bar__hamburger--line-5 {
+        opacity: 1;
+        transform: rotate(-45deg) translate3d(0, 0, 0);
+        transition: opacity .2s ease-in-out .5s,transform .2s ease-in-out .5s,-webkit-transform .2s ease-in-out .5s;
+    }
+}
+
+.menu-bar-isOpened {
+    .adaptisVer2Header-menu-bar__items {
+        width: 100%;
+    }
+    @include max-sm {
+        width: 100vw;
+        height: 100vh;
+    }
+    a {
+        display: inline-block;
+        color: #{color(c-white)};
+    }
+    @include min-sm_max-xl {
+        a:first-child {
+            display: none;
+        }
+    }
 }

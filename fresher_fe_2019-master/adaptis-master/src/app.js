@@ -13,12 +13,20 @@ $(() => {
 
 $(document).ready(() => {
   Global.lazyLoad();
+<<<<<<< HEAD
+  adaptisHeaderLogo.init();
+  skrollr.init();
+  // HeaderAirBnb.init();
+  // HeaderAirBnb.modal();
+  //adaptisVer2
+=======
   load.init();
   // loadClient.init();
   skrollr.init();
   // new WOW().init();
   
     // lazy.init();
+>>>>>>> 951104987bb2f934f476b80276963b906fb50054
 });
 
 $(window).on('resize', () => {
