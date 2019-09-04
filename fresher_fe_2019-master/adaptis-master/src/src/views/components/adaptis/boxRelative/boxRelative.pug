@@ -1,0 +1,38 @@
+- const relativeBlockArray = [
+-   {
+-       thumb: "../../assets/images/adaptis-credentials.jpg",
+-       caption: "Download now!",
+-       title: "2018 Digital Credentials",
+-       desc: "Register now to download our credentials in PDF format. The selected projects will provide a range of our experience in delivering global solutions.",
+-       link: "SEND TO ME"
+-   },
+-   {
+-       thumb: "../../assets/images/adaptis-careers-bg.jpg",
+-       caption: "Work with the best!",
+-       title: "Careers",
+-       desc: "Collaborate with other passionate people, like yourself, who enthusiastically seek out new challenges and continuous learning to create bigger, better and bolder experiences.",
+-       link: "APPLY NOW"
+-   },
+-   {
+-       thumb: "../../assets/images/adaptis-contact-us.png",
+-       caption: "Get in touch!",
+-       title: "Contact Us",
+-       desc: "Have a project you want to discuss? Just looking for someone to speak with. Get in touch now and we’ll be sure to find the right person to speak with.",
+-       link: "LETS TALK" 
+-   }
+- ]
+
+mixin boxRelativeItem
+    .boxRelative-container
+        ul.boxRelative-container__items
+            each val, index in relativeBlockArray
+                li.boxRelative-container__item
+                    a(href="#").boxRelative-container__item-thumb(style=`background-image: url(${val.thumb})`)
+                        .boxRelative-container__item-caption= val.caption
+                    a(href="#").boxRelative-container__item-title= val.title
+                    .boxRelative-container__item-desc= val.desc
+                    a(href="#").boxRelative-container__item-link= val.link
+ 
+block content
+    section.boxRelative
+        +boxRelativeItem

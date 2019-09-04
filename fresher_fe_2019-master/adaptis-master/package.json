@@ -53,6 +53,8 @@
     "webpack-notifier": "^1.6.0"
   },
   "dependencies": {
+    "animate.css": "^3.7.2",
+    "bootstrap": "^4.3.1",
     "bunnyjs": "^0.14.41",
     "eve": "^0.5.4",
     "fitvids": "^2.0.0",
@@ -71,6 +73,7 @@
     "sticky-js": "^1.2.0",
     "tippy.js": "^3.2.0",
     "vanilla-lazyload": "^10.0.1",
+    "wow.js": "^1.2.2",
     "yarn": "^1.10.1"
   }
 }

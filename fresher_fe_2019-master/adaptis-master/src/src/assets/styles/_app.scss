@@ -1,0 +1,36 @@
+/*
+  EN font
+*/
+// @import './base/font-language/en-EN';
+// @import './base/_functions';
+// @import './base/_variables';
+// @import './base/_mixins';
+// @import './base/_fonts';
+// @import './base/_global';
+// @import './base/_flexboxgrid';
+// @import './base/_lazyload';
+
+// Component
+// @import '../../views/components/header/header';
+// @import '../../views/components/footer/footer';
+// Bootstrap
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+
+//components
+@import '../../views/components/adaptis/shared/shared.scss';
+@import './airbnb/mixin/mixin';
+@import '../../views/components/adaptis/header/header.scss';
+@import '../../views/components/adaptis/description/description.scss';
+@import '../../views/components/adaptis/slide/slide.scss';
+@import '../../views/components/adaptis/develop/develop.scss';
+@import '../../views/components/adaptis/successStory/successStory.scss';
+@import '../../views/components/adaptis/weAre/weAre';
+@import '../../views/components/adaptis/viewTheWork/viewTheWork';
+@import '../../views/components/adaptis/providing/providing';
+@import '../../views/components/adaptis/toSupport/toSupport';
+@import '../../views/components/adaptis/boxRelative/boxRelative';
+@import '../../views/components/adaptis/slide/slide';
+@import '../../views/components/adaptis/footer/footer';
+
+
+

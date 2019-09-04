@@ -17,10 +17,13 @@
 .adaptis-clients-container-grid-item {
     width: 25%;
     position: relative;
-    animation: fadeInUp .5s ease-in-out forwards;
     @include min-sm {
         width: 20%;
     }
+
+}
+.animated{
+    animation: fadeInUp .5s ease-in-out forwards;
     &:nth-child(1) {
         animation-delay: .2s;
         a {

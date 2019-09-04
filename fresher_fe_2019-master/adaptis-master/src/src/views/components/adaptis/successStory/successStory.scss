@@ -1,0 +1,124 @@
+@import '../shared/shared.scss';
+
+@mixin font-properties($line-height) {
+    font-family: $main-font;
+    font-weight: 300;
+    color: #fff;
+    line-height: $line-height;
+}
+.adaptis-successStory {
+    padding: 0 15px;
+    max-width: 960px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 150px;
+    position: relative;
+    @include breakpoint($medium) {
+        flex-direction: row;
+    }
+    @include breakpoint($medium-large) {
+        width: 100%;
+        transform: translate(0, 0);
+    }
+    @include breakpoint($large) {
+        width: 110%;
+        transform: translate(-20%, 0);
+;    }
+    &-ballon {
+        position: absolute;
+        left: calc(50%-70px);
+        top: -65px;
+        z-index: 3;
+        transform: translate(0px, -150px);
+        opacity: 1;
+        &__bg {
+            background-image: url('../../assets/images/adaptis/adaptis-jw-ballon.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 141px;
+            height: 350px;
+            transform: rotate(5deg);
+            animation: ballon 8s ease-in-out infinite;
+            @include breakpoint($medium) {
+                width: 213px;
+                height: 527px;
+            }
+        }
+        @include breakpoint($medium) {
+            left: 7%;
+        }
+        @keyframes ballon {
+            0% {transform: rotate(5deg);}
+            50% {transform: rotate(-5deg);}
+            100% {transform: rotate(5deg);}
+        }
+    }
+    &-background {
+        background-image: url('../../assets/images/adaptis/adaptis-jw-bgd.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: translate(0px);
+        opacity: 1;
+        width: 100%;
+        height: 300px;
+        @include breakpoint($medium) {
+            width: 335px;
+        }
+    }
+    &-content {
+        background: #393939;
+        color: #fff;
+        padding: 30px;
+        position: relative;
+        transform: translate(0px);
+        opacity: 1;
+        &__title {
+            @include font-properties(12.8px);
+        }
+        &__subtitle {
+            @include font-properties(20.48px);
+            margin: 0;
+            margin-bottom: 20px;
+            font-size: 17.6px;
+        }
+        &__description {
+            @include font-properties(20.48px);
+            margin: 0;
+            margin-bottom: 30px;
+            font-size: 11.2px;
+        }
+        a {
+            @include breakpoint($large) {
+                position: absolute;
+                bottom: 10%;
+                right: -50px;
+                border-color: #3C213A;
+            }
+            font-family: $main-font;
+            margin: 0;
+            text-decoration: none;
+            border: 1px solid #fff;
+            display: inline-block;
+            letter-spacing: 2px;
+            font-weight: bold;
+            min-width: 200px;
+            transition: all .2s ease-in-out;
+            font-size: 8.8px;
+            line-height: 2.18182;
+            padding: 7ox 60px 7px 20px;
+            background: #fff;
+            position: relative;
+            white-space: nowrap;
+            color: #3C213A;
+            border-color: #3C213A;
+            @include right-arrow(#3C213A);
+        }
+        @include breakpoint($medium) {
+            width: 64%;
+        }
+    }
+}

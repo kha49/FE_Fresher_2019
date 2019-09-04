@@ -229,10 +229,10 @@ mixin adaptis-introduction-item--special
 
 mixin adaptis-introduction-item--switch
     .adaptis-introduction-item-switch
-        .adaptis-introduction-item-switch-thumb
+        .adaptis-introduction-item-switch-thumb(class='skrollable skrollable-after' data-bottom-center='transform: translate(-100px, 0); opacity: 0' data-center-center='transform: translate(0,0); opacity: 1')
             .adaptis-introduction-item-switch-thumb__bgd
                 a(href="#" title="LET'S TALK").adaptis-introduction-item-switch-thumb__bgd-link LET'S TALK
-        .adaptis-introduction-item-switch-content
+        .adaptis-introduction-item-switch-content(class='skrollable skrollable-after' data-bottom-center='transform: translate(100px,0); opacity:0' data-center-center='transform: translate(0,0); opacity: 1')
             .adaptis-introduction-item-switch-content__title
                 span We are
                 span problem solvers
@@ -243,14 +243,14 @@ mixin adaptis-introduction-item--switch
 
 mixin adaptis-highlight-block
     section.adaptis-highlight-block
-        .adaptis-highlight-block-bgd
+        .adaptis-highlight-block-bgd(class='skrollable skrollable-after' data-bottom-center='transfrom: translate(0, 20%)' data-center-center='transform:translate(0,0)')
         .adaptis-highlight-block-content
             .adaptis-highlight-block-content__desc View our work for Vicostone Quartz.  Customize your new quartz stone through the online visualiser and learn about new trends in home improvements.
             a(href="#").adaptis-highlight-block-content__link VIEW THE WORK     
 
 mixin adaptis-solution-block
     section.adaptis-solution-block
-        .adaptis-solution-decor
+        .adaptis-solution-decor(class='skrollable skrollable-between' data-top-bottom='transform: translateY(100px)' data-center-center='transform: translateY(-200px)')
         .adaptis-solution-container
             .adaptis-solution-container-content
                 .adaptis-solution-container-content-title
@@ -260,14 +260,14 @@ mixin adaptis-solution-block
                     p Helping companies to become more digitally connected is one of our specialities. From design thinking to machine learning, we start with a holistic approach that combines core values with the value of technology solutions. 
                     p The result, clients have a much deeper grasp on their company’s purpose and are better prepared to maintain consistency in the connected age.
             ul.adaptis-solution-container-items
-                li.adaptis-solution-container-items__item
+                li.adaptis-solution-container-items__item(data-animate)
                     p.adaptis-solution-container-items__item--content User Experience <br> Design
                     .adaptis-solution-container-items__item--text
                         span UX
                         span UI
-                li.adaptis-solution-container-items__item
+                li.adaptis-solution-container-items__item(data-animate)
                     p.adaptis-solution-container-items__item--content Development <br> & Delivery
-                li.adaptis-solution-container-items__item
+                li.adaptis-solution-container-items__item( data-animate)
                     p.adaptis-solution-container-items__item--content Agency <br> Partnership
             .adaptis-solution-container-title
                 span To support 
@@ -278,9 +278,9 @@ mixin adaptis-clients
         .adaptis-clients-container
             .adaptis-clients-container-grid
                 each val, index in adaptisClientsArray
-                    .adaptis-clients-container-grid-item
+                    .adaptis-clients-container-grid-item( data-animate)
                         a(href="#")
-                            img(class="load done" src=`${val.src}` alt=`${val.alt}`)
+                            img( src=`${val.src}` alt=`${val.alt}`)
 
 mixin adaptis-relative-block
     section.adaptis-relative-block
