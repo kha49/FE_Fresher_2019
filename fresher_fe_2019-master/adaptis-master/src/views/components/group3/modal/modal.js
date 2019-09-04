@@ -2,6 +2,7 @@ const Modal = {
     init: () => {
         let modalTrending = document.getElementsByClassName("ModalTrending");
         let modalHotsale = document.getElementsByClassName("modalHotsale");
+        let addToCard = document.getElementsByClassName("addToCard");
         const modals = [];
         for (let i = 0; i < modalTrending.length; i++) {
             modals.push(
@@ -31,6 +32,7 @@ const Modal = {
             if (modalBtn) {
                 Modal.showModal(modalBtn, modalContent);
                 Modal.closeModal(closerBtn, modalContent);
+                Modal.addToCard(modalContent);
             }
         });
     },
@@ -53,6 +55,9 @@ const Modal = {
                 modalContent.style.display = "none";
             }
         });
+    },
+    addToCard:(contetn)=>{
+        console.log(contetn);
     }
 }
 

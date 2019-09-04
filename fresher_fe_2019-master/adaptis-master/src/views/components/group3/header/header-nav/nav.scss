@@ -28,6 +28,7 @@
     display: block;
   }
   @include Responsive(XL) {
+    top: 0;
     display: block;
     ul {
       width: 80%;

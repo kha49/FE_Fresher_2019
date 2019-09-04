@@ -47,7 +47,7 @@
                         |is added to shopping card
                     .add-modal__button
                         button.btn(type='button') continue shopping 
-                        button.btn(type='button') go to card
+                        button.btn(type='button',id="addToCard"+index) go to card
     each pro,index in box_hotsale
         .add-modal__content(id="modalHotsaleContent"+index)
             .row

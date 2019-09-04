@@ -25,6 +25,34 @@
         text-decoration: none;
         margin-top: 20px;
     }
+    .slick-prev{
+        height: 40px;
+        width: 40px;
+        border-radius: 999px;
+        border: 1px solid #bebebe;
+        background-color:$color-white;
+        left: 0;
+        top:50%;
+        position: absolute;
+        z-index: 2;
+        background-image: url(https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_left_48px-512.png);
+        font-size: 0;
+        background-size: cover;
+    }
+    .slick-next{
+        height: 40px;
+        width: 40px;
+        border-radius: 999px;
+        background-color:$color-white;
+        border: 1px solid #bebebe;
+        position: absolute;
+        display: block;
+        right: 0;
+        font-size: 0;
+        top: 50%;
+        background-image: url(https://22514street.com/wp-content/themes/realty/js/ic_keyboard_arrow_right_48px-128.png);
+        background-size: cover;
+    }
     .trend__content-pro{
         display: block;
         width: 100%;
@@ -151,7 +179,7 @@
             display: none;
             position: absolute;
             text-align: center;
-            z-index: 2;
+            z-index: 1;
             width:202px;
             top: 60px;
             a{
