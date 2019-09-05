@@ -88,7 +88,7 @@
     left: 0;
     top: 50%;
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     background-image: url(https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_left_48px-512.png);
     font-size: 0;
     background-size: cover;
@@ -107,7 +107,6 @@
     background-image: url(https://22514street.com/wp-content/themes/realty/js/ic_keyboard_arrow_right_48px-128.png);
     background-size: cover;
   }
-
   .trend__button-select {
     width: 210px;
     margin: 20px auto;
@@ -163,7 +162,7 @@
       display: none;
     }
   }
-  @include min-xl {
+  @include min-xl{
     width: 100%;
     &__title-trend {
       margin: 0 auto;
