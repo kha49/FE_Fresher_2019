@@ -17,12 +17,12 @@
     height: auto;
     position: relative;
     .close-modal {
-      font-size: 14px;
+      font-size: 18px;
       height: 29px;
       width: 29px;
       position: absolute;
-      right: -15px;
-      top: -15px;
+      right: 10px;
+      top: -40px;
       z-index: 9;
       color: $color-white;
       background-color: #000;
@@ -78,6 +78,10 @@
       img{
         width: 120px;
       }
+      .close-modal{
+        top: -15px;
+        right: -15px;
+      }
     }
     &__button {
       button {
@@ -97,6 +101,10 @@
       }
       img{
         width: 120px;
+      }
+      .close-modal{
+        top: -15px;
+        right: -15px;
       }
     }
     &__button {
