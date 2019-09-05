@@ -6,11 +6,10 @@
 .nav-cart {
  display: none;
  position: absolute;
- width: 96vw;
+ width: 100vw;
  right: 0;
  border-bottom: 1px solid $color-text-price;
- padding: 15px;
- z-index: 1;
+ z-index: 100;
  background: $color-white;
 }
 .box-modal {
@@ -58,6 +57,7 @@
   padding: 15px 0;
   text-transform: uppercase;
   font-weight: bold;
+  z-index: 1;
   button {
     width: 100%;
     margin: 5px 15px;

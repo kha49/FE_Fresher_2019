@@ -35,7 +35,7 @@
                         span.old=val.old  
                         span.new=val.new 
                     if val.status == 0 
-                        .trend__button-select(class="select disable")
+                        .trend__button-select(class="select disable", id="modalHotsaleBtnMD" + index)
                             span=val.span
                     else
                         .trend__button-select(class="select")

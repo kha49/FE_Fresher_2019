@@ -1,24 +1,14 @@
-.container-fluid.nav-cart
-    .row
-        .col-12.box-cart
-            .row
-                .col-3
-                    img(src="https://cdn.shopify.com/s/files/1/0098/9705/0209/products/product-image-986041657_small.jpg?v=1560167019", alt="")
-                .col-8
-                    p Lorem, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    p
-                        span $2.0 x 2
-                .col-1
-                    span &times;
-        .col-12.box-checkout
-            .row.justify-content-between
-                .col-3
-                    h3  Total
-                .col-3
-                    h3  $4.80
-            .row.justify-content-center
-                button.btn(type='submit') Checkout
-                a(href="#", title="title") or view cart        
-
-
-
+.nav-cart
+    .container-fluid
+        .row
+            .col-12.box-cart
+                #cartContent
+            .col-12.box-checkout
+                .row.justify-content-between
+                    .col-3
+                        h3  Total
+                    .col-3
+                        h3  $4.80
+                .row.justify-content-center
+                    button(type='submit') Checkout
+                    a(href="#", title="title") or view cart        
