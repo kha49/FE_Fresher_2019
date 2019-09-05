@@ -1,7 +1,7 @@
 const nav_canvas = {
     init: () => {
         let header = document.querySelector(".header");
-        let main = document.querySelector(".main");
+        let main = document.querySelector("#main");
         let footer = document.querySelector(".footer");
         let navBtn = document.querySelector("#nav-canvasBtn");
         let nav = document.querySelector(".nav-canvas");
