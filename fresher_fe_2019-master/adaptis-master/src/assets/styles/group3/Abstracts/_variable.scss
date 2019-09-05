@@ -15,13 +15,6 @@ $color-text-price: #969696;
 $color-background: #e4bdb8;
 $color-background-white: rgba(255, 255, 255, 0.8);
 
-// breakpoints
-$grid-breakpoints: (
-    xxs: 360px,
-    xs: 481px,
-    sm: 768px,
-    smplus: 769px,
-    md: 992px,
-    lg: 1025px,
-    xl: 1200px
-); 
+// Fonts
+$Roboto:'Roboto';
+$Montserrat:'Montserrat';

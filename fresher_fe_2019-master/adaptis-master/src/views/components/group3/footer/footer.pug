@@ -1,28 +1,34 @@
 .footer#footer.wow.fadeInUp(data-wow-delay="0.5s", data-wow-duration="2s")
-    .footer__info.wow.fadeInUp(data-wow-delay="0.5s", data-wow-duration="2s")
-        .box-list
-            h3.box-list__title help
-            a(href="") About us
-            a(href="") Terms
-            a(href="") Contact us
-        .box-list
-            h3.box-list__title information
-            a(href="") privacy policy
-            a(href="") shipping info
-            a(href="") returns and refunds
-        .box-list__content
-            h3.box-list__title
-                |SIGN UP FOR EMAIL AND GET ALL THE BEST DEALS
-            .box-list__sub
-                input(type="text" placeholder="enter your email address")
-                button(type='submit') subscribe
-    .footer__checkout.wow.fadeInUp(data-wow-delay="0.5s", data-wow-duration="2s")
-        p © Ice Snow Lips. All Rights Reserved.
-        a(href="")
-            img(src="https://cdn.shopify.com/s/files/1/0098/9705/0209/t/2/assets/icon-cc-visa.png?129", alt="alt")
-        a(href="")
-            img(src="https://cdn.shopify.com/s/files/1/0098/9705/0209/t/2/assets/icon-cc-american-express.png?129", alt="alt")
-        a(href="")
-            img(src="https://cdn.shopify.com/s/files/1/0098/9705/0209/t/2/assets/icon-cc-mastercard.png?129", alt="alt")
-        a(href="")
-            img(src="https://cdn.shopify.com/s/files/1/0098/9705/0209/t/2/assets/icon-cc-discover.png?129", alt="alt")
+    .container
+        .row
+            - const list = [
+            - {title: "help", link: ["About us","Terms","Contact us"]},
+            - {title: "information", link: ["privacy policy","shipping info","returns and refunds"]}
+            - ]
+            .col-12.col-md-6
+                .row
+                    each item in list
+                        .col-6.box-list
+                            h3.box-list__title=item.title
+                            each link in item.link
+                                a(href="")=link
+            .col-12.col-md-6.pb-4.footer__form
+                .row.wow.fadeInUp(data-wow-delay="0.5s", data-wow-duration="2s")
+                    .col-12
+                        h3.footer__title
+                            |SIGN UP FOR EMAIL AND GET ALL THE BEST DEALS
+                    .col-8.col-sm-8.col-md-8.col-lg-8
+                        input(type="text" placeholder="enter your email address")
+                    .col-5.col-sm-4.col-md-5.col-lg-4
+                        button(type='button') subscribe
+            .col-12.pt-4.border-top.footer__checkout.wow.fadeInUp(data-wow-delay="0.5s", data-wow-duration="2s")
+                p © Ice Snow Lips. All Rights Reserved.
+                - const logos = [
+                - {img:"https://cdn.shopify.com/s/files/1/0098/9705/0209/t/2/assets/icon-cc-visa.png?129"},
+                - {img:"https://cdn.shopify.com/s/files/1/0098/9705/0209/t/2/assets/icon-cc-american-express.png?129"},
+                - {img:"https://cdn.shopify.com/s/files/1/0098/9705/0209/t/2/assets/icon-cc-mastercard.png?129"},
+                - {img:"https://cdn.shopify.com/s/files/1/0098/9705/0209/t/2/assets/icon-cc-discover.png?129"},
+                - ]
+                each logo in logos
+                    a(href="")
+                        img(src=logo.img, alt="alt")

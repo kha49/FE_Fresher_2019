@@ -1,34 +1,31 @@
 const Modal = {
     init: () => {
-        // let modalTrending = document.getElementsByClassName("ModalTrending");
         let modalTrending = document.querySelectorAll('.ModalTrending');
-        let modalHotsale = document.getElementsByClassName("modalHotsale");
+        let modalHotsale = document.querySelectorAll(".modalHotsale");
         const modals = [];
-        for (let i = 0; i < modalTrending.length; i++) {
+
+        modalTrending.forEach((val,index) => {
             modals.push(
                 {
-                    modalBtn: "modalBtn" + i,
-                    modal: "modalContent" + i,
-                    closerBtn: "closeBtn" + i,
-                    addToCard: "addToCard" + i
+                    modalBtn: "modalBtn" + index,
+                    modal: "modalContent" + index,
+                    closerBtn: "closeBtn" + index,
+                    addToCard: "addToCard" + index
                 }
             );
-
-        }
-        modalTrending.forEach(element => {
-            console.log(modalTrending);
         });
-        for (let i = 0; i < modalHotsale.length; i++) {
+
+        modalHotsale.forEach((val,index) => {
             modals.push(
                 {
-                    modalBtn: "modalHotsaleBtn" + i,
-                    modal: "modalHotsaleContent" + i,
-                    closerBtn: "closeHotsaleBtn" + i,
-                    addToCard: "addToCarda" + i
+                    modalBtn: "modalHotsaleBtn" + index,
+                    modal: "modalHotsaleContent" + index,
+                    closerBtn: "closeHotsaleBtn" + index,
+                    addToCard: "addToCarda" + index
                 }
             );
+        });
 
-        }
         modals.forEach(items => {
             const modalBtn = document.getElementById(items.modalBtn);
             const modalContent = document.getElementById(items.modal);
@@ -38,7 +35,6 @@ const Modal = {
             if (modalBtn) {
                 Modal.showModal(modalBtn, modalContent);
                 Modal.closeModal(closerBtn, modalContent);
-                Modal.addToCard(addToCard,modalContent);
             }
         });
     },
@@ -61,9 +57,6 @@ const Modal = {
                 modalContent.style.display = "none";
             }
         });
-    },
-    addToCard:(addToCard,modalContent)=>{
-        console.log(modalContent);
     }
 }
 

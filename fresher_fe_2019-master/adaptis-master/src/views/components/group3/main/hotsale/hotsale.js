@@ -75,7 +75,6 @@ const hotSale = {
             }
             
             product.push(item);
-            console.log(product);
         });
         if (showMoreBtn) {
             showMoreBtn.addEventListener("click", () => {

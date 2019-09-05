@@ -1,14 +1,15 @@
 .nav-canvas {
+  display: block;
   height: 100%;
-  width: 0px;
+  width: 0;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
+  overflow: hidden;
   background-color: $color-white;
   border: 1px solid $color-text-gray;
   box-shadow: 1px 1px 5px $color-text-gray inset;
-  overflow-x: hidden;
   transition: 0.5s;
   &__link {
     li {
