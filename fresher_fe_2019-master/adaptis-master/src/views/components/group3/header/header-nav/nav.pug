@@ -1,34 +1,18 @@
 .header-nav
     ul
-        li
-            a(href="") All collections
-        li
-            a(href="") lipsticks
-                span.fas.fa-caret-down
-            ul.header-nav__sub
-                li
-                    a(href="") 3CE Lipstick
-                li
-                    a(href="") 3CE Lipstick
-                li
-                    a(href="") 3CE Lipstick
-        li
-            a(href="") makeup tool
-                span.fas.fa-caret-down
-            ul.header-nav__sub
-                li
-                    a(href="") 3CE Lipstick
-                li
-                    a(href="") 3CE Lipstick
-                li
-                    a(href="") 3CE Lipstick
-        li
-            a(href="") orther cosmetics
-                span.fas.fa-caret-down
-            ul.header-nav__sub
-                li
-                    a(href="") 3CE Lipstick
-                li
-                    a(href="") 3CE Lipstick
-                li
-                    a(href="") 3CE Lipstick
+        - const menu = [
+        -   {link: "All collections"},
+        -   {link: "lipsticks", sub:["3CE Lipstick", "3CE Lipstick", "3CE Lipstick"]},
+        -   {link: "makeup tool", sub:["3CE Lipstick", "3CE Lipstick", "3CE Lipstick"]},
+        -   {link: "orther cosmetics", sub:["3CE Lipstick", "3CE Lipstick", "3CE Lipstick"]},
+        - ]
+        each val in menu
+            li
+                a(href="")=val.link
+                if val.sub
+                    span.fas.fa-caret-down
+                if val.sub
+                    ul.header-nav__sub
+                        each item in val.sub
+                            li
+                                a(href="")=item
