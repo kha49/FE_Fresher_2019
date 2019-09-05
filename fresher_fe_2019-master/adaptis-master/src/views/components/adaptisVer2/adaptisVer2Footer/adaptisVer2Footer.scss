@@ -34,21 +34,6 @@
         margin-top: 20px;
         @include display(flex, center);
         flex-direction: column;
-        .footer-animate {
-            animation: fadeInDown .5s linear forwards;
-            &:nth-child(1) {
-                animation-delay: .2s;
-            }
-            &:nth-child(2) {
-                animation-delay: .4s;
-            }
-            &:nth-child(3) {
-                animation-delay: .6s;
-            }
-            &:nth-child(4) {
-                animation-delay: .8s;
-            }
-        }
         .adaptis-footer-item {
             display: inline-block;
             letter-spacing: .25em;
