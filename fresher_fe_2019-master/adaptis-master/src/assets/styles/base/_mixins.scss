@@ -29,8 +29,20 @@
     }
 }
 
+@mixin min-smMinus {
+    @media (min-width: #{breakpoints(sm)} - 1px) {
+        @content;
+    }
+}
+
 @mixin max-sm {
     @media (max-width: #{breakpoints(sm)}) {
+        @content;
+    }
+}
+
+@mixin max-smMinus {
+    @media (max-width: #{breakpoints(sm)} - 1px) {
         @content;
     }
 }

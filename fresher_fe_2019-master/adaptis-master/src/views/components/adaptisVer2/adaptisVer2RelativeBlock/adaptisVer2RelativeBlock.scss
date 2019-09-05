@@ -116,15 +116,20 @@
         line-height: 2.18182;
         font-weight: bold;
         line-height: 1.5;
-        opacity: 1;
-        @include min-sm {
-            .adaptis-relative-block-container-items__item-link::before {
-                opacity: 0;
-            }
+        &::before {
+            opacity: 1;
         }
         &:hover::before {
             // left: initial;
             right: 0;
+        }
+    }
+    @include min-sm {
+        .adaptis-relative-block-container-items__item-link::before {
+            opacity: 0;
+        }
+        .adaptis-relative-block-container-items__item-link:hover::before {
+            opacity: 1;
         }
     }
 }

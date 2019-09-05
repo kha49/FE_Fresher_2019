@@ -39,6 +39,9 @@
             flex-direction: column;
             overflow: hidden;
             a {
+                @include min-sm_max-xl {
+                    line-height: 80px;
+                }
                 @include max-sm {
                     @include paddings(0, 0, 10px, 0);
                     margin-bottom: 30px;
@@ -61,7 +64,8 @@
                 }
             }
             a:nth-child(1) {
-                display: none;
+                transform: translate(100px);
+                @include transition(width, 0s, ease-in-out);
             }
         }
         &__hamburger {
@@ -100,7 +104,7 @@
         }
         @include min-sm_max-xl {
             padding-left: 25px;
-            width: 550px;
+            width: 80px;
             .adaptisVer2Header-menu-bar__items {
                 flex-direction: row;
                 a {
@@ -117,8 +121,6 @@
 }
 
 .hamburgerOpen {
-    left: initial;
-    right: 25px;
     .adaptisVer2Header-menu-bar__hamburger--line-1 {
         width: 0;
         transition: width .2s ease-in-out .2s;
@@ -145,7 +147,10 @@
 
 .menu-bar-isOpened {
     .adaptisVer2Header-menu-bar__items {
-        width: 100%;
+        width: 85%;
+        @include max-sm {
+            width: 100%;
+        }
     }
     @include max-sm {
         width: 100vw;
@@ -154,10 +159,31 @@
     a {
         display: inline-block;
         color: #{color(c-white)};
+        font-size: 1em;
+        @include min-sm_max-xl {
+            height: 80px;
+        }
+    }
+    a:first-child {
+        transform: translate(0);
     }
     @include min-sm_max-xl {
+        padding-left: 25px;
+        width: 550px;
         a:first-child {
             display: none;
+        }
+    }
+}
+
+.is-scrolled {
+    .adaptisVer2Header-menu-bar {
+        &__items {
+            #firstChildItem {
+                @include max-smMinus {
+                    display: block;
+                }
+            }
         }
     }
 }
