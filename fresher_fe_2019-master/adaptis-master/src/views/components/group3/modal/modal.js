@@ -3,25 +3,27 @@ const Modal = {
         let modalTrending = document.querySelectorAll('.ModalTrending');
         let modalHotsale = document.querySelectorAll(".modalHotsale");
         const modals = [];
+        var products = [];
+        // localStorage.clear();
 
-        modalTrending.forEach((val,index) => {
+        modalTrending.forEach((val, index) => {
             modals.push(
                 {
                     modalBtn: "modalBtn" + index,
                     modal: "modalContent" + index,
                     closerBtn: "closeBtn" + index,
-                    addToCard: "addToCard" + index
+                    addToCard: "addToCart" + index
                 }
             );
         });
 
-        modalHotsale.forEach((val,index) => {
+        modalHotsale.forEach((val, index) => {
             modals.push(
                 {
                     modalBtn: "modalHotsaleBtn" + index,
                     modal: "modalHotsaleContent" + index,
                     closerBtn: "closeHotsaleBtn" + index,
-                    addToCard: "addToCarda" + index
+                    addToCard: "addToCarta" + index
                 }
             );
         });
@@ -30,13 +32,20 @@ const Modal = {
             const modalBtn = document.getElementById(items.modalBtn);
             const modalContent = document.getElementById(items.modal);
             const closerBtn = document.getElementById(items.closerBtn);
-            const addToCard = document.getElementById(items.addToCard);
+            const addToCardBtn = document.getElementById(items.addToCard);
 
             if (modalBtn) {
                 Modal.showModal(modalBtn, modalContent);
                 Modal.closeModal(closerBtn, modalContent);
+                if (addToCardBtn) {
+                    addToCardBtn.addEventListener("click", () => {
+                        products.push(Modal.addToCard(modalContent));
+                        Modal.showToCart(products);
+                    });
+                }
             }
         });
+
     },
     showModal: (modalBtn, modalContent) => {
         let modal = document.getElementsByClassName("add-modal");
@@ -57,6 +66,42 @@ const Modal = {
                 modalContent.style.display = "none";
             }
         });
+    },
+    addToCard: (modalContent) => {
+        let price = document.querySelector("#" + (modalContent.id) + " " + ".proPrice");
+        let content = document.querySelector("#" + (modalContent.id) + " " + ".proContent");
+        let img = document.querySelector("#" + (modalContent.id) + " " + "img");
+        let product = {
+            price: price.innerText,
+            content: content.innerText,
+            img: img.src
+        }
+        return product;
+    },
+    showToCart: (products) => {
+        let productCount = document.querySelector("#productCount");
+        const SP = [];
+        products.forEach((pro) => {
+            let item = `<div class="row wow fadeIn modalHotsale" data-wow-delay=1s, data-wow-duration="2s">`;
+            item += `<div class="col-3">`;
+            item += `<img src="${pro.img}" alt="">`;
+            item += `</div>`;
+            item += `<div class="col-8">`;
+            item += `<p>${pro.content}</p>`;
+            item += `<p>${pro.price}</p>`;
+            item += `</div>`;
+            item += `<div class="col-1">`;
+            item += ` <span>&times</span>`;
+            item += `</div>`;
+            item += `</div>`;
+            SP.push(item);
+        });
+
+        if ($("#box-shoppingCart")) {
+            $("#box-shoppingCart").html(SP);
+        }
+        productCount.innerText = products.length;
+
     }
 }
 
