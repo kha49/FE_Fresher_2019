@@ -9,7 +9,7 @@ import scrollBtn from './views/components/group3/footer/scroll_btn/btn';
 import box_checkout from './views/components/group3_checkout/box-checkout/box-checkout';
 import form_checkout from './views/components/group3_checkout/form_checkout/form_checkout';
 import Modal from './views/components/group3/modal/modal';
-import hotSale from './views/components/group3/main/hotsale/hotsale';
+import hotSale from './views/components/group3/main-home/hotsale/hotsale';
 require('normalize.css');
 
 $(() => {
@@ -23,13 +23,11 @@ $(document).ready(() => {
   hotSale.init();
   $('.multiple-items').slick({
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 300,
     slidesToShow: 5,
     slidesToScroll: 1,
     arrows: true,
-    // prevArrow: $('.prev'),
-    // nextArrow: $('.next'),
     responsive: [
       {
         breakpoint: 1128,

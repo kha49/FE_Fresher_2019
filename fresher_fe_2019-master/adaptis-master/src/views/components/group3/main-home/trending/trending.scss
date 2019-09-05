@@ -53,7 +53,7 @@
         background-image: url(https://22514street.com/wp-content/themes/realty/js/ic_keyboard_arrow_right_48px-128.png);
         background-size: cover;
     }
-    .trend__content-pro{
+    &__product{
         display: block;
         width: 100%;
         img{
@@ -77,19 +77,23 @@
         }
     }
     
-    .trend__content-text{
+    &__text{
+        height: 120px;
+        overflow:hidden;
         a{
             font-size: 16px;
             font-family: 'Roboto';
             color: $color-dark;
             cursor: pointer;
             text-decoration: none;
+            word-wrap: break-word;
+           
         }  
     }
     .trend__content-hover{
         display: none;
     }
-    &__content-price{
+    &__price{
         .old{
             text-decoration: line-through;
             display: inline;
@@ -125,8 +129,15 @@
         color: #bebebe;     
     }
     .disable{
+       
         border: 2px solid #000;
         color: #000;
+        &:hover{
+            background-color: #333;
+            span{
+                color: $color-white;
+            } 
+        }
     }
     .row{
         margin: 20px auto;
@@ -143,7 +154,7 @@
                 font-weight: bold;
             }
         }
-        .trend__content-pro{
+        &__product{
             img{
                 &:hover{
                     opacity: 0.8;
@@ -166,7 +177,7 @@
                 font-weight: bold;
             }
         }
-        .trend__content-pro{
+        &__product{
             &:hover > .trend__content-hover{
                 display: block;
             }

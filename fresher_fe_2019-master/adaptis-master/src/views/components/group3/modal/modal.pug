@@ -44,10 +44,10 @@
                     h5=pro.content
                     p 
                         i.fas.fa-check#check
-                        |is added to shopping card
+                        |is added to shopping cart
                     .add-modal__button
                         button.btn(type='button') continue shopping 
-                        button.btn(type='button',id="addToCard"+index) go to card
+                        button.btn(type='button',id="addTocart"+index) go to cart
     each pro,index in box_hotsale
         .add-modal__content(id="modalHotsaleContent"+index)
             .row
@@ -60,7 +60,7 @@
                     h5=pro.content
                     p 
                         i.fas.fa-check#check
-                        |is added to shopping card
+                        |is added to shopping cart
                     .add-modal__button
                         button.btn(type='button') continue shopping 
-                        button.btn(type='button') go to card
+                        button.btn(type='button') go to cart

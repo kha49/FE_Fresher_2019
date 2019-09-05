@@ -1,41 +1,37 @@
-.trending.wow
-    .trending__title-trend.wow
-        h2 LIPSTICK TRENDING NOW
-    .trending__content-trend.multiple-items.wow
-            - const box_trend = [
-            -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/products/product-image-932241012_large.jpg?v=1560166171",label:"sale",content:"O.TWO.O 12 Colors Lips Makeup Lipstick  Lip Gloss Long Lasting Moisture Cosmetic Lipstick Red Lip Matte Lipstick Waterproof",old:"$4.89",new:"$3.99",span: "Select option", status: 0},
+.trending(style="margin-top: 80px").wow
+    .trending__title-hotsale
+        h2 Hot Sellers
+    .trending__content-trend.d-grid#hotSale
+            - const box_hotsale = [
             -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/products/product-image-986041898_large.jpg?v=1560167031",label:"sold out",content:"VIBELY 4 Colors Long Lasting Moisturizer Lipstick Makeup Waterproof Charming Lips Stick Lip Make Up Cosmetic Beauty maquiagem",old:"$4.28",new:"$3.83",span: "Select option", status: 0},
-            -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/products/product-image-408654837_large.jpg?v=1560166171",label:"sale",content:"O.TWO.O High Quality Velvet Matte lipstick Long Lasting Lips Makeup Waterproof Liquid Lipgloss Lip stick Pigmented 12 Colors",old:"$1.67",new:"$0.99",span: "Add to card", status: 0},
+            -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/products/product-image-408654837_large.jpg?v=1560166171",label:"sale",content:"O.TWO.O High Quality Velvet Matte lipstick Long Lasting Lips Makeup Waterproof Liquid Lipgloss Lip stick Pigmented 12 Colors",old:"$1.67",new:"$0.99",span: "Add to cart", status: 0},
             -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/products/product-image-986749718_large.jpg?v=1560242548",label:"sold out",content:"MISS ROSE 12 Colors Matte Lipstick makeup Long Lasting Waterproof lip gloss Gifts for Women Beauty Cosmetic maquillaje TSLM1",old:"$1.67",new:"$0.99",span: "Unavailable", status: 1},
             -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/products/product-image-986036456_large.jpg?v=1560166169",label:"sale",content:"Kissbeauty Aloe Vera Color Changes Lip Cream Moisturizing Long Lasting Lipstick",old:"$1.67",new:"$0.99",span: "Select option", status: 0},
             -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/products/product-image-936322753_large.jpg?v=1560242577",label:"sold out",content:"Brand Makeup Lip Gloss Waterproof Batom Lips Tint Red Brown Nude Long Lasting Liquid Matte Lipstick Makeup Lipgloss kyliejenner",old:"$1.67",new:"$0.99",span: "Select option", status: 0},
             -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/products/product-image-986036456_large.jpg?v=1560166169",label:"sale",content:"Kissbeauty Aloe Vera Color Changes Lip Cream Moisturizing Long Lasting Lipstick",old:"$1.67",new:"$0.99",span: "Select option", status: 0},
+            -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/products/product-image-932241012_large.jpg?v=1560166171",label:"sale",content:"O.TWO.O 12 Colors Lips Makeup Lipstick  Lip Gloss Long Lasting Moisture Cosmetic Lipstick Red Lip Matte Lipstick Waterproof",old:"$4.89",new:"$3.99",span: "Select option", status: 0},
             -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/products/product-image-936322753_large.jpg?v=1560242577",label:"sold out",content:"Brand Makeup Lip Gloss Waterproof Batom Lips Tint Red Brown Nude Long Lasting Liquid Matte Lipstick Makeup Lipgloss kyliejenner",old:"$1.67",new:"$0.99",span: "Unavailable", status: 1},
             -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/products/product-image-821634520_large.jpg?v=1560156404",label:"sold out",content:"Brand Makeup Lip Gloss Waterproof Batom Lips Tint Red Brown Nude Long Lasting Liquid Matte Lipstick Makeup Lipgloss kyliejenner",old:"$1.67",new:"$0.99",span: "Select option", status: 0},
-            -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/products/product-image-736359186_large.jpg?v=1560156425",label:"sold out",content:"Brand Makeup Lip Gloss Waterproof Batom Lips Tint Red Brown Nude Long Lasting Liquid Matte Lipstick Makeup Lipgloss kyliejenner",old:"$1.67",new:"$0.99",span: "Unavailable", status: 1},
-            -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/products/product-image-821634520_large.jpg?v=1560156404",label:"sold out",content:"Brand Makeup Lip Gloss Waterproof Batom Lips Tint Red Brown Nude Long Lasting Liquid Matte Lipstick Makeup Lipgloss kyliejenner",old:"$1.67",new:"$0.99",span: "Add to card", status: 0},
-            -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/products/product-image-894407076_large.jpg?v=1560166174",label:"sold out",content:"Brand Makeup Lip Gloss Waterproof Batom Lips Tint Red Brown Nude Long Lasting Liquid Matte Lipstick Makeup Lipgloss kyliejenner",old:"$1.67",new:"$0.99",span: "Unavailable", status: 1},
-            -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/products/product-image-986749718_large.jpg?v=1560242548",label:"sold out",content:"Brand Makeup Lip Gloss Waterproof Batom Lips Tint Red Brown Nude Long Lasting Liquid Matte Lipstick Makeup Lipgloss kyliejenner",old:"$1.67",new:"$0.99",span: "Add to card", status: 0},
-            -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/products/product-image-934683218_large.jpg?v=1560242547",label:"sold out",content:"Brand Makeup Lip Gloss Waterproof Batom Lips Tint Red Brown Nude Long Lasting Liquid Matte Lipstick Makeup Lipgloss kyliejenner",old:"$1.67",new:"$0.99",span: "Unavailable", status: 1},
+            -   {img:"//cdn.shopify.com/s/files/1/0098/9705/0209/products/product-image-736359186_large.jpg?v=1560156425",label:"sold out",content:"Brand Makeup Lip Gloss Waterproof Batom Lips Tint Red Brown Nude Long Lasting Liquid Matte Lipstick Makeup Lipgloss kyliejenner",old:"$1.67",new:"$0.99",span: "Unavailable", status: 1}
             - ]
-            each val,index in box_trend 
-                .grid-item.wow.fadeIn.ModalTrending(data-wow-delay=(index/5)+"s", data-wow-duration="2s")
-                    .trend__content-pro
+            each val,index in box_hotsale 
+                 .grid-item.wow.fadeIn.modalHotsale(data-wow-delay=(index/5)+"s", data-wow-duration="2s")
+                    .trending__product
                         span(class="label")=val.label
                         img.trend(src=val.img,)
                         .trend__content-hover
                             a(class="icon")
                                 span.fas.fa-heart
                             if val.status == 0 
-                                .trend__button-selectd(class="select disable",id=("modalBtn" + index))
+                                .trend__button-selectd(class="select disable",id=("modalHotsaleBtn" + index))
                                     span=val.span
                             else
-                                .trend__button-selectd(class="select",id=("modalBtn" + index))
+                                .trend__button-selectd(class="select",id=("" + index))
                                     span=val.span
                             a(class="view") QUICK VIEW
-                    .trend__content-text
+                    .trending__text
                         a=val.content
-                    .trending__content-price
+                    .trending__price
                         span.old=val.old  
                         span.new=val.new 
                     if val.status == 0 
@@ -44,4 +40,5 @@
                     else
                         .trend__button-select(class="select")
                             span=val.span
-                    
+    .hotsale__button#showMoreBtn
+         span Show more
