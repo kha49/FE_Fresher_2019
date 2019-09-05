@@ -9,8 +9,8 @@ import scrollBtn from './views/components/group3/footer/scroll_btn/btn';
 import box_checkout from './views/components/group3_checkout/box-checkout/box-checkout';
 import form_checkout from './views/components/group3_checkout/form_checkout/form_checkout';
 import Modal from './views/components/group3/modal/modal';
-import hotSale from './views/components/group3/main/hotsale/hotsale';
-import Slick from './views/components/group3/main/trending/trending';
+import hotSale from './views/components/group3/main-home/hotsale/hotsale';
+import Slick from './views/components/group3/main-home/trending/trending';
 require('normalize.css');
 
 $(() => {
