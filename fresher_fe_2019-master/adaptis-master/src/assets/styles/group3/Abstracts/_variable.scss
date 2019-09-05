@@ -1,15 +1,27 @@
+// colors
 $color-dark: #000000;
-$color-white: #FFFFFF;
-$color-red: #E95144;
-$color-background-red: rgba(255,113,113,0.8);
-$color-background-nav: #ED8074;
+$color-white: #ffffff;
+$color-red: #e95144;
+$color-background-red: rgba(255, 113, 113, 0.8);
+$color-background-nav: #ed8074;
 $color-background-dark: #323232;
-$color-background-gray: #3B3B3B;
-$color-background-checkout: #FAFAFA;
-$color-border-gray: #2D2D2D;
+$color-background-gray: #3b3b3b;
+$color-background-checkout: #fafafa;
+$color-border-gray: #2d2d2d;
 $color-border-dark: #000000;
-$color-text-gray: #DBDBDB;
+$color-text-gray: #dbdbdb;
 $color-text: #000000;
 $color-text-price: #969696;
 $color-background: #e4bdb8;
-$color-background-white:rgba(255,255,255,0.8);
+$color-background-white: rgba(255, 255, 255, 0.8);
+
+// breakpoints
+$grid-breakpoints: (
+    xxs: 360px,
+    xs: 481px,
+    sm: 768px,
+    smplus: 769px,
+    md: 992px,
+    lg: 1025px,
+    xl: 1200px
+); 

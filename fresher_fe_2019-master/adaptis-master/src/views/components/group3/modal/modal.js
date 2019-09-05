@@ -1,25 +1,30 @@
 const Modal = {
     init: () => {
-        let modalTrending = document.getElementsByClassName("ModalTrending");
+        // let modalTrending = document.getElementsByClassName("ModalTrending");
+        let modalTrending = document.querySelectorAll('.ModalTrending');
         let modalHotsale = document.getElementsByClassName("modalHotsale");
-        let addToCard = document.getElementsByClassName("addToCard");
         const modals = [];
         for (let i = 0; i < modalTrending.length; i++) {
             modals.push(
                 {
                     modalBtn: "modalBtn" + i,
                     modal: "modalContent" + i,
-                    closerBtn: "closeBtn" + i
+                    closerBtn: "closeBtn" + i,
+                    addToCard: "addToCard" + i
                 }
             );
 
         }
+        modalTrending.forEach(element => {
+            console.log(modalTrending);
+        });
         for (let i = 0; i < modalHotsale.length; i++) {
             modals.push(
                 {
                     modalBtn: "modalHotsaleBtn" + i,
                     modal: "modalHotsaleContent" + i,
-                    closerBtn: "closeHotsaleBtn" + i
+                    closerBtn: "closeHotsaleBtn" + i,
+                    addToCard: "addToCarda" + i
                 }
             );
 
@@ -28,11 +33,12 @@ const Modal = {
             const modalBtn = document.getElementById(items.modalBtn);
             const modalContent = document.getElementById(items.modal);
             const closerBtn = document.getElementById(items.closerBtn);
+            const addToCard = document.getElementById(items.addToCard);
 
             if (modalBtn) {
                 Modal.showModal(modalBtn, modalContent);
                 Modal.closeModal(closerBtn, modalContent);
-                Modal.addToCard(modalContent);
+                Modal.addToCard(addToCard,modalContent);
             }
         });
     },
@@ -56,8 +62,8 @@ const Modal = {
             }
         });
     },
-    addToCard:(contetn)=>{
-        console.log(contetn);
+    addToCard:(addToCard,modalContent)=>{
+        console.log(modalContent);
     }
 }
 

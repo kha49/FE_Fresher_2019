@@ -9,7 +9,12 @@ import scrollBtn from './views/components/group3/footer/scroll_btn/btn';
 import box_checkout from './views/components/group3_checkout/box-checkout/box-checkout';
 import form_checkout from './views/components/group3_checkout/form_checkout/form_checkout';
 import Modal from './views/components/group3/modal/modal';
+<<<<<<< HEAD
 import hotSale from './views/components/group3/main-home/hotsale/hotsale';
+=======
+import hotSale from './views/components/group3/main/hotsale/hotsale';
+import Trending from './views/components/group3/main/trending/trending';
+>>>>>>> 54a1e89532ea0cdbc8889ded9386c9927b42ddb0
 require('normalize.css');
 
 $(() => {
@@ -21,6 +26,7 @@ $(document).ready(() => {
   user.init();
   nav_canvas.init();
   hotSale.init();
+<<<<<<< HEAD
   $('.multiple-items').slick({
     dots: false,
     infinite: true,
@@ -54,10 +60,13 @@ $(document).ready(() => {
       }
     ]
   });
+=======
+>>>>>>> 54a1e89532ea0cdbc8889ded9386c9927b42ddb0
   scrollBtn.init();
   box_checkout.init();
   form_checkout.init();
   Modal.init();
+  Trending.init();
   new WOW().init();
 });
 
