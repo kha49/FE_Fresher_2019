@@ -28,6 +28,7 @@
         @include min-sm {
             padding: 0 0 0 10%;
         }
+        position: relative;
         &__title {
             @include typography($adaptis-title-font, initial, 2.25em, 1.25em);
             margin-bottom: 20px;
@@ -76,6 +77,7 @@
         }
     }
 }
+
 
 .adaptis-introduction-item-special {
     @include flexbox;

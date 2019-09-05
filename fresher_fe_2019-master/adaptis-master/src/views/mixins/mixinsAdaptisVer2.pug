@@ -204,7 +204,7 @@ mixin adaptisVer2Slide
                                     a(href="#" title=`${val.link}`)= val.link
 mixin adaptis-introduction-item
     .adaptis-introduction-item
-                .adaptis-introduction-item-content(class='skrollable skrollable-after skrollable-between' data-bottom-center='transform: translateX(200px); opacity: 0' data-center-center='transform: translateX(0); opacity: 1')
+                .adaptis-introduction-item-content(class='skrollable skrollable-after' data-top-top='transform: translateX(0px,0px); opacity: 1' data-center-center='transform: translate(400px,0px); opacity:0;')
                     .adaptis-introduction-item-content__title
                         span We develop
                         span mission critical applications
@@ -220,8 +220,8 @@ mixin adaptis-introduction-item--special
     .adaptis-introduction-item-special
         .adaptis-introduction-item-special-balloon
             .adaptis-introduction-item-special-balloon__bgd
-        .adaptis-introduction-item-special-thumb
-        .adaptis-introduction-item-special-content
+        .adaptis-introduction-item-special-thumb(class='skrollable skrollable-after' data-top-center='transform: translateX(200px,0px); opacity: 0' data-center-center='transform: translate(0px,0px); opacity:1;')
+        .adaptis-introduction-item-special-content(class='skrollable skrollable-after' data-top-center='transform: translateX(200px,0px); opacity: 0' data-center-center='transform: translate(0px,0px); opacity:1;')
             .adaptis-introduction-item-special-content__subtitle Success Story
             .adaptis-introduction-item-special-content__title Johnnie Walker CRM Program
             .adaptis-introduction-item-special-content__desc As apart of launching Johnnie Walkers CRM program, we built a personalisation studio that allows you to customise a Johnnie Walker Wiskey.
@@ -229,10 +229,10 @@ mixin adaptis-introduction-item--special
 
 mixin adaptis-introduction-item--switch
     .adaptis-introduction-item-switch
-        .adaptis-introduction-item-switch-thumb(class='skrollable skrollable-after' data-bottom-center='transform: translate(-100px, 0); opacity: 0' data-center-center='transform: translate(0,0); opacity: 1')
+        .adaptis-introduction-item-switch-thumb(class='skrollable skrollable-after' data-top-center='transform: translate(0); opacity:1' data-center-center='transform: translate(-400px); opacity:0' )
             .adaptis-introduction-item-switch-thumb__bgd
                 a(href="#" title="LET'S TALK").adaptis-introduction-item-switch-thumb__bgd-link LET'S TALK
-        .adaptis-introduction-item-switch-content(class='skrollable skrollable-after' data-bottom-center='transform: translate(100px,0); opacity:0' data-center-center='transform: translate(0,0); opacity: 1')
+        .adaptis-introduction-item-switch-content(class='skrollable skrollable-after' data-top-center='transform: translate(0,0); opacity:1' data-center-center='transform: translate(400px,100px); opacity:0')
             .adaptis-introduction-item-switch-content__title
                 span We are
                 span problem solvers
@@ -242,11 +242,12 @@ mixin adaptis-introduction-item--switch
                     p Some clients call us a digital agency, others see us as a development partner. We just see it as investing in our people to work alongside the most demanding of clients. Welcome to Adaptis, a global technical agency with locations in Australia, Switzerland, South East Asia, and Vietnam.   
 
 mixin adaptis-highlight-block
-    section.adaptis-highlight-block
-        .adaptis-highlight-block-bgd(class='skrollable skrollable-after skrollable-between' data-bottom-center='transform: translate(0, 20%)' data-center-center='transform: translate(0,0)')
+     section.adaptis-highlight-block
+        .adaptis-highlight-block-bgd(class='skrollable skrollable-between' data-top-bottom='transform: translateY(100px)' data-center-center='transform: translateY(-200px)')
         .adaptis-highlight-block-content
             .adaptis-highlight-block-content__desc View our work for Vicostone Quartz.  Customize your new quartz stone through the online visualiser and learn about new trends in home improvements.
-            a(href="#").adaptis-highlight-block-content__link VIEW THE WORK  
+            a(href="#").adaptis-highlight-block-content__link VIEW THE WORK 
+        
 
 mixin adaptis-solution-block
     section.adaptis-solution-block

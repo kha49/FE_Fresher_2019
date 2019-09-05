@@ -26,6 +26,9 @@ body {
     opacity: 1;
     overflow: hidden;
     color: #{color(adaptis-font-color)};
+    height: inherit !important;
+    height: 100%;
+    position: relative;
     p, a {
         font-family: $adaptis-main-font;
         font-weight: 300;
