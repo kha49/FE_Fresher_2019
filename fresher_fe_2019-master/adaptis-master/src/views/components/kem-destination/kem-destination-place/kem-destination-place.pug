@@ -11,11 +11,11 @@ section.kem-destination-place
                         -    listFilter: 1,
                         -    dataFilterGroup: "region", 
                         -    listBtn: [
-                        -                {dataFilter:"", select:"Filter By Region"}, 
-                        -                {dataFilter:".europe", select:"Europe"}, 
-                        -                {dataFilter:".ap", select:"Asia Pacific"}, 
-                        -                {dataFilter:".americas", select:"Americas"}, 
-                        -                {dataFilter:".mea", select:"Middle East & Africa"}
+                        -                {id:"r0", select:"Filter By Region"}, 
+                        -                {id:"r1", select:"Europe"}, 
+                        -                {id:"r2", select:"Asia Pacific"}, 
+                        -                {id:"r3", select:"Americas"}, 
+                        -                {id:"r4", select:"Middle East & Africa"}
                         -             ]
                         - },
                         - {
@@ -24,14 +24,34 @@ section.kem-destination-place
                         -    listFilter: 2,
                         -    dataFilterGroup: "country",  
                         -    listBtn: [
-                        -                {dataFilter:"", select:"Filter By Country"},
-                        -                {dataFilter:".Australia", select:"Australia"},
-                        -                {dataFilter:".Bulgaria", select:"Bulgaria"},
-                        -                {dataFilter:".China", select:"China"},
-                        -                {dataFilter:".Croatia", select:"Croatia"},
-                        -                {dataFilter:".Cuba", select:"Cuba"},
-                        -                {dataFilter:".DRC", select:"Democratic Republic of Congo"},
-                        -                {dataFilter:".Diibouti", select:"Diibouti"}
+                        -                {id:"c0", select:"Filter By Country"},
+                        -                {id:"c1", select:"Australia"},
+                        -                {id:"c2", select:"Bulgaria"},
+                        -                {id:"c3", select:"CROATIA"},
+                        -                {id:"c4", select:"GERMANY"},
+                        -                {id:"c5", select:"HUNGARY"},
+                        -                {id:"c6", select:"ITALY"},
+                        -                {id:"c7", select:"LATVIA"},
+                        -                {id:"c8", select:"LITHUANIA"},
+                        -                {id:"c9", select:"MALTA"},
+                        -                {id:"c11", select:"CHINA"},
+                        -                {id:"c12", select:"INDONESIA"},
+                        -                {id:"c13", select:"MONGOLIA"},
+                        -                {id:"c14", select:"MYANMAR"},
+                        -                {id:"c15", select:"SINGAPORE"},
+                        -                {id:"c16", select:"THAILAND"},
+                        -                {id:"c17", select:"CUBA"},
+                        -                {id:"c18", select:"dominica"},
+                        -                {id:"c19", select:"DEMOCRATIC REPUBLIC OF CONGO"},
+                        -                {id:"c20", select:"DJIBOUTI"},
+                        -                {id:"c21", select:"EGYPT"},
+                        -                {id:"c22", select:"GHANA"},
+                        -                {id:"c23", select:"JORDAN"},
+                        -                {id:"c24", select:"KENYA"},
+                        -                {id:"c25", select:"LEBANON"},
+                        -                {id:"c26", select:"OMAN"},
+                        -                {id:"c27", select:"QATAR"},
+                        -                {id:"c28", select:"SAUDI ARABIA"}
                         -             ]
                         - },
                         - {
@@ -40,13 +60,13 @@ section.kem-destination-place
                         -    listFilter: 3,
                         -    dataFilterGroup: "experience",  
                         -    listBtn: [
-                        -                {dataFilter:"", select:"Filter By Experience"}, 
-                        -                {dataFilter:".Weddings", select:"Weddings"},
-                        -                {dataFilter:".Culinary", select:"Culinary"},
-                        -                {dataFilter:".Golf", select:"Golf"},
-                        -                {dataFilter:".Ski", select:"Ski"},
-                        -                {dataFilter:".Spa", select:"Spa"},
-                        -                {dataFilter:".SS", select:"SUITELY SENSATIONAL"}
+                        -                {id: "e0", select:"Filter By Experience"}, 
+                        -                {id: "e1", select:"Weddings"},
+                        -                {id: "e2", select:"Culinary"},
+                        -                {id: "e3", select:"Golf"},
+                        -                {id: "e4", select:"Ski"},
+                        -                {id: "e5", select:"Spa"},
+                        -                {id: "e6", select:"SUITELY SENSATIONAL"}
                         -             ]
                         - },
                         - {
@@ -71,7 +91,7 @@ section.kem-destination-place
                                     .filters
                                         ul.kem-destination-place__btn-block__list(id= "listFilter"+ btn.listFilter data-filter-group= btn.dataFilterGroup)
                                             each link in btn.listBtn
-                                                li.kem-destination-place__btn-block__item(data-filter= link.dataFilter)
+                                                li.kem-destination-place__btn-block__item(id= link.id)
                                                     a.kem-destination-place__btn-block__link= link.select
                                             
             .row(style="margin:0")
@@ -79,91 +99,90 @@ section.kem-destination-place
                     ul.row.kem-destination-place__area
                         - var itemLv1Arr = [
                         - {
-                        -    regionName: "europe",
+                        -    regionName: "r1",
                         -    blockArr: [{
                         -               title: "europe",
                         -               itemLv2Arr: [
-                        -                             {subtitle: "australia",
-                        -                              itemLv3Arr: ["Joohberg - Kitzbuhel", "Vienna"]},
-                        -                             {subtitle: "Bulgaria",
-                        -                              itemLv3Arr: ["Banko"]},
-                        -                             {subtitle: "croatia",
-                        -                              itemLv3Arr: ["savudrjia - latria"]},
-                        -                             {subtitle: "germany",
-                        -                              itemLv3Arr: ["Berchtesgaden", "Berlin - Adlon", "Berlin - Bristol (Partner Hotel)", "Dresden", "Frankfurt - Gravenbruch", "Hamburg", "Königstein – Falkenstein Grand", "Königstein - Villa Rothschild", "Munich"]},
-                        -                             {subtitle: "HUNGARY",
-                        -                              itemLv3Arr: ["Budapest"]},
-                        -                             {subtitle: "ITALY",
-                        -                              itemLv3Arr: ["Venice"]},
-                        -                             {subtitle: "LATVIA",
-                        -                              itemLv3Arr: ["Riga"]},
-                        -                             {subtitle: "LITHUANIA",
-                        -                              itemLv3Arr: ["Vilnius"]},
-                        -                             {subtitle: "MALTA",
-                        -                              itemLv3Arr: ["Gozo - San Lawrenz"]},
-                        -                             {subtitle: "RUSSIA",
-                        -                              itemLv3Arr: ["Black Sea - Gelendzhik", "Moscow", "St. Petersburg"]},
-
+                        -                             {className: "c1", subtitle: "australia",
+                        -                              itemLv3Arr: [{expClass: "e1", expName: ["Joohberg - Kitzbuhel", "Vienna"]}]},
+                        -                             {className: "c2", subtitle: "Bulgaria",
+                        -                              itemLv3Arr: [{expClass: "e2", expName:["Banko"]}]},
+                        -                             {className: "c3", subtitle: "croatia",
+                        -                              itemLv3Arr: [{expClass: "e3", expName: ["savudrjia - latria"]}]},
+                        -                             {className: "c4", subtitle: "germany",
+                        -                              itemLv3Arr: [{expClass: "e4", expName: ["Berchtesgaden", "Berlin - Adlon", "Berlin - Bristol (Partner Hotel)", "Dresden", "Frankfurt - Gravenbruch", "Hamburg", "Königstein – Falkenstein Grand", "Königstein - Villa Rothschild", "Munich"]}]},
+                        -                             {className: "c5", subtitle: "HUNGARY",
+                        -                              itemLv3Arr: [{expClass: "e5", expName: ["Budapest"]}]},
+                        -                             {className: "c6", subtitle: "ITALY",
+                        -                              itemLv3Arr: [{expClass: "e6", expName:["Venice"]}]},
+                        -                             {className: "c7", subtitle: "LATVIA",
+                        -                              itemLv3Arr: [{expClass: "", expName: ["Riga"]}]},
+                        -                             {className: "c8", subtitle: "LITHUANIA",
+                        -                              itemLv3Arr: [{expClass: "", expName:["Vilnius"]}]},
+                        -                             {className: "c9", subtitle: "MALTA",
+                        -                              itemLv3Arr: [{expClass: "", expName: ["Gozo - San Lawrenz"]}]},
+                        -                             {className: "c10", subtitle: "RUSSIA",
+                        -                              itemLv3Arr: [{expClass: "", expName:["Black Sea - Gelendzhik", "Moscow", "St. Petersburg"]}]}
                         -                           ]                 
                         -            }]
                         - },
                         - {
-                        -    regionName: "ap", 
+                        -    regionName: "r2", 
                         -    blockArr: [{
                         -               title: "ASIA PACIFIC",
                         -               itemLv2Arr: [
-                        -                             {subtitle: "CHINA",
-                        -                              itemLv3Arr: ["Beijing ", "Beijing Yanqi Lake - Boutique", "Hotels", "Beijing Yanqi Lake - Sunrise", "Beijing Yanqi Lake - Yanqi Hotel", "Changsha", "Chengdu", "Chongqing", "Dalian", "Fuzhou", "Guiyang", "Hangzhou", "Huizhou", "Nanjing", "Shanghai - Pudong", "Shanghai - Puxi", "Shenyang", "Shenzhen", "Suzhou", "Taiyuan", "Xiamen", "Yinchuan"]},
-                        -                             {subtitle: "INDONESIA",
-                        -                              itemLv3Arr: ["Bali - Nusa Dua", "Jakarta"]},
-                        -                             {subtitle: "MONGOLIA",
-                        -                              itemLv3Arr: ["Ulaanbaatar"]},
-                        -                             {subtitle: "MYANMAR",
-                        -                              itemLv3Arr: ["Nay Pyi Taw"]},
-                        -                             {subtitle: "SINGAPORE",
-                        -                              itemLv3Arr: ["Singapore"]},
-                        -                             {subtitle: "THAILAND",
-                        -                              itemLv3Arr: ["Bangkok - Siam "]},
+                        -                             {className: "c11", subtitle: "CHINA",
+                        -                              itemLv3Arr: [{expClass: "", expName:["Beijing ", "Beijing Yanqi Lake - Boutique", "Hotels", "Beijing Yanqi Lake - Sunrise", "Beijing Yanqi Lake - Yanqi Hotel", "Changsha", "Chengdu", "Chongqing", "Dalian", "Fuzhou", "Guiyang", "Hangzhou", "Huizhou", "Nanjing", "Shanghai - Pudong", "Shanghai - Puxi", "Shenyang", "Shenzhen", "Suzhou", "Taiyuan", "Xiamen", "Yinchuan"]}]},
+                        -                             {className: "c12", subtitle: "INDONESIA",
+                        -                              itemLv3Arr: [{expClass: "", expName:["Bali - Nusa Dua", "Jakarta"]}]},
+                        -                             {className: "c13", subtitle: "MONGOLIA",
+                        -                              itemLv3Arr: [{expClass: "", expName:["Ulaanbaatar"]}]},
+                        -                             {className: "c14", subtitle: "MYANMAR",
+                        -                              itemLv3Arr: [{expClass: "", expName:["Nay Pyi Taw"]}]},
+                        -                             {className: "c15", subtitle: "SINGAPORE",
+                        -                              itemLv3Arr: [{expClass: "", expName:["Singapore"]}]},
+                        -                             {className: "c16", subtitle: "THAILAND",
+                        -                              itemLv3Arr: [{expClass: "", expName:["Bangkok - Siam"]}]}
                         -                           ]                 
                         -            }]
                         - },
                         - {
-                        -    regionName: "americas",
+                        -    regionName: "r3",
                         -    blockArr: [{
                         -               title: "AMERICAS",
                         -               itemLv2Arr: [
-                        -                             {subtitle: "CUBA",
-                        -                              itemLv3Arr: ["Havana"]},
-                        -                             {subtitle: "DOMINICA",
-                        -                              itemLv3Arr: ["Portsmouth - Douglas Bay"]},
+                        -                             {className: "c17", subtitle: "CUBA",
+                        -                              itemLv3Arr: [{expClass: "", expName:["Havana"]}]},
+                        -                             {className: "c18", subtitle: "DOMINICA",
+                        -                              itemLv3Arr: [{expClass: "", expName:["Portsmouth - Douglas Bay"]}]}
                         -                           ]                 
                         -            }]
                         - },
                         - {
-                        -    regionName: "mea",
+                        -    regionName: "r4",
                         -    blockArr: [{
                         -               title: "MIDDLE EAST & AFRICA",
                         -               itemLv2Arr: [
-                        -                             {subtitle: "DEMOCRATIC REPUBLIC OF CONGO",
-                        -                              itemLv3Arr: ["Kinshasa - Gombe"]},
-                        -                             {subtitle: "DJIBOUTI",
-                        -                              itemLv3Arr: ["Djibouti"]},
-                        -                             {subtitle: "EGYPT",
-                        -                              itemLv3Arr: ["Cairo - New Cairo", "Cairo - Nile", "Soma Bay - Red Sea"]},
-                        -                             {subtitle: "GHANA",
-                        -                              itemLv3Arr: ["Accra - Ridge"]},
-                        -                             {subtitle: "JORDAN",
-                        -                              itemLv3Arr: ["Amman", "Aqaba - Red Sea", "Dead Sea"]},
-                        -                             {subtitle: "KENYA",
-                        -                              itemLv3Arr: ["Masai Mara", "Nairobi"]},
-                        -                             {subtitle: "LEBANON",
-                        -                              itemLv3Arr: ["Beirut"]},
-                        -                             {subtitle: "OMAN",
-                        -                              itemLv3Arr: ["Muscat"]},
-                        -                             {subtitle: "QATAR",
-                        -                              itemLv3Arr: ["Doha", "Doha - The Pearl-Qatar"]},
-                        -                             {subtitle: "SAUDI ARABIA",
-                        -                              itemLv3Arr: ["Al Khobar"]},
+                        -                             {className: "c19", subtitle: "DEMOCRATIC REPUBLIC OF CONGO",
+                        -                              itemLv3Arr: [{expClass: "", expName:["Kinshasa - Gombe"]}]},
+                        -                             {className: "c20", subtitle: "DJIBOUTI",
+                        -                              itemLv3Arr: [{expClass: "", expName:["Djibouti"]}]},
+                        -                             {className: "c21", subtitle: "EGYPT",
+                        -                              itemLv3Arr: [{expClass: "", expName:["Cairo - New Cairo", "Cairo - Nile", "Soma Bay - Red Sea"]}]},
+                        -                             {className: "c22", subtitle: "GHANA",
+                        -                              itemLv3Arr: [{expClass: "", expName:["Accra - Ridge"]}]},
+                        -                             {className: "c23", subtitle: "JORDAN",
+                        -                              itemLv3Arr: [{expClass: "", expName:["Amman", "Aqaba - Red Sea", "Dead Sea"]}]},
+                        -                             {className: "c24", subtitle: "KENYA",
+                        -                              itemLv3Arr: [{expClass: "", expName:["Masai Mara", "Nairobi"]}]},
+                        -                             {className: "c25", subtitle: "LEBANON",
+                        -                              itemLv3Arr: [{expClass: "", expName:["Beirut"]}]},
+                        -                             {className: "26", subtitle: "OMAN",
+                        -                              itemLv3Arr: [{expClass: "", expName:["Muscat"]}]},
+                        -                             {className: "c27", subtitle: "QATAR",
+                        -                              itemLv3Arr: [{expClass: "", expName:["Doha", "Doha - The Pearl-Qatar"]}]},
+                        -                             {className: "c28", subtitle: "SAUDI ARABIA",
+                        -                              itemLv3Arr: [{expClass: "", expName:["Al Khobar"]}]}
                         -                           ]                 
                         -            }]
                         - },
@@ -176,9 +195,10 @@ section.kem-destination-place
                                         h2.kem-destination-place__area__title= block.title
                                         ul.kem-destination-place__area__listLv2
                                             each itemLv2 in block.itemLv2Arr
-                                                li.kem-destination-place__area__itemLv2
+                                                li.kem-destination-place__area__itemLv2(class= itemLv2.className)
                                                     h3.kem-destination-place__area__subtitle= itemLv2.subtitle
                                                     ul.kem-destination-place__area__listLv3
                                                         each itemLv3 in itemLv2.itemLv3Arr
-                                                            li.kem-destination-place__area__itemLv3
-                                                                a.kem-destination-place__area__linkLv3(href="#")= itemLv3
+                                                            li.kem-destination-place__area__itemLv3(class= itemLv3.expClass)
+                                                                each link3 in itemLv3.expName     
+                                                                    a.kem-destination-place__area__linkLv3(href="#")= link3

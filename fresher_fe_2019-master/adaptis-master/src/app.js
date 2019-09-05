@@ -13,7 +13,6 @@ import searchModal from './views/components/modals/modal-search/modal-search';
 import destinationPlace from './views/components/kem-destination/kem-destination-place/kem-destination-place';
 import Mapbox from './views/components/kem-homepage/kem-homepage-mapbox/kem-homepage-mapbox';
 
-require('isotope-layout');
 require('normalize.css');
 require('slick-carousel');
 require('daterangepicker');
@@ -25,19 +24,13 @@ $(() => {
 
 $(document).ready(() => {
   Global.lazyLoad();
-  Gallery.init();
-  Gallery.showModal();
-  Gallery.closedModal();
   offersSlide.slickSlider();
   experienceSlide.slickSlider();
   Gallery.slickSlider();
   Gallery.modalSlider();
   Gallery.init();
-  Gallery.showModal();
-  Gallery.closedModal();
   Explore.doubleSlider();
   Explore.singleSlider();
-  // Explore.showButton();
   header.init();
   footer.init();
   footerModal.init();
@@ -46,7 +39,6 @@ $(document).ready(() => {
   search.daterp()
   searchModal.init();
   destinationPlace.init();
-  destinationPlace.filter();
   Mapbox.viewMap();
 
 });
@@ -66,6 +58,5 @@ $(window).on('resize', () => {
 });
 
 window.onload = () => {
-  destinationPlace.filter();
   Mapbox.viewMap();
 };
