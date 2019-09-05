@@ -15,15 +15,8 @@
         }
     }
 }
-
-.adaptis-relative-block-container-items__item {
+.item-animate {
     animation: fadeInUp .5s ease-in-out forwards;
-    flex: 2;
-    margin: 0 0 30px;
-    @include min-sm {
-        flex: 1;
-        margin-left: 16px;
-    }
     &:first-child {
         animation-delay: .2s;
         @include min-sm {
@@ -36,6 +29,28 @@
     &:nth-child(3) {
         animation-delay: .6s;
     }
+}
+
+.adaptis-relative-block-container-items__item {
+    // animation: fadeInUp .5s ease-in-out forwards;
+    flex: 2;
+    margin: 0 0 30px;
+    @include min-sm {
+        flex: 1;
+        margin-left: 16px;
+    }
+    // &:first-child {
+    //     animation-delay: .2s;
+    //     @include min-sm {
+    //         margin-left: 0px;
+    //     }
+    // }
+    // &:nth-child(2) {
+    //     animation-delay: .4s;
+    // }
+    // &:nth-child(3) {
+    //     animation-delay: .6s;
+    // }
     &-thumb {
         @include adaptisVer2BackgroundImageProperties;
         height: 200px;
