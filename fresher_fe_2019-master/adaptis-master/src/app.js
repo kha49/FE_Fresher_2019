@@ -1,7 +1,14 @@
 import Global from './views/components/global/global';
 import load from './views/components/adaptisVer2/adaptisVer2SolutionBlock/adaptisVer2SolutionBlock';
 import adaptisHeaderLogo from './views/components/adaptisVer2/adaptisVer2Header/adaptisVer2Header';
+<<<<<<< HEAD
 import skrollr from './skrollr.min.js';
+=======
+import adaptisSlide from './views/components/adaptisVer2/adaptisVer2Slide/adaptisVer2Slide';
+import skrollr from '../node_modules/skrollr/src/skrollr';
+
+import '../node_modules/slick-carousel/slick/slick';
+>>>>>>> e32245b67d0628a48d6dbb715c367a97f116962e
 require('normalize.css');
 $(() => {
   // Code here
@@ -10,6 +17,13 @@ $(() => {
 $(document).ready(() => {
   Global.lazyLoad();
   adaptisHeaderLogo.init();
+  adaptisSlide.init();
+  $('.single-item').slick({
+    infinite: false,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
   skrollr.init();
   load.init();
 });

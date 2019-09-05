@@ -188,12 +188,12 @@ mixin adaptisVer2Title
 
 mixin adaptisVer2Slide
     .adaptisVer2Slide
-        .adaptisVer2Slide-button
-            button.adaptisVer2Slide-button__left prev
-            button.adaptisVer2Slide-button__right next
+        //- .adaptisVer2Slide-button
+        //-     button.adaptisVer2Slide-button__left prev
+        //-     button.adaptisVer2Slide-button__right next
         .adaptisVer2Slide-slides
             .adaptisVer2Slide-slides-mySlides
-                section.adaptisVer2Slide-slides-mySlides-section
+                section.adaptisVer2Slide-slides-mySlides-section.single-item
                     each val, index in adaptisSlideItemCaptionArray
                         .adaptisVer2Slide-item(class=`adaptisVer2Slide-slides-mySlides-section-${val.item}` style=`background-image: url(${val.image})`)
                             .adaptisVer2Slide__caption(class=`adaptisVer2Slide-slides-mySlides-section-${val.itemCaption}`)
@@ -202,6 +202,7 @@ mixin adaptisVer2Slide
                                 .adaptisVer2Slide__desc(class=`adaptisVer2Slide-slides-mySlides-section-${val.itemCaption}__${val.itemCaptionDesc}`)= val.desc
                                 .adaptisVer2Slide__link(class=`adaptisVer2Slide-slides-mySlides-section-${val.itemCaption}__${val.itemCaptionLink}`)
                                     a(href="#" title=`${val.link}`)= val.link
+                                    
 mixin adaptis-introduction-item
     .adaptis-introduction-item
                 .adaptis-introduction-item-content(class='skrollable skrollable-after' data-top-top='transform: translateX(0px,0px); opacity: 1' data-center-center='transform: translate(400px,0px); opacity:0;')
@@ -273,6 +274,7 @@ mixin adaptis-solution-block
             .adaptis-solution-container-title
                 span To support 
                 span global companies
+
 mixin adaptis-clients
     section.adaptis-clients
         .adaptis-clients-container
