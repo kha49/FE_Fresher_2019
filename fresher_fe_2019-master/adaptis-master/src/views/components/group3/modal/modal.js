@@ -3,13 +3,14 @@ const Modal = {
         let modalTrending = document.querySelectorAll('.ModalTrending');
         let modalHotsale = document.querySelectorAll(".modalHotsale");
         const modals = [];
-        var products = [];
+        const products = [];
         // localStorage.clear();
 
         modalTrending.forEach((val, index) => {
             modals.push(
                 {
                     modalBtn: "modalBtn" + index,
+                    modalBtnMD: "modalBtnMD" + index,
                     modal: "modalContent" + index,
                     closerBtn: "closeBtn" + index,
                     addToCard: "addToCart" + index
@@ -30,10 +31,13 @@ const Modal = {
 
         modals.forEach(items => {
             const modalBtn = document.getElementById(items.modalBtn);
+            const modalBtnMD = document.getElementById(items.modalBtnMD);
             const modalContent = document.getElementById(items.modal);
             const closerBtn = document.getElementById(items.closerBtn);
             const addToCardBtn = document.getElementById(items.addToCard);
-
+            if (modalBtnMD) {
+                Modal.showModal(modalBtnMD, modalContent);
+            }
             if (modalBtn) {
                 Modal.showModal(modalBtn, modalContent);
                 Modal.closeModal(closerBtn, modalContent);
