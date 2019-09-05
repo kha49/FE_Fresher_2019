@@ -22,6 +22,7 @@ const Modal = {
             modals.push(
                 {
                     modalBtn: "modalHotsaleBtn" + index,
+                    modalBtnMD: "modalHotsaleBtnMD" + index,
                     modal: "modalHotsaleContent" + index,
                     closerBtn: "closeHotsaleBtn" + index,
                     addToCard: "addToCarta" + index
@@ -103,6 +104,9 @@ const Modal = {
 
         if ($("#box-shoppingCart")) {
             $("#box-shoppingCart").html(SP);
+        }
+        if ($("#cartContent")) {
+            $("#cartContent").html(SP);
         }
         productCount.innerText = products.length;
 
