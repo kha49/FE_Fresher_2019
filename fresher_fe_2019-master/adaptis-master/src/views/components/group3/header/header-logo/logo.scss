@@ -117,6 +117,9 @@
       span {
         width: 100%;
       }
+      a{
+        color: #fff;
+      }
     }
   }
   @include Responsive(XL) {
