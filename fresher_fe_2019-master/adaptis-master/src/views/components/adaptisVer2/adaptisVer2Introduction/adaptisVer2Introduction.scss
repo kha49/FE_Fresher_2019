@@ -29,12 +29,13 @@
             padding: 0 0 0 10%;
         }
         &__title {
-            @include typography($adaptis-sub-font, initial, 2.25em, 1.25em);
+            @include typography($adaptis-title-font, initial, 2.25em, 1.25em);
             margin-bottom: 20px;
             text-align: right;
             @include min-sm {
                 font-size: 2.625em;
                 margin-bottom: 30px;
+                
             }
             span {
                 display: block;
@@ -49,7 +50,7 @@
         &__context {
             @include paddings(0, 0, 0, 5%);
             color: #{color(adaptis-font-color)};
-            font-size: 1em;
+            font-size: 1.3rem;
             @include min-sm {
                 @include paddings(0, 0, 0, 50%);
             }
@@ -233,7 +234,7 @@
             }
         }
         &__context {
-            font-size: 1em;
+            font-size: 1.3rem;
             color: #{color(adaptis-font-color)};
             padding: 0 0 0 5%;
             @include min-sm {

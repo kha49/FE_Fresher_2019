@@ -26,7 +26,8 @@ $fonts: (
     fontawesome: ('Fontawesome'),
     //ADAPTIS-FONT
     adaptisFonts: ("runda", sans-serif),
-    adaptisSubFonts: ("capitolium-2", sans-serif)
+    adaptisSubFonts: ("capitolium-2", sans-serif),
+    adaptisTitleFonts: ('Times New Roman', Times, serif)
 );
 
 $font-main: fonts(main);
@@ -36,6 +37,7 @@ $font-fontawesome: fonts(fontawesome);
 //ADAPTIS-FONT
 $adaptis-main-font: fonts(adaptisFonts);
 $adaptis-sub-font: fonts(adaptisSubFonts);
+$adaptis-title-font: fonts(adaptisTitleFonts);
 
 $fontweight-light: fontWeight(light);
 $fontweight-regular: fontWeight(regular);

@@ -39,10 +39,11 @@
             padding: 0 5%;
             width: 100%;
             margin-bottom: 30px;
+            font-size: 1.2rem;
             @include min-sm {
                 margin-bottom: 0;
                 text-align: right;
-                width: 70%;
+                width: 80%;
 
             }
         }

@@ -3,14 +3,17 @@
     @include paddings(120px, 25px, 50px, 25px);
     height: auto;
     align-items: center;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     line-height: 1.8;
     color: #{color(adaptis-font-color)};
     p {
-        max-width: 960px;
+        max-width: 1200px;
     }
     @include min-md {
         height: 80vh;
         padding: 50px;
+    }
+    @include max-sm {
+        font-size: 1.1rem;
     }
 }
