@@ -20,6 +20,7 @@
 @import '../../views/components/google/section/section.scss';
 
 @import '../../../node_modules/bootstrap/scss/bootstrap';
+@import '../../../node_modules/slick-carousel/slick/slick.scss';
 // Demo Search Result Google
 @import '../../views/components/searchResultGoogle/header/header.scss';
 @import '../../views/components/searchResultGoogle/body/body.scss';
@@ -29,7 +30,6 @@
 @import '../../views/components/airbnb/banner/banner.scss';
 @import '../../views/components/airbnb/body/body.scss';
 @import '../../views/components/airbnb/footer/footer.scss';
-@import '../../../node_modules/slick-carousel/slick/slick.scss';
 
 // Demo airbnbUpdate
 @import '../../views/components/airbnbUpdate/header/header.scss';

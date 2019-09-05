@@ -193,7 +193,7 @@ mixin adaptisVer2Slide
             button.adaptisVer2Slide-button__right next
         .adaptisVer2Slide-slides
             .adaptisVer2Slide-slides-mySlides
-                section.adaptisVer2Slide-slides-mySlides-section
+                section.adaptisVer2Slide-slides-mySlides-section.single-item
                     each val, index in adaptisSlideItemCaptionArray
                         .adaptisVer2Slide-item(class=`adaptisVer2Slide-slides-mySlides-section-${val.item}` style=`background-image: url(${val.image})`)
                             .adaptisVer2Slide__caption(class=`adaptisVer2Slide-slides-mySlides-section-${val.itemCaption}`)
