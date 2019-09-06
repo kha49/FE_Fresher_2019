@@ -12,22 +12,18 @@
 }
 
 .adaptis-introduction-item {
-    // @include flexbox();
-    // flex-direction: column;
     margin-bottom: 150px;
     position: relative;
     @include min-sm {
         flex-direction: row;
     }
     &-content {
-        // flex: 2;
         padding: 0 5%;
         @include translateX(0px);
         opacity: 1;
         @include min-sm {
             padding: 0 0 0 10%;
         }
-        // position: relative;
         &__title {
             @include typography($adaptis-title-font, initial, 2.25em, 1.25em);
             margin-bottom: 20px;

@@ -177,7 +177,7 @@ mixin adaptisVer2Header
             .adaptisVer2Header-menu-bar__items
                 a(href="#", title="ADAPTIS")#firstChildItem ADAPTIS
                 each val, index in adaptisHeaderMenuBarItems
-                    a(href="#" title=`${val}`)= val
+                    a(href="http://localhost:8080/adaptisVer2Contact" title=`${val}`)= val
             .adaptisVer2Header-menu-bar__hamburger#hamburger
                 each val, index in adaptisHeaderMenuBarHamburgerLine
                     i.adaptisVer2Header-menu-bar__hamburger--line(class=`adaptisVer2Header-menu-bar__hamburger--line-${val}`)
@@ -202,7 +202,7 @@ mixin adaptisVer2Slide
                                     
 mixin adaptis-introduction-item
     .adaptis-introduction-item
-                .adaptis-introduction-item-content(data-top-top='transform: translateX(0px,0px); opacity: 1' data-center-center='transform: translate(400px,0px); opacity:0;')
+                .adaptis-introduction-item-content(class='skrollable skrollable-after skrollable-between' data-bottom-center="transform: translateX(200px); opacity: 0" data-center-center="transform: translateX(0); opacity: 1")
                     .adaptis-introduction-item-content__title
                         span We develop
                         span mission critical applications
