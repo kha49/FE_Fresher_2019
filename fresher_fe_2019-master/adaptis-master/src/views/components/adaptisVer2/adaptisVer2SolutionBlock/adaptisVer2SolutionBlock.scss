@@ -119,11 +119,13 @@
             span {
                 display: block;
                 color: #{color(adaptis-font-color)};
+                font-family: 'Times New Roman', Times, serif;
             }
             span:first-child {
                 font-size: .6em;
                 color: #6E6E6E;
                 line-height: 1em;
+                font-family: 'Times New Roman', Times, serif;
             }
         }
     }
