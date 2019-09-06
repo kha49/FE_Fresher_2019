@@ -2,7 +2,6 @@
     position: relative;
     .adaptis-solution-decor {
         @include adaptisVer2BackgroundImage(url('../images/adaptis/visualisation.png'));
-        // @include translateY(-200px);
         @include absolute(absolute, 0, 0, initial, initial);
         @include scale(250px, 350px);
         display: none;
@@ -29,11 +28,13 @@
                 }
                 span {
                     display: block;
+                    font-family: 'Times New Roman', Times, serif;
                 }
                 span:first-child {
                     font-size: .6em;
                     color: #6E6E6E;
                     line-height: 1em;
+                    font-family: 'Times New Roman', Times, serif;
                 }
             }
             &-desc {

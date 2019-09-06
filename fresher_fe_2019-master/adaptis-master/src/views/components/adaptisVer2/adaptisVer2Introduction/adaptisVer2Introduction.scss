@@ -7,28 +7,27 @@
         margin: 0 auto;
         width: 100%;
         @include paddings(0, 15px, 0, 15px);
-        // max-width: 1024px;
-        max-width: 960px;
+        max-width: 1200px;
     }
 }
 
 .adaptis-introduction-item {
-    @include flexbox();
-    flex-direction: column;
+    // @include flexbox();
+    // flex-direction: column;
     margin-bottom: 150px;
     position: relative;
     @include min-sm {
         flex-direction: row;
     }
     &-content {
-        flex: 2;
+        // flex: 2;
         padding: 0 5%;
         @include translateX(0px);
         opacity: 1;
         @include min-sm {
             padding: 0 0 0 10%;
         }
-        position: relative;
+        // position: relative;
         &__title {
             @include typography($adaptis-title-font, initial, 2.25em, 1.25em);
             margin-bottom: 20px;
@@ -41,11 +40,14 @@
             span {
                 display: block;
                 color: #{color(adaptis-font-color)};
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 1.3em
             }
             span:first-child {
-                font-size: .6em;
+                font-size: .7em;
                 color: #6E6E6E;
                 line-height: 1em;
+                font-family: 'Times New Roman', Times, serif;
             }
         }
         &__context {
@@ -191,7 +193,7 @@
             min-height: 30vh;
             margin-bottom: 30px;
             @include min-sm {
-                width: 350px;
+                width: 450px;
                 min-height: 550px;
                 margin-bottom: 0;
             }
@@ -225,12 +227,13 @@
                 margin-bottom: 30px;
             }
             span {
-                font-family: $adaptis-sub-font;
+                font-family: $adaptis-title-font;
                 display: block;
                 height: 36px;
+                font-size: 1.3em;
             }
             span:first-child {
-                font-size: .6em;
+                font-size: .7em;
                 color: #6E6E6E;
                 line-height: 1em;
             }
