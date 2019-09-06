@@ -3,6 +3,7 @@ import Global from './views/components/global/global';
 import Header from './views/components/header/header';
 import 'bootstrap';
 import '../node_modules/slick-carousel/slick/slick';
+import '../node_modules/jquery-validation/dist/jquery.validate.min';
 import user from './views/components/group3/header/header-navbar-mobile/header-box-user/user-content';
 import nav_canvas from './views/components/group3/header/header-navbar-mobile-canvas/nav-canvas';
 import scrollBtn from './views/components/group3/footer/scroll_btn/btn';
@@ -28,6 +29,7 @@ $(document).ready(() => {
   Modal.init();
   Slick.init();
   new WOW().init();
+  $("#formCheckout").validate();
 });
 
 $(window).on('resize', () => {

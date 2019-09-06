@@ -5,42 +5,42 @@
     p.text-center|or
 .col-12
     .row
-        .col-6
-            h3 Contact information
-        .col-6
-            span Already have an account?
+        .col-12.col-md-6
+            h4 Contact information
+        .col-12.col-md-6
+            span.account Already have an account?
                 a(href="") Login
         .col-12.pt-3.pb-3
-            .form-group
-                input.form-control#email(type="text", placeholder="Email or mobile phone number")
-                span#email-erro
+            form(action="" method="method" id="emailCheckout")
+                .form-group
+                    input.form-control#email(type="email", placeholder="Email or mobile phone number" required)
         .col-12
             .form-check
                 input.form-check-input(type="checkbox", name="") 
                 |Keep me up to date on news and exclusive offers
     .col-12.p-0.pt-5
-        h3 Shipping address
-        form(action="" method="method")
+        h4 Shipping address
+        form(action="" method="method")#formCheckout
             .row
                 .col-12.col-sm-6
                     .form-group
-                        input.form-control#u_email(type="text", placeholder="Email or mobile phone number")
+                        input.form-control#u_email(type="text", placeholder="Email or mobile phone number" required)
                         span#u_email-erro
                 .col-12.col-sm-6
                     .form-group
-                        input.form-control#u_fname(type="text", placeholder="First name (optional)")
+                        input.form-control#u_fname(type="text", placeholder="First name (optional)" required)
                         span#u_fname-erro
                 .col-12
                     .form-group
-                        input.form-control#u_lname(type="text", placeholder="Last name")
+                        input.form-control#u_lname(type="text", placeholder="Last name" required)
                         span#u_lname-erro
                 .col-12
                     .form-group
-                        input.form-control#u_address(type="text", placeholder="Address")
+                        input.form-control#u_address(type="text", placeholder="Address" required)
                         span#u_address-erro
                 .col-12
                     .form-group
-                        input.form-control#u_ap(type="text", placeholder="Apartment, suite, ect. (optional)")
+                        input.form-control#u_ap(type="text", placeholder="Apartment, suite, ect. (optional)" required)
                         span#u_ap-erro
                 .col-12.col-sm-6
                     .form-group
@@ -49,7 +49,7 @@
                             option(value="") Viet Nam
                 .col-12.col-sm-6
                     .form-group
-                        input.form-control#u_code(type="text", placeholder="Postal code")
+                        input.form-control#u_code(type="text", placeholder="Postal code" required)
                         span#u_code-erro
                 .col-12
                     .form-check

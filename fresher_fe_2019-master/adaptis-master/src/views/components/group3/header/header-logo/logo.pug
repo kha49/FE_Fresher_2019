@@ -1,9 +1,9 @@
-.banner
+.header_banner
     .container
         .row.align-items-center
-            .col-12.col-md-6.col-lg-5.mt-3
-                img.banner__logo(src="https://cdn.shopify.com/s/files/1/0098/9705/0209/t/2/assets/logo.png?129", alt="alt")
-            .col-12.col-md-6.col-lg-7.banner__list
+            .col-12.col-md-6.col-lg-5.mt-3.text-center
+                img.header_banner__logo(src="https://cdn.shopify.com/s/files/1/0098/9705/0209/t/2/assets/logo.png?129", alt="alt")
+            .col-12.col-md-6.col-lg-7.header_banner__list
                 .row.justify-content-end.text-right
                     .col-md-5.col-lg-3
                         span.fas.fa-heart
@@ -14,8 +14,8 @@
                         a(href="") create an account
                     .col-md-6.p-0.col-lg-4.shopping-cart
                         span.fas.fa-shopping-cart
+                            span#productCount 0
                         a(href="") Shopping cart
-                        span#productCount 0
                         .box-shoppingCart
                             .col-12
                                 .row
@@ -25,11 +25,11 @@
                                     .col-6.text-left
                                         h3  Total
                                     .col-6.text-right
-                                        h3  $4.80
+                                        h3.totalPrice
                                 .row.justify-content-center
                                     button(type='button')
                                         a(href="/checkout") Checkout
                                     a(href="#", title="title") or view cart
-            .col-12.p-0.banner__search
+            .col-12.p-0.header_banner__search
                 input(type="text" placeholder="search")
                 span.fas.fa-search

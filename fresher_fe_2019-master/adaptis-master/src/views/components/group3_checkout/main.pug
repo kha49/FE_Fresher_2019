@@ -8,12 +8,12 @@
                 .col-sm-12.d-block.d-lg-none
                     div.border.showProd#showProd
                         .row
-                            .col-7
+                            .col-8
                                 span.fas.fa-shopping-cart
                                 span Show order sumary
                                 span.fas.fa-chevron-down
-                            .col-5.text-right
-                                span $2.29
+                            .col-4.text-right
+                                span.totalPrice
                 .col-sm-12.d-none.d-lg-block
                     nav(aria-label = "breadcrumb")
                         ol.breadcrumb
@@ -29,7 +29,7 @@
                         include ./box-checkout/box-checkout.pug
             .row.form_checkout.pt-5
                 include ./form_checkout/form_checkout.pug
-        .col-sm-12.col-lg-6.d-none.d-lg-block.border-left
+        .col-sm-12.col-lg-6.d-none.d-lg-block.border-left.box-checkout-content
             .row
                 .col-sm-12.col-lg-12
                     include ./box-checkout/box-checkout.pug
