@@ -1,30 +1,37 @@
 .kem-home-gallery {
     // text-align: center;
     padding-bottom: 50px;
+
     &__heading {
         text-align: center;
+
         &__desc {
-            padding-bottom: 30px; 
+            padding-bottom: 30px;
         }
     }
+
     &__slider {
         padding: 35px 0;
         margin: 0 auto;
         @include flexbox();
+
         &__item {
             display: flex !important;
             justify-content: center;
             margin: 0 10px;
             padding: 0 10px;
             text-align: center;
+
             .slider-gallery-img {
                 position: relative;
                 width: 192px;
                 height: 192px;
                 max-width: 200px;
+
                 @include min-sm {
                     max-width: 100%;
                 }
+
                 .gallery-username {
                     position: absolute;
                     z-index: 2;
@@ -44,48 +51,51 @@
                     color: #fff;
                     background-color: rgba(0, 0, 0, .3);
                 }
+
                 &:hover {
                     .gallery-username {
                         display: inline-block;
                     }
                 }
             }
-           
+
         }
     }
+
     &__button {
         text-align: center;
         padding: 18px 0 10px;
+
         @include min-sm {
             @include flexbox();
             justify-content: center;
         }
-        &__see-all, &__upload {
+
+        &__see-all,
+        &__upload {
             margin: 4px;
         }
     }
-    .slick-prev { 
-        left: 74px;
+
+    .slick-prev {
+        left: 20px;
+
         @include min-sm {
             left: -25px;
         }
     }
 
     .slick-next {
-        right: 70px;
+        right: 15px;
+
         @include min-sm {
-            right: -40px;
+            right: -25px;
+        }
+        @include min-xl {
+            right: -30px;
         }
     }
 
-    // .slick-prev:focus,
-    // .slick-prev:hover {
-
-    // }
-
-    // .slick-next:focus,
-    // .slick-next:hover {
-    // }
     .slick-prev::before {
         content: '\f053';
     }
@@ -93,6 +103,7 @@
     .slick-next::before {
         content: '\f054';
     }
+
     .slick-prev::before,
     .slick-next::before {
         font-size: 50px;
@@ -121,6 +132,7 @@
     top: 0;
     display: none;
     z-index: 10;
+
     &__item {
         display: none;
         background-color: #fff;
@@ -128,6 +140,7 @@
         width: 60% !important;
         padding: 25px;
         position: relative;
+
         .modal-gallery__closed {
             font-size: 20px;
             position: absolute;
@@ -139,21 +152,27 @@
             line-height: 25px;
             text-align: center;
             color: #010f2a;
+            cursor: pointer;
+
             &::after {
                 content: 'X';
             }
         }
+
         .modal-gallery__images {
             @include min-md {
                 padding: 0 20px;
             }
+
             padding: 0 20px 20px;
         }
+
         .modal-gallery__content {
             @include min-md {
                 vertical-align: middle;
                 position: relative;
             }
+
             &__author {
                 .author-info {
                     transition: color .1s ease;
@@ -167,6 +186,7 @@
                     text-overflow: ellipsis;
                     color: #010f2a;
                 }
+
                 .author-caption {
                     position: relative;
                     height: 52px;
@@ -183,8 +203,10 @@
                     color: #010f2a;
                 }
             }
+
             &__product {
                 margin: 40px 0;
+
                 .product-name {
                     font-family: Arial Black, Arial, Helvetica, sans-serif;
                     font-size: 16px;
@@ -193,6 +215,7 @@
                     text-transform: uppercase;
                     color: #010f2a;
                 }
+
                 .product-related {
                     font-family: Arial, Helvetica, sans-serif;
                     font-size: 13px;
@@ -203,11 +226,13 @@
                     color: #010f2a;
                 }
             }
+
             &__sharing {
                 @include min-md {
                     position: absolute;
                     bottom: 0px;
                 }
+
                 .sharing-title {
                     margin-bottom: 10px;
                     font-size: 11px;
@@ -216,11 +241,15 @@
                     color: #010f2a;
                     font-family: Arial, Helvetica, sans-serif;
                 }
+
                 .sharing-with {
                     @include flexbox();
                     justify-content: space-between;
+
                     &__social {
-                        &__fb, &__pin {
+
+                        &__fb,
+                        &__pin {
                             display: inline-block;
                             width: 27px;
                             height: 27px;
@@ -229,19 +258,23 @@
                             text-align: center;
                             color: #010f2a;
                             cursor: pointer;
+
                             &::before {
                                 display: block;
                                 height: 27px;
                                 content: '';
                             }
                         }
+
                         &__fb {
                             margin-right: 6px;
+
                             &::before {
                                 background: url(//olapic-data.s3.amazonaws.com/kempinskimaster/assets/img/KI_SocialMedia_RGB_Facebook_StellarBlue.png);
                                 background-size: cover;
                             }
                         }
+
                         &__pin {
                             &::before {
                                 background: url(//olapic-data.s3.amazonaws.com/kempinskimaster/assets/img/KI_SocialMedia_RGB_Pinterest_StellarBlue.png);
@@ -249,8 +282,10 @@
                             }
                         }
                     }
+
                     &__copyright {
                         padding-left: 50px;
+
                         a {
                             font-family: 'TiemposText', Arial, sans-serif;
                             font-size: 10px;

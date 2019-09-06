@@ -9,12 +9,13 @@
                 .kem-title.modal-footer__title kempinski hotels
         .modal-footer__content
             h5.modal-footer__content__title sign up to our newsletter
-            form.modal-footer__content__form
-                div
+            form#modalFormFooter.modal-footer__content__form()
+                div(style="padding-bottom: 20px")
                     p.form__inp__desc
                         |Email
                         span.form__inp__desc--red *
-                    input.form__inp(type="text", name="" placeholder="Email address")
+                    input.form__inp(style="margin-bottom: 5px" type="email" id="email" name="email" placeholder="Email address" required)
+                    //- p.form__inp__desc(id="message")
                 div.row.form__checkbox
                     div.col-xs-1.padding-none
                         input(type="checkbox" id="footer-modal-checkbox-1")

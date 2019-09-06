@@ -1,5 +1,10 @@
 const Gallery = {
   init: () => {
+    Gallery.initModal();
+    Gallery.modalSlider();
+    Gallery.slickSlider();
+  },
+  initModal: () => {
     const arrModal = [
       {
         imgGallery: 'imgGallery1',
@@ -33,7 +38,7 @@ const Gallery = {
         Gallery.showModal(imgGallery, modalGallery);
         Gallery.closedModal(modalGallery);
       }
-    })
+    });
   },
   showModal: (imgGallery, modalGallery) => {
     const modalBox = document.querySelector('.kem-home-gallery__modal-gallery');
@@ -123,11 +128,5 @@ const Gallery = {
       ]
     });
   }
-
-  // lightGallery: () => {
-  //   $('.multiple-items-gallery').lightGallery(
-
-  //   );
-  // }
 }
 export default Gallery;

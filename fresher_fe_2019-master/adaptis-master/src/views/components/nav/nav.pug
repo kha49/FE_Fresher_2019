@@ -18,7 +18,9 @@
 
         each item in itemArr
             li.kem-nav__item
-                a.kem-nav__link= item.navLink
+                //- - var pages = { item.navLink: '/kem-destination'}
+
+                a(href="/kem-destination").kem-nav__link= item.navLink
                 label.nav-label(for= item.navCheckbox)
                     span.kem-nav__icon-down-open.toggle-btn
                         i(class= item.iconClass)

@@ -1,4 +1,7 @@
 const Mapbox = {
+    init: () => {
+        Mapbox.viewMap();
+    },
     viewMap: () => {
         var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
         mapboxgl.accessToken = 'pk.eyJ1IjoiaHVlbWluIiwiYSI6ImNrMDQwaWk0ZDBmdjEzbnBucjUzNnU0d2IifQ.wbCztcHVJSRW-lCm2ftmKQ';

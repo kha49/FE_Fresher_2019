@@ -1,0 +1,19 @@
+.banner__img {
+    background-image: url(../images/kem/kem-banner/kem-banner-destination.jpg);
+    height: 270px; 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: 0 center;
+
+    @include min-xs {
+        height: 36rem; 
+    }
+
+    @include min-sm {
+        height: 51.2rem; 
+    }
+
+    @include min-lg {
+        height: 43.3rem; 
+    }
+}

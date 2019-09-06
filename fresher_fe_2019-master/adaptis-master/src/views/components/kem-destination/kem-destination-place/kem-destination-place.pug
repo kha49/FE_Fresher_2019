@@ -5,27 +5,82 @@ section.kem-destination-place
                 .col-xs-12(style="padding:0")
                     div.row.kem-destination-place__btn-block
                         - var btnArr = [
-                        - {nameBtn: "Filter By Region", idBtn: 1, listFilter: 1, listBtn: ["Filter By Region", "Europe", "Asia Pacific", "Americas", "Middle East & Africa"]},
-                        - {nameBtn: "Filter By Country", idBtn: 2, listFilter: 2, listBtn: ["Filter By Country", "Australia", "Bulgaria", "China", "Croatia", "Cuba", "Democratic Republic of Congo", "Diibouti"]},
-                        - {nameBtn: "Filter By Experience", idBtn: 3, listFilter: 3, listBtn: ["Filter By Experience", "Weddings", "Culinary", "Golf", "Ski", "Spa", "SUITELY SENSATIONAL"]},
-                        - {nameBtn: "Filter By Property Type", idBtn: 4, listFilter: 4, listBtn: ["Filter By Property Type", "Kempinski Hotel", "Residence", "Combined Hotel Residence"]}
+                        - {
+                        -    idBtn: 1, 
+                        -    nameBtn: "Filter By Region", 
+                        -    listFilter: 1,
+                        -    dataFilterGroup: "region", 
+                        -    listBtn: [
+                        -                {dataFilter:"", select:"Filter By Region"}, 
+                        -                {dataFilter:".europe", select:"Europe"}, 
+                        -                {dataFilter:".ap", select:"Asia Pacific"}, 
+                        -                {dataFilter:".americas", select:"Americas"}, 
+                        -                {dataFilter:".mea", select:"Middle East & Africa"}
+                        -             ]
+                        - },
+                        - {
+                        -    idBtn: 2, 
+                        -    nameBtn: "Filter By Country", 
+                        -    listFilter: 2,
+                        -    dataFilterGroup: "country",  
+                        -    listBtn: [
+                        -                {dataFilter:"", select:"Filter By Country"},
+                        -                {dataFilter:".Australia", select:"Australia"},
+                        -                {dataFilter:".Bulgaria", select:"Bulgaria"},
+                        -                {dataFilter:".China", select:"China"},
+                        -                {dataFilter:".Croatia", select:"Croatia"},
+                        -                {dataFilter:".Cuba", select:"Cuba"},
+                        -                {dataFilter:".DRC", select:"Democratic Republic of Congo"},
+                        -                {dataFilter:".Diibouti", select:"Diibouti"}
+                        -             ]
+                        - },
+                        - {
+                        -    idBtn: 3, 
+                        -    nameBtn: "Filter By Experience", 
+                        -    listFilter: 3,
+                        -    dataFilterGroup: "experience",  
+                        -    listBtn: [
+                        -                {dataFilter:"", select:"Filter By Experience"}, 
+                        -                {dataFilter:".Weddings", select:"Weddings"},
+                        -                {dataFilter:".Culinary", select:"Culinary"},
+                        -                {dataFilter:".Golf", select:"Golf"},
+                        -                {dataFilter:".Ski", select:"Ski"},
+                        -                {dataFilter:".Spa", select:"Spa"},
+                        -                {dataFilter:".SS", select:"SUITELY SENSATIONAL"}
+                        -             ]
+                        - },
+                        - {
+                        -    idBtn: 4, 
+                        -    nameBtn: "Filter By Property Type", 
+                        -    listFilter: 4,
+                        -    dataFilterGroup: "", 
+                        -    listBtn: [
+                        -                {select:"Filter By Property Type"},
+                        -                {select:"Kempinski Hotel"},
+                        -                {select:"Residence"},
+                        -                {select:"Combined Hotel Residence"}
+                        -             ]
+                        - }
                         - ]
                         each btn in btnArr
                             .col-xs-12.col-sm-6.col-md-3(style="margin-bottom: 1rem")
-                                button.kem-destination-place__btn-block__btn(type="button" id= "idBtn"+ btn.idBtn) 
+                                .kem-destination-place__btn-block__btn(type="button" id= "idBtn"+ btn.idBtn) 
                                     =btn.nameBtn
                                     span.kem-destination-place__btn-block__icon
                                         i(class="fas fa-caret-down")
-                                ul.kem-destination-place__btn-block__list(id= "listFilter"+ btn.listFilter)
-                                    each link in btn.listBtn
-                                        li.kem-destination-place__btn-block__item
-                                            a.kem-destination-place__btn-block__link= link
+                                    .filters
+                                        ul.kem-destination-place__btn-block__list(id= "listFilter"+ btn.listFilter data-filter-group= btn.dataFilterGroup)
+                                            each link in btn.listBtn
+                                                li.kem-destination-place__btn-block__item(data-filter= link.dataFilter)
+                                                    a.kem-destination-place__btn-block__link= link.select
                                             
             .row(style="margin:0")
                 .col-xs-12.col-md-12
                     ul.row.kem-destination-place__area
                         - var itemLv1Arr = [
-                        - {blockArr: [{
+                        - {
+                        -    regionName: "europe",
+                        -    blockArr: [{
                         -               title: "europe",
                         -               itemLv2Arr: [
                         -                             {subtitle: "australia",
@@ -52,7 +107,9 @@ section.kem-destination-place
                         -                           ]                 
                         -            }]
                         - },
-                        - {blockArr: [{
+                        - {
+                        -    regionName: "ap", 
+                        -    blockArr: [{
                         -               title: "ASIA PACIFIC",
                         -               itemLv2Arr: [
                         -                             {subtitle: "CHINA",
@@ -70,7 +127,9 @@ section.kem-destination-place
                         -                           ]                 
                         -            }]
                         - },
-                        - {blockArr: [{
+                        - {
+                        -    regionName: "americas",
+                        -    blockArr: [{
                         -               title: "AMERICAS",
                         -               itemLv2Arr: [
                         -                             {subtitle: "CUBA",
@@ -80,7 +139,9 @@ section.kem-destination-place
                         -                           ]                 
                         -            }]
                         - },
-                        - {blockArr: [{
+                        - {
+                        -    regionName: "mea",
+                        -    blockArr: [{
                         -               title: "MIDDLE EAST & AFRICA",
                         -               itemLv2Arr: [
                         -                             {subtitle: "DEMOCRATIC REPUBLIC OF CONGO",
@@ -109,7 +170,7 @@ section.kem-destination-place
                         - ]
 
                         each itemLv1 in itemLv1Arr
-                            li.col-xs-12.col-md-3.kem-destination-place__area__item
+                            li.col-xs-12.col-md-3.kem-destination-place__area__item(class= itemLv1.regionName)
                                 each block in itemLv1.blockArr
                                     div.kem-destination-place__area__block
                                         h2.kem-destination-place__area__title= block.title
