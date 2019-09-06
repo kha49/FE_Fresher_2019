@@ -205,7 +205,7 @@ mixin adaptisVer2Slide
                                     
 mixin adaptis-introduction-item
     .adaptis-introduction-item
-                .adaptis-introduction-item-content(class='skrollable skrollable-after skrollable-between' data-bottom-center="transform: translateX(200px); opacity: 0" data-center-center="transform: translateX(0); opacity: 1")
+                .adaptis-introduction-item-content(class='skrollable skrollable-after skrollable-between' data-top-top='transform: translateX(0px,0px); opacity: 1' data-center-center='transform: translate(400px,0px); opacity:0;')
                     .adaptis-introduction-item-content__title
                         span We develop
                         span mission critical applications
@@ -296,15 +296,9 @@ mixin adaptis-relative-block
 
 mixin adaptis-footer-clocks
     each val, index in adaptisFooterLocationsArray
+        //- +clock
         .adaptis-footer-clock
-            .adaptis-footer-clock__clock
-                div(class=`adaptis-footer-clock__clock--${val.clock}`)
-                    .adaptis-footer-clock__clock--location-hours
-                        .adaptis-footer-clock__clock-location-hours--hours
-                    .adaptis-footer-clock__clock--location-minutes
-                        .adaptis-footer-clock__clock-location-minutes--minutes
-                    .adaptis-footer-clock__clock--location-seconds
-                        .adaptis-footer-clock__clock-location-seconds--seconds
+            +clock
             .adaptis-footer-clock__text
                 .adaptis-footer-clock__text--location= val.location
                 .adaptis-footer-clock__text--phone
@@ -322,6 +316,25 @@ mixin adaptis-footer
                 a.adaptis-footer-item(href="#")= val
         .adaptis-footer-clocks
             +adaptis-footer-clocks
+
+mixin clock 
+    div#time
+    div#clock
+        div.num.num1 1
+        div.num.num2 2
+        div.num.num3 3
+        div.num.num4 4
+        div.num.num5 5
+        div.num.num6 6
+        div.num.num7 7
+        div.num.num8 8
+        div.num.num9 9
+        div.num.num10 10
+        div.num.num11 11
+        div.num.num12 12
+        div#hr-hand 
+        div#min-hand 
+        div#sec-hand 
 
 mixin adaptis-contact
     section.adaptis-contact
