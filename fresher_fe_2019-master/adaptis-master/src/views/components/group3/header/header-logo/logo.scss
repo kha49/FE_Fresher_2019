@@ -1,22 +1,9 @@
 .banner {
-  [class^="col-"] {
-    padding: 0;
-    margin: 0;
-  }
-  width: 100%;
-  display: block;
-  text-align: center;
-  &__content {
-    width: 100%;
-    display: block;
-    margin-top: 25px;
-  }
   &__logo {
     width: 130px;
   }
   &__search {
     display: flex;
-    width: 100%;
     margin-top: 20px;
     border: 1px solid $color-text-gray;
     input {
@@ -37,17 +24,10 @@
   &__list {
     display: none;
   }
-  @include Responsive(MD) {
-    margin-bottom: 25px;
-    &__content {
-      width: 95%;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      margin-top: 50px;
-    }
+  @include min-md {
+    padding-top: 30px;
     &__logo {
-      width: 130px;
+      display: flex;
     }
     &__search {
       width: 200px;
@@ -70,29 +50,17 @@
     }
     &__list {
       display: block;
-      width: 50%;
-      ul {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        flex-wrap: wrap;
-        li {
-          list-style: none;
-          padding: 10px;
-          a {
-            color: $color-text;
-            font-size: 16px;
-            text-transform: capitalize;
-          }
-          span {
-            padding: 5px;
-            font-size: 15px;
-          }
-        }
+      a {
+        color: $color-text;
+        font-size: 16px;
+        text-transform: capitalize;
+      }
+      span {
+        padding: 5px;
+        font-size: 15px;
       }
     }
     .shopping-cart {
-      order: 1;
       &:hover > .box-shoppingCart {
         display: block;
       }
@@ -100,14 +68,13 @@
     .box-shoppingCart {
       display: none;
       position: absolute;
-      right: 40px;
-      width: 40%;
+      right: 0;
+      width: 350px;
       border: 1px solid $color-text-gray;
-      padding: 15px;
+      padding: 10px;
       background: $color-white;
       img {
         width: 100%;
-        padding: 5px;
       }
       p {
         width: 100%;
@@ -117,14 +84,79 @@
       span {
         width: 100%;
       }
-      a{
+      a {
         color: #fff;
       }
     }
+    .box-checkout-md {
+      z-index: 1;
+      padding: 15px 0;
+      text-transform: uppercase;
+      border-top: 1px solid $color-border-dark;
+      button {
+        width: 100%;
+        margin: 5px 15px;
+        padding: 10px 15px;
+        background-color: $color-dark;
+        border: 1px solid #000;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $color-white;
+        a{
+          color: #fff;
+          text-decoration: none;
+        }
+        &:hover {
+          background-color: $color-background-nav;
+          color: $color-white;
+        }
+      }
+      a {
+        margin-top: 5px;
+        color: $color-text;
+        font-size: 14px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: "Montserrat";
+        font-weight: bold;
+        text-decoration: underline;
+      }
+      h3 {
+        font-weight: bold;
+        font-size: 16px;
+        color: $color-text;
+      }
+    }
+    .box-cart-md {
+      [class^="col-"] {
+        padding: 0;
+        margin: 0;
+      }
+      display: block;
+      max-height: 200px;
+      overflow: auto;
+      img {
+        width: 100%;
+        padding: 5px;
+      }
+      span {
+        color: black;
+        cursor: pointer;
+        padding: 0;
+      }
+      p {
+        color: black;
+        cursor: pointer;
+        font-size: 15px;
+        text-align: left;
+        span {
+          font-weight: bold;
+        }
+      }
+    }
   }
-  @include Responsive(XL) {
-    width: 80%;
-    margin: 0 auto;
+  @include min-xl {
     &__content {
       width: 80%;
       margin: 0 auto;
@@ -157,54 +189,153 @@
     }
     &__list {
       display: block;
-      width: 50%;
-      ul {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        flex-wrap: wrap;
-        li {
-          list-style: none;
-          padding: 10px;
-          a {
-            color: $color-text;
-            font-size: 16px;
-            text-transform: capitalize;
-          }
-          span {
-            padding: 5px;
-            font-size: 15px;
-          }
+      text-align: center !important;
+    }
+    .shopping-cart {
+      &:hover > .box-shoppingCart {
+        display: block;
+      }
+    }
+    .box-shoppingCart {
+      display: none;
+      position: absolute;
+      right: 0;
+      width: 350px;
+      border: 1px solid $color-text-gray;
+      background: $color-white;
+    }
+    .box-checkout-md {
+      z-index: 1;
+      padding: 15px 0;
+      text-transform: uppercase;
+      border-top: 1px solid $color-border-dark;
+      button {
+        width: 100%;
+        padding: 10px 15px;
+        background-color: $color-dark;
+        border: 1px solid #000;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $color-white;
+        a{
+          color: #fff;
+          text-decoration: none;
+        }
+        &:hover {
+          background-color: $color-background-nav;
+          color: $color-white;
+        }
+      }
+      a {
+        margin-top: 5px;
+        color: $color-text;
+        font-size: 14px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: "Montserrat";
+        font-weight: bold;
+        text-decoration: underline;
+      }
+      h3 {
+        font-weight: bold;
+        font-size: 16px;
+        color: $color-text;
+      }
+    }
+    .box-cart-md {
+      [class^="col-"] {
+        padding: 0;
+        margin: 0;
+      }
+      display: block;
+      max-height: 200px;
+      overflow: auto;
+      img {
+        width: 100%;
+        padding: 5px;
+      }
+      span {
+        color: black;
+        cursor: pointer;
+        padding: 0;
+      }
+      p {
+        color: black;
+        cursor: pointer;
+        font-size: 15px;
+        text-align: left;
+        span {
+          font-weight: bold;
         }
       }
     }
-    .shopping-cart {
-        &:hover > .box-shoppingCart {
-          display: block;
+    .box-checkout-md {
+      z-index: 1;
+      padding: 15px 0;
+      text-transform: uppercase;
+      border-top: 1px solid $color-border-dark;
+      button {
+        width: 100%;
+        margin: 5px 15px;
+        padding: 10px 15px;
+        background-color: $color-dark;
+        border: 1px solid #000;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $color-white;
+        a{
+          color: #fff;
+          text-decoration: none;
+        }
+        &:hover {
+          background-color: $color-background-nav;
+          color: $color-white;
         }
       }
-      .box-shoppingCart {
-        display: none;
-        position: absolute;
-        z-index: 1;
-        background-color: $color-white;
-        right: 300px;
-        width: 20%;
-        border: 1px solid $color-text-gray;
-        padding: 15px;
-        img {
-          width: 100%;
-          padding: 5px;
-        }
-        p {
-          width: 100%;
-          font-size: 15px;
-          text-align: left;
-        }
+      a {
+        margin-top: 5px;
+        color: $color-text;
+        font-size: 14px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: "Montserrat";
+        font-weight: bold;
+        text-decoration: underline;
+      }
+      h3 {
+        font-weight: bold;
+        font-size: 16px;
+        color: $color-text;
+      }
+    }
+    .box-cart-md {
+      [class^="col-"] {
+        padding: 0;
+        margin: 0;
+      }
+      display: block;
+      max-height: 200px;
+      overflow: auto;
+      img {
+        width: 100%;
+        padding: 5px;
+      }
+      span {
+        color: black;
+        cursor: pointer;
+        padding: 0;
+      }
+      p {
+        color: black;
+        cursor: pointer;
+        font-size: 15px;
+        text-align: left;
         span {
-          width: 100%;
-          font-size: 20px;
+          font-weight: bold;
         }
       }
+    }
   }
 }

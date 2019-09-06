@@ -1,32 +1,35 @@
 .banner
-    .banner__content
-        img.banner__logo(src="https://cdn.shopify.com/s/files/1/0098/9705/0209/t/2/assets/logo.png?129", alt="alt")
-        .banner__list
-            ul
-                li
-                    span.fas.fa-heart
-                    a(href="") my wishlist
-                li.shopping-cart
-                    .shopping-cart__icon
+    .container
+        .row.align-items-center
+            .col-12.col-md-6.col-lg-5.mt-3
+                img.banner__logo(src="https://cdn.shopify.com/s/files/1/0098/9705/0209/t/2/assets/logo.png?129", alt="alt")
+            .col-12.col-md-6.col-lg-7.banner__list
+                .row.justify-content-end.text-right
+                    .col-md-5.col-lg-3
+                        span.fas.fa-heart
+                        a(href="") my wishlist
+                    .col-md-7.p-0.mb-3.col-lg-5
+                        a(href="") sign in
+                        span or
+                        a(href="") create an account
+                    .col-md-6.p-0.col-lg-4.shopping-cart
                         span.fas.fa-shopping-cart
+                        a(href="") Shopping cart
                         span#productCount 0
-                    a(href="") Shopping cart
-                    .box-shoppingCart
-                        #box-shoppingCart
-                        .box-checkout
-                            .row.justify-content-between
-                                .col-3
-                                    h3  Total
-                                .col-3
-                                    h3  $4.80
-                            .row.justify-content-center
-                                button.btn(type='button')
-                                    a(href="/checkout") Checkout
-                                a(href="#", title="title") or view cart
-                li
-                    a(href="") sign in
-                    span or
-                    a(href="") create an account
-    .banner__search
-        input(type="text" placeholder="search")
-        span.fas.fa-search
+                        .box-shoppingCart
+                            .col-12
+                                .row
+                                    #box-shoppingCart.box-cart-md
+                            .box-checkout-md
+                                .row.justify-content-between
+                                    .col-6.text-left
+                                        h3  Total
+                                    .col-6.text-right
+                                        h3  $4.80
+                                .row.justify-content-center
+                                    button(type='button')
+                                        a(href="/checkout") Checkout
+                                    a(href="#", title="title") or view cart
+            .col-12.p-0.banner__search
+                input(type="text" placeholder="search")
+                span.fas.fa-search

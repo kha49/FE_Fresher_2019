@@ -18,41 +18,21 @@
         span {
           padding-left: 10px;
         }
-        // &:hover ~ .header-nav__sub {
-        //   display: block;
-        // }
+      }
+      &:hover {
+        .header-nav__sub {
+          display: block;
+        }
       }
     }
   }
-  @include Responsive(MD) {
+  @include min-md {
     display: block;
   }
-  @include Responsive(XL) {
-    top: 0;
+  @include min-xl {
     display: block;
-    ul {
+    ul{
       width: 80%;
-      display: flex;
-      align-items: center;
-      li {
-        list-style: none;
-        a {
-          display: block;
-          font-size: 16px;
-          text-transform: uppercase;
-          font-family: "Montserrat";
-          color: $color-white;
-          padding: 10px;
-          span {
-            padding-left: 10px;
-          }
-        }
-        &:hover {
-          .header-nav__sub {
-            display: block;
-          }
-        }
-      }
     }
   }
   .header-nav__sub {
@@ -71,11 +51,11 @@
         padding-left: 40px;
       }
       &:hover::before {
-        content: '';
+        content: "";
         width: 15px;
         height: 1px;
         position: absolute;
-        top: 18px;
+        top: 20px;
         left: 20px;
         background: #000;
       }

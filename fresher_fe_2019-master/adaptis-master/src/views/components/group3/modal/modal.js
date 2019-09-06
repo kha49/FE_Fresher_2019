@@ -88,14 +88,14 @@ const Modal = {
         const SP = [];
         products.forEach((pro) => {
             let item = `<div class="row wow fadeIn modalHotsale" data-wow-delay=1s, data-wow-duration="2s">`;
-            item += `<div class="col-3">`;
+            item += `<div class="col-3 col-lg-3">`;
             item += `<img src="${pro.img}" alt="">`;
             item += `</div>`;
-            item += `<div class="col-8">`;
+            item += `<div class="col-8 col-lg-7">`;
             item += `<p>${pro.content}</p>`;
             item += `<p>${pro.price}</p>`;
             item += `</div>`;
-            item += `<div class="col-1">`;
+            item += `<div class="col-1 col-lg-1">`;
             item += ` <span>&times</span>`;
             item += `</div>`;
             item += `</div>`;

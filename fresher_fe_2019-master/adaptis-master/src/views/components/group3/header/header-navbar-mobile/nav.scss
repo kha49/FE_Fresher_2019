@@ -12,10 +12,10 @@
       font-size: 16px;
     }
   }
-  @include Responsive(MD) {
+  @include min-md {
     display: none;
   }
-  @include Responsive(XL) {
+  @include min-xl {
     display: none;
   }
 }
