@@ -138,14 +138,16 @@
 -       ID: "firstName",
 -       name: "firstName",
 -       labelText: "First name*",
--       inputType: "text"   
+-       inputType: "text",
+-       required: "required"
 -   },
 -   {
 -       labelFor: "lastName",
 -       ID: "lastName",
 -       name: "lastName",
 -       labelText: "Last name*",
--       inputType: "text"    
+-       inputType: "text",
+-       required: "required"
 -   },
 -   {
 -       labelFor: "email",
@@ -153,6 +155,7 @@
 -       name: "email",
 -       labelText: "Email address*",
 -       inputType: "email"
+-       
 -   },
 -   {
 -       labelFor: "company",
@@ -327,11 +330,26 @@ mixin adaptis-contact
                 span Every project
                 span Starts with a conversation
             .adaptis-contact-container-desc We’re always looking to meet and work with companies that have forwarded thinking views. Our team is a mixed bunch of strategists, designers, developers, analysts, with passionate and all-round nice people.
-            form(method="POST").adaptis-contact-container-form
-                each val, index in adaptisContactFields
-                    .adaptis-contact-container-form__field
-                        label(for=`${val.labelFor}`).adaptis-contact-container-form__field--label= val.labelText
-                        input(id=`${val.ID}` type=`${val.inputType}` name=`${val.name}`).adaptis-contact-container-form__field--input
+            form(method="POST").adaptis-contact-container-form#adaptisForm
+                //- each val, index in adaptisContactFields
+                //-     .adaptis-contact-container-form__field
+                //-         label(for=`${val.labelFor}`).adaptis-contact-container-form__field--label= val.labelText
+                //-         input(id=`${val.ID}` type=`${val.inputType}` name=`${val.name}`).adaptis-contact-container-form__field--input
+                .adaptis-contact-container-form__field
+                    label(for="firstName").adaptis-contact-container-form__field--label First name
+                    input(id="firstName" type="text" name="firstName" required).adaptis-contact-container-form__field--input
+                .adaptis-contact-container-form__field
+                    label(for="lastName").adaptis-contact-container-form__field--label Last name
+                    input(id="lastName" type="text" name="lastName" required).adaptis-contact-container-form__field--input
+                .adaptis-contact-container-form__field
+                    label(for="email").adaptis-contact-container-form__field--label Email address
+                    input(id="email" type="email" name="email" required).adaptis-contact-container-form__field--input
+                .adaptis-contact-container-form__field
+                    label(for="company").adaptis-contact-container-form__field--label Company
+                    input(id="company" type="text" name="company").adaptis-contact-container-form__field--input
+                .adaptis-contact-container-form__field
+                    label(for="phoneNumber").adaptis-contact-container-form__field--label Phone number
+                    input(id="phoneNumber" type="phone" name="phoneNumber").adaptis-contact-container-form__field--input
                 .adaptis-contact-container-form__field
                     button(type="submit").adaptis-contact-container-form__field--button
                         span Submit

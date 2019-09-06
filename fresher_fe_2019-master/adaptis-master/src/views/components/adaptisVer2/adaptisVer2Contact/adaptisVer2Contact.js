@@ -4,6 +4,10 @@ const adaptisContact = {
         // if(onClickedInput.on) {
         //     onClickedInput.style.border-color = "#182F45";
         // }
+        $("#adaptisForm").validate();
+    },
+    validation: () => {
+        
     }
 }
 
