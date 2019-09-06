@@ -1,6 +1,6 @@
 .kem-home-hoteliers {
     text-align: center;
-    padding-bottom: 40px;
+    padding: 25px 0 35px;
     &__heading {
         &__desc {
             padding-bottom: 30px; 
@@ -12,10 +12,10 @@
             padding: 0 10%;
         }
         @include min-md {
-            padding: 0 16%;
+            padding: 0 15%;
         }
         @include min-xl {
-            padding: 0 22%;
+            padding: 0 20%;
         }
     }
 }

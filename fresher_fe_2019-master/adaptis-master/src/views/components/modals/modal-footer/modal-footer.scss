@@ -121,6 +121,11 @@
             }
         }
     }
+    
+}
+label.error {
+    @include typography($font-primary, 300, 12px, 1.6rem);
+    color: red;
 }
 
 .modal-link{

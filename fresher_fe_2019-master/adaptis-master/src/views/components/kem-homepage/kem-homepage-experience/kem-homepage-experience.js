@@ -1,4 +1,7 @@
-const experienceSlide = {
+const Experience = {
+  init: () => {
+    Experience.slickSlider();
+  },
     slickSlider:() => {
         $('.multiple-items-experience').slick({
             dots: false,
@@ -28,4 +31,4 @@ const experienceSlide = {
           });
     }
 }
-export default experienceSlide;
+export default Experience;

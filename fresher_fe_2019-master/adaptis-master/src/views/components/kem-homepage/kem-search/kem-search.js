@@ -1,8 +1,11 @@
 const search = {
-    init: () =>{
+    init: () => {
+        search.initModal();
+        search.daterp();
+    },
+    initModal: () => {
 
         let kemSearch = document.getElementById('kemSearch');
-        let formSecond = document.getElementById("formSecond");
         let btnSearchNotDesktop = document.getElementById('btnSearchNotDesktop');
         let closeFormSearch = document.getElementById('closeFormSearch');
         let partnerDestinations = document.getElementById('partnerDestinations')
@@ -31,32 +34,27 @@ const search = {
             });
         }
 
-        $(document).ready(function() {
-			$("#input").change(function(event) {
-				/* Act on the event */
-				var select = $(this).select().val();
-				console.log(select);
-				// $("#test").empty();
-				var strings = '';
-				// var tmpString = '<div>';
-				for (var i = 0; i < select; i++) {
-					var string = '<select id="color'+(i+1)+'" class="color color'+(i+1)+' form-control-static">'
-						+'<option>1</option>'
-						+'<option>2</option>'
-						+'<option>3</option>'
-						+'<option>4</option>'+
-						'</select>';
-						strings += string;
-				};
-				// tmpString += strings + '</div>';
-				$("#test").html(strings);
-			});
-		});
-        // window.onclick = function(event) {
-        //     if (event.target == formSecond) {
-        //         formSecond.style.display = "none";
-        //     }
-        // }
+        $(document).ready(function () {
+            $("#input").change(function (event) {
+                /* Act on the event */
+                var select = $(this).select().val();
+                console.log(select);
+                // $("#test").empty();
+                var strings = '';
+                // var tmpString = '<div>';
+                for (var i = 0; i < select; i++) {
+                    var string = '<select id="color' + (i + 1) + '" class="color color' + (i + 1) + ' form-control-static">'
+                        + '<option>1</option>'
+                        + '<option>2</option>'
+                        + '<option>3</option>'
+                        + '<option>4</option>' +
+                        '</select>';
+                    strings += string;
+                };
+                // tmpString += strings + '</div>';
+                $("#test").html(strings);
+            });
+        });
     },
 
     showHideKemSearch: () => {
@@ -64,11 +62,11 @@ const search = {
         let formPrimaryPeople = document.getElementById("formPrimaryPeople");
 
         if (formPrimaryPeople) {
-            formPrimaryPeople.style.display = "unset";    
+            formPrimaryPeople.style.display = "unset";
         }
 
         if (formSecond) {
-            formSecond.style.display = "flex"; 
+            formSecond.style.display = "flex";
         }
     },
 
@@ -77,11 +75,11 @@ const search = {
         let formPrimaryPeople = document.getElementById("formPrimaryPeople");
 
         if (formPrimaryPeople) {
-            formPrimaryPeople.style.display = "none";    
+            formPrimaryPeople.style.display = "none";
         }
 
         if (formSecond) {
-            formSecond.style.display = "none"; 
+            formSecond.style.display = "none";
         }
     },
 
@@ -91,19 +89,19 @@ const search = {
         let toggleBlock = document.getElementsByClassName('toggle-block');
 
         if (searchBlockModal) {
-            searchBlockModal.style.display = "unset";    
+            searchBlockModal.style.display = "unset";
         }
 
         if (headerNavToggle) {
             for (let i = 0; i < headerNavToggle.length; i++) {
-                headerNavToggle[i].style.display = "none";   
-            }    
+                headerNavToggle[i].style.display = "none";
+            }
         }
 
         if (headerNavToggle) {
             for (let j = 0; j < toggleBlock.length; j++) {
-                toggleBlock[j].style.display = "none";   
-            }    
+                toggleBlock[j].style.display = "none";
+            }
         }
     },
 
@@ -111,12 +109,12 @@ const search = {
         let modalSearch = document.getElementById('modalSearch')
 
         if (modalSearch) {
-            modalSearch.style.display = "unset";    
+            modalSearch.style.display = "unset";
         }
     },
 
     daterp: () => {
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('#dateCheck').daterangepicker(
                 {
                     separator: ' to ',
@@ -131,7 +129,7 @@ const search = {
                         $('#checkOut').val(s2);
                     }
                 });
-    		});
+        });
     },
 };
 

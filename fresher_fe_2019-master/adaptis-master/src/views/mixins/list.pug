@@ -52,12 +52,12 @@ mixin slider-experience(link, title, desc)
   .kem-home-experience__slider__item.kem-bgd-primary
     a.slider-img.slider-experience-img(style="background-image : url(../../../../assets/images/kem/kem-homepage/"+link+")")
     .slider-experience-caption 
-        h4.slider-experience-caption__title.kem-title= title
-        .slider-experience-caption__desc
-          p.kem-para= desc[0]
-          p.kem-para= desc[1]
-        .slider-experience-caption__btn
-          +button-link("FURTHER INFORMATION")
+      h4.slider-experience-caption__title.kem-title= title
+      .slider-experience-caption__desc
+        p.kem-para= desc[0]
+        p.kem-para= desc[1]
+      .slider-experience-caption__btn
+        +button-link("FURTHER INFORMATION")
 
 //- kem-home-gallery__slider__item
 mixin slider-gallery(idImgGallery,link,username)
