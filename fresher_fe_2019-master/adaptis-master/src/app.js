@@ -12,6 +12,7 @@ import form_checkout from './views/components/group3_checkout/form_checkout/form
 import Modal from './views/components/group3/modal/modal';
 import hotSale from './views/components/group3/main-home/hotsale/hotsale';
 import Slick from './views/components/group3/main-home/trending/trending';
+import Nav from './views/components/group3/header/header-nav/nav';
 require('normalize.css');
 
 $(() => {
@@ -28,8 +29,8 @@ $(document).ready(() => {
   form_checkout.init();
   Modal.init();
   Slick.init();
+  Nav.init();
   new WOW().init();
-  $("#formCheckout").validate();
 });
 
 $(window).on('resize', () => {
