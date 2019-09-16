@@ -413,10 +413,20 @@
     }
 }
 
-@mixin adaptisVer2ClientsAfter {
+@mixin adaptisVer2ClientsAfterBottom {
     &::after {
         content: '';
-        @include absolute(absolute, initial, initial, 0, 50%);
+        @include absolute(absolute, initial, initial, 1px, 50%);
+        @include translate2D(-50%, 0);
+        @include scale(50%, 1px);
+        background: #d5d5d5;
+    }
+}
+
+@mixin adaptisVer2ClientsAfterTop {
+    &::after {
+        content: '';
+        @include absolute(absolute, 0, initial, initial, 50%);
         @include translate2D(-50%, 0);
         @include scale(50%, 1px);
         background: #d5d5d5;

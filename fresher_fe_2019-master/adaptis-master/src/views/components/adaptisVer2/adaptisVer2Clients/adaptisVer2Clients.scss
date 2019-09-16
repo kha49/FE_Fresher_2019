@@ -5,11 +5,17 @@
         margin: 0 auto;
         width: 100%;
         padding: 0 15px;
+        //update
+        overflow: hidden;
+        //update
         &-grid {
             @include flexbox;
             flex-wrap: wrap;
             max-width: 850px;
             margin: 0 auto;
+            //update
+            margin-bottom: -3px;
+            //update
         }
     }
 }
@@ -22,100 +28,148 @@
     }
 
 }
-.animated{
+
+.animated {
     animation: fadeInUp .5s ease-in-out forwards;
     &:nth-child(1) {
-        animation-delay: .2s;
         a {
             @include adaptisVer2Clients;
-            @include adaptisVer2ClientsAfter;
+            @include adaptisVer2ClientsAfterBottom;
         }
-        
     }
-    &:nth-child(2) {
-        animation-delay: .4s;
+    &:nth-child(n+2) {
         a {
             @include adaptisVer2Clients;
-            @include adaptisVer2ClientsAfter;
+            @include adaptisVer2ClientsAfterBottom;
             @include adaptisVer2ClientsBefore;
         }
     }
-    &:nth-child(3) {
-        animation-delay: .6s;
+    // &:nth-child(n+5) {
+    //     a {
+    //         @include min-sm {
+
+    //         }
+    //         @include adaptisVer2Clients;
+    //         @include adaptisVer2ClientsAfterTop;
+    //     }
+    // }
+    &:nth-child(4n+5) {
         a {
-            @include adaptisVer2Clients;
-            @include adaptisVer2ClientsAfter;
-            @include adaptisVer2ClientsBefore;
+            @include max-sm {
+                @include adaptisVer2ClientsBefore;
+                &::before {
+                    content: none;
+                }
+            }
         }
     }
-    &:nth-child(4) {
-        animation-delay: .8s;
+    &:nth-child(5n+6) {
         a {
-            @include adaptisVer2Clients;
-            @include adaptisVer2ClientsAfter;
-            @include adaptisVer2ClientsBefore;
-        }
-    }
-    &:nth-child(5) {
-        animation-delay: 1s;
-        a {
-            @include adaptisVer2Clients;
-            @include adaptisVer2ClientsAfter;
             @include min-sm {
                 @include adaptisVer2ClientsBefore;
+                &::before {
+                    content: none;
+                }
             }
         }
     }
-    &:nth-child(6) {
-        animation-delay: 1.2s;
-        a {
-            @include adaptisVer2Clients;
-            @include max-sm {
-                @include adaptisVer2ClientsAfter;
-                @include adaptisVer2ClientsBefore;
-            }
-        }
-    }
-    &:nth-child(7) {
-        animation-delay: 1.4s;
-        a {
-            @include adaptisVer2Clients;
-            @include max-sm {
-                @include adaptisVer2ClientsAfter;
-            }
-            @include adaptisVer2ClientsBefore;
-        }
-    }
-    &:nth-child(8) {
-        animation-delay: 1.6s;
-        a {
-            @include adaptisVer2Clients;
-            @include max-sm {
-                @include adaptisVer2ClientsAfter;
-            }
-            @include adaptisVer2ClientsBefore;
-        }
-    }
-    &:nth-child(9) {
-        animation-delay: 1.8s;
-        a {
-            @include adaptisVer2Clients;
-            @include min-sm {
-                @include adaptisVer2ClientsBefore;
-            }
-        }
-    }
-    &:nth-child(10) {
-        animation-delay: 2s;
-        a {
-            @include adaptisVer2Clients;
-            @include adaptisVer2ClientsBefore;
-        }
-    }
-    
+    // &:nth-child(5) {
+    //     a {
+    //         @include min-sm {
+    //             @include adaptisVer2ClientsAfterTop;
+    //             &::after {
+    //                 content: none;
+    //             }
+    //         }
+    //     }
+    // }
+
+
+
+    // &:nth-child(1) {
+    //     a {
+    //         @include adaptisVer2Clients;
+    //         @include adaptisVer2ClientsAfterBottom;
+    //     }
+    // }
+    // &:nth-child(2) {
+    //     a {
+    //         @include adaptisVer2Clients;
+    //         @include adaptisVer2ClientsAfterBottom;
+    //         @include adaptisVer2ClientsBefore;
+    //     }
+    // }
+    // &:nth-child(3) {
+    //     a {
+    //         @include adaptisVer2Clients;
+    //         @include adaptisVer2ClientsAfterBottom;
+    //         @include adaptisVer2ClientsBefore;
+    //     }
+    // }
+    // &:nth-child(4) {
+    //     a {
+    //         @include adaptisVer2Clients;
+    //         @include adaptisVer2ClientsAfterBottom;
+    //         @include adaptisVer2ClientsBefore;
+    //     }
+    // }
+    // &:nth-child(5) {
+    //     a {
+    //         @include adaptisVer2Clients;
+    //         @include adaptisVer2ClientsAfterBottom;
+    //         @include min-sm {
+    //             @include adaptisVer2ClientsBefore;
+    //         }
+    //     }
+    // }
+    // &:nth-child(6) {
+    //     a {
+    //         @include adaptisVer2Clients;
+    //         @include max-sm {
+    //             @include adaptisVer2ClientsAfterBottom;
+    //             @include adaptisVer2ClientsBefore;
+    //         }
+    //     }
+    // }
+    // &:nth-child(7) {
+    //     a {
+    //         @include adaptisVer2Clients;
+    //         @include max-sm {
+    //             @include adaptisVer2ClientsAfterBottom;
+    //         }
+    //         @include adaptisVer2ClientsBefore;
+    //     }
+    // }
+    // &:nth-child(8) {
+    //     a {
+    //         @include adaptisVer2Clients;
+    //         @include max-sm {
+    //             @include adaptisVer2ClientsAfterBottom;
+    //         }
+    //         @include adaptisVer2ClientsBefore;
+    //     }
+    // }
+    // &:nth-child(9) {
+    //     a {
+    //         @include adaptisVer2Clients;
+    //         @include min-sm {
+    //             @include adaptisVer2ClientsBefore;
+    //         }
+    //     }
+    // }
+    // &:nth-child(10) {
+    //     a {
+    //         @include adaptisVer2Clients;
+    //         @include adaptisVer2ClientsBefore;
+    //     }
+    // }
 }
 
 @keyframes fadeInUp {
     0% {opacity: 0; @include translate3D(0, 40px, 0)};
     100% {opacity: 1; @include translate3D(0, 0, 0)};
+}
+
+[data-animate] {
+    opacity: 0;
 }

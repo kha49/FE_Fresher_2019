@@ -267,7 +267,7 @@ mixin adaptis-solution-block
                         span UI
                 li.adaptis-solution-container-items__item(data-animate)
                     p.adaptis-solution-container-items__item--content Development <br> & Delivery
-                li.adaptis-solution-container-items__item( data-animate)
+                li.adaptis-solution-container-items__item(data-animate)
                     p.adaptis-solution-container-items__item--content Agency <br> Partnership
             .adaptis-solution-container-title
                 span To support 
@@ -278,9 +278,9 @@ mixin adaptis-clients
         .adaptis-clients-container
             .adaptis-clients-container-grid
                 each val, index in adaptisClientsArray
-                    .adaptis-clients-container-grid-item( data-animate)
-                        a(href="#")
-                            img( src=`${val.src}` alt=`${val.alt}`)
+                    .adaptis-clients-container-grid-item(data-animate)
+                        a(id=`adaptis-clients-container-grid-item__brand--${index+1}`)(href="#")
+                            img(src=`${val.src}` alt=`${val.alt}`)
 
 mixin adaptis-relative-block
     section.adaptis-relative-block

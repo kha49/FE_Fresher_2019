@@ -6,6 +6,8 @@ import adaptisSlide from './views/components/adaptisVer2/adaptisVer2Slide/adapti
 import '../node_modules/slick-carousel/slick/slick';
 import '../node_modules/jquery-validation/dist/jquery.validate.min';
 import adaptisContact from './views/components/adaptisVer2/adaptisVer2Contact/adaptisVer2Contact';
+import adaptisClients from './views/components/adaptisVer2/adaptisVer2Clients/adaptisVer2Clients';
+import adaptisFooter from './views/components/adaptisVer2/adaptisVer2Footer/adaptisVer2Footer';
 
 require('normalize.css');
 $(() => {
@@ -17,12 +19,8 @@ $(document).ready(() => {
   adaptisHeaderLogo.init();
   adaptisSlide.init();
   adaptisContact.init();
-  $('.single-item').slick({
-    infinite: false,
-    speed: 300,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  });
+  adaptisClients.init();
+  adaptisFooter.init();
   skrollr.init();
   load.init();
 });

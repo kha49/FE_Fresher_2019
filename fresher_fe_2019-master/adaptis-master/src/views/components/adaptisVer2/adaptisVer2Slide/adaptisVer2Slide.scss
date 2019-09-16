@@ -62,8 +62,8 @@
             transition: all 0s;
             white-space: nowrap;
             font-size: 0px;
-            // width: calc(100%);
             @include scale(100%, 100%);
+            // width: 100%;
             transition-duration: 0.3s;
             // @include translate3D(-33.3333%, 0px, 0px);
         }

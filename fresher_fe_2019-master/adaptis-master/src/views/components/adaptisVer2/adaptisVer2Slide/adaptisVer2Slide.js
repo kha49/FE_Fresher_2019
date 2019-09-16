@@ -1,5 +1,14 @@
 const adaptisSlide = {
     init: () => {
+        let adaptisSlides = document.querySelector('.single-item');
+        if(adaptisSlides) {
+            $('.single-item').slick({
+                infinite: false,
+                speed: 300,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+        } 
         // let adaptisSlideArea = document.querySelector('.slick-active');
         // if(adaptisSlideArea) {
         //     adaptisSlide.showCaption();
