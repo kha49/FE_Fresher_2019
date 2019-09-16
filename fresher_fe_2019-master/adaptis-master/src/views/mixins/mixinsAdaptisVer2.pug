@@ -298,7 +298,15 @@ mixin adaptis-footer-clocks
     each val, index in adaptisFooterLocationsArray
         //- +clock
         .adaptis-footer-clock
-            +clock
+            //- +clock
+            .adaptis-footer-clock__active
+                .adaptis-footer-clock__active--location(id=`adaptis-footer-clock__active--${val.clock}`)
+                    .adaptis-footer-clock__hours-container
+                        .adaptis-hours
+                    .adaptis-footer-clock__minutes-container
+                        .adaptis-minutes
+                    .adaptis-footer-clock__seconds-container
+                        .adaptis-seconds
             .adaptis-footer-clock__text
                 .adaptis-footer-clock__text--location= val.location
                 .adaptis-footer-clock__text--phone

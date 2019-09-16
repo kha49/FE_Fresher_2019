@@ -55,6 +55,4 @@ const adaptisClients = {
 
 export default adaptisClients
 
-// let temp = window.getComputedStyle(
-//     document.querySelector('#adaptis-clients-container-grid-item__brand--9'), ':after'
-// ).getPropertyValue('content');
+// let temp = window.getComputedStyle(document.querySelector('#adaptis-clients-container-grid-item__brand--9'), ':after').getPropertyValue('content');

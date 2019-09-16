@@ -26,7 +26,6 @@
     @include min-sm {
         width: 20%;
     }
-
 }
 
 .animated {
@@ -55,7 +54,7 @@
     // }
     &:nth-child(4n+5) {
         a {
-            @include max-sm {
+            @include max-smMinus {
                 @include adaptisVer2ClientsBefore;
                 &::before {
                     content: none;

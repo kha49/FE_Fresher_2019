@@ -42,7 +42,13 @@
 }
 
 @mixin max-smMinus {
-    @media (max-width: #{breakpoints(sm)} - 1px) {
+    @media (max-width: #{breakpoints(sm) - 0.5px}) {
+        @content;
+    }
+}
+
+@mixin max-smPlus {
+    @media (max-width: #{breakpoints(sm) + 1px}) {
         @content;
     }
 }
@@ -59,7 +65,7 @@
     }
 }
 
-@mixin min-smplus {
+@mixin min-smPlus {
     @media (min-width: #{breakpoints(sm)} + 1px) {
         @content;
     }
