@@ -3,27 +3,27 @@ const adaptisFooter = {
         let adaptisFooterItems = document.querySelectorAll('.adaptis-footer-item');
         let adaptisClientLocation = document.querySelectorAll('.adaptis-footer-clock__text--location');
         let adaptisClientEmail = document.querySelectorAll('.adaptis-footer-clock__text--email');
-        let adaptisClientArray = [adaptisClientLocation, adaptisClientEmail];     
+        let adaptisClientPropertiesArray = [adaptisClientLocation, adaptisClientEmail];     
         let initializationDelay = 0.2;
-        for(let i = 0; i <= adaptisFooterItems.length; i++) {
-            let adaptisFooterItemChild = document.querySelector(`.adaptis-footer-item:nth-child(${i})`);
+        adaptisFooterItems.forEach((val, index) => {
+            let adaptisFooterItemChild = document.querySelector(`.adaptis-footer-item:nth-child(${index+1})`);
             if(adaptisFooterItemChild) {
                 adaptisFooterItemChild.style = `animation-delay: ${initializationDelay}s`;
                 initializationDelay += 0.2;
             }
-        }
-        if(adaptisClientArray) {
-            for(let i = 0; i < adaptisClientArray.length; i++) {
-                if(adaptisClientArray[i]) {
-                    adaptisFooter.upperCase(adaptisClientArray[i]);
+        });
+        if(adaptisClientPropertiesArray) {
+            adaptisClientPropertiesArray.forEach((val, index) => {
+                if(adaptisClientPropertiesArray[index]) {
+                    adaptisFooter.upperCase(adaptisClientPropertiesArray[index]);
                 }
-            }
+            });
         }
     },
     upperCase: (variable) => {
-        for(let i = 0; i < variable.length; i++) {
-            variable[i].style = 'text-transform: uppercase';
-        }
+        variable.forEach((val, index) => {
+            variable[index].style = 'text-transform: uppercase';
+        });
     }
 }
 
