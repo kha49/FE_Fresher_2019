@@ -1,0 +1,174 @@
+@import '../../../../assets/styles/base/mixins';
+
+.search-result-number-google {
+    margin: 10px 0 0 165px;
+    p {
+        color: #777;
+        font-size: 13px;
+    }
+}
+
+.search-result-google-title {
+    margin: 25px 0 0 165px;
+    div {
+        a {
+            p {
+                display: inline;
+                font-size: 18px;
+                color: #1a0dab;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .google-result-content {
+        width: 600px;
+        p {
+            color: #545454;
+            font-size: 14px;
+        }
+    }
+}
+
+.google-result-link {
+    a {
+        color: #006621;
+        span {
+            img {
+                @include scale(13px, 13px);
+            }
+        }
+    }
+}
+
+.search-result-google-images {
+    margin: 25px 0 0 165px;
+    div {
+        a {
+            display: inline;
+            font-size: 18px;
+            color: #1a0dab;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .result-images {
+        @include display(flex, flex-start);
+        position: relative;
+        margin: 25px 0 0 0;
+        div {
+            margin: 0 10px 0 0;
+            a {
+                img {
+                    border-radius: 2px;
+                }
+            }
+        }
+        .more-result-images {
+            position: absolute;
+            left: 587px;
+            top: 40px;
+            a {
+                img {
+                    @include scale(40px, 40px);
+                }
+            }
+        }
+    }
+    .result-other-images {
+        margin: 10px 0 0 0;
+        width: 600px;
+        div {
+            @include display(flex, space-between);
+            a {
+                div {
+                    @include display(flex, flex-start);
+                    .result-other-images-button
+                        img {
+                            @include scale(20px, 20px);
+                        }
+                    .result-other-images-title
+                        p {
+                            font-size: 14px;
+                            color: #1a0dab;
+                        }
+                }
+                
+            }
+        }
+    }
+}
+
+.related-search {
+    margin: 25px 0 0 152px;
+    width: 700px;
+    border: solid 1px #e7e8eb;
+    border-radius: 8px;
+    padding: 0 0 0 10px;
+    .related-search-title {
+        p {
+            color: #777;
+        }
+    }
+    .related-search-title-rapper {
+        p {
+            color: #222;
+        }
+    }.related-search-rapper {
+        @include display(flex, flex-start);
+        div {
+            margin: 0 10 0 0;
+            .related-search-rapper-name {
+                a {
+                    color: #1a0dab;
+                }
+            }
+        }
+    }
+}
+
+.related-search-tags {
+    .related-search-tags-title {
+        margin: 25px 0 0 165px;
+        p {
+            color: #222;
+            font-size: 20px;
+        }
+    }
+    .related-search-title-result-tags {
+        margin: 25px 0 0 165px;
+        @include display(flex, flex-start);
+        div {
+            margin: 0 15px 0 0;
+            a {
+                color: #1a0dab;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.google-brand-footer {
+    div {
+        margin: 25px 0 0 310px;
+    }
+}
+
+.google-brand-footer-numbers {
+    margin: 0 0 0 360px;
+    @include display(flex, flex-start);
+    div {
+        margin-left: 10px;
+        a {
+            color: #1a0dab;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    
+}

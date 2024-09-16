@@ -1,0 +1,47 @@
+@import '../header/header.scss';
+
+.airbnbUpdate-more {
+    &__title {
+        margin: 15px;
+        margin-left: 10%;
+    }
+    &-articles {
+        &-posts {
+            display: flex;
+            margin: 15px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 3px;
+            box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px;
+            &__image {
+                img {
+                    height: 94.75px;
+                }
+            }
+            &__post {
+                margin: auto 15px;
+                &--title {
+                    h4 {
+                        margin: 0px;
+                    }
+                }
+            }
+            @include breakpoint--minHuge() {
+                display: block;
+                width: 23%;
+                &__image {
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                &__post {
+                    margin: 0;
+                }
+            }
+        }
+        @include breakpoint--minHuge() {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

@@ -13,3 +13,29 @@
 // Component
 @import '../../views/components/header/header';
 @import '../../views/components/footer/footer';
+
+// Demo Google
+@import '../../views/components/google/footer/footer.scss';
+@import '../../views/components/google/header/header.scss';
+@import '../../views/components/google/section/section.scss';
+
+// Demo Search Result Google
+@import '../../views/components/searchResultGoogle/header/header.scss';
+@import '../../views/components/searchResultGoogle/body/body.scss';
+
+// Demo airbnb
+// @import '../../../node_modules/slick-carousel/slick/slick-theme.scss';
+@import '../../views/components/airbnb/banner/banner.scss';
+@import '../../views/components/airbnb/body/body.scss';
+@import '../../views/components/airbnb/footer/footer.scss';
+@import '../../../node_modules/slick-carousel/slick/slick.scss';
+
+// Demo airbnbUpdate
+@import '../../views/components/airbnbUpdate/header/header.scss';
+@import '../../views/components/airbnbUpdate/form/form.scss';
+@import '../../views/components/airbnbUpdate/introduce/introduce.scss';
+@import '../../views/components/airbnbUpdate/quote/quote.scss';
+@import '../../views/components/airbnbUpdate/question/question.scss';
+@import '../../views/components/airbnbUpdate/more/more.scss';
+@import '../../views/components/airbnbUpdate/readyToEarn/ready.scss';
+@import '../../views/components/airbnbUpdate/footer/footer.scss';
